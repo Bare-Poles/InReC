@@ -1,0 +1,20 @@
+{
+	"id":"InReC_bludgeon_shot",
+
+	"onFireEffect":"org.amazigh.InReC.scripts.InReC_bludgeonOnFireEffect",
+	"onHitEffect":"org.amazigh.InReC.scripts.InReC_bludgeonOnHitEffect",
+
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"length":25.0,
+	"hitGlowRadius":60,
+	"width":10.0,
+	"fadeTime":0.3,
+	"fringeColor":[255,175,70,235],
+	"coreColor":[255,255,255,170],	
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/shell_round_lrg.png"
+}

@@ -1,0 +1,31 @@
+{
+	"id":"InReC_canister",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"MEDIUM",
+	"displayArcRadius":400,
+	"turretSprite":"graphics/weapons/InReC_canister_turret_base.png",
+	"turretGunSprite":"graphics/weapons/InReC_canister_turret_recoil.png",
+	"hardpointSprite":"graphics/weapons/InReC_canister_hardpoint_base.png",
+	"hardpointGunSprite":"graphics/weapons/InReC_canister_hardpoint_recoil.png",	
+	"visualRecoil":6.0,  # the gun sprites are only used if this is non-0
+	"renderHints":[RENDER_BARREL_BELOW],
+	"turretOffsets":[15,-2.5, 15,-2, 15,-2, 15,-1.5, 15,-1, 15,-1, 15,0, 15,0, 15,0, 15,1, 15,1, 15,1.5, 15,2, 15,2, 15,2.5],
+	"turretAngleOffsets":[-3.5, -3, -2.5, -2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5],
+	"hardpointOffsets":[18,-2.5, 18,-2, 18,-2, 18,-1.5, 18,-1, 18,-1, 18,0, 18,0, 18,0, 18,1, 18,1, 18,1.5, 18,2, 18,2, 18,2.5],
+	"hardpointAngleOffsets":[-3.5, -3, -2.5, -2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5],
+	"specialWeaponGlowWidth":10,
+	"specialWeaponGlowHeight":25,
+	"barrelMode":"LINKED",
+        "separateRecoilForLinkedBarrels":"TRUE",
+	"animationType":"MUZZLE_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":30.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":12.0,
+					   "particleSizeMin":7.0,
+					   "particleSizeRange":8.0,
+					   "particleDuration":0.3,
+					   "particleCount":15,
+					   "particleColor":[210,240,255,200]},
+	"projectileSpecId":"InReC_canister_shot",  # projectile that will be fired
+	"fireSoundTwo":"needler_fire", #TEMP!!
+}

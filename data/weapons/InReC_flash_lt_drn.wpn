@@ -1,0 +1,29 @@
+{
+	"id":"InReC_flash_lt_drn",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"SMALL",
+	"turretSprite":"graphics/weapons/InReC_flash_lt_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/InReC_flash_lt_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/InReC_flash_lt_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/InReC_flash_lt_hardpoint_glow.png",
+	"glowColor":[113,217,243,225],
+	"turretOffsets":[0,0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[0,0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"specialWeaponGlowWidth":14,
+	"specialWeaponGlowHeight":25,
+	"muzzleFlashSpec":{"length":18.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":18.0,
+					   "particleSizeMin":8.0,
+					   "particleSizeRange":10.0,
+					   "particleDuration":0.15,
+					   "particleCount":20,
+					   "particleColor":[110,215,240,225]},	
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"InReC_flash_lt_shot",  # projectile that will be fired
+	"fireSoundTwo":"ir_pulse_laser_fire", #TEMP!
+}

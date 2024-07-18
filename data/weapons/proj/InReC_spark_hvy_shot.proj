@@ -1,0 +1,16 @@
+{
+	"id":"InReC_spark_hvy_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"hitGlowRadius":15,
+	"length":40.0,
+	"width":4.2,
+	"fadeTime":0.2,
+	"fringeColor":[121,107,56,245],
+	"coreColor":[243,215,113,210],
+	"textureType":"ROUGH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0
+}

@@ -1,0 +1,29 @@
+{
+	"id":"InReC_millstone_tri",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"LARGE",
+	"turretSprite":"graphics/weapons/InReC_grinder_tri_turret_base.png",
+	"turretGunSprite":"graphics/weapons/InReC_grinder_tri_turret_recoil.png",
+	"hardpointSprite":"graphics/weapons/InReC_grinder_tri_hardpoint_base.png",
+	"hardpointGunSprite":"graphics/weapons/InReC_grinder_tri_hardpoint_recoil.png",	
+	"visualRecoil":8.0,  # the gun sprites are only used if this is non-0
+	"renderHints":[RENDER_BARREL_BELOW],
+	"turretOffsets":[23,-8, 23,0, 23,8],
+	"turretAngleOffsets":[0, 0, 0],
+	"hardpointOffsets":[26,-8, 26,0, 26,8],
+	"hardpointAngleOffsets":[0, 0, 0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"specialWeaponGlowWidth":15,
+	"specialWeaponGlowHeight":40,
+	"animationType":"MUZZLE_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":39.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":6.0,
+					   "particleSizeMin":10.0,
+					   "particleSizeRange":16.0,
+					   "particleDuration":0.35,
+					   "particleCount":13,
+					   "particleColor":[255,150,125,200]},
+	"projectileSpecId":"InReC_millstone_trio_shot",  # projectile that will be fired
+	"fireSoundTwo":"heavy_mortar_fire", #TEMP!!
+}

@@ -1,0 +1,30 @@
+{
+	"id":"InReC_negatron",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/InReC_negatron_turret_base.png",
+	"turretGunSprite":"graphics/weapons/InReC_negatron_turret_recoil.png",
+	"turretGlowSprite":"graphics/weapons/InReC_negatron_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/InReC_negatron_hardpoint_base.png",
+	"hardpointGunSprite":"graphics/weapons/InReC_negatron_hardpoint_recoil.png",
+	"hardpointGlowSprite":"graphics/weapons/InReC_negatron_hardpoint_glow.png",
+	"visualRecoil":5.0,  # the gun sprites are only used if this is non-0
+	"glowColor":[171,101,255,225],
+	"turretOffsets":[8,0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[13,0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":35.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":7.0,
+					   "particleSizeMin":14.0,
+					   "particleSizeRange":16.0,
+					   "particleDuration":0.25,
+					   "particleCount":16,
+					   "particleColor":[170,100,250,225]},	
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"InReC_negatron_shot",  # projectile that will be fired
+	"fireSoundTwo":"heavy_blaster_fire", #TEMP!
+}

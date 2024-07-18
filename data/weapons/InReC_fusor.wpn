@@ -1,0 +1,28 @@
+{
+	"id":"InReC_fusor",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/InReC_fusor_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/InReC_fusor_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/InReC_fusor_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/InReC_fusor_hardpoint_glow.png",
+	"glowColor":[180,180,255,255],
+	"turretOffsets":[15,-1, 15,1],
+	"turretAngleOffsets":[0, 0],
+	"hardpointOffsets":[20,-1, 20,1],
+	"hardpointAngleOffsets":[0, 0],
+	"barrelMode":"LINKED",
+	"animationType":"GLOW_AND_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"specialWeaponGlowWidth":10,
+	"specialWeaponGlowHeight":30,
+	"muzzleFlashSpec":{"length":24.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":5.0,
+					   "particleSizeMin":3.0,
+					   "particleSizeRange":6.0,
+					   "particleDuration":0.3,
+					   "particleCount":10,
+					  "particleColor":[100,100,195,180]},
+	"projectileSpecId":"InReC_fusor_shot",  # projectile that will be fired
+	"fireSoundTwo":"railgun_fire", #TEMP!!
+}

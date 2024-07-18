@@ -1,0 +1,23 @@
+{
+	"id":"InReC_negatron_shot",
+
+	"onFireEffect":"org.amazigh.InReC.scripts.InReC_negatronOnFireEffect",
+	"onHitEffect":"org.amazigh.InReC.scripts.InReC_negatronOnHitEffect",
+
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"hitGlowRadius":45,
+	"length":70.0,
+	"width":7.0,
+	"fadeTime":0.25,
+	"fringeColor":[113,67,169,245],
+	"coreColor":[235,210,255,210],
+	"glowColor":[161,111,255,81],
+	"glowRadius":36,
+	"textureType":"SMOOTH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/shell_gauss_cannon.png"
+}

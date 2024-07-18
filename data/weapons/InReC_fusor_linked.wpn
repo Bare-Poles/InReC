@@ -1,0 +1,28 @@
+{
+	"id":"InReC_fusor_linked",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"LARGE",
+	"turretSprite":"graphics/weapons/InReC_fusor_linked_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/InReC_fusor_linked_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/InReC_fusor_linked_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/InReC_fusor_linked_hardpoint_glow.png",
+	"glowColor":[180,180,255,255],
+	"turretOffsets":[18,-6, 18,-4, 18,4, 18,6],
+	"turretAngleOffsets":[0, 0, 0, 0],
+	"hardpointOffsets":[22,-6, 22,-4, 22,4, 22,6],
+	"hardpointAngleOffsets":[0, 0, 0, 0],
+	"barrelMode":"LINKED",
+	"animationType":"GLOW_AND_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"specialWeaponGlowWidth":10,
+	"specialWeaponGlowHeight":30,
+	"muzzleFlashSpec":{"length":25.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":5.0,
+					   "particleSizeMin":3.0,
+					   "particleSizeRange":6.0,
+					   "particleDuration":0.3,
+					   "particleCount":10,
+					  "particleColor":[100,100,195,180]},
+	"projectileSpecId":"InReC_fusor_shot",  # projectile that will be fired
+	"fireSoundTwo":"railgun_fire", #TEMP!!
+}

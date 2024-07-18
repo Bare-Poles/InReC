@@ -1,0 +1,25 @@
+{
+	"id":"InReC_millstone_drn",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"SMALL",
+	"turretSprite":"graphics/weapons/InReC_grinder_ftr.png",
+	"hardpointSprite":"graphics/weapons/InReC_grinder_ftr.png",
+	"turretOffsets":[0,0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[0,0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"specialWeaponGlowWidth":15,
+	"specialWeaponGlowHeight":40,
+	"animationType":"MUZZLE_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":33.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":6.0,
+					   "particleSizeMin":10.0,
+					   "particleSizeRange":16.0,
+					   "particleDuration":0.35,
+					   "particleCount":11,
+					   "particleColor":[255,150,125,200]},
+	"projectileSpecId":"InReC_millstone_mono_shot",  # projectile that will be fired
+	"fireSoundTwo":"heavy_mortar_fire", #TEMP!!
+}

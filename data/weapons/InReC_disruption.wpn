@@ -1,0 +1,27 @@
+{
+	"id":"InReC_disruption",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/InReC_disruption_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/InReC_disruption_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/InReC_disruption_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/InReC_disruption_hardpoint_glow.png",
+	"glowColor":[100,201,255,225],
+	"turretOffsets":[8,0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[12,0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":32.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":5.0,
+					   "particleSizeMin":15.0,
+					   "particleSizeRange":18.0,
+					   "particleDuration":0.15,
+					   "particleCount":10,
+					   "particleColor":[100,210,255,225]},	
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"InReC_disruption_shot",  # projectile that will be fired
+	"fireSoundTwo":"ion_pulser_fire", #TEMP!
+}

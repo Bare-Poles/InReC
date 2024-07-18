@@ -1,0 +1,29 @@
+{
+	"id":"InReC_gluon",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"SMALL",
+	"turretSprite":"graphics/weapons/InReC_gluon_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/InReC_gluon_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/InReC_gluon_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/InReC_gluon_hardpoint_glow.png",
+	"glowColor":[243,183,113,225],
+	"turretOffsets":[5,-4, 5,4],
+	"turretAngleOffsets":[-35, 35],
+	"hardpointOffsets":[9,-4, 9,4],
+	"hardpointAngleOffsets":[-35, 35],
+	"barrelMode":"LINKED", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"specialWeaponGlowWidth":15,
+	"specialWeaponGlowHeight":24,
+	"muzzleFlashSpec":{"length":20.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":21.0,
+					   "particleSizeMin":5.0,
+					   "particleSizeRange":8.0,
+					   "particleDuration":0.25,
+					   "particleCount":21,
+					   "particleColor":[240,180,110,225]},	
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"InReC_gluon_shot",  # projectile that will be fired
+	"fireSoundTwo":"ir_pulse_laser_fire", #TEMP!
+}

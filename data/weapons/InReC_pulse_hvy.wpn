@@ -1,0 +1,27 @@
+{
+	"id":"InReC_pulse_hvy",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/InReC_pulse_hvy_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/InReC_pulse_hvy_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/InReC_pulse_hvy_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/InReC_pulse_hvy_hardpoint_glow.png",
+	"glowColor":[113,243,205,225],
+	"turretOffsets":[8,0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[11,0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":26.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":6.0,
+					   "particleSizeMin":14.0,
+					   "particleSizeRange":16.0,
+					   "particleDuration":0.15,
+					   "particleCount":10,
+					   "particleColor":[110,240,205,225]},	
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"InReC_pulse_hvy_shot",  # projectile that will be fired
+	"fireSoundTwo":"pulse_laser_fire", #TEMP!
+}
