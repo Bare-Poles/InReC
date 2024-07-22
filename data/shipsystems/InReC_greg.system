@@ -1,0 +1,18 @@
+{
+	"id":"InReC_greg",
+	"type":"STAT_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"org.amazigh.InReC.shipsystems.scripts.ai.InReC_gregAI",
+	
+	"statsScript":"org.amazigh.InReC.shipsystems.scripts.InReC_gregStats",
+
+	"useSound":"drone_launch",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}
+}
+
+
+
+

@@ -1,0 +1,38 @@
+{
+	"id":"InReC_flock_mrm",
+	"specClass":"missile",
+	"missileType":"MISSILE",
+	"sprite":"graphics/missiles/InReC_flock.png",
+	"size":[10,18],
+	"center":[5,9],
+	"collisionRadius":10,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[100,150,252,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":70, # purely visual
+	"flameoutTime":1,
+	"noEngineGlowTime":0.2,
+	"fadeTime":0.5,
+	"engineSpec":{"turnAcc":160,
+				  "turnRate":60,
+				  "acc":666,
+				  "dec":300},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-9, 0],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[150,250,60,255],
+						"contrailDuration":1.4,
+						"contrailWidthMult":0.5,
+						"contrailWidthAddedFractionAtEnd":0.9,# can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":5, # min segment length, in pixels
+						"contrailMaxSpeedMult":0.3f,
+						"contrailAngularVelocityMult":0.6f,
+						"contrailSpawnDistMult":0, # how far away from engine it starts
+						"contrailColor":[30,110,105,140],
+						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":6,
+				    "length":28.0,
+				    "angle":180.0}]
+}

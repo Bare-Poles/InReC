@@ -1,0 +1,207 @@
+{
+  "hullName": "Sunder (IRC)",
+  "hullId": "InReC_sunder",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/InReC_sunder.png",
+  "style": "INREC",
+  "height": 190,
+  "width": 116,
+  "center": [59, 85],
+  "collisionRadius": 130,
+  "shieldCenter": [6, -0],
+  "shieldRadius": 123,
+  "viewOffset": 0,
+  "builtInMods": [
+    "InReC_slot"
+  ],
+  "builtInWeapons": {
+    "WS0010": "InReC_deco_sunder",
+    "WS0011": "InReC_deco_sunder"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [29, 31]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [78, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [6, 54]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [-5, -51]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -55,
+      "locations": [9, -21]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 0,
+      "locations": [31, -0]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": 0,
+      "locations": [59, -0]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": 75,
+      "locations": [10, 18]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 180,
+      "locations": [-51, 0]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-32, 28]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -90,
+      "locations": [-32, -28]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-85, 17],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-85, -17],
+      "length": 64,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-83, 32],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-83, -32],
+      "length": 64,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    }
+  ],
+  "bounds": [
+    79, -6,
+    97, -6,
+    97, -14,
+    90, -18,
+    53, -29,
+    36, -18,
+    26, -19,
+    25, -33,
+    7, -39,
+    -5, -50,
+    -15, -31,
+    -6, -19,
+    -11, -19,
+    -23, -31,
+    -40, -31,
+    -49, -26,
+    -62, -42,
+    -81, -35,
+    -83, -12,
+    -70, -9,
+    -64, -3,
+    -64, 3,
+    -70, 9,
+    -83, 12,
+    -81, 35,
+    -62, 42,
+    -49, 26,
+    -40, 31,
+    -23, 31,
+    -11, 19,
+    -3, 19,
+    4, 27,
+    -9, 34,
+    1, 41,
+    6, 53,
+    20, 40,
+    32, 36,
+    32, 26,
+    18, 19,
+    36, 18,
+    53, 29,
+    90, 18,
+    97, 14,
+    97, 6,
+    79, 6
+  ]
+}

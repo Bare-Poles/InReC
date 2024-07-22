@@ -1,0 +1,307 @@
+{
+  "hullName": "Enforcer (IRC)",
+  "hullId": "InReC_enforcer",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/InReC_enforcer.png",
+  "style": "INREC",
+  "height": 138,
+  "width": 146,
+  "center": [73, 68],
+  "collisionRadius": 105.5,
+  "shieldCenter": [-5, -0],
+  "shieldRadius": 99,
+  "viewOffset": 0,
+  "builtInMods": [
+    "InReC_slot"
+  ],
+  "builtInWeapons": {
+    "WS0017": "InReC_deco_enforcer",
+    "WS0018": "InReC_deco_enforcer"
+  },
+  "weaponSlots": [
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        3, -31,
+        11, -39,
+        16, -23
+      ]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [42, 30]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [42, -30]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [15, 63]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [15, -63]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [-16, 67]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [-16, -67]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 125,
+      "angle": 0,
+      "locations": [19, -0]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 40,
+      "locations": [12, 29]
+    },
+    {
+      "id": "WS0009",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": -40,
+      "locations": [12, -29]
+    },
+    {
+      "id": "WS0011",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -90,
+      "locations": [-15, -44]
+    },
+    {
+      "id": "WS0010",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 90,
+      "locations": [-15, 44]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 15,
+      "locations": [32, 45]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": -15,
+      "locations": [32, -45]
+    },
+    {
+      "id": "WS0014",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 95,
+      "locations": [-1, 63]
+    },
+    {
+      "id": "WS0015",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": -95,
+      "locations": [-1, -63]
+    },
+    {
+      "id": "WS0016",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 180,
+      "locations": [-33, -0]
+    },
+    {
+      "id": "WS0017",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-9, 25]
+    },
+    {
+      "id": "WS0018",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -90,
+      "locations": [-9, -25]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-66, 29],
+      "length": 64,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-66, -29],
+      "length": 64,
+      "width": 24,
+      "angle": -180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-68, 38],
+      "length": 40,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-64, 17],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-68, -38],
+      "length": 40,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-64, -17],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    }
+  ],
+  "bounds": [
+    63, -20,
+    57, -25,
+    39, -19,
+    43, -25,
+    43, -38,
+    34, -41,
+    32, -52,
+    26, -55,
+    24, -64,
+    10, -64,
+    5, -58,
+    3, -63,
+    -7, -64,
+    -11, -68,
+    -24, -68,
+    -25, -62,
+    -33, -61,
+    -40, -55,
+    -41, -48,
+    -53, -47,
+    -66, -42,
+    -63, -14,
+    -47, -12,
+    -45, -8,
+    -36, -6,
+    -36, 6,
+    -45, 8,
+    -47, 12,
+    -63, 14,
+    -66, 42,
+    -53, 47,
+    -41, 48,
+    -40, 55,
+    -33, 61,
+    -25, 62,
+    -24, 68,
+    -11, 68,
+    -7, 64,
+    3, 63,
+    5, 58,
+    10, 64,
+    24, 64,
+    26, 55,
+    32, 52,
+    34, 41,
+    43, 38,
+    43, 25,
+    39, 19,
+    57, 25,
+    63, 20,
+    66, -0
+  ]
+}

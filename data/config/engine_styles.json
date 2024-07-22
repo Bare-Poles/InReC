@@ -1,0 +1,16 @@
+{
+	# Reserved engine style ids (can not be used):
+	# "CUSTOM"
+	
+	"INREC":{
+		"engineColor":[255,195,75,255], # 255,145,75
+		"contrailParticleSizeMult":4,
+		"contrailParticleDuration":2,
+		"contrailParticleFinalSizeMult":2.5,
+		"contrailMaxSpeedMult":0.5,
+		"contrailAngularVelocityMult":0,
+		"contrailColor":[100,105,95,25], # 100,100,100
+		"contrailCampaignColor":[150,130,100,75], # 150,120,100
+		"type":"GLOW" # GLOW or SMOKE
+	},
+}

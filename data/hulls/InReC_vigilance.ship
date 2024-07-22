@@ -1,0 +1,138 @@
+{
+  "hullName": "Vigilance (IRC)",
+  "hullId": "InReC_vigilance",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/InReC_vigilance.png",
+  "style": "INREC",
+  "height": 100,
+  "width": 64,
+  "center": [33, 47],
+  "collisionRadius": 80,
+  "shieldCenter": [1, -0],
+  "shieldRadius": 78,
+  "viewOffset": 0,
+  "builtInMods": [
+    "InReC_slot"
+  ],
+  "builtInWeapons": {
+    "WS0004": "InReC_deco_droVig"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 50,
+      "locations": [12, 13]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [49, -12]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [5, -25]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-12, 17]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 5,
+      "locations": [40.5, 4.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 95,
+      "locations": [11.5, 29.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": -100,
+      "locations": [-7.5, -17.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-46, 0.5],
+      "length": 60,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-45, 11],
+      "length": 32,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-45, -10],
+      "length": 32,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    }
+  ],
+  "bounds": [
+    37, -28,
+    22, -25,
+    19, -20,
+    12, -19,
+    9, -25,
+    1, -25,
+    -2, -20,
+    -11, -19,
+    -14, -16,
+    -21, -16,
+    -25, -19,
+    -44, -12,
+    -44, 13,
+    -25, 20,
+    -5, 20,
+    7, 31,
+    29, 30,
+    41, 14,
+    42, -4,
+    49, -8,
+    49, -16,
+    42, -20
+  ]
+}

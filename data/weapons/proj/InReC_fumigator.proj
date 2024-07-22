@@ -1,0 +1,90 @@
+{
+	"id":"InReC_fumigator",
+	"specClass":"missile",
+	"missileType":"MIRV",
+	"sprite":"graphics/missiles/InReC_fumigator.png",
+	"size":[14,20],
+	"center":[7,10],
+	"collisionRadius":10,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[255,73,50,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":120, # purely visual
+	"armingTime":0.5,
+
+	"flameoutTime":1,
+	"noEngineGlowTime":0.2,
+	"fadeTime":0.5,
+	"engineSpec":{"turnAcc":900,
+				  "turnRate":180,
+				  "acc":800,
+				  "dec":350},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-6, 5],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[250,95,30,255],
+						"contrailDuration":0.7,
+						"contrailWidthMult":0.8,
+						"contrailWidthAddedFractionAtEnd":1.2,# can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":8, # min segment length, in pixels
+						"contrailMaxSpeedMult":0.1f,
+						"contrailAngularVelocityMult":0.6f,
+						"contrailSpawnDistMult":0, # how far away from engine it starts
+						"contrailColor":[170,35,30,140],
+						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":5.0,
+				    "length":23.0,
+				    "angle":165.0}],
+
+	"engineSlots":[{"id":"ES2",
+					"loc":[-6, -5],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[250,95,30,255],
+						"contrailDuration":0.7,
+						"contrailWidthMult":0.8,
+						"contrailWidthAddedFractionAtEnd":1.2,# can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":8, # min segment length, in pixels
+						"contrailMaxSpeedMult":0.1f,
+						"contrailAngularVelocityMult":0.6f,
+						"contrailSpawnDistMult":0, # how far away from engine it starts
+						"contrailColor":[170,35,30,140],
+						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":5.0,
+				    "length":23.0,
+				    "angle":195.0}],
+
+	"behaviorSpec":{"behavior":"MIRV",
+					"splitRange":800,
+					"minTimeToSplit":1,
+					"canSplitEarly":false,
+					"splitSound":"launch_flare_1",
+					"numShots":30,
+					"damage":20,
+					"impact":0,
+					"emp":200,
+					"damageType":ENERGY,
+					"hitpoints":100,
+					"arc":50,
+					"spreadInaccuracy":20,
+					"arcOffset":0,
+					"evenSpread":false,
+					"spreadSpeed":150,
+					"spreadSpeedRange":50,
+					"projectileSpec":"InReC_flare_dumb",
+					"smokeSpec":{"particleSizeMin":10.0,
+								 "particleSizeRange":10.0,
+								 "cloudParticleCount":5,
+								 "cloudDuration":1.0,
+								 "cloudRadius":10.0,
+								 "blowbackParticleCount":0,
+								 "blowbackDuration":2,
+								 "blowbackLength":30.0,
+								 "blowbackSpread":10.0,
+								 "particleColor":[100,100,110,150]}
+					}
+}

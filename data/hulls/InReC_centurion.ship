@@ -1,0 +1,170 @@
+{
+  "hullName": "Centurion (IRC)",
+  "hullId": "InReC_centurion",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/InReC_centurion.png",
+  "style": "INREC",
+  "height": 98,
+  "width": 104,
+  "center": [53, 47],
+  "collisionRadius": 81,
+  "shieldCenter": [1, 1],
+  "shieldRadius": 79,
+  "viewOffset": 0,
+  "builtInMods": [
+    "InReC_slot"
+  ],
+  "builtInWeapons": {
+    "WS0008": "InReC_deco_centurion"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [29, -10]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [-21, 41]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [-21, -39]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 35,
+      "locations": [34, 33]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": -35,
+      "locations": [34, -31]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": 75,
+      "locations": [0, 34]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": -75,
+      "locations": [-1, -32]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 180,
+      "locations": [-23, 1]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-46, 25],
+      "length": 40,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 48,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-46, -23],
+      "length": 40,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 40,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-44, 13],
+      "length": 56,
+      "width": 18,
+      "angle": 180,
+      "contrailSize": 48,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-44, -11],
+      "length": 56,
+      "width": 18,
+      "angle": -180,
+      "contrailSize": 48,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    }
+  ],
+  "bounds": [
+    44, 23,
+    48, 27,
+    48, 45,
+    43, 51,
+    31, 51,
+    30, 46,
+    25, 46,
+    10, 39,
+    7, 43,
+    -7, 49,
+    -13, 39,
+    -32, 37,
+    -45, 27,
+    -43, 7,
+    -26, 6,
+    -26, -4,
+    -43, -5,
+    -45, -25,
+    -32, -35,
+    -13, -37,
+    -7, -47,
+    7, -41,
+    10, -37,
+    25, -44,
+    30, -44,
+    31, -49,
+    43, -49,
+    48, -43,
+    48, -25,
+    44, -21,
+    34, -21,
+    25, 7,
+    19, 9,
+    25, 15,
+    20, 20,
+    23, 23
+  ]
+}

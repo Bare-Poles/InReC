@@ -1,0 +1,213 @@
+{
+  "hullName": "Drover (IRC)",
+  "hullId": "InReC_drover",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/InReC_drover.png",
+  "style": "INREC",
+  "height": 110,
+  "width": 140,
+  "center": [70, 51],
+  "collisionRadius": 116,
+  "shieldCenter": [1, -0],
+  "shieldRadius": 114,
+  "viewOffset": 0,
+  "builtInMods": [
+    "InReC_slot"
+  ],
+  "builtInWeapons": {
+    "WS0007": "InReC_deco_droVig",
+    "WS0008": "InReC_deco_droVig"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": 15,
+      "locations": [31, 30]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [43, 60]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 30,
+      "locations": [20, 58]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": -30,
+      "locations": [20, -58]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": -20,
+      "locations": [16, 7]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": -10,
+      "locations": [47, -18]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 5,
+      "locations": [38, -0]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-6, 60]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -90,
+      "locations": [-6, -60]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        20, -34,
+        28, -42,
+        33, -26
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-49, 51],
+      "length": 30,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 44,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-49, -51],
+      "length": 30,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 52,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-50, 40],
+      "length": 44,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 48,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-50, -40],
+      "length": 44,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 48,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-47, 17],
+      "length": 52,
+      "width": 18,
+      "angle": 180,
+      "contrailSize": 52,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-47, -17],
+      "length": 52,
+      "width": 18,
+      "angle": -180,
+      "contrailSize": 52,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    }
+  ],
+  "bounds": [
+    43, -62,
+    24, -68,
+    4, -65,
+    1, -63,
+    -33, -65,
+    -37, -56,
+    -47, -55,
+    -48, -35,
+    -42, -32,
+    -39, -24,
+    -45, -21,
+    -45, -12,
+    -32, -4,
+    -32, 4,
+    -45, 12,
+    -45, 21,
+    -39, 24,
+    -42, 32,
+    -48, 35,
+    -47, 55,
+    -37, 56,
+    -33, 65,
+    1, 63,
+    4, 65,
+    24, 68,
+    40, 65,
+    41, 53,
+    47, 53,
+    55, 28,
+    51, 22,
+    52, 16,
+    47, 14,
+    48, -4,
+    55, -10,
+    55, -26,
+    47, -29,
+    40, -45,
+    49, -50
+  ]
+}

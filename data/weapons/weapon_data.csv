@@ -24,9 +24,9 @@ Flock MRM,InReC_flock,1,,300,2000,,120,,16,15,4,,,,HIGH_EXPLOSIVE,0,,0,11.5,3,0.
 Flock MRM Pod,InReC_flock_pod,1,,1200,2000,,120,,16,10,8,,,,HIGH_EXPLOSIVE,0,,0,8.2,5,0.2,0,4,1,1,,200,70,15,100,,,DO_NOT_AIM,"missile12, utility0, inrec_wep_bp, merc",,InReC,,Fire Support,Slow,Medium,,,,,,,,19221.1
 Pesticide Launcher,InReC_pesticide,0,,250,2000,,90,60,15,20,3,,,,FRAGMENTATION,0,,0,11.3,8,0.1,1,5,1,1,,250,400,12,120,,,DO_NOT_AIM,"utility7, missile0, inrec_wep_bp, merc",,InReC,,Saturation,Medium,Good,,,,,,,,19222
 Twin Pesticide Launcher,InReC_pesticide_pod,0,,1000,2000,,90,60,15,15,6,,,,FRAGMENTATION,0,,0,14.05,20,0.05,1,6,1,1,,250,450,12,120,,,DO_NOT_AIM,"utility12, missile0, inrec_wep_bp, merc",,InReC,,Saturation,Medium,Good,,,,,,,,19222.1
-Fumigator Flare Dispenser,InReC_fumigator,1,,1600,2000,,400,,,10,9,,,,FRAGMENTATION,0,,0,25,1,0,0,0,0,0,,300,100,30,500,,,DO_NOT_AIM,"utility15, missile0, inrec_wep_bp, merc",,InReC,,Saturation,Medium,Good,,,On nearing its target the missile will slow down and fire a barrage of %s.,EM charged flares,,,TRUE,19223
+Fumigator Flare Dispenser,InReC_fumigator,1,,1600,2000,,400,,,10,9,,,,FRAGMENTATION,0,,0,25,1,0,0,0,0,0,,300,100,30,500,,,DO_NOT_AIM,"utility15, missile0, damage_special, inrec_wep_bp, merc",,InReC,,Saturation,Medium,Good,,,On nearing its target the missile will slow down and fire a barrage of %s.,EM charged flares,,,TRUE,19223
 Defoliant Strike Missile,InReC_defoliant,1,,400,2000,,400,,15,20,4,9,,,KINETIC,0,,0,5,1,0,0,0,0,0,,600,100,5,200,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","missile8, strike3, inrec_wep_bp, merc",,InReC,,Anti Shield,Very Fast,Special,,,After an initial aiming stage accelerates rapidly and continues with limited guidance.,,,,TRUE,19224
-Heart-throb Drone Launcher,InReC_heart-throb,2,,1800,4000,,900,,,10,12,,,,ENERGY,0,,0,28,2,2,0,0,0,0,,250,100,10,300,,,DO_NOT_AIM,"missile12, damage_special, inrec_wep_bp, merc",,InReC,,Drone Launcher,Medium,Excellent,,,"Launches a pair of autonomous drones, each armed with a %s.
+Heart-throb Drone Launcher,InReC_heart-throb,2,,1800,4000,,900,,,10,12,,,,ENERGY,0,,0,28,2,2,0,0,0,0,,250,100,10,300,,,DO_NOT_AIM,"utility15, missile10, damage_special, inrec_wep_bp, merc",,InReC,,Drone Launcher,Medium,Excellent,,,"Launches a pair of autonomous drones, each armed with a %s.
 Drones feature a solid-state flux capacitor, and will self destruct after firing %s shots.",Pulse Bolter | 90,,,TRUE,19225
 Beekeeper Kinetic Blister,InReC_beekeeper,2,,500,1500,,1200,,,15,4,2,,,KINETIC,0,,0,5,1,0,0,0,0,0,,250,75,,,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","strike4, missile8, inrec_wep_bp, merc",,InReC,,Anti Shield,Medium,Good,,,On nearing its target the missile will slow down and fire a barrage of %s.,Micro Missiles,,,TRUE,19226
 Beekeeper Sub,InReC_beekeeper_sub,0,,1000,1200,,60,,4,10,,,,,KINETIC,0,,0,1,1,0,0,0,0,0,,350,100,4,50,,,"SYSTEM, DO_NOT_AIM",,,InReC,,,,,,,,,,,,19226.1
@@ -47,4 +47,13 @@ Flare (Dumb),InReC_flare_dumb,,,1000,400,,20,200,0,,,,,,ENERGY,0,,0,1,1,0.1,30,3
 Flare (Jamming),InReC_flare_jam,,,1000,200,,20,100,0,,,,,,ENERGY,0,,0,1,1,0.1,30,30,0,0,,200,100,5,400,,,SYSTEM,,,InReC,,,,,,,,,,,,19242
 Flare (Smart),InReC_flare_smart,,,1000,500,,20,400,0,,,,,,ENERGY,0,,0,1,1,0.1,40,40,0,0,,400,200,8,1,,,SYSTEM,,,InReC,,,,,,,,,,,,19243
 Cluster Flak,InReC_cluster_flak,,,1000,250,,100,,,,,,,,FRAGMENTATION,0,,0,0.1,7,0.5,150,150,0,0,,50,200,2.75,60,,,SYSTEM,,,InReC,,,,,,,,,,,,19244
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Deco Brawler,InReC_deco_brawler,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
+Deco Centurion,InReC_deco_centurion,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
+Deco Champion,InReC_deco_champion,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
+Deco DroverVigilance,InReC_deco_droVig,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
+Deco Enforcer,InReC_deco_enforcer,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
+Deco Sunder,InReC_deco_sunder,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
