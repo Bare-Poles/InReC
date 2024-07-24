@@ -1,7 +1,7 @@
 {
 	"id":"InReC_heart-throb_dummy",
 
-	"onFireEffect":"org.amazigh.InReC.scripts.InReC_heart-throbOnFireEffect",
+	"onFireEffect":"org.amazigh.InReC.scripts.InReC_heartThrobOnFireEffect",
 
 	"specClass":"missile",
 	"missileType":"MISSILE",

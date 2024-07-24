@@ -2,7 +2,7 @@
 	"id":"InReC_pulse_drn",  # this id must match what's in the spreadsheet
 	"specClass":"projectile",
 
-	"everyFrameEffect": "org.amazigh.InReC.scripts.DroneAmmoScript",
+	"everyFrameEffect": "org.amazigh.InReC.scripts.InReC_DroneAmmoScript",
 
 	"type":"ENERGY",
 	"size":"SMALL",

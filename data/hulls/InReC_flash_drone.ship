@@ -1,0 +1,42 @@
+{
+  "hullName": "Flash Drone",
+  "hullId": "InReC_flash_drone",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/InReC_flash_drone.png",
+  "style": "INREC",
+  "height": 20,
+  "width": 18,
+  "center": [9, 11],
+  "collisionRadius": 12,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 11,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 0,
+      "locations": [5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-9, -0],
+      "length": 16,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 32,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    }
+  ],
+  "bounds": [
+    4, -7,
+    -5, -7,
+    -5, 7,
+    4, 7
+  ]
+}

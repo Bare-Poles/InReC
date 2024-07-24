@@ -3,7 +3,7 @@
 	"type":"STAT_MOD",
 	"aiType":"DAMPER_FIELD",
 	
-	"statsScript":"org.amazigh.InReC.shipsystems.scripts.InReC_damperStats",
+	"statsScript":"com.fs.starfarer.api.impl.combat.DamperFieldStats",
 	
 	"jitterUnderColor":[65,220,195,155],  # 255,165,90,155
 	"jitterUnderCopies":25,

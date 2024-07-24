@@ -1,0 +1,42 @@
+{
+  "hullName": "Pulse Drone",
+  "hullId": "InReC_pulse_drone_w",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/InReC_pulse_drone_w.png",
+  "style": "INREC",
+  "height": 16,
+  "width": 14,
+  "center": [7, 8],
+  "collisionRadius": 10,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 9,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 0,
+      "locations": [5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-7, -0],
+      "length": 15,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 32,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    }
+  ],
+  "bounds": [
+    6, -4,
+    -3, -5,
+    -3, 5,
+    6, 4
+  ]
+}

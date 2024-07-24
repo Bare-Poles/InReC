@@ -2,6 +2,7 @@ package org.amazigh.InReC.scripts;
 
 import java.awt.Color;
 
+import org.amazigh.InReC.scripts.ai.InReC_flashProjScript;
 import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
 
@@ -11,12 +12,15 @@ import com.fs.starfarer.api.combat.OnFireEffectPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
 
-public class InReC_fusionOnFireEffect implements OnFireEffectPlugin {
+public class InReC_flashOnFireEffect implements OnFireEffectPlugin {
     
     public void onFire(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine) {
 
             ShipAPI ship = weapon.getShip();
             float angle = projectile.getFacing();
+            
+            // attach the homing script
+        	engine.addPlugin(new InReC_flashProjScript(projectile));
             
     		// random projectile velocity thing (scales velocity from -15% to +5%)
     		float velScale = projectile.getProjectileSpec().getMoveSpeed(ship.getMutableStats(), weapon);
@@ -33,19 +37,8 @@ public class InReC_fusionOnFireEffect implements OnFireEffectPlugin {
     				0.6f,
     				0.5f,
     				MathUtils.getRandomNumberInRange(0.2f, 0.6f),
-    				new Color(150,105,95,75),
+    				new Color(140,65,150,75),
     				true);
-    		
-    		for (int i=0; i < 3; i++) {
-            	Vector2f velocity = MathUtils.getPointOnCircumference(ship.getVelocity(), MathUtils.getRandomNumberInRange(18f, 50f), MathUtils.getRandomNumberInRange(angle - 15f, angle + 15f));
-            	
-            	engine.addSmoothParticle(projectile.getLocation(),
-            			velocity,
-            			MathUtils.getRandomNumberInRange(2f, 3f),
-            			1f,
-            			0.9f,
-            			new Color(212,34,34,171));
-            }
     		
     }
   }

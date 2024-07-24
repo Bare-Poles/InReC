@@ -21,7 +21,7 @@
 				 "blowbackDuration":2.0,
 				 "blowbackLength":30.0,
 				 "blowbackSpread":10.0,
-				 "particleColor":[100,100,110,150]},
+				 "particleColor":[100,105,110,150]},
 	"projectileSpecId":"InReC_flare_jam",
 	"fireSoundTwo":"launch_flare_1",
 }

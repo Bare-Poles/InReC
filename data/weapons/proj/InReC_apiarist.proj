@@ -11,9 +11,9 @@
 	"explosionRadius":180, # purely visual
 	"armingTime":0.5,
 
-	"flameoutTime":1.2,
+	"flameoutTime":1.5,
 	"noEngineGlowTime":0.2,
-	"fadeTime":0.6,
+	"fadeTime":0.7,
 	"engineSpec":{"turnAcc":650,
 				  "turnRate":160,
 				  "acc":280,

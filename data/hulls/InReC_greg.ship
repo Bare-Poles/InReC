@@ -1,0 +1,48 @@
+{
+  "hullName": "Footman",
+  "hullId": "InReC_greg",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/InReC_greg.png",
+  "style": "INREC",
+  "height": 40,
+  "width": 26,
+  "center": [13, 19],
+  "collisionRadius": 25,
+  "shieldCenter": [-1, -0],
+  "shieldRadius": 23,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [3, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-18, -0],
+      "length": 28,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 32,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    }
+  ],
+  "bounds": [
+    10, -7,
+    -2, -10,
+    -16, -2,
+    -16, 2,
+    -2, 10,
+    10, 7,
+    15, -0
+  ]
+}

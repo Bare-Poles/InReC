@@ -1,11 +1,17 @@
 name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sModDesc,sprite
 ,,,,,,,,,,,,,,,,,,,
 InReC Module Slot,InReC_slot,1,,InReC,,,,,TRUE,TRUE,999,999,999,999,org.amazigh.InReC.hullmods.InReC_slot,Hidden Hullmod that allows InReC ships to mount their module hullmods,Hidden Hullmod that allows InReC ships to mount their module hullmods,,graphics/hullmods/detach_never.png
+InReC Greg Slot,InReC_gregSlot,1,,InReC,,,,,TRUE,TRUE,999,999,999,999,org.amazigh.InReC.hullmods.InReC_slot,Hidden Hullmod that allows InReC ships to swap greg drone types,Hidden Hullmod that allows InReC ships to swap greg drone types,,graphics/hullmods/detach_never.png
 ,,,,,,,,,,,,,,,,,,,
+External Flux Vents,InReC_slotVent,1,,InReC,"special, merc, standard",Special,5000,TRUE,,,3,6,9,16,org.amazigh.InReC.hullmods.InReC_slotVent,Soft Venting!,Soft Venting!,"Bonus dissipation always applies at full strength, regardless of hard flux level.",graphics/hullmods/detach_always.png
+Shield Bypass Array,InReC_slotShield,1,,InReC,"defensive, shields, merc, standard",Shields,5000,TRUE,,,3,6,9,16,org.amazigh.InReC.hullmods.InReC_slotShield,Shield!,Shield!,Shield upkeep reduced by %s.,graphics/hullmods/detach_always.png
+Automated Protection Unit,InReC_slotFlares,1,,InReC,"defensive, special, merc, standard",Special,5000,TRUE,,,3,6,9,16,org.amazigh.InReC.hullmods.InReC_slotFlares,Automatic Flares!,Automatic Flares!,"Flare count per port increased to %s, flare reload time reduced to %s.",graphics/hullmods/detach_always.png
+Bolt Focus Regulator,InReC_slotRange,1,,InReC,"offensive, merc, standard",Weapons,5000,TRUE,,,3,6,9,16,org.amazigh.InReC.hullmods.InReC_slotRange,Energy proj wep range!,Energy proj wep range!,Increases the base range of all non-beam Energy and Hybrid weapons by %s up to a maximum of %s/%s/%s/%s.,graphics/hullmods/detach_always.png
 ,,,,,,,,,,,,,,,,,,,
-External Flux Vents,InReC_slotVent,1,,InReC,"special, merc, standard",Special,5000,,,,3,6,9,16,org.amazigh.InReC.hullmods.InReC_slotVent,Soft Venting!,Soft Venting!,"Bonus dissipation always applies at full strength, regardless of hard flux level.",graphics/hullmods/detach_always.png
-Shield Bypass Array,InReC_slotShield,1,,InReC,"defensive, shields, merc, standard",Shields,5000,,,,3,6,9,16,org.amazigh.InReC.hullmods.InReC_slotShield,Shield!,Shield!,Shield upkeep reduced by %s.,graphics/hullmods/detach_always.png
-Automated Protection Unit,InReC_slotFlares,1,,InReC,"defensive, special, merc, standard",Special,5000,,,,3,6,9,16,org.amazigh.InReC.hullmods.InReC_slotFlares,Automatic Flares!,Automatic Flares!,"Flare count per port increased to %s, flare reload time reduced to %s.",graphics/hullmods/detach_always.png
-Bolt Focus Regulator,InReC_slotRange,1,,InReC,"offensive, merc, standard",Weapons,5000,,,,3,6,9,16,org.amazigh.InReC.hullmods.InReC_slotRange,Energy proj wep range!,Energy proj wep range!,Increases the base range of all non-beam Energy and Hybrid weapons by %s up to a maximum of %s/%s/%s/%s.,graphics/hullmods/detach_always.png
+Greg (Assault),InReC_greg_a,1,,InReC,"special, merc, standard",Special,5000,TRUE,,,3,6,9,16,org.amazigh.InReC.hullmods.InReC_greg_a,Assault Greg!,Assault Greg!,,graphics/hullmods/detach_always.png
+Greg (Support),InReC_greg_s,1,,InReC,"special, merc, standard",Special,5000,TRUE,,,3,6,9,16,org.amazigh.InReC.hullmods.InReC_greg_s,Support Greg!,Support Greg!,,graphics/hullmods/detach_always.png
+Pulse Drone,InReC_greg_p,1,,InReC,"special, merc, standard",Special,5000,TRUE,,,3,6,9,16,org.amazigh.InReC.hullmods.InReC_greg_p,"Pulse Drones, but no greg :(","Pulse Drones, but no greg :(",,graphics/hullmods/detach_always.png
+,,,,,,,,,,,,,,,,,,,
+Concussion Damper,InReC_concDamper,,,InReC,,,,,TRUE,TRUE,,,,,org.amazigh.InReC.hullmods.InReC_concDamper,Concussion Damper effect hullmod,Concussion Damper effect hullmod,,graphics/hullmods/detach_never.png
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,

@@ -1,0 +1,42 @@
+{
+  "hullName": "Flock Platform",
+  "hullId": "InReC_flock_drone",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/InReC_flock_drone.png",
+  "style": "INREC",
+  "height": 34,
+  "width": 28,
+  "center": [14, 14],
+  "collisionRadius": 24,
+  "shieldCenter": [2, 1],
+  "shieldRadius": 22,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [11, 3]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-12, 0.5],
+      "length": 20,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 32,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    }
+  ],
+  "bounds": [
+    12, -10,
+    -8, -9,
+    -8, 9,
+    6, 10
+  ]
+}

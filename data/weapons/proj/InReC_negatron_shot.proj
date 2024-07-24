@@ -2,7 +2,6 @@
 	"id":"InReC_negatron_shot",
 
 	"onFireEffect":"org.amazigh.InReC.scripts.InReC_negatronOnFireEffect",
-	"onHitEffect":"org.amazigh.InReC.scripts.InReC_negatronOnHitEffect",
 
 	"specClass":"projectile",
 	"spawnType":"BALLISTIC_AS_BEAM",
