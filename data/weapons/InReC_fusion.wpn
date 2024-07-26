@@ -22,8 +22,8 @@
 					   "particleSizeMin":7.0,
 					   "particleSizeRange":9.0,
 					   "particleDuration":0.25,
-					   "particleCount":20,
-					   "particleColor":[210,30,30,225]},	
+					   "particleCount":5, #20
+					   "particleColor":[210,30,30,145]}, # 210,30,30,225
 	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
 	"projectileSpecId":"InReC_fusion_shot",  # projectile that will be fired
 	"fireSoundTwo":"ir_pulse_laser_fire", #TEMP!

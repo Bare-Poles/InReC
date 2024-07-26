@@ -1,0 +1,59 @@
+{
+  "variantId": "InReC_champion_sup",
+  "hullId": "InReC_champion",
+  "displayName": "Support",
+  "goalVariant": true,
+  "fluxCapacitors": 14,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "InReC_slotFlares",
+    "eccm"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "InReC_pesticide",
+        "WS0002": "InReC_pesticide",
+        "WS0003": "InReC_pesticide",
+        "WS0004": "InReC_flock",
+        "WS0005": "InReC_flock",
+        "WS0006": "InReC_flock",
+        "WS0007": "InReC_flock"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "InReC_millstone_tri"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "InReC_gluon",
+        "WS0012": "InReC_gluon",
+        "WS0013": "InReC_gluon",
+        "WS0014": "InReC_gluon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "InReC_spark_hvy",
+        "WS0010": "InReC_spark_hvy",
+        "WS0015": "InReC_flash_lt",
+        "WS0016": "InReC_flash_lt"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -91,8 +91,10 @@ public class InReC_fumigatorMissileAI implements MissileAIPlugin, GuidedMissileA
 	private float DETECT=640000; //800^2
 	
 	// timer for firing flares after getting into range
-	private IntervalUtil flareInterval = new IntervalUtil(0.05f, 0.05f);
-	
+	private IntervalUtil flareInterval = new IntervalUtil(0.15f, 0.15f);
+
+	// timer for simulating lifetime 
+	private IntervalUtil lifeInterval = new IntervalUtil(8f, 8f);
 	
 	
 	
@@ -218,6 +220,10 @@ public class InReC_fumigatorMissileAI implements MissileAIPlugin, GuidedMissileA
                 MISSILE.giveCommand(ShipCommand.DECELERATE);
         	} else {
                 MISSILE.giveCommand(ShipCommand.ACCELERATE);
+                lifeInterval.advance(amount);
+                if (lifeInterval.intervalElapsed()) {
+                	MISSILE.flameOut();
+                }
         	}
             
             if (MathUtils.getDistanceSquared(MISSILE.getLocation(), target.getLocation()) <= DETECT) {
@@ -249,7 +255,7 @@ public class InReC_fumigatorMissileAI implements MissileAIPlugin, GuidedMissileA
 				Vector2f puffRandomVel = MathUtils.getPointOnCircumference(flareVel, MathUtils.getRandomNumberInRange(4f, 12f), flareAngle);
 				engine.addSmokeParticle(loc,
 						puffRandomVel,
-						MathUtils.getRandomNumberInRange(8f, 18f),
+						MathUtils.getRandomNumberInRange(14f, 25f),
 						0.8f,
 						0.6f,
 						new Color(100,105,110,150));

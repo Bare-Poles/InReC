@@ -1,0 +1,45 @@
+{
+  "variantId": "InReC_drover_mss",
+  "hullId": "InReC_drover",
+  "displayName": "Missile",
+  "goalVariant": true,
+  "fluxCapacitors": 8,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "InReC_slotRange",
+    "eccm",
+    "pointdefenseai"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "InReC_pesticide_pod",
+        "WS0002": "InReC_flock"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "InReC_spark",
+        "WS0004": "InReC_spark",
+        "WS0005": "InReC_spark",
+        "WS0006": "InReC_spark"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "InReC_flock_drone_wing"
+  ]
+}

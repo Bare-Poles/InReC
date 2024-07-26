@@ -1,0 +1,58 @@
+{
+  "variantId": "InReC_sunder_ass",
+  "hullId": "InReC_sunder",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 3,
+  "fluxVents": 15,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "InReC_slotVent",
+    "unstable_injector",
+    "stabilizedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "InReC_beekeeper_pod",
+        "WS0002": "InReC_pesticide"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "InReC_defoliant",
+        "WS0004": "InReC_defoliant"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "InReC_bludgeon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "InReC_negatron"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "InReC_spark",
+        "WS0008": "InReC_spark",
+        "WS0009": "InReC_spark"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

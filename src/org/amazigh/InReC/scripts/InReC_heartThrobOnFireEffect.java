@@ -41,5 +41,7 @@ public class InReC_heartThrobOnFireEffect implements OnFireEffectPlugin {
     		drone.setFacing(angle);
     		FleetManager.setSuppressDeploymentMessages(false);
     		
+    		engine.removeEntity(projectile);
+    		
     }
   }

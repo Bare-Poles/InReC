@@ -1,0 +1,54 @@
+{
+  "variantId": "InReC_enforcer_ass",
+  "hullId": "InReC_enforcer",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 5,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "InReC_slotVent",
+    "heavyarmor",
+    "unstable_injector"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "InReC_herbicide",
+        "WS0002": "InReC_herbicide",
+        "WS0003": "InReC_herbicide",
+        "WS0004": "InReC_herbicide",
+        "WS0005": "InReC_herbicide",
+        "WS0006": "InReC_herbicide"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "InReC_canister"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "InReC_negatron",
+        "WS0009": "InReC_negatron"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "InReC_pulse",
+        "WS0011": "InReC_pulse"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

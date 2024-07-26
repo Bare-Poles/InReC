@@ -1,0 +1,44 @@
+{
+  "variantId": "InReC_centurion_sup",
+  "hullId": "InReC_centurion",
+  "displayName": "Support",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 8,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "InReC_slotFlares",
+    "eccm"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0002": "InReC_flock",
+        "WS0003": "InReC_flock"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "InReC_millstone"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "InReC_gluon",
+        "WS0005": "InReC_gluon",
+        "WS0006": "InReC_gluon",
+        "WS0007": "InReC_gluon"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

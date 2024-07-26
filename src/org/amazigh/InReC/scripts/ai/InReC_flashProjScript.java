@@ -17,17 +17,17 @@ public class InReC_flashProjScript extends BaseEveryFrameCombatPlugin {
 	//---Settings: adjust to fill the needs of your implementation---
 	
 	//How fast the projectile is allowed to turn, in degrees/second
-	private static final float TURN_RATE = 66f;
+	private static final float TURN_RATE = 28f; //40
 	
 	//The actual target angle is randomly offset by this much, to simulate inaccuracy
 	//2f means up to 2 degrees angle off from the actual target angle
-	private static final float ONE_TURN_DUMB_INACCURACY = 3f;
+	private static final float ONE_TURN_DUMB_INACCURACY = 9f; //3
 	
 	//If non-zero, the projectile will sway back-and-forth by this many degrees during its guidance (with a sway period determined by SWAY_PERIOD).
     //High values, as one might expect, give very poor tracking. Also, high values will decrease effective range (as the projectiles travel further) so be careful
     //Secondary and primary sway both run in parallel, allowing double-sine swaying if desired
-    private static final float SWAY_AMOUNT_PRIMARY = 3f;
-    private static final float SWAY_AMOUNT_SECONDARY = 1.5f;
+    private static final float SWAY_AMOUNT_PRIMARY = 5f; //3
+    private static final float SWAY_AMOUNT_SECONDARY = 2f; //1.5
 
     //Used together with SWAY_AMOUNT, determines how fast the swaying happens
     //1f means an entire sway "loop" (max sway right -> min sway -> max sway left -> min sway again) per second, 2f means 2 loops etc.

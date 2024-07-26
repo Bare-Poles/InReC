@@ -12,7 +12,7 @@
 	"turretAngleOffsets":[-35, 35],
 	"hardpointOffsets":[9,-4, 9,4],
 	"hardpointAngleOffsets":[-35, 35],
-	"barrelMode":"LINKED", # or LINKED.  whether barrels fire at the same time or alternate.
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
 	"animationType":"GLOW_AND_FLASH",
 	"specialWeaponGlowWidth":15,
 	"specialWeaponGlowHeight":24,

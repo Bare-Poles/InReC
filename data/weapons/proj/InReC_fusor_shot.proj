@@ -1,5 +1,5 @@
 {
-	"id":"InReC_fusor_shot_shot",
+	"id":"InReC_fusor_shot",
 	"specClass":"projectile",
 	"spawnType":"BALLISTIC_AS_BEAM",
 	"collisionClass":"RAY",

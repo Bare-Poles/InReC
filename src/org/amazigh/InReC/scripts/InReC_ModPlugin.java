@@ -6,10 +6,11 @@ import com.fs.starfarer.api.campaign.CampaignPlugin;
 import com.fs.starfarer.api.combat.MissileAIPlugin;
 import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
-import org.amazigh.InReC.scripts.ai.InReC_apiaristMissileAI;
-import org.amazigh.InReC.scripts.ai.InReC_beekeeperMissileAI;
-import org.amazigh.InReC.scripts.ai.InReC_defoliantMissileAI;
 import org.amazigh.InReC.scripts.ai.InReC_fumigatorMissileAI;
+import org.amazigh.InReC.scripts.ai.InReC_defoliantMissileAI;
+import org.amazigh.InReC.scripts.ai.InReC_beekeeperMissileAI;
+import org.amazigh.InReC.scripts.ai.InReC_apiaristMissileAI;
+import org.amazigh.InReC.scripts.ai.InReC_herbicideMissileAI;
 
 public class InReC_ModPlugin extends BaseModPlugin {
 	
@@ -17,6 +18,7 @@ public class InReC_ModPlugin extends BaseModPlugin {
 	public static final String DEFOLIANT_MISSILE_ID = "InReC_defoliant";
 	public static final String BEEKEEPER_MISSILE_ID = "InReC_beekeeper";
 	public static final String APIARIST_MISSILE_ID = "InReC_apiarist";
+	public static final String HERBICIDE_MISSILE_ID = "InReC_herbicide";
 
 
 	//public boolean HAS_GRAPHICSLIB = false;
@@ -48,6 +50,8 @@ public class InReC_ModPlugin extends BaseModPlugin {
                 return new PluginPick<MissileAIPlugin>(new InReC_beekeeperMissileAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SPECIFIC);
             case APIARIST_MISSILE_ID:
                 return new PluginPick<MissileAIPlugin>(new InReC_apiaristMissileAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SPECIFIC);
+            case HERBICIDE_MISSILE_ID:
+                return new PluginPick<MissileAIPlugin>(new InReC_herbicideMissileAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SPECIFIC);
             default:
                 return null;
         }

@@ -1,0 +1,59 @@
+{
+  "variantId": "InReC_champion_std",
+  "hullId": "InReC_champion",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 9,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "InReC_slotRange",
+    "targetingunit",
+    "missleracks"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "InReC_apiarist",
+        "WS0002": "InReC_apiarist",
+        "WS0003": "InReC_apiarist",
+        "WS0004": "InReC_apiarist",
+        "WS0005": "InReC_apiarist",
+        "WS0006": "InReC_apiarist",
+        "WS0007": "InReC_apiarist"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "InReC_fusor_linked"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "InReC_pulse_hvy",
+        "WS0010": "InReC_pulse_hvy",
+        "WS0011": "InReC_pulse",
+        "WS0012": "InReC_pulse"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "InReC_flash_lt",
+        "WS0014": "InReC_flash_lt",
+        "WS0015": "InReC_flash_lt",
+        "WS0016": "InReC_flash_lt"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

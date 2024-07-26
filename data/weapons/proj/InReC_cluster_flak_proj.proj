@@ -1,5 +1,5 @@
 {
-	"id":"InReC_cluster_flak",
+	"id":"InReC_cluster_flak_proj",
 	"specClass":"missile",
 	"missileType":"BOMB",
 	"onFireEffect":"com.fs.starfarer.api.impl.combat.CanisterFlakPlugin",

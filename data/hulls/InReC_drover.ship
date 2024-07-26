@@ -12,7 +12,8 @@
   "shieldRadius": 114,
   "viewOffset": 0,
   "builtInMods": [
-    "InReC_slot"
+    "InReC_slot",
+    "InReC_gregSlot"
   ],
   "builtInWeapons": {
     "WS0007": "InReC_deco_droVig",

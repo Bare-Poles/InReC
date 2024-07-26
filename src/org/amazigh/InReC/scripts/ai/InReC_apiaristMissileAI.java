@@ -88,8 +88,10 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
 	private float DETECT=810000; //900^2
 	
 	// timer for firing missiles after getting into range
-	private IntervalUtil missileInterval = new IntervalUtil(0.05f, 0.05f);
+	private IntervalUtil missileInterval = new IntervalUtil(0.1f, 0.1f);
 	
+	// timer for simulating lifetime 
+	private IntervalUtil lifeInterval = new IntervalUtil(5f, 5f);
 	
 	
 	
@@ -215,6 +217,10 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
                 MISSILE.giveCommand(ShipCommand.DECELERATE);
         	} else {
                 MISSILE.giveCommand(ShipCommand.ACCELERATE);
+                lifeInterval.advance(amount);
+                if (lifeInterval.intervalElapsed()) {
+                	MISSILE.flameOut();
+                }
         	}
             
             if (MathUtils.getDistanceSquared(MISSILE.getLocation(), target.getLocation()) <= DETECT) {
@@ -226,7 +232,7 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
             MISSILE.giveCommand(ShipCommand.TURN_RIGHT);
         } else {
             MISSILE.giveCommand(ShipCommand.TURN_LEFT);
-        }  
+        }
         
         
         if (TRIGGER) {
@@ -242,10 +248,10 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
 				Vector2f smokeVel = new Vector2f(vel.x * 0.8f, vel.y * 0.8f);
 				
 				
-				float subFacing1 = MISSILE.getFacing() + MathUtils.getRandomNumberInRange(25f, 50f);
+				float subFacing1 = MISSILE.getFacing() + MathUtils.getRandomNumberInRange(30f, 60f);
 				engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_apiarist_sub", loc, subFacing1, MathUtils.getRandomPointInCircle(smokeVel, 15f));
 				
-				Vector2f puffRandomVel1 = MathUtils.getPointOnCircumference(smokeVel, MathUtils.getRandomNumberInRange(4f, 12f), subFacing1);
+				Vector2f puffRandomVel1 = MathUtils.getPointOnCircumference(smokeVel, MathUtils.getRandomNumberInRange(8f, 24f), subFacing1);
             	engine.addSmokeParticle(loc,
             			puffRandomVel1,
             			MathUtils.getRandomNumberInRange(7f, 14f),
@@ -254,7 +260,7 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
             			new Color(110,100,90,150));
             	
             	
-            	float subFacing2 = MISSILE.getFacing() - MathUtils.getRandomNumberInRange(25f, 50f);
+            	float subFacing2 = MISSILE.getFacing() - MathUtils.getRandomNumberInRange(30f, 60f);
             	engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_apiarist_sub", loc, subFacing2 - MathUtils.getRandomNumberInRange(0f, 5f), MathUtils.getRandomPointInCircle(smokeVel, 15f));
 				
 				Vector2f puffRandomVel2 = MathUtils.getPointOnCircumference(smokeVel, MathUtils.getRandomNumberInRange(4f, 12f), subFacing2);

@@ -17,7 +17,7 @@ public class InReC_gluonProjScript extends BaseEveryFrameCombatPlugin {
 	//---Settings: adjust to fill the needs of your implementation---
 	
 	//How fast the projectile is allowed to turn, in degrees/second
-	private static final float TURN_RATE = 360f;
+	private static final float TURN_RATE = 333f; //360
 	
 	//The actual target angle is randomly offset by this much, to simulate inaccuracy
 	//2f means up to 2 degrees angle off from the actual target angle
@@ -31,8 +31,8 @@ public class InReC_gluonProjScript extends BaseEveryFrameCombatPlugin {
 	//If non-zero, the projectile will sway back-and-forth by this many degrees during its guidance (with a sway period determined by SWAY_PERIOD).
     //High values, as one might expect, give very poor tracking. Also, high values will decrease effective range (as the projectiles travel further) so be careful
     //Secondary and primary sway both run in parallel, allowing double-sine swaying if desired
-    private static final float SWAY_AMOUNT_PRIMARY = 4f;
-    private static final float SWAY_AMOUNT_SECONDARY = 2f;
+    private static final float SWAY_AMOUNT_PRIMARY = 7f; //4
+    private static final float SWAY_AMOUNT_SECONDARY = 4f; //2
 
     //Used together with SWAY_AMOUNT, determines how fast the swaying happens
     //1f means an entire sway "loop" (max sway right -> min sway -> max sway left -> min sway again) per second, 2f means 2 loops etc.

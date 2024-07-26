@@ -91,8 +91,10 @@ public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileA
 	private float DETECT=810000; //900^2
 	
 	// timer for firing missiles after getting into range
-	private IntervalUtil missileInterval = new IntervalUtil(0.05f, 0.05f);
-	
+	private IntervalUtil missileInterval = new IntervalUtil(0.1f, 0.1f);
+
+	// timer for simulating lifetime 
+	private IntervalUtil lifeInterval = new IntervalUtil(5f, 5f);
 	
 	
 	
@@ -218,6 +220,10 @@ public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileA
                 MISSILE.giveCommand(ShipCommand.DECELERATE);
         	} else {
                 MISSILE.giveCommand(ShipCommand.ACCELERATE);
+                lifeInterval.advance(amount);
+                if (lifeInterval.intervalElapsed()) {
+                	MISSILE.flameOut();
+                }
         	}
             
             if (MathUtils.getDistanceSquared(MISSILE.getLocation(), target.getLocation()) <= DETECT) {
@@ -229,7 +235,7 @@ public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileA
             MISSILE.giveCommand(ShipCommand.TURN_RIGHT);
         } else {
             MISSILE.giveCommand(ShipCommand.TURN_LEFT);
-        }  
+        }
         
         
         if (TRIGGER) {
@@ -244,7 +250,7 @@ public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileA
 
 				Vector2f smokeVel = new Vector2f(vel.x * 0.8f, vel.y * 0.8f);
 				
-				float angle = MathUtils.getRandomNumberInRange((40-AMMO) * 0.7f, (40-AMMO) * 1.1f);
+				float angle = MathUtils.getRandomNumberInRange((40-AMMO) * 0.8f, (40-AMMO) * 1.2f) * 1.4f;
 				
 				if (SIDE) {
 					SIDE = false;
@@ -252,7 +258,7 @@ public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileA
 					
 					engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_beekeeper_sub", loc, subFacing + MathUtils.getRandomNumberInRange(0f, 5f), MathUtils.getRandomPointInCircle(smokeVel, 15f));
 
-					Vector2f puffRandomVel = MathUtils.getPointOnCircumference(smokeVel, MathUtils.getRandomNumberInRange(4f, 12f), subFacing);
+					Vector2f puffRandomVel = MathUtils.getPointOnCircumference(smokeVel, MathUtils.getRandomNumberInRange(8f, 24f), subFacing);
                 	engine.addSmokeParticle(loc,
                 			puffRandomVel,
                 			MathUtils.getRandomNumberInRange(7f, 14f),

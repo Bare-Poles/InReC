@@ -24,8 +24,8 @@
 					   "particleSizeMin":7.0,
 					   "particleSizeRange":8.0,
 					   "particleDuration":0.3,
-					   "particleCount":15,
-					   "particleColor":[210,240,255,200]},
+					   "particleCount":5, #15
+					   "particleColor":[210,240,255,120]},  # 210,240,255,200
 	"projectileSpecId":"InReC_canister_shot",  # projectile that will be fired
 	"fireSoundTwo":"needler_fire", #TEMP!!
 }

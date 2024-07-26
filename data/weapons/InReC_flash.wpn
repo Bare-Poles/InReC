@@ -2,7 +2,7 @@
 	"id":"InReC_flash",  # this id must match what's in the spreadsheet
 	"specClass":"projectile",
 	"type":"ENERGY",
-	"size":"medium",
+	"size":"MEDIUM",
 	"turretSprite":"graphics/weapons/InReC_flash_turret_base.png",
 	"turretGlowSprite":"graphics/weapons/InReC_flash_turret_glow.png",
 	"hardpointSprite":"graphics/weapons/InReC_flash_hardpoint_base.png",

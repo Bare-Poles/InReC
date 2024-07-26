@@ -5,12 +5,12 @@
   "type": "DECORATIVE",
   "size": "SMALL",
 
-  "everyFrameEffect": "org.amazigh.InReC.scripts.InReC.variableDecoWeaponScript",
+  "everyFrameEffect": "org.amazigh.InReC.scripts.InReC_variableDecoWeaponScript",
 
-  "turretSprite": "graphics/weapons/deco/InReC_deco_droVig.png",
-  "hardpointSprite": "graphics/weapons/deco/InReC_deco_droVig.png",
+  "turretSprite": "graphics/weapons/deco/InReC_droVig_deco_00.png",
+  "hardpointSprite": "graphics/weapons/deco/InReC_droVig_deco_00.png",
   "showDamageWhenDecorative": True,
-  "numFrames":4,
+  "numFrames":5,
   "frameRate":1,
 
   "collisionClass": "RAY",

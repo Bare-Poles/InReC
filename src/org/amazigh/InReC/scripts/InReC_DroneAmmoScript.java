@@ -13,12 +13,17 @@ import com.fs.starfarer.api.combat.EveryFrameWeaponEffectPlugin;
 import com.fs.starfarer.api.combat.OnFireEffectPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
+import com.fs.starfarer.api.impl.campaign.skills.NeuralLinkScript;
 import com.fs.starfarer.api.util.IntervalUtil;
 
 public class InReC_DroneAmmoScript implements OnFireEffectPlugin, EveryFrameWeaponEffectPlugin {
     
 	private IntervalUtil interval1 = new IntervalUtil(0.15f,0.2f); // vfx
 	private IntervalUtil interval2 = new IntervalUtil(0.7f,0.75f); // self destruct delay
+
+	//TODO TEST REMOVE
+	private IntervalUtil intervalTEST = new IntervalUtil(0.5f,0.5f);
+	//TODO TEST REMOVE
 	
     public void onFire(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine) {
     	// to summarize, this script causes the weapon to start "smoking" and "sparking" when low on ammo, and when ammo is depleted, causes the ship to selfdestruct after a brief delay 
@@ -29,6 +34,22 @@ public class InReC_DroneAmmoScript implements OnFireEffectPlugin, EveryFrameWeap
 		
 		ShipAPI ship = weapon.getShip();
 		
+
+		//TODO TEST REMOVE
+		intervalTEST.advance(amount);
+		if (intervalTEST.intervalElapsed()) {
+			engine.addFloatingTextAlways(ship.getLocation(),
+					"TEST!" + weapon.getAmmo(),
+					NeuralLinkScript.getFloatySize(ship) * 1.5f, new Color(250,220,100,255), ship,
+					15f, // flashFrequency
+					3f, // flashDuration
+					0.5f, // durInPlace
+					0.5f, // durFloatingUp
+					0.5f, // durFadingOut
+					1f); // baseAlpha
+		}
+		//TODO TEST REMOVE
+		
 		if (weapon.getAmmo() <= 24) {
 			interval1.advance(amount);
 		}
@@ -37,13 +58,12 @@ public class InReC_DroneAmmoScript implements OnFireEffectPlugin, EveryFrameWeap
 			interval2.advance(amount);
 		}
 		
-		
 		if (interval1.intervalElapsed()) {
 			
 			int alpha = (int) (75 - (weapon.getAmmo() * 2)); 
 			
 			Vector2f nebVel = MathUtils.getRandomPointInCircle(ship.getVelocity(), MathUtils.getRandomNumberInRange(2f, 8f));
-    		engine.addSwirlyNebulaParticle(weapon.getLocation(),
+    		engine.addSwirlyNebulaParticle(ship.getLocation(),
     				nebVel,
     				10f,
     				1.5f,
@@ -57,7 +77,7 @@ public class InReC_DroneAmmoScript implements OnFireEffectPlugin, EveryFrameWeap
     			
     			int sparkAlpha = (int) (alpha * 3);
     			Vector2f sparkVel = MathUtils.getRandomPointInCircle(ship.getVelocity(), MathUtils.getRandomNumberInRange(12f, 40f));
-            	engine.addSmoothParticle(weapon.getLocation(),
+            	engine.addSmoothParticle(ship.getLocation(),
             			sparkVel,
             			MathUtils.getRandomNumberInRange(2f, 3f),
             			1f,

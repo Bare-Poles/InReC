@@ -1,0 +1,64 @@
+{
+  "variantId": "InReC_champion_ass",
+  "hullId": "InReC_champion",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 6,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "InReC_slotVent"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "InReC_herbicide",
+        "WS0002": "InReC_herbicide",
+        "WS0003": "InReC_herbicide"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "InReC_defoliant",
+        "WS0005": "InReC_defoliant",
+        "WS0006": "InReC_defoliant",
+        "WS0007": "InReC_defoliant"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "InReC_fusor_linked"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "InReC_negatron",
+        "WS0010": "InReC_negatron"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "InReC_spark",
+        "WS0012": "InReC_spark",
+        "WS0013": "InReC_spark",
+        "WS0014": "InReC_spark",
+        "WS0015": "InReC_spark",
+        "WS0016": "InReC_spark"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

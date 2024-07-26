@@ -41,7 +41,7 @@ public class InReC_greg_s extends BaseHullMod {
 	
 	@Override
 	public boolean isApplicableToShip(ShipAPI ship) {
-		return ship.getVariant().getHullMods().contains("InReC_gregSlot") && !ship.getVariant().getHullMods().contains("InReC_greg_a") && !ship.getVariant().getHullMods().contains("InReC_greg_s");
+		return ship.getVariant().getHullMods().contains("InReC_gregSlot") && !ship.getVariant().getHullMods().contains("InReC_greg_a") && !ship.getVariant().getHullMods().contains("InReC_greg_p");
 	}
 	
 	public boolean showInRefitScreenModPickerFor(ShipAPI ship) {
@@ -49,7 +49,7 @@ public class InReC_greg_s extends BaseHullMod {
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
-		if (ship.getVariant().getHullMods().contains("InReC_greg_a") || ship.getVariant().getHullMods().contains("InReC_greg_s")) {
+		if (ship.getVariant().getHullMods().contains("InReC_greg_a") || ship.getVariant().getHullMods().contains("InReC_greg_p")) {
 			return "May only install one Footman Variant at a time.";
 		}
 		if (!ship.getVariant().getHullMods().contains("InReC_gregSlot")) {

@@ -1,0 +1,49 @@
+{
+  "variantId": "InReC_brawler_ass",
+  "hullId": "InReC_brawler",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 3,
+  "fluxVents": 5,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "InReC_slotShield",
+    "unstable_injector",
+    "armoredweapons"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "InReC_defoliant",
+        "WS0002": "InReC_defoliant"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "InReC_herbicide",
+        "WS0004": "InReC_herbicide"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "InReC_fusion"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "InReC_spark"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

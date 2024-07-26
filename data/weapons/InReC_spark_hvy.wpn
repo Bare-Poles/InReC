@@ -2,7 +2,7 @@
 	"id":"InReC_spark_hvy",  # this id must match what's in the spreadsheet
 	"specClass":"projectile",
 	"type":"ENERGY",
-	"size":"SMALL",
+	"size":"MEDIUM",
 	"turretSprite":"graphics/weapons/InReC_spark_hvy_turret_base.png",
 	"turretGlowSprite":"graphics/weapons/InReC_spark_hvy_turret_glow.png",
 	"hardpointSprite":"graphics/weapons/InReC_spark_hvy_hardpoint_base.png",

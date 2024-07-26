@@ -37,11 +37,11 @@ public class InReC_gregStats extends BaseShipSystemScript {
         	DEPLOYED = true;
         	
             if (variant.getHullMods().contains("InReC_greg_a")) {
-            	WING_NAME = "InReC_greg_wing_a";
+            	WING_NAME = "InReC_greg_a_wing";
             } else if (variant.getHullMods().contains("InReC_greg_s")) {
-        		WING_NAME = "InReC_greg_wing_s";
+        		WING_NAME = "InReC_greg_s_wing";
     		} else if (variant.getHullMods().contains("InReC_greg_p")) {
-        		WING_NAME = "InReC_pulse_drone_g_std";
+        		WING_NAME = "InReC_pulse_drone_g_wing";
         		MULTI = true;
     		}
     		

@@ -9,7 +9,7 @@
 	"hardpointSprite":"graphics/weapons/InReC_negatron_hardpoint_base.png",
 	"hardpointGunSprite":"graphics/weapons/InReC_negatron_hardpoint_recoil.png",
 	"hardpointGlowSprite":"graphics/weapons/InReC_negatron_hardpoint_glow.png",
-	"visualRecoil":5.0,  # the gun sprites are only used if this is non-0
+	"visualRecoil":4.0, # 5.0
 	"glowColor":[171,101,255,225],
 	"turretOffsets":[8,0],
 	"turretAngleOffsets":[0],

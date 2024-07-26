@@ -1,0 +1,44 @@
+{
+  "variantId": "InReC_brawler_std",
+  "hullId": "InReC_brawler",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 7,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "InReC_slotFlares",
+    "missleracks",
+    "eccm",
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "InReC_apiarist",
+        "WS0004": "InReC_apiarist"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "InReC_pesticide",
+        "WS0002": "InReC_pesticide"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "InReC_pulse",
+        "WS0006": "InReC_pulse"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -1,0 +1,49 @@
+{
+  "variantId": "InReC_centurion_stk",
+  "hullId": "InReC_centurion",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 5,
+  "fluxVents": 4,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "InReC_slotVent",
+    "unstable_injector"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0002": "InReC_herbicide",
+        "WS0003": "InReC_herbicide"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "InReC_canister"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "InReC_fusion",
+        "WS0005": "InReC_fusion"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "InReC_spark",
+        "WS0007": "InReC_spark"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -32,7 +32,7 @@ public class InReC_fusionOnFireEffect implements OnFireEffectPlugin {
     				1.5f,
     				0.6f,
     				0.5f,
-    				MathUtils.getRandomNumberInRange(0.2f, 0.6f),
+    				MathUtils.getRandomNumberInRange(1.2f, 1.7f),
     				new Color(150,105,95,75),
     				true);
     		
@@ -43,7 +43,7 @@ public class InReC_fusionOnFireEffect implements OnFireEffectPlugin {
             			velocity,
             			MathUtils.getRandomNumberInRange(2f, 3f),
             			1f,
-            			0.9f,
+            			MathUtils.getRandomNumberInRange(0.9f, 1.6f),
             			new Color(212,34,34,171));
             }
     		

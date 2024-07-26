@@ -26,7 +26,7 @@ public class InReC_negatronOnFireEffect implements OnFireEffectPlugin {
             	Vector2f velocity = MathUtils.getPointOnCircumference(ship_velocity, i * 3f + MathUtils.getRandomNumberInRange(0f, 3f), MathUtils.getRandomNumberInRange(angle - 3f, angle + 3f));
             	
             	Vector2f spawnLocation = MathUtils.getPointOnCircumference(proj_location, (i+1) * 0.4f, angle);
-            	spawnLocation = MathUtils.getRandomPointInCircle(spawnLocation, MathUtils.getRandomNumberInRange(0f, 1.8f));
+            	spawnLocation = MathUtils.getRandomPointInCircle(spawnLocation, MathUtils.getRandomNumberInRange(0f, 3f));
             	
             	engine.addSmoothParticle(spawnLocation,
             			velocity,
