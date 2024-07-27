@@ -17,7 +17,6 @@ public class InReC_negatronOnFireEffect implements OnFireEffectPlugin {
     public void onFire(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine) {
 
             float angle = projectile.getFacing();
-            
             Vector2f ship_velocity = weapon.getShip().getVelocity();
             Vector2f proj_location = projectile.getLocation();
             engine.addHitParticle(proj_location, ship_velocity, 45f, 1f, 0.1f, FLASH_COLOR.darker());
@@ -26,7 +25,7 @@ public class InReC_negatronOnFireEffect implements OnFireEffectPlugin {
             	Vector2f velocity = MathUtils.getPointOnCircumference(ship_velocity, i * 3f + MathUtils.getRandomNumberInRange(0f, 3f), MathUtils.getRandomNumberInRange(angle - 3f, angle + 3f));
             	
             	Vector2f spawnLocation = MathUtils.getPointOnCircumference(proj_location, (i+1) * 0.4f, angle);
-            	spawnLocation = MathUtils.getRandomPointInCircle(spawnLocation, MathUtils.getRandomNumberInRange(0f, 3f));
+            	spawnLocation = MathUtils.getRandomPointInCircle(spawnLocation, MathUtils.getRandomNumberInRange(0f, 4f));
             	
             	engine.addSmoothParticle(spawnLocation,
             			velocity,

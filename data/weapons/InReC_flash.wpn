@@ -17,13 +17,13 @@
 	"animationType":"GLOW_AND_FLASH",
 	"specialWeaponGlowWidth":12,
 	"specialWeaponGlowHeight":20,
-	"muzzleFlashSpec":{"length":25.0,   # only used if animationType = MUZZLE_FLASH
+	"muzzleFlashSpec":{"length":15.0,   # only used if animationType = MUZZLE_FLASH
 					   "spread":18.0,
 					   "particleSizeMin":9.0,
 					   "particleSizeRange":11.0,
 					   "particleDuration":0.15,
-					   "particleCount":20,
-					   "particleColor":[110,215,240,225]},	
+					   "particleCount":10,
+					   "particleColor":[110,215,240,115]},
 	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
 	"projectileSpecId":"InReC_flash_shot",  # projectile that will be fired
 	"fireSoundTwo":"ir_pulse_laser_fire", #TEMP!

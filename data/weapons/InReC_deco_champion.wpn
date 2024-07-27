@@ -10,6 +10,9 @@
   "turretSprite": "graphics/weapons/deco/InReC_champion_deco_00.png",
   "hardpointSprite": "graphics/weapons/deco/InReC_champion_deco_00.png",
   "showDamageWhenDecorative": True,
+
+  # "renderHints":["RENDER_ADDITIVE"],
+
   "numFrames":5,
   "frameRate":1,
 

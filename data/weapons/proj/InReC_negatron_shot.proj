@@ -7,16 +7,27 @@
 	"spawnType":"BALLISTIC_AS_BEAM",
 	"collisionClass":"RAY",
 	"collisionClassByFighter":"RAY_FIGHTER",
-	"hitGlowRadius":45,
-	"length":70.0,
-	"width":7.0,
+
+	"length":26.0, #28
+	"width":20.0, #24
 	"fadeTime":0.25,
-	"fringeColor":[113,67,169,245],
-	"coreColor":[235,210,255,210],
-	"glowColor":[161,111,255,81],
-	"glowRadius":36,
-	"textureType":"SMOOTH",  # only needed for BEAM spawnType
+	"fringeColor":[153,67,209,170],
+	"coreColor":[245,230,255,220],
+	"glowColor":[151,69,255,61],
+	"glowRadius":49, #63
+	"hitGlowRadius":45,
 	"textureScrollSpeed":64.0,
-	"pixelsPerTexel":5.0,
-	"bulletSprite":"graphics/missiles/shell_gauss_cannon.png"
+
+	"pixelsPerTexel":1.0,
+	"bulletSprite":"",
+	"textureType": [
+    	"graphics/fx/beam_chunky_fringe.png", # FRINGE		beam_pulsar.png
+    	"graphics/fx/beamcore.png" # CORE	beam_rough2_core.png
+	]
+
+
+
+	#"bulletSprite":"graphics/missiles/shell_gauss_cannon.png",
+	#"textureType":"SMOOTH",
+	#"pixelsPerTexel":5.0
 }

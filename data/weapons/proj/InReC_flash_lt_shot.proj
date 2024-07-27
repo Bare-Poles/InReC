@@ -7,9 +7,9 @@
 	"spawnType":"BALLISTIC",
 	"collisionClass":"PROJECTILE_FF",
 	"collisionClassByFighter":"PROJECTILE_FIGHTER",
-	"length":35.0,
+	"length":17.0, #35
 	"hitGlowRadius":35,
-	"width":6.5,
+	"width":6.2,
 	"fadeTime":0.2,
 	"fringeColor":[113,217,243,255],
 	"coreColor":[138,227,253,150],  # 113,217,243
@@ -27,8 +27,8 @@
 									 "particleSizeMin":2.0,
 									 "particleSizeRange":4.0,
 									 "particleDuration":0.8,
-									 "particleCount":40,
-									 "particleColor":[113,217,243,250],
+									 "particleCount":21,
+									 "particleColor":[113,217,243,145],
 									 "sound":"explosion_flak"}, #TEMP!
 					}
 					

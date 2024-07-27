@@ -8,8 +8,8 @@ Spark Bolter,InReC_spark,1,,400,450,,30,,0,100,6,,,,FRAGMENTATION,6,,0.05,0.65,7
 Heavy Spark Bolter,InReC_spark_hvy,0,,1200,550,,40,,0,50,10,,,,FRAGMENTATION,8,,0.05,0.25,5,0.05,6,6,0,0,,1250,,,,,,PD,"pd12, energy10, inrec_wep_bp, merc",,InReC,,Point Defense,,,,,,,,,,19203.1
 Fusion Bolter,InReC_fusion,2,,600,450,,30,,0,30,7,,,,HIGH_EXPLOSIVE,30,,0.1,2.7,5,0.05,40,40,0,0,,1000,,,,,,,"energy9, inrec_wep_bp, merc",,InReC,,Anti Armour,,,,,Each bolt deals an additional %s damage to armor. This damage is not reduced by armor.,6,,,,19204
 Gluon Bolter,InReC_gluon,3,,750,800,,25,,0,20,7,,,,ENERGY,30,,0.2,3.65,24,0.05,30,30,0,0,,720,,,,,,,"energy10, LR, inrec_wep_bp, merc",,InReC,,Fire Support,,,,Swarming,,,,,,19205
-Disruption Bolter,InReC_disruption,2,,2400,600,,150,600,0,20,12,,,,ENERGY,195,,0.2,1.9,4,0.3,4,4,0,0,,1000,,,,,,,"energy13, inrec_wep_bp, merc",,InReC,,Suppression,,,,,"Each hits on hull or armor will discharge %s arcs, each arc dealing %s and %s damage.",4 | 30 Energy |120 EMP,,,,19206
-Negatron Bolter,InReC_negatron,2,,2400,700,,210,,0,15,12,,,,ENERGY,231,,0.15,1.85,5,0.25,6,6,0,0,,1000,,,,,,,"energy13, inrec_wep_bp, merc",,InReC,,General,,,,,,,,,,19207
+Disruption Bolter,InReC_disruption,2,,2400,600,,150,400,0,20,12,,,,ENERGY,195,,0.2,1.9,4,0.3,4,4,0,0,,1000,,,,,,,"energy13, inrec_wep_bp, merc",,InReC,,Suppression,,,,,"Each hits on hull or armor will discharge %s arcs, each arc dealing %s and %s damage.",4 | 30 Energy | 80 EMP,,,,19206
+Negatron Bolter,InReC_negatron,2,,2400,700,,210,,0,15,12,,,,ENERGY,231,,0.15,2.05,5,0.2,6,6,0,0,,1000,,,,,,,"energy13, inrec_wep_bp, merc",,InReC,,General,,,,,,,,,,19207
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Bludgeon Grenade Launcher,InReC_bludgeon,1,,1800,700,,150,,12,25,12,6,0.666666,2,HIGH_EXPLOSIVE,120,,0,0.3,1,0,0,16,4,4,,500,,,,,,DO_NOT_CONSERVE,"he16, inrec_wep_bp, merc",,InReC,,Anti Armor,,,,,"Shots explode on impact, dealing damage in a small area.",,,,,19211
@@ -25,22 +25,22 @@ Flock MRM Pod,InReC_flock_pod,1,,1200,2000,,120,,16,10,8,,,,HIGH_EXPLOSIVE,0,,0,
 Pesticide Launcher,InReC_pesticide,0,,250,2000,,90,60,15,20,3,,,,FRAGMENTATION,0,,0,11.3,8,0.1,1,5,1,1,,250,400,12,120,,,"DO_NOT_AIM, MISSILE_SPREAD","utility7, missile0, inrec_wep_bp, merc",,InReC,,Saturation,Medium,Good,,,,,,,,19222
 Twin Pesticide Launcher,InReC_pesticide_pod,0,,1000,2000,,90,60,15,15,6,,,,FRAGMENTATION,0,,0,14.05,20,0.05,1,6,1,1,,250,450,12,120,,,"DO_NOT_AIM, MISSILE_SPREAD","utility12, missile0, inrec_wep_bp, merc",,InReC,,Saturation,Medium,Good,,,,,,,,19222.1
 Fumigator Flare Dispenser,InReC_fumigator,1,,1600,2000,,400,,,10,9,,,,FRAGMENTATION,0,,0,25,1,0,0,0,0,0,,300,100,30,500,,,DO_NOT_AIM,"utility15, missile0, damage_special, inrec_wep_bp, merc",,InReC,,Saturation,Medium,Good,,,On nearing its target the missile will slow down and fire a barrage of %s.,EM charged flares,,,TRUE,19223
-Defoliant Strike Missile,InReC_defoliant,1,,400,2000,,400,,15,20,4,9,,,KINETIC,0,,0,5,1,0,0,0,0,0,,600,100,5,200,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","missile8, strike3, inrec_wep_bp, merc",,InReC,,Anti Shield,Very Fast,Special,,,After an initial aiming stage accelerates rapidly and continues with limited guidance.,,,,TRUE,19224
+Defoliant Strike Missile,InReC_defoliant,1,,400,2000,,400,,15,20,4,9,,,KINETIC,0,,0,6,1,0,0,0,0,0,,600,100,5,200,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","missile8, strike3, inrec_wep_bp, merc",,InReC,,Anti Shield,Very Fast,Special,,,After an initial aiming stage accelerates rapidly and continues with limited guidance.,,,,TRUE,19224
 Heart-throb Drone Launcher,InReC_heart-throb,2,,1800,4000,,900,,,10,12,,,,ENERGY,0,,0,29,2,1,0,0,0,0,,250,100,10,300,,,DO_NOT_AIM,"utility15, missile10, damage_special, inrec_wep_bp, merc",,InReC,,Drone Launcher,Medium,Excellent,,,"Launches a pair of autonomous drones, each armed with a %s.
-Drones feature a solid-state flux capacitor, and will self destruct after firing %s shots.",Pulse Bolter | 90,,,TRUE,19225
+Drones feature a solid-state flux capacitor, and will self destruct after firing %s shots.",Pulse Bolter | 70,,,TRUE,19225
 Beekeeper Kinetic Blister,InReC_beekeeper,2,,500,1500,,400,,,15,4,2,,,KINETIC,0,,0,5,1,0,0,0,0,0,,250,75,30,300,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","strike4, missile8, inrec_wep_bp, merc",,InReC,,Anti Shield,Medium,Good,,,On nearing its target the missile will slow down and fire a barrage of %s.,Micro Missiles,,,TRUE,19226
-Beekeeper Sub,InReC_beekeeper_sub,0,,1000,1200,,60,,4,10,,,,,KINETIC,0,,0,1,1,0,0,0,0,0,,350,350,4,50,,,"SYSTEM, DO_NOT_AIM",,,InReC,,,,,,,,,,,,19226.1
+Beekeeper Sub,InReC_beekeeper_sub,0,,1000,1200,,50,,4,10,,,,,KINETIC,0,,0,1,1,0,0,0,0,0,,350,350,5,40,,,"SYSTEM, DO_NOT_AIM",,,InReC,,,,,,,,,,,,19226.1
 Beekeeper Kinetic Blister Pod,InReC_beekeeper_pod,2,,1800,1500,,400,,,10,12,8,,,KINETIC,0,,0,15,1,0,0,0,0,0,,250,75,30,300,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","strike8, missile13, inrec_wep_bp, merc",,InReC,,Anti Shield,Medium,Good,,,On nearing its target the missile will slow down and fire a barrage of %s.,Micro Missiles,,,TRUE,19226.2
 Apiarist Blister,InReC_apiarist,2,,500,1500,,400,,,15,4,2,,,HIGH_EXPLOSIVE,0,,0,5,1,0,0,0,0,0,,250,75,30,300,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","strike4, missile8, inrec_wep_bp, merc",,InReC,,Anti Armor,Medium,Good,,,"On nearing its target the missile will slow down and fire a barrage of %s.
 Each %s deals an additional %s damage to armor. This damage is not reduced by armor.",Micro Missiles | Micro Missile | 60,,,TRUE,19227
-Apiarist Sub,InReC_apiarist_sub,0,,1000,1200,,60,,4,10,,,,,HIGH_EXPLOSIVE,0,,0,1,1,0,0,0,0,0,,300,300,4.7,60,,,"SYSTEM, DO_NOT_AIM, MISSILE_SPREAD",,,InReC,,,,,,,,,,,,19227.1
+Apiarist Sub,InReC_apiarist_sub,0,,1000,1200,,60,,4,10,,,,,HIGH_EXPLOSIVE,0,,0,1,1,0,0,0,0,0,,300,300,5.8,50,,,"SYSTEM, DO_NOT_AIM, MISSILE_SPREAD",,,InReC,,,,,,,,,,,,19227.1
 Apiarist Blister Pod,InReC_apiarist_pod,2,,1800,1500,,400,,,10,12,8,,,HIGH_EXPLOSIVE,0,,0,15,1,0,0,0,0,0,,250,75,30,300,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","strike8, missile13, inrec_wep_bp, merc",,InReC,,Anti Armor,Medium,Good,,,"On nearing its target the missile will slow down and fire a barrage of %s.
 Each %s deals an additional %s damage to armor. This damage is not reduced by armor.",Micro Missiles | Micro Missile | 60,,,TRUE,19227.2
-Herbicide SRM,InReC_herbicide,1,,400,750,,90,,10,25,5,90,,,HIGH_EXPLOSIVE,0,,0,5.25,6,0.15,1,10,1,2,,500,150,10,60,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES, MISSILE_SPREAD","missile8, strike4, inrec_wep_bp, merc",,InReC,,Anti Armor,Fast,Special,,,Unguided after a brief initial aiming stage.,,,,,19228
+Herbicide SRM,InReC_herbicide,1,,400,800,,120,,10,25,5,90,,,HIGH_EXPLOSIVE,0,,0,7,6,0.2,1,10,1,2,,500,100,3.5,60,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES, MISSILE_SPREAD","missile8, strike4, inrec_wep_bp, merc",,InReC,,Anti Armor,Fast,Medium,,,,,,,,19228
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Pulse Bolter (Drone),InReC_pulse_drn,0,,1000,550,,30,,0,50,0,90,,,ENERGY,0,,0,1.1,7,0.15,5,5,0,0,,1000,,,,,,"SYSTEM, DO_NOT_CONSERVE",,,InReC,,General,,,,,,,,,,19231
-Light Flash Bolter (Drone),InReC_flash_lt_drn,0,,1000,400,,30,,0,100,0,,,,ENERGY,0,,0.1,1.1,3,0.15,30,30,0,0,,1200,,,,,,"SYSTEM, PD",,,InReC,,Point Defense (area),,,,,,,,,,19232
+Pulse Bolter (Drone),InReC_pulse_drn,0,,1000,550,,30,,0,50,0,70,,,ENERGY,0,,0,1.1,7,0.15,5,5,0,0,,1000,,,,,,"SYSTEM, DO_NOT_CONSERVE",,,InReC,,General,,,,,,,,,,19231
+Light Flash Bolter,InReC_flash_lt_drn,0,,1000,400,,30,,0,100,0,,,,ENERGY,0,,0.1,1.1,3,0.15,30,30,0,0,,1200,,,,,,"SYSTEM, PD",,,InReC,,Point Defense (area),,,,,,,,,,19232
 Millstone Mono,InReC_millstone_drn,0,,1000,900,,160,,9,30,0,,,,FRAGMENTATION,48,,0,1,1,,1,,,,,800,,,,,,SYSTEM,,,InReC,,General,,,,,,,,,,19233
 Flock MRM (Drone),InReC_flock_drn,0,,1000,2000,,120,,16,15,0,,,,HIGH_EXPLOSIVE,0,,0,13.75,2,0.25,0,3,1,1,,200,70,15,100,,,"SYSTEM, DO_NOT_AIM",,,InReC,,Fire Support,,,,,,,,,,19234
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

@@ -49,7 +49,7 @@ public class InReC_slotFlares extends BaseHullMod {
         			if (MathUtils.isWithinRange(ship, AIUtils.getNearestEnemyMissile(ship), 1000f)) {
                     	info.READY = false;
                     	info.FIRING = true;
-                    	info.TIMER = 0.1f;
+                    	info.TIMER = 0.15f;
                 	}
         		}
         		
@@ -59,8 +59,8 @@ public class InReC_slotFlares extends BaseHullMod {
         // if there is a missile within range, fire flares!
         if (info.FIRING) {
         	info.TIMER += amount;
-        	if (info.TIMER > 0.1f) {
-            	info.TIMER -= 0.1f;
+        	if (info.TIMER > 0.15f) {
+            	info.TIMER -= 0.15f;
             	
             	for (WeaponSlotAPI weapon : ship.getHullSpec().getAllWeaponSlotsCopy()) {
 	        		if (weapon.isDecorative()) {
@@ -81,11 +81,10 @@ public class InReC_slotFlares extends BaseHullMod {
 	        	        }
 	        			
 	                	engine.spawnProjectile(ship, null, "InReC_flare_smart", flarePoint, flareAngle, flareVel);
-	                	info.FIRED++;
-	                	
-	        			Global.getSoundPlayer().playSound("system_flare_launcher_active", 1f, 0.7f, ship.getLocation(), ship.getVelocity());
+	                	Global.getSoundPlayer().playSound("system_flare_launcher_active", 1f, 0.7f, ship.getLocation(), ship.getVelocity());
 	        		}
             	}
+            	info.FIRED++;
             	
             	if (info.FIRED >= info.COUNT) {
             		info.FIRING = false;

@@ -162,6 +162,10 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
             );
             //forced acceleration by default
             MISSILE.giveCommand(ShipCommand.ACCELERATE);
+            lifeInterval.advance(amount);
+            if (lifeInterval.intervalElapsed()) {
+            	MISSILE.flameOut();
+            }
             return;
         }
         
@@ -213,19 +217,16 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
         float aimAngle = MathUtils.getShortestRotation( MISSILE.getFacing(), correctAngle);
         
         if(Math.abs(aimAngle)<OVERSHOT_ANGLE){
-        	if (TRIGGER) {
-                MISSILE.giveCommand(ShipCommand.DECELERATE);
-        	} else {
+        	if (MathUtils.getDistanceSquared(MISSILE.getLocation(), target.getLocation()) <= DETECT) {
+        		MISSILE.giveCommand(ShipCommand.DECELERATE);
+            	TRIGGER = true;
+            } else {
                 MISSILE.giveCommand(ShipCommand.ACCELERATE);
                 lifeInterval.advance(amount);
                 if (lifeInterval.intervalElapsed()) {
                 	MISSILE.flameOut();
                 }
         	}
-            
-            if (MathUtils.getDistanceSquared(MISSILE.getLocation(), target.getLocation()) <= DETECT) {
-            	TRIGGER = true;
-            }
         }
         
         if (aimAngle < 0) {

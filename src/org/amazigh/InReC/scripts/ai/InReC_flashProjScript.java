@@ -19,10 +19,6 @@ public class InReC_flashProjScript extends BaseEveryFrameCombatPlugin {
 	//How fast the projectile is allowed to turn, in degrees/second
 	private static final float TURN_RATE = 28f; //40
 	
-	//The actual target angle is randomly offset by this much, to simulate inaccuracy
-	//2f means up to 2 degrees angle off from the actual target angle
-	private static final float ONE_TURN_DUMB_INACCURACY = 9f; //3
-	
 	//If non-zero, the projectile will sway back-and-forth by this many degrees during its guidance (with a sway period determined by SWAY_PERIOD).
     //High values, as one might expect, give very poor tracking. Also, high values will decrease effective range (as the projectiles travel further) so be careful
     //Secondary and primary sway both run in parallel, allowing double-sine swaying if desired
@@ -49,6 +45,11 @@ public class InReC_flashProjScript extends BaseEveryFrameCombatPlugin {
     private final float estimateMaxLife; // How long we estimate this projectile should be alive
 	private Vector2f offsetVelocity; // Only used for ONE_TURN_DUMB: keeps velocity from the ship and velocity from the projectile separate (messes up calculations otherwise)
 	
+	//The actual target angle is randomly offset by this much, to simulate inaccuracy
+	//2f means up to 2 degrees angle off from the actual target angle
+	private float ONE_TURN_DUMB_INACCURACY = 21f;
+	// the value we set here doesn't matter, as it is changed to be 70% of the weapons current spread later on 
+	
 	/**
 	 * Initializer for the guided projectile script
 	 *
@@ -67,8 +68,13 @@ public class InReC_flashProjScript extends BaseEveryFrameCombatPlugin {
         lifeCounter = 0f;
         estimateMaxLife = proj.getWeapon().getRange() / new Vector2f(proj.getVelocity().x - proj.getSource().getVelocity().x, proj.getVelocity().y - proj.getSource().getVelocity().y).length();
 		
+        ONE_TURN_DUMB_INACCURACY = proj.getWeapon().getCurrSpread() * 0.7f;
+        
 		//For one-turns, we set our target point ONCE and never adjust it
 		targetAngle = proj.getWeapon().getCurrAngle() + MathUtils.getRandomNumberInRange(-ONE_TURN_DUMB_INACCURACY, ONE_TURN_DUMB_INACCURACY);
+		
+		
+		
 		offsetVelocity = proj.getSource().getVelocity();
 	}
 

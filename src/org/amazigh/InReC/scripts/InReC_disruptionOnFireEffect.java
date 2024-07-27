@@ -29,7 +29,7 @@ public class InReC_disruptionOnFireEffect implements OnFireEffectPlugin {
             	
             	Vector2f velocity = MathUtils.getPointOnCircumference(ship_velocity, MathUtils.getRandomNumberInRange(0f, 8f), MathUtils.getRandomNumberInRange(angle - 85f, angle + 85f));
             	
-            	float sparkRange = 30 - i; // 30 - (1-24) =  6-29
+            	float sparkRange = 38 - (i * 1.5f); // 38 - (1.5-36) =  2-36.5
             	
             	Vector2f spawnLocation = MathUtils.getPointOnCircumference(proj_location, sparkRange, arcPoint);
             	spawnLocation = MathUtils.getRandomPointInCircle(spawnLocation, MathUtils.getRandomNumberInRange(0f, 5f));
@@ -44,15 +44,15 @@ public class InReC_disruptionOnFireEffect implements OnFireEffectPlugin {
             
             for (int i=0; i < 3; i++) {
         		float angle1 = angle + MathUtils.getRandomNumberInRange(-5f, 5f);
-        		Vector2f nebVel = MathUtils.getPointOnCircumference(ship_velocity, (i * 4) + MathUtils.getRandomNumberInRange(2f, 10f), angle1);
+        		Vector2f nebVel = MathUtils.getPointOnCircumference(ship_velocity, (i * 3) + MathUtils.getRandomNumberInRange(1f, 6f), angle1);
         		engine.addSwirlyNebulaParticle(proj_location,
         				nebVel,
-        				10f,
+        				12f,
         				1.5f,
         				0.6f,
         				0.5f,
-        				MathUtils.getRandomNumberInRange(0.2f, 0.6f),
-        				new Color(95,125,150,75),
+        				MathUtils.getRandomNumberInRange(0.6f, 1.05f),
+        				new Color(95,125,150,115),
         				true);
             }
     		

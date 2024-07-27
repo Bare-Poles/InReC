@@ -11,17 +11,17 @@
 	"explosionRadius":80, # purely visual
 
 	"reduceDamageWhileFading":true,
-	"fizzleOnReachingWeaponRange":true,
+	# "fizzleOnReachingWeaponRange":true,
 	"dudProbabilityOnFlameout":0,
 
 	"flameoutTime":1.0, # total time from flameout to full fadeout
 	"noEngineGlowTime":0.2, # time spent without the engine glow being rendered
 	"fadeTime":0.5, # fadeout duration
 
-	"engineSpec":{"turnAcc":400,
-				  "turnRate":180,
+	"engineSpec":{"turnAcc":600, #400
+				  "turnRate":200, #180
 				  "acc":1200,
-				  "dec":30}, #10
+				  "dec":60}, #40
 	"engineSlots":[{"id":"ES1",
 					"loc":[-10, 0],
 				    "style":"CUSTOM",

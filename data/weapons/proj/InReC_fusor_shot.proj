@@ -1,5 +1,8 @@
 {
 	"id":"InReC_fusor_shot",
+
+	"onFireEffect":"org.amazigh.InReC.scripts.InReC_fusorOnFireEffect",
+
 	"specClass":"projectile",
 	"spawnType":"BALLISTIC_AS_BEAM",
 	"collisionClass":"RAY",

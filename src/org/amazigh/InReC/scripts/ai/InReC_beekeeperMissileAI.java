@@ -78,11 +78,8 @@ public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileA
 	
 	
 	
-	// how many shots to fire
-	private int AMMO = 40;
-	
-	// what side to fire from, as we swap between shots
-	private boolean SIDE = false;
+	// how many shots to fire (multiply this by 2 because firing from two launch ports at once)
+	private int AMMO = 20;
 	
 	// to check whether the missile is within "MIRV" range, and whether to fire the missiles
 	private boolean TRIGGER = false;
@@ -165,6 +162,10 @@ public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileA
             );
             //forced acceleration by default
             MISSILE.giveCommand(ShipCommand.ACCELERATE);
+            lifeInterval.advance(amount);
+            if (lifeInterval.intervalElapsed()) {
+            	MISSILE.flameOut();
+            }
             return;
         }
         
@@ -216,19 +217,16 @@ public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileA
         float aimAngle = MathUtils.getShortestRotation( MISSILE.getFacing(), correctAngle);
         
         if(Math.abs(aimAngle)<OVERSHOT_ANGLE){
-        	if (TRIGGER) {
-                MISSILE.giveCommand(ShipCommand.DECELERATE);
-        	} else {
+        	if (MathUtils.getDistanceSquared(MISSILE.getLocation(), target.getLocation()) <= DETECT) {
+        		MISSILE.giveCommand(ShipCommand.DECELERATE);
+            	TRIGGER = true;
+            } else {
                 MISSILE.giveCommand(ShipCommand.ACCELERATE);
                 lifeInterval.advance(amount);
                 if (lifeInterval.intervalElapsed()) {
                 	MISSILE.flameOut();
                 }
         	}
-            
-            if (MathUtils.getDistanceSquared(MISSILE.getLocation(), target.getLocation()) <= DETECT) {
-            	TRIGGER = true;
-            }
         }
         
         if (aimAngle < 0) {
@@ -250,36 +248,31 @@ public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileA
 
 				Vector2f smokeVel = new Vector2f(vel.x * 0.8f, vel.y * 0.8f);
 				
-				float angle = MathUtils.getRandomNumberInRange((40-AMMO) * 0.8f, (40-AMMO) * 1.2f) * 1.4f;
+				float angle = MathUtils.getRandomNumberInRange((20-AMMO) * 0.8f, (20-AMMO) * 1.2f) * 2.8f;
 				
-				if (SIDE) {
-					SIDE = false;
-					float subFacing = MISSILE.getFacing() + angle;
-					
-					engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_beekeeper_sub", loc, subFacing + MathUtils.getRandomNumberInRange(0f, 5f), MathUtils.getRandomPointInCircle(smokeVel, 15f));
-
-					Vector2f puffRandomVel = MathUtils.getPointOnCircumference(smokeVel, MathUtils.getRandomNumberInRange(8f, 24f), subFacing);
-                	engine.addSmokeParticle(loc,
-                			puffRandomVel,
-                			MathUtils.getRandomNumberInRange(7f, 14f),
-                			0.8f,
-                			0.6f,
-                			new Color(90,100,110,150));
-					
-				} else {
-					SIDE = true;
-					float subFacing = MISSILE.getFacing() - angle;
-					
-					engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_beekeeper_sub", loc, subFacing - MathUtils.getRandomNumberInRange(0f, 5f), MathUtils.getRandomPointInCircle(smokeVel, 15f));
-					
-					Vector2f puffRandomVel = MathUtils.getPointOnCircumference(smokeVel, MathUtils.getRandomNumberInRange(4f, 12f), subFacing);
-                	engine.addSmokeParticle(loc,
-                			puffRandomVel,
-                			MathUtils.getRandomNumberInRange(7f, 14f),
-                			0.8f,
-                			0.6f,
-                			new Color(90,100,110,150));
-				}
+				float subFacing1 = MISSILE.getFacing() + angle;
+				engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_beekeeper_sub", loc, subFacing1 + MathUtils.getRandomNumberInRange(0f, 5f), MathUtils.getRandomPointInCircle(smokeVel, 15f));
+				
+				Vector2f puffRandomVel1 = MathUtils.getPointOnCircumference(smokeVel, MathUtils.getRandomNumberInRange(8f, 24f), subFacing1);
+            	engine.addSmokeParticle(loc,
+            			puffRandomVel1,
+            			MathUtils.getRandomNumberInRange(7f, 14f),
+            			0.8f,
+            			0.6f,
+            			new Color(90,100,110,150));
+            	
+            	
+				float subFacing2 = MISSILE.getFacing() - angle;				
+				engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_beekeeper_sub", loc, subFacing2 - MathUtils.getRandomNumberInRange(0f, 5f), MathUtils.getRandomPointInCircle(smokeVel, 15f));
+				
+				Vector2f puffRandomVel2 = MathUtils.getPointOnCircumference(smokeVel, MathUtils.getRandomNumberInRange(4f, 12f), subFacing2);
+            	engine.addSmokeParticle(loc,
+            			puffRandomVel2,
+            			MathUtils.getRandomNumberInRange(7f, 14f),
+            			0.8f,
+            			0.6f,
+            			new Color(90,100,110,150));
+				
 				
             	Global.getSoundPlayer().playSound("swarmer_fire", 1.0f, 1.0f, loc, vel);
             	

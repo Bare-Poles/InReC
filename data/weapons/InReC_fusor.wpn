@@ -7,7 +7,7 @@
 	"turretGlowSprite":"graphics/weapons/InReC_fusor_turret_glow.png",
 	"hardpointSprite":"graphics/weapons/InReC_fusor_hardpoint_base.png",
 	"hardpointGlowSprite":"graphics/weapons/InReC_fusor_hardpoint_glow.png",
-	"glowColor":[180,180,255,255],
+	"glowColor":[181,179,255,255],
 	"turretOffsets":[15,-1, 15,1],
 	"turretAngleOffsets":[0, 0],
 	"hardpointOffsets":[20,-1, 20,1],

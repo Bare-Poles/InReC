@@ -88,7 +88,7 @@ public class InReC_fumigatorMissileAI implements MissileAIPlugin, GuidedMissileA
 	private boolean TRIGGER = false;
 	
 	// square of range to engage "flare mode" at
-	private float DETECT=640000; //800^2
+	private float DETECT=490000; //700^2
 	
 	// timer for firing flares after getting into range
 	private IntervalUtil flareInterval = new IntervalUtil(0.15f, 0.15f);
@@ -165,6 +165,10 @@ public class InReC_fumigatorMissileAI implements MissileAIPlugin, GuidedMissileA
             );
             //forced acceleration by default
             MISSILE.giveCommand(ShipCommand.ACCELERATE);
+            lifeInterval.advance(amount);
+            if (lifeInterval.intervalElapsed()) {
+            	MISSILE.flameOut();
+            }
             return;
         }
         
@@ -216,19 +220,16 @@ public class InReC_fumigatorMissileAI implements MissileAIPlugin, GuidedMissileA
         float aimAngle = MathUtils.getShortestRotation( MISSILE.getFacing(), correctAngle);
         
         if(Math.abs(aimAngle)<OVERSHOT_ANGLE){
-        	if (TRIGGER) {
-                MISSILE.giveCommand(ShipCommand.DECELERATE);
-        	} else {
+        	if (MathUtils.getDistanceSquared(MISSILE.getLocation(), target.getLocation()) <= DETECT) {
+        		MISSILE.giveCommand(ShipCommand.DECELERATE);
+            	TRIGGER = true;
+            } else {
                 MISSILE.giveCommand(ShipCommand.ACCELERATE);
                 lifeInterval.advance(amount);
                 if (lifeInterval.intervalElapsed()) {
                 	MISSILE.flameOut();
                 }
         	}
-            
-            if (MathUtils.getDistanceSquared(MISSILE.getLocation(), target.getLocation()) <= DETECT) {
-            	TRIGGER = true;
-            }
         }
         
         if (aimAngle < 0) {
@@ -250,9 +251,9 @@ public class InReC_fumigatorMissileAI implements MissileAIPlugin, GuidedMissileA
             	
 				Vector2f flareVel = new Vector2f(vel.x * 0.8f, vel.y * 0.8f);
 				
-				float flareAngle = MISSILE.getFacing() + MathUtils.getRandomNumberInRange(-40f, 40f);
+				float flareAngle = MISSILE.getFacing();
 				
-				Vector2f puffRandomVel = MathUtils.getPointOnCircumference(flareVel, MathUtils.getRandomNumberInRange(4f, 12f), flareAngle);
+				Vector2f puffRandomVel = MathUtils.getPointOnCircumference(flareVel, MathUtils.getRandomNumberInRange(7f, 21f), flareAngle + MathUtils.getRandomNumberInRange(-40f, 40f));
 				engine.addSmokeParticle(loc,
 						puffRandomVel,
 						MathUtils.getRandomNumberInRange(14f, 25f),
@@ -260,15 +261,18 @@ public class InReC_fumigatorMissileAI implements MissileAIPlugin, GuidedMissileA
 						0.6f,
 						new Color(100,105,110,150));
 				
+				MISSILE.getVelocity().set(MathUtils.getPointOnCircumference(flareVel, 25f, MISSILE.getFacing() + MathUtils.getRandomNumberInRange(-40f, 40f)));
+				// some random "push in" accel thing
+				
 				if (JAM) {
 					JAM = false;
 					
-					engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_flare_jam", loc, flareAngle, flareVel);
+					engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_flare_jam", loc, flareAngle + MathUtils.getRandomNumberInRange(-75f, 75f), flareVel);
                     
 				} else {
 					JAM = true;
 					
-					engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_flare_dumb", loc, flareAngle, flareVel);
+					engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_flare_dumb", loc, flareAngle + MathUtils.getRandomNumberInRange(-40f, 40f), flareVel);
 				}
             	
             	Global.getSoundPlayer().playSound("launch_flare_1", 1.0f, 1.0f, loc, vel);

@@ -7,7 +7,7 @@
 	"spawnType":"BALLISTIC",
 	"collisionClass":"PROJECTILE_FF",
 	"collisionClassByFighter":"PROJECTILE_FIGHTER",
-	"length":40.0,
+	"length":20.0, # 40
 	"hitGlowRadius":40,
 	"width":7,
 	"fadeTime":0.2,
@@ -27,8 +27,8 @@
 									 "particleSizeMin":2.0,
 									 "particleSizeRange":4.0,
 									 "particleDuration":0.8,
-									 "particleCount":55,
-									 "particleColor":[113,217,243,250],
+									 "particleCount":25,
+									 "particleColor":[113,217,243,145],
 									 "sound":"explosion_flak"}, #TEMP!
 					}
 					

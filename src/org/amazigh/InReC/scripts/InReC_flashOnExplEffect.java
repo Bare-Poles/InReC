@@ -12,8 +12,8 @@ import com.fs.starfarer.api.combat.ProximityExplosionEffect;
 
 public class InReC_flashOnExplEffect implements ProximityExplosionEffect {
 
-	private static final Color COLOR_P = new Color(217,96,243,220);
-	private static final Color COLOR_X = new Color(243,113,217,50);
+	private static final Color COLOR_P = new Color(217,96,243,240);
+	private static final Color COLOR_X = new Color(243,113,217,56); // 85 alpha
 	
 	public void onExplosion(DamagingProjectileAPI explosion, DamagingProjectileAPI originalProjectile) {
 		
@@ -24,7 +24,7 @@ public class InReC_flashOnExplEffect implements ProximityExplosionEffect {
         for (int i = 0; i < 2; i++) {
     		engine.addSwirlyNebulaParticle(point,
     				explosion.getVelocity(),
-    				explosion.getCollisionRadius() * 0.65f,
+    				10f + (explosion.getCollisionRadius() * 0.95f),
     				1.65f,
     				0.6f,
     				0.5f,
@@ -38,7 +38,7 @@ public class InReC_flashOnExplEffect implements ProximityExplosionEffect {
 		engine.addHitParticle(
                 point,
                 explosion.getVelocity(),
-                64f,
+                explosion.getCollisionRadius() * 2.2f,
                 0.8f,
                 0.1f,
                 COLOR_P);
@@ -47,23 +47,23 @@ public class InReC_flashOnExplEffect implements ProximityExplosionEffect {
         	
         	engine.addNebulaParticle(point,
     				MathUtils.getRandomPointInCircle(null, 13f),
-    				explosion.getCollisionRadius() * 0.55f, //size
+    				6f + (explosion.getCollisionRadius() * 0.95f), //size
     				1.85f, //endSizeMult  1.75
     				0.1f, //rampUpFraction
-    				0.35f, //fullBrightnessFraction
-    				MathUtils.getRandomNumberInRange(1f, 1.6f), //dur
+    				0.4f, //fullBrightnessFraction
+    				MathUtils.getRandomNumberInRange(1.1f, 1.6f), //dur
     				COLOR_X);
         	
         	float angle2 = (i * 120f) + angle1 + MathUtils.getRandomNumberInRange(0f, 30f);
         	
         	engine.addSwirlyNebulaParticle(MathUtils.getPointOnCircumference(point, explosion.getCollisionRadius() * MathUtils.getRandomNumberInRange(0.3f, 0.5f), angle2),
     				explosion.getVelocity(),
-    				explosion.getCollisionRadius() * 0.4f,
+    				3f + (explosion.getCollisionRadius() * 0.7f),
     				1.5f,
     				0.4f,
     				0.2f,
     				MathUtils.getRandomNumberInRange(0.7f, 1.15f),
-    				new Color(60,150,160,70),
+    				new Color(60,150,160,75),
     				true);
         }
 	}

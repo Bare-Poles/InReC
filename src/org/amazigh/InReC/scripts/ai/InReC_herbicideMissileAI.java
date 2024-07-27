@@ -38,7 +38,7 @@ public class InReC_herbicideMissileAI implements MissileAIPlugin, GuidedMissileA
     private final float WAVE_AMPLITUDE=18;
     
     // how long to wait before starting up the engine, after "locking" on to the target.
-    private final float DELAY=0.4f;
+    private final float DELAY=0.6f;
     
     // The time after "locking" on, at which the missile should drop to minimum tracking strength
     private final float DECAY_TIME=1.75f;
@@ -96,7 +96,7 @@ public class InReC_herbicideMissileAI implements MissileAIPlugin, GuidedMissileA
     //   2: half precision without ECCM
     //   3: a third as precise without ECCM. Default
     //   4, 5, 6 etc : 1/4th, 1/5th, 1/6th etc precision.
-    private float ECCM=3;   //A VALUE BELOW 1 WILL PREVENT THE MISSILE FROM EVER HITTING ITS TARGET!
+    private float ECCM = 2.1f;   //A VALUE BELOW 1 WILL PREVENT THE MISSILE FROM EVER HITTING ITS TARGET!
     
     
     // how far off from direct aim the "swarm spread" should be, big numbers can result in extremely *weird* behaviour

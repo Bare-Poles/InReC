@@ -65,26 +65,38 @@ public class InReC_slotVent extends BaseHullMod {
 	    			
 	    			int alpha = 30 + (int) (60f * ship.getFluxTracker().getFluxLevel());
 	    			
-	    			Vector2f flarePoint = weapon.computePosition(ship);
+	    			Vector2f ventPoint = weapon.computePosition(ship);
 	    			Vector2f ventVel = ship.getVelocity();
 	    			Float ventAngle = weapon.computeMidArcAngle(ship);
+	    			
+	    			Vector2f nebVel = MathUtils.getPointOnCircumference(ventVel, MathUtils.getRandomNumberInRange(9f, 27f), ventAngle + MathUtils.getRandomNumberInRange(-5f, 5f));
+	    			
+	    			engine.addNebulaParticle(ventPoint,
+	    					nebVel,
+							12f,
+							MathUtils.getRandomNumberInRange(1.6f, 2.0f),
+							0.8f,
+							0.4f,
+							0.6f,
+							new Color(120,100,110,70),
+							false);
 	    			
 	    	        for (int i = 0; i < 2; i++) {
 	    	        	Vector2f puffRandomVel = MathUtils.getPointOnCircumference(ventVel, MathUtils.getRandomNumberInRange(9f, 27f), ventAngle + MathUtils.getRandomNumberInRange(-5f, 5f));
 	        			
-	    	        	engine.addSwirlyNebulaParticle(flarePoint,
+	    	        	engine.addSwirlyNebulaParticle(ventPoint,
 	    	        			puffRandomVel,
 	            				10f,
 	            				2.4f,
 	            				0.6f,
 	            				0.4f,
-	            				MathUtils.getRandomNumberInRange(0.4f, 0.7f),
-	            				new Color(125,55,155,alpha),
+	            				MathUtils.getRandomNumberInRange(0.5f, 0.7f),
+	            				new Color(135,55,165,alpha),
 	            				true);
 	    	        }
 	    	        
 	    	        for (int j = 0; j < 3; j++) {
-    	        		Vector2f sparkPoint = MathUtils.getRandomPointInCircle(flarePoint, 4f);
+    	        		Vector2f sparkPoint = MathUtils.getRandomPointInCircle(ventPoint, 4f);
     	        		Vector2f sparkVel = MathUtils.getPointOnCircumference(ventVel, MathUtils.getRandomNumberInRange(18f, 48f), ventAngle + MathUtils.getRandomNumberInRange(-4f, 4f));
 	        			int sparkAlpha = Math.min(255, (int) (alpha * 3));
     	        		engine.addSmoothParticle(sparkPoint,

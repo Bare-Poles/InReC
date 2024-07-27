@@ -22,9 +22,9 @@ public class InReC_flashOnFireEffect implements OnFireEffectPlugin {
             // attach the homing script
         	engine.addPlugin(new InReC_flashProjScript(projectile));
             
-    		// random projectile velocity thing (scales velocity from -15% to +5%)
+    		// random projectile velocity thing (scales velocity from -18% to +9%)
     		float velScale = projectile.getProjectileSpec().getMoveSpeed(ship.getMutableStats(), weapon);
-    		Vector2f newVel = MathUtils.getPointOnCircumference(projectile.getVelocity(), MathUtils.getRandomNumberInRange(velScale * -0.15f, velScale * 0.05f) , angle);
+    		Vector2f newVel = MathUtils.getPointOnCircumference(projectile.getVelocity(), MathUtils.getRandomNumberInRange(velScale * -0.18f, velScale * 0.09f) , angle);
     		projectile.getVelocity().x = newVel.x;
     		projectile.getVelocity().y = newVel.y;
     		
@@ -32,12 +32,12 @@ public class InReC_flashOnFireEffect implements OnFireEffectPlugin {
     		Vector2f nebVel = MathUtils.getPointOnCircumference(ship.getVelocity(), MathUtils.getRandomNumberInRange(2f, 20f), angle1);
     		engine.addSwirlyNebulaParticle(projectile.getLocation(),
     				nebVel,
-    				10f,
-    				1.5f,
+    				12f,
+    				1.6f,
     				0.6f,
     				0.5f,
-    				MathUtils.getRandomNumberInRange(0.2f, 0.6f),
-    				new Color(140,65,150,75),
+    				MathUtils.getRandomNumberInRange(0.35f, 0.7f),
+    				new Color(155,65,170,95),
     				true);
     		
     }

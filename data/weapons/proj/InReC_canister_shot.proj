@@ -10,7 +10,7 @@
 	"length":50.0,
 	"width":3.5,
 	"hitGlowRadius":25,
-	"fadeTime":0.15,
+	"fadeTime":0.18,
 	"fringeColor":[235,245,255,255],
 	"coreColor":[255,250,255,155],
 	"textureScrollSpeed":64.0,
