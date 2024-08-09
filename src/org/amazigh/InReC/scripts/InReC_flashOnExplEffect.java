@@ -68,6 +68,3 @@ public class InReC_flashOnExplEffect implements ProximityExplosionEffect {
         }
 	}
 }
-
-
-

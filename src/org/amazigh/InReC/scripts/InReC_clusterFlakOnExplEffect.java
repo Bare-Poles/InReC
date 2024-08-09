@@ -23,7 +23,7 @@ public class InReC_clusterFlakOnExplEffect implements ProximityExplosionEffect {
 		
 		CombatEngineAPI engine = Global.getCombatEngine();
 		
-		Vector2f point = MathUtils.getRandomPointOnCircumference(explosion.getLocation(), MathUtils.getRandomNumberInRange(15f, 30f));
+		Vector2f point = MathUtils.getRandomPointOnCircumference(explosion.getLocation(), MathUtils.getRandomNumberInRange(18f, 30f));
 		
 		engine.addHitParticle(
                 point,
@@ -52,7 +52,6 @@ public class InReC_clusterFlakOnExplEffect implements ProximityExplosionEffect {
     				0.35f, //fullBrightnessFraction
     				MathUtils.getRandomNumberInRange(0.75f, 1.2f), //dur
     				COLOR_X2);
-        	
         }
         
         DamagingExplosionSpec blast = new DamagingExplosionSpec(0.12f,
@@ -60,7 +59,7 @@ public class InReC_clusterFlakOnExplEffect implements ProximityExplosionEffect {
                 30f,
                 explosion.getDamageAmount() * 0.8f,
                 explosion.getDamageAmount() * 0.4f,
-                CollisionClass.PROJECTILE_FF,
+                CollisionClass.PROJECTILE_NO_FF,
                 CollisionClass.PROJECTILE_FIGHTER,
                 4f,
                 4f,
@@ -74,6 +73,3 @@ public class InReC_clusterFlakOnExplEffect implements ProximityExplosionEffect {
         
 	}
 }
-
-
-

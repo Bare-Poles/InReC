@@ -79,7 +79,6 @@ InReC_negatron_shot_core,InReC_negatron_shot,base_trail_mild,10,0,0.05,0.05,20,1
 InReC_negatron_shot_glow,InReC_negatron_shot,base_trail_contrail,10,0.05,0,0.1,30,12,"[60,220,210]","[125,45,139]",0.45,256,-128,TRUE,10,0,1,0,TRUE,FALSE,TRUE,20,400,0.1,0,0,0,FALSE,false
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 InReC_pulse_hvy_shot,InReC_pulse_hvy_shot,base_trail_smooth,10,0,0.04,0.11,13,7,"[152,243,203]","[20,60,50]",0.4,256,-128,TRUE,5,0,1,0,TRUE,FALSE,TRUE,20,200,0.1,0,0,0,FALSE,TRUE
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 InReC_pulse_shot,InReC_pulse_shot,base_trail_smooth,10,0,0.03,0.09,10,5,"[152,243,203]","[20,60,50]",0.4,256,-128,TRUE,5,0,1,0,TRUE,FALSE,TRUE,20,200,0.1,0,0,0,FALSE,TRUE

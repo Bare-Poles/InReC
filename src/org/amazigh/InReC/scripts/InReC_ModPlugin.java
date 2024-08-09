@@ -1,6 +1,7 @@
 package org.amazigh.InReC.scripts;
 
 import com.fs.starfarer.api.BaseModPlugin;
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.PluginPick;
 import com.fs.starfarer.api.campaign.CampaignPlugin;
 import com.fs.starfarer.api.combat.MissileAIPlugin;
@@ -12,6 +13,9 @@ import org.amazigh.InReC.scripts.ai.InReC_beekeeperMissileAI;
 import org.amazigh.InReC.scripts.ai.InReC_apiaristMissileAI;
 import org.amazigh.InReC.scripts.ai.InReC_herbicideMissileAI;
 
+import org.dark.shaders.light.LightData;
+import org.dark.shaders.util.ShaderLib;
+
 public class InReC_ModPlugin extends BaseModPlugin {
 	
 	public static final String FUMIGATOR_MISSILE_ID = "InReC_fumigator";
@@ -21,7 +25,7 @@ public class InReC_ModPlugin extends BaseModPlugin {
 	public static final String HERBICIDE_MISSILE_ID = "InReC_herbicide";
 
 
-	//public boolean HAS_GRAPHICSLIB = false;
+	public boolean HAS_GRAPHICSLIB = false;
     
     //New game stuff
     @Override
@@ -30,12 +34,12 @@ public class InReC_ModPlugin extends BaseModPlugin {
     
     public void onApplicationLoad() throws Exception {
 
-//        boolean hasGraphicsLib = Global.getSettings().getModManager().isModEnabled("shaderLib");
-//        if (hasGraphicsLib) {
-//            HAS_GRAPHICSLIB = true;
-//            ShaderLib.init();
-//            LightData.readLightDataCSV((String)"data/config/InReC_lights_data.csv");
-//        }
+        boolean hasGraphicsLib = Global.getSettings().getModManager().isModEnabled("shaderLib");
+        if (hasGraphicsLib) {
+            HAS_GRAPHICSLIB = true;
+            ShaderLib.init();
+            LightData.readLightDataCSV((String)"data/config/InReC_lights_data.csv");
+        }
     	
 	}
 

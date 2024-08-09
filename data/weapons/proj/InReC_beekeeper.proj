@@ -65,7 +65,7 @@
 					"canSplitEarly":false,
 					"splitSound":"swarmer_fire",
 					"numShots":40,
-					"damage":60,
+					"damage":50,
 					"impact":10,
 					"emp":0,
 					"damageType":KINETIC,

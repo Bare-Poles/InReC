@@ -48,7 +48,7 @@ Flock MRM (Drone),InReC_flock_drn,0,,1000,2000,,120,,16,15,0,,,,HIGH_EXPLOSIVE,0
 Flare (Dumb),InReC_flare_dumb,,,1000,400,,20,200,0,,,,,,ENERGY,0,,0,1,1,0.1,30,30,0,0,,150,300,3,100,,,SYSTEM,,,InReC,,,,,,,,,,,,19241
 Flare (Jamming),InReC_flare_jam,,,1000,200,,20,100,0,,,,,,ENERGY,0,,0,1,1,0.1,30,30,0,0,,200,100,5,400,,,SYSTEM,,,InReC,,,,,,,,,,,,19242
 Flare (Smart),InReC_flare_smart,,,1000,500,,20,400,0,,,,,,ENERGY,0,,0,1,1,0.1,40,40,0,0,,400,200,8,1,,,SYSTEM,,,InReC,,,,,,,,,,,,19243
-Cluster Flak,InReC_cluster_flak,,,1000,250,,100,,,,,,,,FRAGMENTATION,0,,0,0.1,7,0.5,150,150,0,0,,50,200,2.75,60,,,SYSTEM,,,InReC,,,,,,,,,,,,19244
+Cluster Flak,InReC_cluster_flak,,,1000,250,,120,,,,,,,,FRAGMENTATION,0,,0,0.1,7,0.5,150,150,0,0,,50,200,2.75,60,,,SYSTEM,,,InReC,,,,,,,,,,,,19244
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Deco Brawler,InReC_deco_brawler,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
