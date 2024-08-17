@@ -29,7 +29,14 @@ public class InReC_slotVent extends BaseHullMod {
 		mag.put(HullSize.CAPITAL_SHIP, 200f);
 	}
 	
-	public static final float SMOD_RATE_BONUS = 50;
+	public static final float SMOD_VENT_BONUS = 15;
+	
+	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {	
+		boolean sMod = isSMod(stats);
+		if (sMod) {
+			stats.getVentRateMult().modifyPercent(id, SMOD_VENT_BONUS);
+		}
+	}
 	
 	public void advanceInCombat(ShipAPI ship, float amount){
 		CombatEngineAPI engine = Global.getCombatEngine();
@@ -44,12 +51,6 @@ public class InReC_slotVent extends BaseHullMod {
         
 		float dissipation = (Float) mag.get(ship.getHullSize());
         
-        MutableShipStatsAPI stats = ship.getMutableStats();
-        boolean sMod = isSMod(stats);
-		if (sMod) {
-			dissipation *= 1f + (SMOD_RATE_BONUS * ship.getFluxTracker().getFluxLevel() * 0.01f);
-		}
-		
 		float fluxDiff = amount * Math.min(dissipation, (ship.getFluxTracker().getCurrFlux() - ship.getFluxTracker().getHardFlux()));
     	
 		// if you have more soft flux than hard flux, dissipate some for free!
@@ -76,9 +77,9 @@ public class InReC_slotVent extends BaseHullMod {
 							12f,
 							MathUtils.getRandomNumberInRange(1.6f, 2.0f),
 							0.8f,
-							0.4f,
 							0.6f,
-							new Color(120,100,110,70),
+							0.85f,
+							new Color(120,100,110,90),
 							false);
 	    			
 	    	        for (int i = 0; i < 2; i++) {
@@ -89,8 +90,8 @@ public class InReC_slotVent extends BaseHullMod {
 	            				10f,
 	            				2.4f,
 	            				0.6f,
-	            				0.4f,
-	            				MathUtils.getRandomNumberInRange(0.5f, 0.7f),
+	            				0.6f,
+	            				MathUtils.getRandomNumberInRange(0.69f, 0.9f),
 	            				new Color(135,55,165,alpha),
 	            				true);
 	    	        }
@@ -104,7 +105,7 @@ public class InReC_slotVent extends BaseHullMod {
     	            			MathUtils.getRandomNumberInRange(2f, 3f),
     	            			1f,
     	            			MathUtils.getRandomNumberInRange(0.25f, 0.5f),
-    	            			new Color(235,255,245,sparkAlpha));
+    	            			new Color(215,235,225,sparkAlpha));
     	        		
     	        	}
 	    			
@@ -120,9 +121,6 @@ public class InReC_slotVent extends BaseHullMod {
 	    }
 	 
 	
-	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-	}
-    
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		return null;
 	}
@@ -155,7 +153,7 @@ public class InReC_slotVent extends BaseHullMod {
 	}
 	
 	public String getSModDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + SMOD_RATE_BONUS + "%";
+		if (index == 0) return "" + (int)SMOD_VENT_BONUS + "%";
 		return null;
 	}
 	

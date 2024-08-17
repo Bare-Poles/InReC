@@ -4,7 +4,7 @@
   "hullSize": "FRIGATE",
   "spriteName": "graphics/ships/InReC_brawler.png",
   "style": "INREC",
-  "height": 60,
+  "height": 62,
   "width": 102,
   "center": [51, 31],
   "collisionRadius": 70,
@@ -12,11 +12,8 @@
   "shieldRadius": 67,
   "viewOffset": 0,
   "builtInMods": [
-    "InReC_slot"
+    "InReC_slotShield_b"
   ],
-  "builtInWeapons": {
-    "WS0007": "InReC_deco_brawler"
-  },
   "weaponSlots": [
     {
       "id": "WS0001",
@@ -25,7 +22,7 @@
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": 0,
-      "locations": [25, 30]
+      "locations": [26, 30]
     },
     {
       "id": "WS0002",
@@ -34,7 +31,7 @@
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": 0,
-      "locations": [25, -30]
+      "locations": [26, -30]
     },
     {
       "id": "WS0003",
@@ -43,7 +40,7 @@
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": 90,
-      "locations": [2, 47]
+      "locations": [3, 47]
     },
     {
       "id": "WS0004",
@@ -52,7 +49,7 @@
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": -90,
-      "locations": [2, -47]
+      "locations": [3, -47]
     },
     {
       "id": "WS0005",
@@ -61,7 +58,7 @@
       "mount": "TURRET",
       "arc": 130,
       "angle": 40,
-      "locations": [5, 19]
+      "locations": [6, 19]
     },
     {
       "id": "WS0006",
@@ -70,21 +67,12 @@
       "mount": "TURRET",
       "arc": 130,
       "angle": -40,
-      "locations": [5, -19]
-    },
-    {
-      "id": "WS0007",
-      "size": "SMALL",
-      "type": "DECORATIVE",
-      "mount": "TURRET",
-      "arc": 0,
-      "angle": 180,
-      "locations": [-26, 0]
+      "locations": [6, -19]
     }
   ],
   "engineSlots": [
     {
-      "location": [-26, 15.5],
+      "location": [-25, 15.5],
       "length": 32,
       "width": 13,
       "angle": 180,
@@ -93,7 +81,7 @@
       "styleId": "INREC"
     },
     {
-      "location": [-26, -15.5],
+      "location": [-25, -15.5],
       "length": 32,
       "width": 13,
       "angle": -180,
@@ -102,7 +90,7 @@
       "styleId": "INREC"
     },
     {
-      "location": [-27, 28],
+      "location": [-26, 28],
       "length": 48,
       "width": 22,
       "angle": 180,
@@ -111,7 +99,7 @@
       "styleId": "INREC"
     },
     {
-      "location": [-27, -28],
+      "location": [-26, -28],
       "length": 48,
       "width": 22,
       "angle": -180,
@@ -121,32 +109,31 @@
     }
   ],
   "bounds": [
-    19, -8,
-    18, -23,
-    24, -25,
-    24, -35,
-    11, -40,
-    2, -46,
-    -5, -41,
-    -16, -41,
-    -17, -36,
-    -25, -33,
-    -25, -12,
-    -22, -10,
-    -28, -0,
-    -28, 0,
-    -22, 10,
-    -25, 12,
-    -25, 33,
-    -17, 36,
-    -16, 41,
-    -5, 41,
-    2, 46,
-    11, 40,
-    24, 35,
-    24, 25,
-    18, 23,
-    19, 8,
-    25, 0
+    20, -8,
+    19, -23,
+    25, -25,
+    25, -35,
+    12, -40,
+    3, -46,
+    -4, -41,
+    -15, -41,
+    -16, -36,
+    -24, -33,
+    -24, -12,
+    -21, -10,
+    -29, -0,
+    -21, 10,
+    -24, 12,
+    -24, 33,
+    -16, 36,
+    -15, 41,
+    -4, 41,
+    3, 46,
+    12, 40,
+    25, 35,
+    25, 25,
+    19, 23,
+    20, 8,
+    27, -0
   ]
 }

@@ -1,8 +1,8 @@
 id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-InReC_greg_wing,InReC_greg_std,"auto_fighter, no_drop, no_sell, mid, rapid_reform, leader_no_swarm, wingmen_no_swarm, match_leader_facing, independent_of_carrier, restricted",0,,0,0,V,100000,450,0,1,INTERCEPTOR,Drone,5,100000,,,,,,,,,,,,,19201
-InReC_greg_a_wing,InReC_greg_a_std,"auto_fighter, no_drop, no_sell, mid, rapid_reform, leader_no_swarm, wingmen_no_swarm, match_leader_facing, independent_of_carrier, restricted",0,,0,0,V,100000,400,0,1,FIGHTER,Drone,5,100000,,,,,,,,,,,,,19202
-InReC_greg_s_wing,InReC_greg_s_std,"auto_fighter, no_drop, no_sell, mid, rapid_reform, leader_no_swarm, wingmen_no_swarm, match_leader_facing, independent_of_carrier, restricted",0,,0,0,V,100000,800,0,1,FIGHTER,Drone,5,100000,,,,,,,,,,,,,19203
+InReC_greg_wing,InReC_greg_std,"auto_fighter, no_drop, no_sell, mid, rapid_reform, leader_no_swarm, wingmen_no_swarm, match_leader_facing, attack_at_an_angle, independent_of_carrier, restricted",0,,0,0,V,100000,400,0,1,INTERCEPTOR,Drone,5,100000,,,,,,,,,,,,,19201
+InReC_greg_a_wing,InReC_greg_a_std,"auto_fighter, no_drop, no_sell, mid, rapid_reform, leader_no_swarm, wingmen_no_swarm, match_leader_facing, attack_at_an_angle, independent_of_carrier, restricted",0,,0,0,V,100000,350,0,1,FIGHTER,Drone,5,100000,,,,,,,,,,,,,19202
+InReC_greg_s_wing,InReC_greg_s_std,"auto_fighter, no_drop, no_sell, mid, rapid_reform, leader_no_swarm, wingmen_no_swarm, match_leader_facing, attack_at_an_angle, independent_of_carrier, restricted",0,,0,0,V,100000,700,0,1,FIGHTER,Drone,5,100000,,,,,,,,,,,,,19203
 InReC_pulse_drone_g_wing,InReC_pulse_drone_g_std,"auto_fighter, no_drop, no_sell, mid, rapid_reform, leader_no_swarm, wingmen_no_swarm, match_leader_facing, independent_of_carrier, restricted",0,,0,0,V,100000,550,0,1,FIGHTER,Drone,5,100000,,,,,,,,,,,,,19204
 InReC_pulse_drone_w_wing,InReC_pulse_drone_w_std,"auto_fighter, no_drop, no_sell, mid, rapid_reform, leader_no_swarm, wingmen_no_swarm, match_leader_facing, independent_of_carrier, restricted",0,,0,0,V,100000,550,0,1,FIGHTER,Drone,5,100000,,,,,,,,,,,,,19205
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,

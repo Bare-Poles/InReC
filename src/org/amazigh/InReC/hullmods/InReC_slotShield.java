@@ -12,18 +12,14 @@ import com.fs.starfarer.api.util.Misc;
 
 public class InReC_slotShield extends BaseHullMod {
 	
-	public static final int HARD_FLUX_DISSIPATION_PERCENT = 20;
-	public static final float SHIELD_MALUS = 20f;
-	// public static float SOFT_FLUX_CONVERSION = 0.1f;
+	public static final float SHIELD_MALUS = 10f;
+	public static final float SOFT_FLUX_CONVERSION = 0.25f;
 	
 	public static final float SHIELD_UPKEEP_BONUS = 25f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		stats.getHardFluxDissipationFraction().modifyFlat(id, (float)HARD_FLUX_DISSIPATION_PERCENT * 0.01f);
 		
-		// stats.getShieldSoftFluxConversion().modifyFlat(id, SSOFT_FLUX_CONVERSION);
-		// this might be a fun stat to use if this initial idea doesn't work out!
-		
+		stats.getShieldSoftFluxConversion().modifyFlat(id, SOFT_FLUX_CONVERSION);
 		stats.getShieldDamageTakenMult().modifyMult(id, 1f + (SHIELD_MALUS * 0.01f));
 		
 		boolean sMod = isSMod(stats);
@@ -49,10 +45,10 @@ public class InReC_slotShield extends BaseHullMod {
 		Color h = Misc.getHighlightColor();
 		Color bad = Misc.getNegativeHighlightColor();
 		
-		LabelAPI label = tooltip.addPara("Installs a shield bypass that trades efficiency for the ability to dissipate hard flux while shields are active.", opad);
+		LabelAPI label = tooltip.addPara("Installs a shield bypass that trades efficiency for the ability to convert a portion of shield damage to soft flux.", opad);
 		
-		label = tooltip.addPara("Allows the ship to dissipate hard flux at %s of the normal rate while shields are on.", opad, h, "" + (int)HARD_FLUX_DISSIPATION_PERCENT + "%");
-		label.setHighlight("" + (int)HARD_FLUX_DISSIPATION_PERCENT + "%");
+		label = tooltip.addPara("Converts %s of the hard flux damage taken by shields to soft flux.", opad, h, "" + (int) Math.round(SOFT_FLUX_CONVERSION * 100f) + "%");
+		label.setHighlight("" + (int) Math.round(SOFT_FLUX_CONVERSION * 100f) + "%");
 		label.setHighlightColors(h);
 		label = tooltip.addPara("Shield damage taken increased by %s.", pad, bad, "" + (int)SHIELD_MALUS + "%");
 		label.setHighlight("" + (int)SHIELD_MALUS + "%");
@@ -63,7 +59,7 @@ public class InReC_slotShield extends BaseHullMod {
 	}
 	
 	public String getSModDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + SHIELD_UPKEEP_BONUS;
+		if (index == 0) return "" + (int)SHIELD_UPKEEP_BONUS;
 		return null;
 	}
 	

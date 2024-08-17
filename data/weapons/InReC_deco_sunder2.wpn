@@ -1,14 +1,14 @@
 {
 
-  "id": "InReC_deco_brawler",
+  "id": "InReC_deco_sunder2",
   "specClass": "beam",
   "type": "DECORATIVE",
   "size": "SMALL",
 
   "everyFrameEffect": "org.amazigh.InReC.scripts.InReC_variableDecoWeaponScript",
 
-  "turretSprite": "graphics/weapons/deco/InReC_brawler_deco_00.png",
-  "hardpointSprite": "graphics/weapons/deco/InReC_brawler_deco_00.png",
+  "turretSprite": "graphics/weapons/deco/InReC_sunder_deco2_00.png",
+  "hardpointSprite": "graphics/weapons/deco/InReC_sunder_deco2_00.png",
   "showDamageWhenDecorative": True,
   "numFrames":5,
   "frameRate":1,

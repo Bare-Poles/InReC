@@ -12,7 +12,9 @@
   "shieldRadius": 23,
   "viewOffset": 0,
   "builtInMods": [
-    "no_weapon_flux"
+    "no_weapon_flux",
+    "turretgyros",
+    "pointdefenseai"
   ],
   "weaponSlots": [
     {

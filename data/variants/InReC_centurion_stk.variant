@@ -3,12 +3,11 @@
   "hullId": "InReC_centurion",
   "displayName": "Strike",
   "goalVariant": true,
-  "fluxCapacitors": 5,
-  "fluxVents": 4,
+  "fluxCapacitors": 2,
+  "fluxVents": 10,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "InReC_slotVent",
     "unstable_injector"
   ],
   "weaponGroups": [

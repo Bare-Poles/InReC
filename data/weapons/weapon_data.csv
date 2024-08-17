@@ -5,7 +5,7 @@ Heavy Pulse Bolter,InReC_pulse_hvy,0,,1100,650,,70,,0,25,8,,,,ENERGY,49,,0.15,1.
 Light Flash Bolter,InReC_flash_lt,0,,200,400,,30,,0,100,4,,,,ENERGY,18,,0.1,0.6,3,0.15,30,30,0,0,,1200,,,,,,PD,"pd6, energy6, SR, inrec_wep_bp, merc",,InReC,,Point Defense (area),,,,Spread,,,,,,19202
 Flash Bolter,InReC_flash,1,,1500,450,,40,,0,50,12,,,,ENERGY,24,,0.1,2.4,6,0.1,35,35,0,0,,1200,,,,,,PD,"pd13, energy11, SR, inrec_wep_bp, merc",,InReC,,Point Defense (area),,,,Spread,,,,,,19202.1
 Spark Bolter,InReC_spark,1,,400,450,,30,,0,100,6,,,,FRAGMENTATION,6,,0.05,0.65,7,0.05,6,6,0,0,,1250,,,,,,PD,"pd7, energy5, inrec_wep_bp, merc",,InReC,,Point Defense,,,,,,,,,,19203
-Heavy Spark Bolter,InReC_spark_hvy,0,,1200,550,,40,,0,50,10,,,,FRAGMENTATION,8,,0.05,0.25,5,0.05,6,6,0,0,,1250,,,,,,PD,"pd12, energy10, inrec_wep_bp, merc",,InReC,,Point Defense,,,,,,,,,,19203.1
+Heavy Spark Bolter,InReC_spark_hvy,0,,1200,550,,40,,0,50,10,,,,FRAGMENTATION,8,,0.05,0.25,5,0.05,7,7,0,0,,1250,,,,,,PD,"pd12, energy10, inrec_wep_bp, merc",,InReC,,Point Defense,,,,,,,,,,19203.1
 Fusion Bolter,InReC_fusion,2,,600,450,,30,,0,30,7,,,,HIGH_EXPLOSIVE,30,,0.1,2.7,5,0.05,40,40,0,0,,1000,,,,,,,"energy9, inrec_wep_bp, merc",,InReC,,Anti Armour,,,,,Each bolt deals an additional %s damage to armor. This damage is not reduced by armor.,6,,,,19204
 Gluon Bolter,InReC_gluon,3,,750,800,,25,,0,20,7,,,,ENERGY,30,,0.2,3.65,24,0.05,30,30,0,0,,720,,,,,,,"energy10, LR, inrec_wep_bp, merc",,InReC,,Fire Support,,,,Swarming,,,,,,19205
 Disruption Bolter,InReC_disruption,2,,2400,600,,150,400,0,20,12,,,,ENERGY,195,,0.2,1.9,4,0.3,4,4,0,0,,1000,,,,,,,"energy13, inrec_wep_bp, merc",,InReC,,Suppression,,,,,"Each hits on hull or armor will discharge %s arcs, each arc dealing %s and %s damage.",4 | 30 Energy | 80 EMP,,,,19206
@@ -32,10 +32,10 @@ Beekeeper Kinetic Blister,InReC_beekeeper,2,,500,1500,,400,,,15,4,2,,,KINETIC,0,
 Beekeeper Sub,InReC_beekeeper_sub,0,,1000,1200,,50,,4,10,,,,,KINETIC,0,,0,1,1,0,0,0,0,0,,350,350,5,40,,,"SYSTEM, DO_NOT_AIM",,,InReC,,,,,,,,,,,,19226.1
 Beekeeper Kinetic Blister Pod,InReC_beekeeper_pod,2,,1800,1500,,400,,,10,12,8,,,KINETIC,0,,0,15,1,0,0,0,0,0,,250,75,30,300,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","strike8, missile13, inrec_wep_bp, merc",,InReC,,Anti Shield,Medium,Good,,,On nearing its target the missile will slow down and fire a barrage of %s.,Micro Missiles,,,TRUE,19226.2
 Apiarist Blister,InReC_apiarist,2,,500,1500,,400,,,15,4,2,,,HIGH_EXPLOSIVE,0,,0,5,1,0,0,0,0,0,,250,75,30,300,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","strike4, missile8, inrec_wep_bp, merc",,InReC,,Anti Armor,Medium,Good,,,"On nearing its target the missile will slow down and fire a barrage of %s.
-Each %s deals an additional %s damage to armor. This damage is not reduced by armor.",Micro Missiles | Micro Missile | 60,,,TRUE,19227
+Each %s deals an additional %s damage to armor. This damage is not reduced by armor.",Micro Missiles | Micro Missile | 40,,,TRUE,19227
 Apiarist Sub,InReC_apiarist_sub,0,,1000,1200,,60,,4,10,,,,,HIGH_EXPLOSIVE,0,,0,1,1,0,0,0,0,0,,300,300,5.8,50,,,"SYSTEM, DO_NOT_AIM, MISSILE_SPREAD",,,InReC,,,,,,,,,,,,19227.1
 Apiarist Blister Pod,InReC_apiarist_pod,2,,1800,1500,,400,,,10,12,8,,,HIGH_EXPLOSIVE,0,,0,15,1,0,0,0,0,0,,250,75,30,300,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","strike8, missile13, inrec_wep_bp, merc",,InReC,,Anti Armor,Medium,Good,,,"On nearing its target the missile will slow down and fire a barrage of %s.
-Each %s deals an additional %s damage to armor. This damage is not reduced by armor.",Micro Missiles | Micro Missile | 60,,,TRUE,19227.2
+Each %s deals an additional %s damage to armor. This damage is not reduced by armor.",Micro Missiles | Micro Missile | 40,,,TRUE,19227.2
 Herbicide SRM,InReC_herbicide,1,,400,800,,120,,10,25,5,90,,,HIGH_EXPLOSIVE,0,,0,7,6,0.2,1,10,1,2,,500,100,3.5,60,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES, MISSILE_SPREAD","missile8, strike4, inrec_wep_bp, merc",,InReC,,Anti Armor,Fast,Medium,,,,,,,,19228
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -45,17 +45,19 @@ Millstone Mono,InReC_millstone_drn,0,,1000,900,,160,,9,30,0,,,,FRAGMENTATION,48,
 Flock MRM (Drone),InReC_flock_drn,0,,1000,2000,,120,,16,15,0,,,,HIGH_EXPLOSIVE,0,,0,13.75,2,0.25,0,3,1,1,,200,70,15,100,,,"SYSTEM, DO_NOT_AIM",,,InReC,,Fire Support,,,,,,,,,,19234
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Flare (Dumb),InReC_flare_dumb,,,1000,400,,20,200,0,,,,,,ENERGY,0,,0,1,1,0.1,30,30,0,0,,150,300,3,100,,,SYSTEM,,,InReC,,,,,,,,,,,,19241
-Flare (Jamming),InReC_flare_jam,,,1000,200,,20,100,0,,,,,,ENERGY,0,,0,1,1,0.1,30,30,0,0,,200,100,5,400,,,SYSTEM,,,InReC,,,,,,,,,,,,19242
+Flare (Dumb),InReC_flare_dumb,,,1000,400,,20,200,0,,,,,,ENERGY,0,,0,1,1,0.1,30,30,0,0,,150,300,3.2,100,,,SYSTEM,,,InReC,,,,,,,,,,,,19241
+Flare (Jamming),InReC_flare_jam,,,1000,200,,20,100,0,,,,,,ENERGY,0,,0,1,1,0.1,30,30,0,0,,200,100,5.5,400,,,SYSTEM,,,InReC,,,,,,,,,,,,19242
 Flare (Smart),InReC_flare_smart,,,1000,500,,20,400,0,,,,,,ENERGY,0,,0,1,1,0.1,40,40,0,0,,400,200,8,1,,,SYSTEM,,,InReC,,,,,,,,,,,,19243
 Cluster Flak,InReC_cluster_flak,,,1000,250,,120,,,,,,,,FRAGMENTATION,0,,0,0.1,7,0.5,150,150,0,0,,50,200,2.75,60,,,SYSTEM,,,InReC,,,,,,,,,,,,19244
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Deco Brawler,InReC_deco_brawler,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
-Deco Centurion,InReC_deco_centurion,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
-Deco Champion,InReC_deco_champion,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
-Deco DroverVigilance,InReC_deco_droVig,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
-Deco Enforcer,InReC_deco_enforcer,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
-Deco Sunder,InReC_deco_sunder,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
+Deco Champion L,InReC_deco_champion,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
+Deco Champion R,InReC_deco_champion2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
+Deco Drover R,InReC_deco_drover,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
+Deco Drover L,InReC_deco_drover2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
+Deco Enforcer L,InReC_deco_enforcer,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
+Deco Enforcer R,InReC_deco_enforcer2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
+Deco Sunder L,InReC_deco_sunder,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
+Deco Sunder R,InReC_deco_sunder2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

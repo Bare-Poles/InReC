@@ -9,8 +9,8 @@
   "permaMods": [],
   "hullMods": [
     "targetingunit",
-    "InReC_slotFlares",
-    "ecm"
+    "ecm",
+    "stabilizedshieldemitter"
   ],
   "weaponGroups": [
     {

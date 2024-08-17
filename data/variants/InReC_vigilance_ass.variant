@@ -3,14 +3,14 @@
   "hullId": "InReC_vigilance",
   "displayName": "Assault",
   "goalVariant": true,
-  "fluxCapacitors": 3,
+  "fluxCapacitors": 2,
   "fluxVents": 10,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "InReC_slotVent",
     "unstable_injector",
-    "stabilizedshieldemitter"
+    "stabilizedshieldemitter",
+    "fluxdistributor"
   ],
   "weaponGroups": [
     {

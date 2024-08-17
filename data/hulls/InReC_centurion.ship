@@ -12,12 +12,9 @@
   "shieldRadius": 79,
   "viewOffset": 0,
   "builtInMods": [
-    "InReC_slot",
-    "InReC_concDamper"
+    "InReC_concDamper",
+    "InReC_slotVent_b"
   ],
-  "builtInWeapons": {
-    "WS0008": "InReC_deco_centurion"
-  },
   "weaponSlots": [
     {
       "id": "WS0001",

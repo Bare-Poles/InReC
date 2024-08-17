@@ -3,13 +3,12 @@
   "hullId": "InReC_centurion",
   "displayName": "Support",
   "goalVariant": true,
-  "fluxCapacitors": 0,
+  "fluxCapacitors": 3,
   "fluxVents": 8,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "targetingunit",
-    "InReC_slotFlares",
     "eccm"
   ],
   "weaponGroups": [

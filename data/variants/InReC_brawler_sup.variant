@@ -3,12 +3,11 @@
   "hullId": "InReC_brawler",
   "displayName": "Support",
   "goalVariant": true,
-  "fluxCapacitors": 0,
-  "fluxVents": 8,
+  "fluxCapacitors": 2,
+  "fluxVents": 9,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "InReC_slotFlares",
     "eccm",
     "targetingunit"
   ],

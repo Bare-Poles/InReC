@@ -15,12 +15,12 @@ import com.fs.starfarer.api.util.Misc;
 
 public class InReC_apiaristOnHitEffect implements OnHitEffectPlugin {
 
-	public static float DAMAGE = 60;
+	public static float DAMAGE = 40;
 
 	public void onHit(DamagingProjectileAPI projectile, CombatEntityAPI target,
 					  Vector2f point, boolean shieldHit, ApplyDamageResultAPI damageResult, CombatEngineAPI engine) {
 		if (!shieldHit && target instanceof ShipAPI) {
-			DAMAGE = projectile.getDamageAmount();
+			DAMAGE = projectile.getDamageAmount() * 0.666666f;
 			dealArmorDamage(projectile, (ShipAPI) target, point);
 		}
 	}

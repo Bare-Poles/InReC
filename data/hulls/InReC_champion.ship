@@ -16,8 +16,7 @@
   ],
   "builtInWeapons": {
     "WS0017": "InReC_deco_champion",
-    "WS0018": "InReC_deco_champion",
-    "WS0019": "InReC_deco_champion"
+    "WS0018": "InReC_deco_champion2"
   },
   "weaponSlots": [
     {
@@ -181,15 +180,6 @@
       "arc": 0,
       "angle": -90,
       "locations": [-26, -54]
-    },
-    {
-      "id": "WS0019",
-      "size": "SMALL",
-      "type": "DECORATIVE",
-      "mount": "TURRET",
-      "arc": 0,
-      "angle": 180,
-      "locations": [-79, -0]
     }
   ],
   "engineSlots": [
@@ -311,8 +301,8 @@
     -108, -29,
     -102.5, -28,
     -102, -10,
-    -81, -6,
-    -81, 6,
+    -78, -6,
+    -78, 6,
     -102, 10,
     -102.5, 28,
     -108, 29,

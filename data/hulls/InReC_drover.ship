@@ -16,8 +16,8 @@
     "InReC_gregSlot"
   ],
   "builtInWeapons": {
-    "WS0007": "InReC_deco_droVig",
-    "WS0008": "InReC_deco_droVig"
+    "WS0007": "InReC_deco_drover2",
+    "WS0008": "InReC_deco_drover"
   },
   "weaponSlots": [
     {

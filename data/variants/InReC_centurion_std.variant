@@ -3,12 +3,11 @@
   "hullId": "InReC_centurion",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 2,
+  "fluxCapacitors": 5,
   "fluxVents": 10,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "InReC_slotRange",
     "missleracks",
     "targetingunit",
     "autorepair"

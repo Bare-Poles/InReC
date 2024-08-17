@@ -12,11 +12,8 @@
   "shieldRadius": 78,
   "viewOffset": 0,
   "builtInMods": [
-    "InReC_slot"
+    "InReC_slotRange_b"
   ],
-  "builtInWeapons": {
-    "WS0004": "InReC_deco_droVig"
-  },
   "weaponSlots": [
     {
       "id": "WS0001",
@@ -44,15 +41,6 @@
       "arc": 5,
       "angle": -90,
       "locations": [5, -25]
-    },
-    {
-      "id": "WS0004",
-      "size": "SMALL",
-      "type": "DECORATIVE",
-      "mount": "TURRET",
-      "arc": 0,
-      "angle": 90,
-      "locations": [-12, 17]
     },
     {
       "id": "WS0005",
