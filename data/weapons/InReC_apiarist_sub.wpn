@@ -24,5 +24,5 @@
 				 "blowbackSpread":10.0,
 				 "particleColor":[110,100,90,175]},
 	"projectileSpecId":"InReC_apiarist_sub",
-	"fireSoundTwo":"swarmer_fire", #TEMP!
+	"fireSoundTwo":"InReC_blister_fire", #swarmer_fire
 }

@@ -1,0 +1,60 @@
+{
+  "variantId": "InReC_venture_esc",
+  "hullId": "InReC_venture",
+  "displayName": "Escort",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 11,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "InReC_greg_a",
+    "InReC_slotShield",
+    "targetingunit",
+    "InReC_rebalancer"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "InReC_defoliant"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "InReC_fumigator",
+        "WS0002": "InReC_pesticide_pod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "InReC_fusor"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "InReC_pulse_hvy",
+        "WS0006": "InReC_pulse_hvy"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "InReC_flash_lt"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "InReC_grinder_drone_wing",
+    "InReC_grinder_drone_wing"
+  ]
+}

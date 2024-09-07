@@ -1,0 +1,21 @@
+{
+	"id":"InReC_disruption_shot",
+
+	"onFireEffect":"org.amazigh.InReC.scripts.InReC_disruptionOnFireEffect",
+	"onHitEffect":"org.amazigh.InReC.scripts.InReC_disruptionOnHitEffect",
+
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":61.0,
+	"width":21.0,
+	"fadeTime":0.25,
+	"fringeColor":[25,125,160,245],
+	"coreColor":[225,225,255,210],
+	"glowColor":[100,251,215,69], # 100,201,255,81
+	"glowRadius":36,
+	"textureType":"ROUGH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0
+}

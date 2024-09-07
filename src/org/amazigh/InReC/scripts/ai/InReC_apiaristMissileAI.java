@@ -94,7 +94,6 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
 	private IntervalUtil lifeInterval = new IntervalUtil(5f, 5f);
 	
 	
-	
 	//////////////////////
 	//    VARIABLES     //
 	//////////////////////
@@ -107,8 +106,8 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
 	private final MissileAPI MISSILE;
 	private CombatEntityAPI target;
 	private Vector2f lead = new Vector2f();
-	private boolean launch=true;
-	private float timer=0, check=0f;
+	private boolean launch=true, armed=false;
+	private float timer=0, check=0f, startTimer=0f;
 	
 	//////////////////////
 	//  DATA COLLECTING //
@@ -170,6 +169,12 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
         }
         
         timer+=amount;
+        if (!armed) {
+            startTimer+=amount;
+            if (startTimer > 1f) {
+            	armed = true; // a lil thing to block "mirving" for 1 second after launch
+            }
+        }
         //finding lead point to aim to        
         if(launch || timer>=check){
             launch=false;
@@ -217,7 +222,7 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
         float aimAngle = MathUtils.getShortestRotation( MISSILE.getFacing(), correctAngle);
         
         if(Math.abs(aimAngle)<OVERSHOT_ANGLE){
-        	if (MathUtils.getDistanceSquared(MISSILE.getLocation(), target.getLocation()) <= DETECT) {
+        	if (armed && MathUtils.getDistanceSquared(MISSILE.getLocation(), target.getLocation()) <= DETECT) {
         		MISSILE.giveCommand(ShipCommand.DECELERATE);
             	TRIGGER = true;
             } else {
@@ -249,11 +254,12 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
 				Vector2f smokeVel = new Vector2f(vel.x * 0.8f, vel.y * 0.8f);
 				
 				
-				float subFacing1 = MISSILE.getFacing() + MathUtils.getRandomNumberInRange(30f, 60f);
-				engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_apiarist_sub", loc, subFacing1, MathUtils.getRandomPointInCircle(smokeVel, 15f));
+				float subFacing1 = MISSILE.getFacing() + MathUtils.getRandomNumberInRange(30f, 69f);
+				Vector2f loc1 = MathUtils.getPointOnCircumference(loc, 2f, subFacing1);
+				engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_apiarist_sub", loc1, subFacing1, MathUtils.getRandomPointInCircle(smokeVel, 15f));
 				
 				Vector2f puffRandomVel1 = MathUtils.getPointOnCircumference(smokeVel, MathUtils.getRandomNumberInRange(8f, 24f), subFacing1);
-            	engine.addSmokeParticle(loc,
+            	engine.addSmokeParticle(loc1,
             			puffRandomVel1,
             			MathUtils.getRandomNumberInRange(7f, 14f),
             			0.8f,
@@ -261,11 +267,12 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
             			new Color(110,100,90,150));
             	
             	
-            	float subFacing2 = MISSILE.getFacing() - MathUtils.getRandomNumberInRange(30f, 60f);
-            	engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_apiarist_sub", loc, subFacing2 - MathUtils.getRandomNumberInRange(0f, 5f), MathUtils.getRandomPointInCircle(smokeVel, 15f));
+            	float subFacing2 = MISSILE.getFacing() - MathUtils.getRandomNumberInRange(30f, 69f);
+            	Vector2f loc2 = MathUtils.getPointOnCircumference(loc, 2f, subFacing2);
+            	engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_apiarist_sub", loc2, subFacing2 - MathUtils.getRandomNumberInRange(0f, 5f), MathUtils.getRandomPointInCircle(smokeVel, 15f));
 				
 				Vector2f puffRandomVel2 = MathUtils.getPointOnCircumference(smokeVel, MathUtils.getRandomNumberInRange(4f, 12f), subFacing2);
-            	engine.addSmokeParticle(loc,
+            	engine.addSmokeParticle(loc2,
             			puffRandomVel2,
             			MathUtils.getRandomNumberInRange(7f, 14f),
             			0.8f,
@@ -273,7 +280,7 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
             			new Color(110,100,90,150));
             	
             	
-            	Global.getSoundPlayer().playSound("swarmer_fire", 1.0f, 1.0f, loc, vel);
+            	Global.getSoundPlayer().playSound("InReC_blister_fire", 1.0f, 1.0f, loc, vel); //swarmer_fire
             	
             	if (AMMO <= 0) {
             		MISSILE.flameOut();

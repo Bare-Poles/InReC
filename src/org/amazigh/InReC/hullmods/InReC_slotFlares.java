@@ -167,7 +167,7 @@ public class InReC_slotFlares extends BaseHullMod {
 		label.setHighlight("25 seconds");
 		label.setHighlightColors(h);
 		
-		label = tooltip.addPara("May only be installed on InReC vessels, and only one slot hullmod may be installed at a time.", opad);
+		label = tooltip.addPara("May only be installed on InReCo vessels, and only one slot hullmod may be installed at a time.", opad);
 		
 	}
 	
@@ -189,10 +189,10 @@ public class InReC_slotFlares extends BaseHullMod {
 	
 	public String getUnapplicableReason(ShipAPI ship) {
 		if (ship.getVariant().getHullMods().contains("InReC_slotVent") || ship.getVariant().getHullMods().contains("InReC_slotShield") || ship.getVariant().getHullMods().contains("InReC_slotRange")) {
-			return "May only install one InReC Slot hullmod at a time.";
+			return "May only install one InReCo Slot hullmod at a time.";
 		}
 		if (!ship.getVariant().getHullMods().contains("InReC_slot")) {
-			return "Only compatible with InReC vessels.";
+			return "Only compatible with InReCo vessels.";
 		}
 		return null;
 	}
@@ -200,7 +200,7 @@ public class InReC_slotFlares extends BaseHullMod {
 	
     @Override
     public Color getBorderColor() {
-        return new Color(60,220,210,180);
+        return new Color(30,110,105,180);
     }
 
     @Override

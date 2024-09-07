@@ -22,7 +22,7 @@ public class InReC_gluonProjScript extends BaseEveryFrameCombatPlugin {
 	
 	//The actual target angle is randomly offset by this much, to simulate inaccuracy
 	//2f means up to 2 degrees angle off from the actual target angle
-	private static final float ONE_TURN_DUMB_INACCURACY = 3f; //9
+	private static final float ONE_TURN_DUMB_INACCURACY = 6f; //3
 	
 	//Delays the activation of the script by a random amount of seconds between this MIN and MAX.
 	//Note that shots will still decide on target angle/point at spawn-time, not when this duration is up

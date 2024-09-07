@@ -26,5 +26,5 @@
 					   "particleColor":[110,240,205,225]},
 	"interruptibleBurst":true,
 	"projectileSpecId":"InReC_pulse_shot",  # projectile that will be fired
-	"fireSoundTwo":"ir_pulse_laser_fire", #TEMP!
+	"fireSoundTwo":"InReC_pulse_s_fire", #ir_pulse_laser_fire
 }

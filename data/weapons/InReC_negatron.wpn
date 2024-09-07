@@ -26,5 +26,5 @@
 					   "particleColor":[170,100,250,225]},	
 	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
 	"projectileSpecId":"InReC_negatron_shot",  # projectile that will be fired
-	"fireSoundTwo":"heavy_blaster_fire", #TEMP!
+	"fireSoundTwo":"InReC_negatron_fire", #heavy_blaster_fire
 }

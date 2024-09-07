@@ -1,0 +1,130 @@
+{
+  "hullName": "Cerberus (IRC)",
+  "hullId": "InReC_cerberus",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/InReC_cerberus.png",
+  "style": "INREC",
+  "height": 108,
+  "width": 86,
+  "center": [43, 43],
+  "collisionRadius": 80,
+  "shieldCenter": [2, -0],
+  "shieldRadius": 77,
+  "viewOffset": 0,
+  "builtInMods": [
+    "InReC_gregSlot",
+    "InReC_slotFlares_b"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 0,
+      "locations": [43, 0]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [14, 36]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": 80,
+      "locations": [-12, 19]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": -80,
+      "locations": [-12, -19]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-16, 39]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-40, 31],
+      "length": 36,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-40, -31],
+      "length": 36,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-42.5, 23],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-42.5, -23],
+      "length": 48,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    }
+  ],
+  "bounds": [
+    53, -12,
+    62, -14,
+    53, -20,
+    48, -28,
+    39, -32,
+    14, -31,
+    3, -21,
+    0, -35,
+    -36, -36,
+    -41, -20,
+    -36, -11,
+    -31, -9,
+    -35, -0,
+    -31, 9,
+    -36, 11,
+    -41, 20,
+    -36, 36,
+    -2, 37,
+    4, 33,
+    47, 36,
+    49, 26,
+    42, 21,
+    56, 19,
+    60, 15,
+    53, 12
+  ]
+}

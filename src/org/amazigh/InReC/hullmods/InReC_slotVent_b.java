@@ -141,7 +141,7 @@ public class InReC_slotVent_b extends BaseHullMod {
 	
     @Override
     public Color getBorderColor() {
-        return new Color(60,220,210,180);
+        return new Color(30,110,105,180);
     }
 
     @Override

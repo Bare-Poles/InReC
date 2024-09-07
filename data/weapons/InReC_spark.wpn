@@ -23,5 +23,5 @@
 					   "particleColor":[240,210,110,225]},	
 	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
 	"projectileSpecId":"InReC_spark_shot",  # projectile that will be fired
-	"fireSoundTwo":"vulcan_cannon_fire", #TEMP!
+	"fireSoundTwo":"InReC_spark_s_fire", #vulcan_cannon_fire
 }

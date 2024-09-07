@@ -35,7 +35,7 @@ public class InReC_greg_p extends BaseHullMod {
 		label.setHighlight("Pulse Bolters");
 		label.setHighlightColors(h);
 		
-		label = tooltip.addPara("May only be installed on InReC vessels that feature a Footman deployment system, and only one Footman Variant may be installed at a time.", opad);
+		label = tooltip.addPara("May only be installed on InReCo vessels that feature a Footman deployment system, and only one Footman Variant may be installed at a time.", opad);
 		
 	}
 	
@@ -53,7 +53,7 @@ public class InReC_greg_p extends BaseHullMod {
 			return "May only install one Footman Variant at a time.";
 		}
 		if (!ship.getVariant().getHullMods().contains("InReC_gregSlot")) {
-			return "Only compatible with InReC vessels that feature a Footman deployment system.";
+			return "Only compatible with InReCo vessels that feature a Footman deployment system.";
 		}
 		return null;
 	}
@@ -61,7 +61,7 @@ public class InReC_greg_p extends BaseHullMod {
 	
     @Override
     public Color getBorderColor() {
-        return new Color(60,220,210,180);
+        return new Color(30,110,105,180);
     }
 
     @Override

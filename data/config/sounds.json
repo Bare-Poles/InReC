@@ -1,0 +1,126 @@
+{
+	"InReC_pulse_s_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/InReC_pulse_fire.ogg","pitch":0.95,"volume":0.3},
+		{"file":"sounds/sfx_wpn_energy/InReC_pulse_fire.ogg","pitch":1.0,"volume":0.3},
+		{"file":"sounds/sfx_wpn_energy/InReC_pulse_fire.ogg","pitch":1.05,"volume":0.3},
+	],
+
+	"InReC_pulse_m_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/InReC_pulse_fire.ogg","pitch":0.75,"volume":0.36},
+		{"file":"sounds/sfx_wpn_energy/InReC_pulse_fire.ogg","pitch":0.8,"volume":0.36},
+		{"file":"sounds/sfx_wpn_energy/InReC_pulse_fire.ogg","pitch":0.85,"volume":0.36},
+	],
+
+	"InReC_flash_s_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/InReC_flash_fire.ogg","pitch":0.85,"volume":0.3},
+		{"file":"sounds/sfx_wpn_energy/InReC_flash_fire.ogg","pitch":0.9,"volume":0.3},
+		{"file":"sounds/sfx_wpn_energy/InReC_flash_fire.ogg","pitch":0.95,"volume":0.3},
+	],
+
+	"InReC_flash_m_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/InReC_flash_fire.ogg","pitch":0.75,"volume":0.35},
+		{"file":"sounds/sfx_wpn_energy/InReC_flash_fire.ogg","pitch":0.8,"volume":0.35},
+		{"file":"sounds/sfx_wpn_energy/InReC_flash_fire.ogg","pitch":0.85,"volume":0.35},
+	],
+
+	"InReC_spark_s_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/InReC_spark_fire.ogg","pitch":0.8,"volume":0.2},
+		{"file":"sounds/sfx_wpn_energy/InReC_spark_fire.ogg","pitch":1.0,"volume":0.2},
+		{"file":"sounds/sfx_wpn_energy/InReC_spark_fire.ogg","pitch":1.1,"volume":0.2},
+	],
+
+	"InReC_spark_m_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/InReC_spark_fire.ogg","pitch":0.8,"volume":0.22},
+		{"file":"sounds/sfx_wpn_energy/InReC_spark_fire.ogg","pitch":0.9,"volume":0.22},
+		{"file":"sounds/sfx_wpn_energy/InReC_spark_fire.ogg","pitch":1.0,"volume":0.22},
+	],
+
+	"InReC_fusion_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/InReC_fusion_fire.ogg","pitch":0.85,"volume":0.35},
+		{"file":"sounds/sfx_wpn_energy/InReC_fusion_fire.ogg","pitch":0.9,"volume":0.35},
+		{"file":"sounds/sfx_wpn_energy/InReC_fusion_fire.ogg","pitch":0.95,"volume":0.35},
+	],
+
+	"InReC_gluon_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/InReC_gluon_fire.ogg","pitch":1.1,"volume":0.3},
+		{"file":"sounds/sfx_wpn_energy/InReC_gluon_fire.ogg","pitch":1.15,"volume":0.3},
+		{"file":"sounds/sfx_wpn_energy/InReC_gluon_fire.ogg","pitch":1.2,"volume":0.3},
+	],
+
+
+	"InReC_disruption_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/InReC_disruption_fire_01.ogg","pitch":0.9,"volume":0.55},
+		{"file":"sounds/sfx_wpn_energy/InReC_disruption_fire_01.ogg","pitch":0.95,"volume":0.55},
+		{"file":"sounds/sfx_wpn_energy/InReC_disruption_fire_01.ogg","pitch":1.0,"volume":0.55},
+		{"file":"sounds/sfx_wpn_energy/InReC_disruption_fire_02.ogg","pitch":0.9,"volume":0.55},
+		{"file":"sounds/sfx_wpn_energy/InReC_disruption_fire_02.ogg","pitch":0.95,"volume":0.55},
+		{"file":"sounds/sfx_wpn_energy/InReC_disruption_fire_02.ogg","pitch":1.0,"volume":0.55},
+	],
+
+	"InReC_negatron_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/InReC_negatron_fire.ogg","pitch":0.95,"volume":0.45},
+		{"file":"sounds/sfx_wpn_energy/InReC_negatron_fire.ogg","pitch":1.0,"volume":0.45},
+		{"file":"sounds/sfx_wpn_energy/InReC_negatron_fire.ogg","pitch":1.05,"volume":0.45},
+	],
+
+
+
+	"InReC_bludgeon_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/heavy_mortar_fire_01.ogg","pitch":0.85,"volume":0.85},
+	],
+
+	"InReC_grinder_s_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/InReC_grinder_fire.ogg","pitch":1.0,"volume":0.65},
+		{"file":"sounds/sfx_wpn_guns/InReC_grinder_fire.ogg","pitch":1.05,"volume":0.65},
+		{"file":"sounds/sfx_wpn_guns/InReC_grinder_fire.ogg","pitch":1.1,"volume":0.65},
+	],
+
+	"InReC_grinder_m_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/InReC_grinder_fire.ogg","pitch":0.95,"volume":0.7},
+		{"file":"sounds/sfx_wpn_guns/InReC_grinder_fire.ogg","pitch":1.0,"volume":0.7},
+		{"file":"sounds/sfx_wpn_guns/InReC_grinder_fire.ogg","pitch":1.05,"volume":0.7},
+	],
+
+	"InReC_grinder_l_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/InReC_grinder_fire.ogg","pitch":0.9,"volume":0.75},
+		{"file":"sounds/sfx_wpn_guns/InReC_grinder_fire.ogg","pitch":0.95,"volume":0.75},
+		{"file":"sounds/sfx_wpn_guns/InReC_grinder_fire.ogg","pitch":1.0,"volume":0.75},
+	],
+
+	"InReC_fusor_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/InReC_fusor_fire.ogg","pitch":0.95,"volume":0.5},
+		{"file":"sounds/sfx_wpn_guns/InReC_fusor_fire.ogg","pitch":1.0,"volume":0.5},
+		{"file":"sounds/sfx_wpn_guns/InReC_fusor_fire.ogg","pitch":1.05,"volume":0.5},
+	],
+
+	"InReC_canister_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/InReC_canister_fire.ogg","pitch":1.0,"volume":0.55},
+		{"file":"sounds/sfx_wpn_guns/InReC_canister_fire.ogg","pitch":1.05,"volume":0.55},
+		{"file":"sounds/sfx_wpn_guns/InReC_canister_fire.ogg","pitch":1.1,"volume":0.55},
+	],
+
+
+
+	"InReC_blister_fire":
+	[
+		{"file":"sounds/sfx_wpn_missiles/InReC_blister_fire.ogg","pitch":1,"volume":0.7},
+	],
+
+
+}

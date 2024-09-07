@@ -1,25 +1,31 @@
 name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sModDesc,sprite
+# Built-in - hidden,,,,,,,,,,,,,,,,,,,
+InReC Module Slot,InReC_slot,1,,InReCo,,,,,TRUE,TRUE,999,999,999,999,org.amazigh.InReC.hullmods.InReC_slot,Hidden Hullmod that allows InReCo ships to mount their module hullmods,Hidden Hullmod that allows InReCo ships to mount their module hullmods,,graphics/hullmods/detach_never.png
+InReC Greg Slot,InReC_gregSlot,1,,InReCo,,,,,TRUE,TRUE,999,999,999,999,org.amazigh.InReC.hullmods.InReC_slot,Hidden Hullmod that allows InReCo ships to swap greg drone types,Hidden Hullmod that allows InReCo ships to swap greg drone types,,graphics/hullmods/detach_always.png
+Concussion Damper,InReC_concDamper,,,InReCo,,,,,TRUE,TRUE,0,0,0,0,org.amazigh.InReC.hullmods.InReC_concDamper,Concussion Damper effect hullmod,Concussion Damper effect hullmod,,graphics/hullmods/detach_never.png
+InReC Greg Hullmod,InReC_gregHullmod,,,InReCo,,,,,TRUE,TRUE,0,0,0,0,org.amazigh.InReC.hullmods.InReC_gregHullmod,Buff to footman engine/wep health/repair,Buff to footman engine/wep health/repair,,graphics/hullmods/detach_always.png
 ,,,,,,,,,,,,,,,,,,,
-InReC Module Slot,InReC_slot,1,,InReC,,,,,TRUE,TRUE,999,999,999,999,org.amazigh.InReC.hullmods.InReC_slot,Hidden Hullmod that allows InReC ships to mount their module hullmods,Hidden Hullmod that allows InReC ships to mount their module hullmods,,graphics/hullmods/detach_never.png
-InReC Greg Slot,InReC_gregSlot,1,,InReC,,,,,TRUE,TRUE,999,999,999,999,org.amazigh.InReC.hullmods.InReC_slot,Hidden Hullmod that allows InReC ships to swap greg drone types,Hidden Hullmod that allows InReC ships to swap greg drone types,,graphics/hullmods/detach_always.png
-,,,,,,,,,,,,,,,,,,,
-External Flux Vents,InReC_slotVent_b,1,,InReC,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_slotVent_b,Soft Venting! (Built-in),Soft Venting! (Built-in),,graphics/hullmods/InReC_slotVent_b.png
-Shield Bypass Array,InReC_slotShield_b,1,,InReC,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_slotShield_b,Shield! (Built-in),Shield! (Built-in),,graphics/hullmods/InReC_slotShield_b.png
-Automated Protection Unit,InReC_slotFlares_b,1,,InReC,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_slotFlares_b,Automatic Flares! (Built-in),Automatic Flares! (Built-in),,graphics/hullmods/detach_always.png
-Bolt Focus Regulator,InReC_slotRange_b,1,,InReC,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_slotRange_b,Energy proj wep range! (Built-in),Energy proj wep range! (Built-in),,graphics/hullmods/InReC_slotRange_b.png
-,,,,,,,,,,,,,,,,,,,
-Concussion Damper,InReC_concDamper,,,InReC,,,,,TRUE,TRUE,0,0,0,0,org.amazigh.InReC.hullmods.InReC_concDamper,Concussion Damper effect hullmod,Concussion Damper effect hullmod,,graphics/hullmods/detach_never.png
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-External Flux Vents,InReC_slotVent,1,,InReC,"special, merc, standard",Special,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_slotVent,Soft Venting!,Soft Venting!,Active flux vent rate increased by %s.,graphics/hullmods/InReC_slotVent.png
-Shield Bypass Array,InReC_slotShield,1,,InReC,"defensive, shields, merc, standard",Shields,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_slotShield,Shield!,Shield!,Shield upkeep reduced by %s.,graphics/hullmods/InReC_slotShield.png
-Automated Protection Unit,InReC_slotFlares,1,,InReC,"defensive, special, merc, standard",Special,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_slotFlares,Automatic Flares!,Automatic Flares!,"Flare count per port increased to %s, flare launcher reload time reduced to %s.",graphics/hullmods/InReC_slotFlares.png
-Bolt Focus Regulator,InReC_slotRange,1,,InReC,"offensive, merc, standard",Weapons,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_slotRange,Energy proj wep range!,Energy proj wep range!,Increases the range increase of all non-beam Energy and Hybrid weapons by %s and increases the maximum to %s/%s/%s/%s.,graphics/hullmods/InReC_slotRange.png
+# Built-in - Visible,,,,,,,,,,,,,,,,,,,
+External Flux Vents,InReC_slotVent_b,1,,InReCo,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_slotVent_b,Soft Venting! (Built-in),Soft Venting! (Built-in),,graphics/hullmods/InReC_slotVent_b.png
+Shield Bypass Array,InReC_slotShield_b,1,,InReCo,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_slotShield_b,Shield! (Built-in),Shield! (Built-in),,graphics/hullmods/InReC_slotShield_b.png
+Automated Protection Unit,InReC_slotFlares_b,1,,InReCo,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_slotFlares_b,Automatic Flares! (Built-in),Automatic Flares! (Built-in),,graphics/hullmods/InReC_slotFlares_b.png
+Bolt Focus Regulator,InReC_slotRange_b,1,,InReCo,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_slotRange_b,Energy proj wep range! (Built-in),Energy proj wep range! (Built-in),,graphics/hullmods/InReC_slotRange_b.png
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
-Footman (Assault),InReC_greg_a,1,,InReC,"special, merc, standard",Special,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_greg_a,Assault Greg!,Assault Greg!,,graphics/hullmods/InReC_greg_a.png
-Footman (Support),InReC_greg_s,1,,InReC,"special, merc, standard",Special,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_greg_s,Support Greg!,Support Greg!,,graphics/hullmods/InReC_greg_s.png
-Pulse Drone,InReC_greg_p,1,,InReC,"special, merc, standard",Special,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_greg_p,"Pulse Drones, but no greg :(","Pulse Drones, but no greg :(",,graphics/hullmods/InReC_greg_p.png
+# Modular,,,,,,,,,,,,,,,,,,,
+# Slot,,,,,,,,,,,,,,,,,,,
+External Flux Vents,InReC_slotVent,1,,InReCo,"special, merc, standard",Special,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_slotVent,Soft Venting!,Soft Venting!,Active flux vent rate increased by %s.,graphics/hullmods/InReC_slotVent.png
+Shield Bypass Array,InReC_slotShield,1,,InReCo,"defensive, shields, merc, standard",Shields,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_slotShield,Shield!,Shield!,Shield upkeep reduced by %s.,graphics/hullmods/InReC_slotShield.png
+Automated Protection Unit,InReC_slotFlares,1,,InReCo,"defensive, special, merc, standard",Special,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_slotFlares,Automatic Flares!,Automatic Flares!,"Flare count per port increased to %s, flare launcher reload time reduced to %s.",graphics/hullmods/InReC_slotFlares.png
+Bolt Focus Regulator,InReC_slotRange,1,,InReCo,"offensive, merc, standard",Weapons,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_slotRange,Energy proj wep range!,Energy proj wep range!,Increases the range increase of all non-beam Energy and Hybrid weapons by %s and increases the maximum to %s/%s/%s/%s.,graphics/hullmods/InReC_slotRange.png
 ,,,,,,,,,,,,,,,,,,,
+# Greg,,,,,,,,,,,,,,,,,,,
+Footman (Assault),InReC_greg_a,1,,InReCo,"special, merc, standard",Special,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_greg_a,Assault Greg!,Assault Greg!,,graphics/hullmods/InReC_greg_a.png
+Footman (Support),InReC_greg_s,1,,InReCo,"special, merc, standard",Special,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_greg_s,Support Greg!,Support Greg!,,graphics/hullmods/InReC_greg_s.png
+Pulse Drone,InReC_greg_p,1,,InReCo,"special, merc, standard",Special,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_greg_p,"Pulse Drones, but no greg :(","Pulse Drones, but no greg :(",,graphics/hullmods/InReC_greg_p.png
+,,,,,,,,,,,,,,,,,,,
+"# ""General"" Modular",,,,,# no_build_in ?,,,,,,,,,,,,,,
+Siege Modifications,InReC_siegeMods,2,,InReCo,"special, merc",Weapons,10000,,,,5,10,15,25,org.amazigh.InReC.hullmods.InReC_siegeMods,Missile Spam and Sniping!,Missile Spam and Sniping!,,graphics/hullmods/InReC_siegeMods.png
+Flux Rebalancer,InReC_rebalancer,2,,InReCo,"special, merc","Special, Weapons, Shields",10000,,,,5,10,15,25,org.amazigh.InReC.hullmods.InReC_rebalancer,"Shield res + EN wep Flux, fancy.","Shield res + EN wep Flux, fancy.",,graphics/hullmods/InReC_rebalancer.png
+Parasite Drones,InReC_parasite,2,,InReCo,"special, merc",Fighters,10000,,,,4,8,12,20,org.amazigh.InReC.hullmods.InReC_parasite,ONE OFF DRONE SPAM LET'S GO!,ONE OFF DRONE SPAM LET'S GO!,,graphics/hullmods/InReC_parasite.png
 ,,,,,,,,,,,,,,,,,,,

@@ -1,0 +1,34 @@
+{
+  "variantId": "InReC_cerberus_swrm",
+  "hullId": "InReC_cerberus",
+  "displayName": "Swarm",
+  "goalVariant": true,
+  "fluxCapacitors": 8,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "InReC_greg_p",
+    "InReC_parasite",
+    "eccm"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "InReC_pesticide"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "InReC_spark",
+        "WS0005": "InReC_spark"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

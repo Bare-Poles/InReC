@@ -6,24 +6,24 @@ Light Flash Bolter,InReC_flash_lt,0,,200,400,,30,,0,100,4,,,,ENERGY,18,,0.1,0.6,
 Flash Bolter,InReC_flash,1,,1500,450,,40,,0,50,12,,,,ENERGY,24,,0.1,2.4,6,0.1,35,35,0,0,,1200,,,,,,PD,"pd13, energy11, SR, inrec_wep_bp, merc",,InReC,,Point Defense (area),,,,Spread,,,,,,19202.1
 Spark Bolter,InReC_spark,1,,400,450,,30,,0,100,6,,,,FRAGMENTATION,6,,0.05,0.65,7,0.05,6,6,0,0,,1250,,,,,,PD,"pd7, energy5, inrec_wep_bp, merc",,InReC,,Point Defense,,,,,,,,,,19203
 Heavy Spark Bolter,InReC_spark_hvy,0,,1200,550,,40,,0,50,10,,,,FRAGMENTATION,8,,0.05,0.25,5,0.05,7,7,0,0,,1250,,,,,,PD,"pd12, energy10, inrec_wep_bp, merc",,InReC,,Point Defense,,,,,,,,,,19203.1
-Fusion Bolter,InReC_fusion,2,,600,450,,30,,0,30,7,,,,HIGH_EXPLOSIVE,30,,0.1,2.7,5,0.05,40,40,0,0,,1000,,,,,,,"energy9, inrec_wep_bp, merc",,InReC,,Anti Armour,,,,,Each bolt deals an additional %s damage to armor. This damage is not reduced by armor.,6,,,,19204
-Gluon Bolter,InReC_gluon,3,,750,800,,25,,0,20,7,,,,ENERGY,30,,0.2,3.65,24,0.05,30,30,0,0,,720,,,,,,,"energy10, LR, inrec_wep_bp, merc",,InReC,,Fire Support,,,,Swarming,,,,,,19205
+Fusion Bolter,InReC_fusion,2,,600,450,,30,,0,30,7,,,,HIGH_EXPLOSIVE,30,,0.1,2.7,5,0.05,40,40,0,0,,1000,,,,,,,"energy9, inrec_wep_bp, merc",,InReC,,Anti Armour,,,,Spread,Each bolt deals an additional %s damage to armor. This damage is not reduced by armor.,6,,,,19204
+Gluon Bolter,InReC_gluon,3,,750,800,,25,,0,20,7,,,,ENERGY,30,,0.2,3.65,24,0.05,15,15,0,0,,720,,,,,,,"energy10, LR, inrec_wep_bp, merc",,InReC,,Fire Support,,,,Swarming,,,,,,19205
 Disruption Bolter,InReC_disruption,2,,2400,600,,150,400,0,20,12,,,,ENERGY,195,,0.2,1.9,4,0.3,4,4,0,0,,1000,,,,,,,"energy13, inrec_wep_bp, merc",,InReC,,Suppression,,,,,"Each hits on hull or armor will discharge %s arcs, each arc dealing %s and %s damage.",4 | 30 Energy | 80 EMP,,,,19206
 Negatron Bolter,InReC_negatron,2,,2400,700,,210,,0,15,12,,,,ENERGY,231,,0.15,2.05,5,0.2,6,6,0,0,,1000,,,,,,,"energy13, inrec_wep_bp, merc",,InReC,,General,,,,,,,,,,19207
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Bludgeon Grenade Launcher,InReC_bludgeon,1,,1800,700,,150,,12,25,12,6,0.666666,2,HIGH_EXPLOSIVE,120,,0,0.3,1,0,0,16,4,4,,500,,,,,,DO_NOT_CONSERVE,"he16, inrec_wep_bp, merc",,InReC,,Anti Armor,,,,,"Shots explode on impact, dealing damage in a small area.",,,,,19211
-Millstone Duo,InReC_millstone,0,,1000,900,,210,,9,30,9,,,,FRAGMENTATION,63,,0,0.6,1,0,1,12,2,8,,800,,,,,,FIRE_WHEN_INEFFICIENT,"kinetic10, LR, inrec_wep_bp, merc",,InReC,,General,,,,,,,,,,19212
-Millstone Trio,InReC_millstone_tri,0,,3000,1100,,240,,10,20,16,,,,FRAGMENTATION,72,,0,0.4,1,0,1,12,2,8,,800,,,,,,FIRE_WHEN_INEFFICIENT,"kinetic17, LR, inrec_wep_bp, merc",,InReC,,General,,,,,,,,,,19212.1
+Millstone Duo,InReC_millstone,0,,1000,900,,220,,9,30,9,,,,FRAGMENTATION,55,,0,0.666666,1,0,1,12,2,8,,800,,,,,,FIRE_WHEN_INEFFICIENT,"kinetic10, LR, inrec_wep_bp, merc",,InReC,,General,,,,,,,,,,19212
+Millstone Trio,InReC_millstone_tri,0,,3000,1100,,240,,10,20,16,,,,FRAGMENTATION,60,,0,0.4,1,0,1,12,2,8,,800,,,,,,FIRE_WHEN_INEFFICIENT,"kinetic17, LR, inrec_wep_bp, merc",,InReC,,General,,,,,,,,,,19212.1
 Rail Fusor,InReC_fusor,1,,1000,800,,80,,8,20,11,,,,KINETIC,68,,0.2,0.6,1,0,0,5,1,4,,1000,,,,,,,"kinetic14, inrec_wep_bp, merc",,InReC,,Anti Shield,,,,,,,,,,19213
 Linked Rail Fusor,InReC_fusor_linked,1,,3000,900,,80,,8,15,19,,,,KINETIC,72,,0.2,0.8,1,0,0,5,1,4,,1000,,,,,,,"kinetic18, inrec_wep_bp, merc",,InReC,,Anti Shield,,,,,,,,,,19213.1
 Protractor Canister-shot,InReC_canister,1,,1200,500,,60,,6,30,12,,,,KINETIC,42,,0,3,1,0,30,45,5,3,,1200,,,,,,,"kinetic15, SR, inrec_wep_bp, merc",,InReC,,Anti Shield,,,,Spread,,,,,,19214
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Flock MRM,InReC_flock,1,,300,2000,,120,,16,15,4,,,,HIGH_EXPLOSIVE,0,,0,11.5,3,0.25,0,3,1,1,,200,70,15,100,,,DO_NOT_AIM,"missile8, utility0, inrec_wep_bp, merc",,InReC,,Fire Support,Slow,Medium,,,,,,,,19221
-Flock MRM Pod,InReC_flock_pod,1,,1200,2000,,120,,16,10,8,,,,HIGH_EXPLOSIVE,0,,0,8.2,5,0.2,0,4,1,1,,200,70,15,100,,,DO_NOT_AIM,"missile12, utility0, inrec_wep_bp, merc",,InReC,,Fire Support,Slow,Medium,,,,,,,,19221.1
-Pesticide Launcher,InReC_pesticide,0,,250,2000,,90,60,15,20,3,,,,FRAGMENTATION,0,,0,11.3,8,0.1,1,5,1,1,,250,400,12,120,,,"DO_NOT_AIM, MISSILE_SPREAD","utility7, missile0, inrec_wep_bp, merc",,InReC,,Saturation,Medium,Good,,,,,,,,19222
-Twin Pesticide Launcher,InReC_pesticide_pod,0,,1000,2000,,90,60,15,15,6,,,,FRAGMENTATION,0,,0,14.05,20,0.05,1,6,1,1,,250,450,12,120,,,"DO_NOT_AIM, MISSILE_SPREAD","utility12, missile0, inrec_wep_bp, merc",,InReC,,Saturation,Medium,Good,,,,,,,,19222.1
+Flock MRM,InReC_flock,1,,300,2000,,120,,16,15,4,,,,HIGH_EXPLOSIVE,0,,0,11.4,3,0.3,0,3,1,1,,200,70,15,100,,,DO_NOT_AIM,"missile8, utility0, inrec_wep_bp, merc",,InReC,,Fire Support,Slow,Medium,,,,,,,,19221
+Flock MRM Pod,InReC_flock_pod,1,,1200,2000,,120,,16,10,8,,,,HIGH_EXPLOSIVE,0,,0,8,5,0.25,0,4,1,1,,200,70,15,100,,,DO_NOT_AIM,"missile12, utility0, inrec_wep_bp, merc",,InReC,,Fire Support,Slow,Medium,,,,,,,,19221.1
+Pesticide Launcher,InReC_pesticide,0,,250,2000,,90,60,15,20,3,,,,FRAGMENTATION,0,,0,11.16,8,0.12,1,5,1,1,,250,400,12,120,,,"DO_NOT_AIM, MISSILE_SPREAD","utility7, missile0, inrec_wep_bp, merc",,InReC,,Saturation,Medium,Good,,,,,,,,19222
+Twin Pesticide Launcher,InReC_pesticide_pod,0,,1000,2000,,90,60,15,15,6,,,,FRAGMENTATION,0,,0,13.48,20,0.08,1,6,1,1,,250,450,12,120,,,"DO_NOT_AIM, MISSILE_SPREAD","utility12, missile0, inrec_wep_bp, merc",,InReC,,Saturation,Medium,Good,,,,,,,,19222.1
 Fumigator Flare Dispenser,InReC_fumigator,1,,1600,2000,,400,,,10,9,,,,FRAGMENTATION,0,,0,25,1,0,0,0,0,0,,300,100,30,500,,,DO_NOT_AIM,"utility15, missile0, damage_special, inrec_wep_bp, merc",,InReC,,Saturation,Medium,Good,,,On nearing its target the missile will slow down and fire a barrage of %s.,EM charged flares,,,TRUE,19223
 Defoliant Strike Missile,InReC_defoliant,1,,400,2000,,400,,15,20,4,9,,,KINETIC,0,,0,6,1,0,0,0,0,0,,600,100,5,200,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","missile8, strike3, inrec_wep_bp, merc",,InReC,,Anti Shield,Very Fast,Special,,,After an initial aiming stage accelerates rapidly and continues with limited guidance.,,,,TRUE,19224
 Heart-throb Drone Launcher,InReC_heart-throb,2,,1800,4000,,900,,,10,12,,,,ENERGY,0,,0,29,2,1,0,0,0,0,,250,100,10,300,,,DO_NOT_AIM,"utility15, missile10, damage_special, inrec_wep_bp, merc",,InReC,,Drone Launcher,Medium,Excellent,,,"Launches a pair of autonomous drones, each armed with a %s.
@@ -40,9 +40,10 @@ Herbicide SRM,InReC_herbicide,1,,400,800,,120,,10,25,5,90,,,HIGH_EXPLOSIVE,0,,0,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Pulse Bolter (Drone),InReC_pulse_drn,0,,1000,550,,30,,0,50,0,70,,,ENERGY,0,,0,1.1,7,0.15,5,5,0,0,,1000,,,,,,"SYSTEM, DO_NOT_CONSERVE",,,InReC,,General,,,,,,,,,,19231
+Pulse Bolter,InReC_pulse_drn_2,0,,1000,550,,30,,0,50,99,,,,ENERGY,21,,0.1,1,7,0.15,5,5,0,0,,1000,,,,,,"SYSTEM, DO_NOT_CONSERVE",,,InReC,,General,,,,,,,,,,19231.1
 Light Flash Bolter,InReC_flash_lt_drn,0,,1000,400,,30,,0,100,0,,,,ENERGY,0,,0.1,1.1,3,0.15,30,30,0,0,,1200,,,,,,"SYSTEM, PD",,,InReC,,Point Defense (area),,,,,,,,,,19232
-Millstone Mono,InReC_millstone_drn,0,,1000,900,,160,,9,30,0,,,,FRAGMENTATION,48,,0,1,1,,1,,,,,800,,,,,,SYSTEM,,,InReC,,General,,,,,,,,,,19233
-Flock MRM (Drone),InReC_flock_drn,0,,1000,2000,,120,,16,15,0,,,,HIGH_EXPLOSIVE,0,,0,13.75,2,0.25,0,3,1,1,,200,70,15,100,,,"SYSTEM, DO_NOT_AIM",,,InReC,,Fire Support,,,,,,,,,,19234
+Millstone Mono,InReC_millstone_drn,0,,1000,900,,180,,9,30,0,,,,FRAGMENTATION,45,,0,1,1,,1,,,,,800,,,,,,SYSTEM,,,InReC,,General,,,,,,,,,,19233
+Flock MRM (Drone),InReC_flock_drn,0,,1000,2000,,120,,16,15,0,,,,HIGH_EXPLOSIVE,0,,0,13.75,2,0.3,0,3,1,1,,200,70,15,100,,,"SYSTEM, DO_NOT_AIM",,,InReC,,Fire Support,,,,,,,,,,19234
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Flare (Dumb),InReC_flare_dumb,,,1000,400,,20,200,0,,,,,,ENERGY,0,,0,1,1,0.1,30,30,0,0,,150,300,3.2,100,,,SYSTEM,,,InReC,,,,,,,,,,,,19241
@@ -59,5 +60,5 @@ Deco Enforcer L,InReC_deco_enforcer,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_dr
 Deco Enforcer R,InReC_deco_enforcer2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
 Deco Sunder L,InReC_deco_sunder,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
 Deco Sunder R,InReC_deco_sunder2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Deco Venture,InReC_deco_venture,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

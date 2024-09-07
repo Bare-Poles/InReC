@@ -24,5 +24,5 @@
 					"particleCount":14,
 					"particleColor":[255,205,135,215]},
 	"projectileSpecId":"InReC_bludgeon_shot",  # projectile that will be fired
-	"fireSoundTwo":"heavy_mortar_fire", #TEMP!!
+	"fireSoundTwo":"InReC_bludgeon_fire", #heavy_mortar_fire
 }

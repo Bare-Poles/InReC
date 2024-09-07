@@ -27,5 +27,5 @@
 					   "particleCount":5, #15
 					   "particleColor":[210,240,255,120]},  # 210,240,255,200
 	"projectileSpecId":"InReC_canister_shot",  # projectile that will be fired
-	"fireSoundTwo":"needler_fire", #TEMP!!
+	"fireSoundTwo":"InReC_canister_fire",
 }

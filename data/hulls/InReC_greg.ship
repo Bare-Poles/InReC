@@ -12,9 +12,11 @@
   "shieldRadius": 23,
   "viewOffset": 0,
   "builtInMods": [
+    "InReC_gregHullmod",
     "no_weapon_flux",
     "turretgyros",
     "pointdefenseai"
+
   ],
   "weaponSlots": [
     {

@@ -1,0 +1,35 @@
+{
+	"id":"InReC_flash_shot",
+
+	"onFireEffect":"org.amazigh.InReC.scripts.InReC_flashOnFireEffect",
+
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"length":20.0, # 40
+	"hitGlowRadius":40,
+	"width":7,
+	"fadeTime":0.2,
+	"fringeColor":[113,217,243,255],
+	"coreColor":[138,227,253,150],  # 113,217,243
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/shell_gauss_cannon.png",
+	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
+					"onExplosionEffect":"org.amazigh.InReC.scripts.InReC_flashOnExplEffect",
+					"range":25,
+					"explosionSpec":{"duration":0.1f,
+									 "radius":35,
+									 "coreRadius":28, # full damage within core radius - also equal to proximity fuse range
+									 "collisionClass":PROJECTILE_FF,
+									 "collisionClassByFighter":PROJECTILE_FIGHTER,
+									 "particleSizeMin":2.0,
+									 "particleSizeRange":4.0,
+									 "particleDuration":0.8,
+									 "particleCount":25,
+									 "particleColor":[113,217,243,145],
+									 "sound":"explosion_flak"}, #TEMP!
+					}
+					
+}

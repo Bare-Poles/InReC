@@ -25,5 +25,5 @@
 					   "particleCount":12,
 					   "particleColor":[255,150,125,200]},
 	"projectileSpecId":"InReC_millstone_shot",  # projectile that will be fired
-	"fireSoundTwo":"heavy_mortar_fire", #TEMP!!
+	"fireSoundTwo":"InReC_grinder_m_fire", #heavy_mortar_fire
 }

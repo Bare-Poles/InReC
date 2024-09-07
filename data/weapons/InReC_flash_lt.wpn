@@ -25,5 +25,5 @@
 					   "particleColor":[110,215,240,115]},
 	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
 	"projectileSpecId":"InReC_flash_lt_shot",  # projectile that will be fired
-	"fireSoundTwo":"ir_pulse_laser_fire", #TEMP!
+	"fireSoundTwo":"InReC_flash_s_fire", #ir_pulse_laser_fire
 }

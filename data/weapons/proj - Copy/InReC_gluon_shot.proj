@@ -1,0 +1,19 @@
+{
+	"id":"InReC_gluon_shot",
+
+	"onFireEffect":"org.amazigh.InReC.scripts.InReC_gluonOnFireEffect",
+
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"hitGlowRadius":25,
+	"length":23.0, # 39.0
+	"width":7.5, # 6.0
+	"fadeTime":0.45,
+	"fringeColor":[121,91,56,245],
+	"coreColor":[243,183,113,210],
+	"textureType":"SMOOTH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0
+}

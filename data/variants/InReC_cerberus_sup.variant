@@ -1,0 +1,34 @@
+{
+  "variantId": "InReC_cerberus_sup",
+  "hullId": "InReC_cerberus",
+  "displayName": "Support",
+  "goalVariant": true,
+  "fluxCapacitors": 2,
+  "fluxVents": 3,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "InReC_siegeMods",
+    "targetingunit",
+    "InReC_greg_s"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "InReC_flock"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "InReC_gluon",
+        "WS0005": "InReC_gluon"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

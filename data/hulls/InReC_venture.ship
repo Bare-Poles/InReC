@@ -1,0 +1,259 @@
+{
+  "hullName": "Venture (IRC)",
+  "hullId": "InReC_venture",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/InReC_venture.png",
+  "style": "INREC",
+  "height": 192,
+  "width": 198,
+  "center": [99, 91],
+  "collisionRadius": 135,
+  "shieldCenter": [1, -0],
+  "shieldRadius": 133,
+  "viewOffset": 0,
+  "builtInMods": [
+    "InReC_slot",
+    "InReC_gregSlot"
+  ],
+  "builtInWeapons": {
+    "WS0010": "InReC_deco_venture",
+    "WS0011": "InReC_deco_venture"
+  },
+  "weaponSlots": [
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -50, 16,
+        -50, -16,
+        -53, 5,
+        -53, -5
+      ]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [46, -60]
+    },
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [91, 23]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [15, -80]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 215,
+      "angle": 0,
+      "locations": [36, 0]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 215,
+      "angle": 90,
+      "locations": [-30, 68]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 215,
+      "angle": -90,
+      "locations": [-30, -68]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 195,
+      "angle": 30,
+      "locations": [42, 62]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 80,
+      "locations": [12, 75]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 180,
+      "locations": [-54, 0]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        6, 77,
+        20, 74,
+        12, 65
+      ]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-33, 94]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -90,
+      "locations": [-33, -94]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-84.5, 77.5],
+      "length": 92,
+      "width": 18,
+      "angle": -180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-90, 62],
+      "length": 64,
+      "width": 20,
+      "angle": -180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-88, 54],
+      "length": 48,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-88, -54],
+      "length": 48,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-90, -62],
+      "length": 64,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-84.5, -77.5],
+      "length": 92,
+      "width": 18,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    }
+  ],
+  "bounds": [
+    80, -35,
+    50, -35,
+    42, -43,
+    47, -51,
+    47, -69,
+    5, -69,
+    14, -74,
+    14, -88,
+    3, -89,
+    1, -93,
+    -41, -96,
+    -51, -91,
+    -80, -92,
+    -84, -66,
+    -88, -65,
+    -87, -50,
+    -50, -51,
+    -43, -44,
+    -30, -44,
+    -29, -35,
+    -66, -34,
+    -77, -27,
+    -65, -20,
+    -65, 20,
+    -73, 22,
+    -73, 29,
+    -61, 34,
+    -29, 35,
+    -30, 44,
+    -43, 44,
+    -50, 51,
+    -87, 50,
+    -88, 65,
+    -84, 66,
+    -80, 92,
+    -51, 91,
+    -41, 96,
+    1, 93,
+    2, 87,
+    25, 83,
+    31, 88,
+    36, 82,
+    41, 82,
+    48, 76,
+    52, 65,
+    49, 48,
+    54, 34,
+    92, 32,
+    92, 15,
+    95, 6,
+    95, -16
+  ]
+}

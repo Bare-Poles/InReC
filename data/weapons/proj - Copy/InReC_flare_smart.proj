@@ -1,0 +1,42 @@
+{
+	"id":"InReC_flare_smart",
+	"specClass":"missile",	
+	"missileType":"FLARE_SEEKER",
+	"sprite":"graphics/missiles/bomblet0.png",
+	"size":[4,4],	
+	"center":[2,2],
+	"collisionRadius":11,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[18,187,220,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":75, # purely visual
+	"flameoutTime":1, # total time from flameout to full fadeout
+	"noEngineGlowTime":0.5, # time spent without the engine glow being rendered
+	"fadeTime":0.5, # fadeout duration
+
+	"behaviorSpec":{"behavior":"CUSTOM",
+					"effectRange":250,
+					"effectChance":0.2,
+				   },
+	"engineSpec":{"turnAcc":900,
+				  "turnRate":450,
+				  "acc":750,
+				  "dec":750},
+	"engineSlots":[
+					{"id":"ES1",
+					"loc":[0, 0],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"engineColor":[18,187,220,255],
+						"contrailParticleSizeMult":15,
+						"contrailParticleDuration":2,
+						"contrailMaxSpeedMult":-0.1,
+						"contrailAngularVelocityMult":0f,
+						"contrailColor":[55,225,255,35],
+
+						"type":"GLOW" # GLOW or SMOKE
+					},
+				    "width":7.0,
+				    "length":25.0,
+				    "angle":180.0},
+				   ]
+}

@@ -24,5 +24,5 @@
 					   "particleCount":10,
 					  "particleColor":[100,100,195,180]},
 	"projectileSpecId":"InReC_fusor_shot",  # projectile that will be fired
-	"fireSoundTwo":"railgun_fire", #TEMP!!
+	"fireSoundTwo":"InReC_fusor_fire", #railgun_fire
 }

@@ -23,5 +23,5 @@
 					   "particleColor":[100,210,255,225]},	
 	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
 	"projectileSpecId":"InReC_disruption_shot",  # projectile that will be fired
-	"fireSoundTwo":"ion_pulser_fire", #TEMP!
+	"fireSoundTwo":"InReC_disruption_fire", #ion_pulser_fire
 }
