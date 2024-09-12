@@ -3,7 +3,7 @@
   "hullId": "InReC_drover",
   "displayName": "Support",
   "goalVariant": true,
-  "fluxCapacitors": 3,
+  "fluxCapacitors": 5,
   "fluxVents": 0,
   "quality": 1,
   "permaMods": [],
@@ -11,7 +11,7 @@
     "InReC_greg_p",
     "InReC_slotFlares",
     "targetingunit",
-    "expanded_deck_crew"
+    "InReC_parasite"
   ],
   "weaponGroups": [
     {

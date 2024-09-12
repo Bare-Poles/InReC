@@ -3,14 +3,14 @@
   "hullId": "InReC_champion",
   "displayName": "Support",
   "goalVariant": true,
-  "fluxCapacitors": 14,
+  "fluxCapacitors": 10,
   "fluxVents": 20,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "targetingunit",
     "InReC_slotFlares",
-    "eccm"
+    "InReC_siegeMods"
   ],
   "weaponGroups": [
     {
@@ -49,8 +49,8 @@
       "weapons": {
         "WS0009": "InReC_spark_hvy",
         "WS0010": "InReC_spark_hvy",
-        "WS0015": "InReC_flash_lt",
-        "WS0016": "InReC_flash_lt"
+        "WS0015": "InReC_spark",
+        "WS0016": "InReC_spark"
       }
     }
   ],

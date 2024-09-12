@@ -3,13 +3,14 @@
   "hullId": "InReC_brawler",
   "displayName": "Support",
   "goalVariant": true,
-  "fluxCapacitors": 2,
-  "fluxVents": 9,
+  "fluxCapacitors": 0,
+  "fluxVents": 6,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "eccm",
-    "targetingunit"
+    "targetingunit",
+    "InReC_siegeMods"
   ],
   "weaponGroups": [
     {

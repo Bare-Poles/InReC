@@ -3,14 +3,15 @@
   "hullId": "InReC_vigilance",
   "displayName": "Support",
   "goalVariant": true,
-  "fluxCapacitors": 4,
-  "fluxVents": 10,
+  "fluxCapacitors": 0,
+  "fluxVents": 9,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "targetingunit",
-    "ecm",
-    "stabilizedshieldemitter"
+    "stabilizedshieldemitter",
+    "InReC_siegeMods",
+    "ecm"
   ],
   "weaponGroups": [
     {

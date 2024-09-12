@@ -9,7 +9,7 @@
   "permaMods": [],
   "hullMods": [
     "targetingunit",
-    "eccm"
+    "InReC_siegeMods"
   ],
   "weaponGroups": [
     {

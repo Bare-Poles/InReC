@@ -1,0 +1,73 @@
+{
+  "variantId": "InReC_dominator_std",
+  "hullId": "InReC_dominator",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 18,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "missleracks",
+    "InReC_slotRange",
+    "missile_autoloader"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "InReC_apiarist_pod",
+        "WS0002": "InReC_apiarist_pod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "InReC_apiarist",
+        "WS0004": "InReC_apiarist"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "InReC_fusor",
+        "WS0006": "InReC_fusor"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "InReC_pulse_hvy",
+        "WS0008": "InReC_pulse_hvy",
+        "WS0009": "InReC_pulse_hvy"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "InReC_pulse",
+        "WS0011": "InReC_pulse",
+        "WS0012": "InReC_pulse",
+        "WS0013": "InReC_pulse"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0014": "InReC_spark",
+        "WS0015": "InReC_spark",
+        "WS0016": "InReC_spark",
+        "WS0017": "InReC_spark"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

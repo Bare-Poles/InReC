@@ -3,14 +3,14 @@
   "hullId": "InReC_brawler",
   "displayName": "Assault",
   "goalVariant": true,
-  "fluxCapacitors": 3,
+  "fluxCapacitors": 1,
   "fluxVents": 5,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "InReC_slotShield",
     "unstable_injector",
-    "armoredweapons"
+    "armoredweapons",
+    "InReC_rebalancer"
   ],
   "weaponGroups": [
     {

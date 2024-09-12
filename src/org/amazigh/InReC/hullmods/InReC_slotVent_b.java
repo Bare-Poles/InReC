@@ -42,7 +42,10 @@ public class InReC_slotVent_b extends BaseHullMod {
 		// if you have more soft flux than hard flux, dissipate some for free!
 		if (fluxDiff > 0f) {
     		ship.getFluxTracker().setCurrFlux(Math.max(0f, ship.getFluxTracker().getCurrFlux() - fluxDiff));
-    		info.TIMER += amount;
+    		// only do the vfx if over 10% flux
+    		if (ship.getFluxLevel() > 0.1f) {
+    			info.TIMER += amount;
+    		}
     	}
 		
 		if (info.TIMER > 0.2f) {
@@ -50,7 +53,7 @@ public class InReC_slotVent_b extends BaseHullMod {
 			for (WeaponSlotAPI weapon : ship.getHullSpec().getAllWeaponSlotsCopy()) {
 	    		if (weapon.isDecorative()) {
 	    			
-	    			int alpha = 30 + (int) (60f * ship.getFluxTracker().getFluxLevel());
+	    			int alpha = 10 + (int) (80f * ship.getFluxLevel());
 	    			
 	    			Vector2f ventPoint = weapon.computePosition(ship);
 	    			Vector2f ventVel = ship.getVelocity();

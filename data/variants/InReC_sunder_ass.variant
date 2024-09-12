@@ -3,14 +3,14 @@
   "hullId": "InReC_sunder",
   "displayName": "Assault",
   "goalVariant": true,
-  "fluxCapacitors": 3,
-  "fluxVents": 15,
+  "fluxCapacitors": 0,
+  "fluxVents": 14,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "InReC_slotVent",
     "unstable_injector",
-    "stabilizedshieldemitter"
+    "InReC_rebalancer"
   ],
   "weaponGroups": [
     {

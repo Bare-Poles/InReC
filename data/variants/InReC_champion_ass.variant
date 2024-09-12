@@ -3,13 +3,14 @@
   "hullId": "InReC_champion",
   "displayName": "Assault",
   "goalVariant": true,
-  "fluxCapacitors": 6,
+  "fluxCapacitors": 3,
   "fluxVents": 30,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "targetingunit",
-    "InReC_slotVent"
+    "InReC_slotVent",
+    "InReC_rebalancer"
   ],
   "weaponGroups": [
     {
@@ -50,12 +51,12 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0011": "InReC_spark",
-        "WS0012": "InReC_spark",
-        "WS0013": "InReC_spark",
-        "WS0014": "InReC_spark",
-        "WS0015": "InReC_spark",
-        "WS0016": "InReC_spark"
+        "WS0011": "InReC_flash_lt",
+        "WS0012": "InReC_flash_lt",
+        "WS0013": "InReC_flash_lt",
+        "WS0014": "InReC_flash_lt",
+        "WS0015": "InReC_flash_lt",
+        "WS0016": "InReC_flash_lt"
       }
     }
   ],

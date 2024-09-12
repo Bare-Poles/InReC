@@ -11,7 +11,7 @@
     "targetingunit",
     "InReC_greg_a",
     "InReC_slotShield",
-    "hardenedshieldemitter"
+    "InReC_rebalancer"
   ],
   "weaponGroups": [
     {

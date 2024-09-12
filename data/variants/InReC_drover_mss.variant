@@ -3,7 +3,7 @@
   "hullId": "InReC_drover",
   "displayName": "Missile",
   "goalVariant": true,
-  "fluxCapacitors": 8,
+  "fluxCapacitors": 4,
   "fluxVents": 0,
   "quality": 1,
   "permaMods": [],
@@ -11,7 +11,7 @@
     "targetingunit",
     "InReC_slotRange",
     "eccm",
-    "pointdefenseai"
+    "InReC_siegeMods"
   ],
   "weaponGroups": [
     {
