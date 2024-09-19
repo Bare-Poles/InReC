@@ -1,0 +1,27 @@
+{
+	"id":"InReC_guillotine",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"LARGE",
+	"turretSprite":"graphics/weapons/InReC_guillotine_turret_base.png",
+	"turretGunSprite":"graphics/weapons/InReC_guillotine_turret_recoil.png",
+	"hardpointSprite":"graphics/weapons/InReC_guillotine_hardpoint_base.png",
+	"hardpointGunSprite":"graphics/weapons/InReC_guillotine_hardpoint_recoil.png",	
+	"visualRecoil":15.0,  # the gun sprites are only used if this is non-0
+	"renderHints":[RENDER_BARREL_BELOW],
+	"turretOffsets":[52,0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[56,0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"MUZZLE_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":69.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":10.0,
+					   "particleSizeMin":10.0,
+					   "particleSizeRange":26.0,
+					   "particleDuration":0.7,
+					   "particleCount":48,
+					   "particleColor":[250,133,30,220]},
+	"projectileSpecId":"InReC_guillotine_shot",  # projectile that will be fired
+	"fireSoundTwo":"mjolnir_fire", #TEMP! InReC_grinder_l_fire
+}

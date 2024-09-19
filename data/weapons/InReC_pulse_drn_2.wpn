@@ -1,6 +1,9 @@
 {
 	"id":"InReC_pulse_drn_2",  # this id must match what's in the spreadsheet
 	"specClass":"projectile",
+
+	"everyFrameEffect": "org.amazigh.InReC.scripts.InReC_DroneAmmoScript",
+
 	"type":"ENERGY",
 	"size":"SMALL",
 	"turretSprite":"graphics/weapons/InReC_pulse_turret_base.png",

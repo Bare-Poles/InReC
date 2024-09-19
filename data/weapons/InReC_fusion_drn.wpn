@@ -1,0 +1,33 @@
+{
+	"id":"InReC_fusion_drn",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+
+	"everyFrameEffect": "org.amazigh.InReC.scripts.InReC_DroneAmmoScriptFusion",
+
+	"type":"ENERGY",
+	"size":"SMALL",
+	"turretSprite":"graphics/weapons/InReC_fusion_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/InReC_fusion_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/InReC_fusion_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/InReC_fusion_hardpoint_glow.png",
+	"glowColor":[212,34,34,225],
+	"turretOffsets":[6,-1, 6,0, 6,1],
+	"turretAngleOffsets":[-2, 0, 2],
+	"hardpointOffsets":[9,-1, 9,0, 9,1],
+	"hardpointAngleOffsets":[-2, 0, 2],
+	"barrelMode":"LINKED",
+        "separateRecoilForLinkedBarrels":"TRUE",
+	"animationType":"GLOW_AND_FLASH",
+	"specialWeaponGlowWidth":12,
+	"specialWeaponGlowHeight":26,
+	"muzzleFlashSpec":{"length":20.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":18.0,
+					   "particleSizeMin":7.0,
+					   "particleSizeRange":9.0,
+					   "particleDuration":0.25,
+					   "particleCount":5, #20
+					   "particleColor":[183,45,30,135]}, # 210,30,30,145
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"InReC_fusion_shot",  # projectile that will be fired
+	"fireSoundTwo":"InReC_fusion_fire", #ir_pulse_laser_fire
+}

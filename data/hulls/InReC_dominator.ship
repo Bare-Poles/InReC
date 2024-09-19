@@ -4,19 +4,19 @@
   "hullSize": "CRUISER",
   "spriteName": "graphics/ships/InReC_dominator.png",
   "style": "INREC",
-  "height": 192,
+  "height": 188,
   "width": 210,
   "center": [105, 91],
-  "collisionRadius": 170,
+  "collisionRadius": 155,
   "shieldCenter": [9, -0],
-  "shieldRadius": 160,
+  "shieldRadius": 145,
   "viewOffset": 0,
   "builtInMods": [
     "InReC_slot"
   ],
   "builtInWeapons": {
-    "WS0026": "InReC_deco_dominator2",
-    "WS0027": "InReC_deco_dominator"
+    "WS0024": "InReC_deco_dominator2",
+    "WS0025": "InReC_deco_dominator"
   },
   "weaponSlots": [
     {
@@ -56,25 +56,25 @@
       "locations": [14, -86]
     },
     {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [-38, 93]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [-38, -93]
+    },
+    {
       "id": "WS0014",
-      "size": "SMALL",
-      "type": "ENERGY",
-      "mount": "TURRET",
-      "arc": 210,
-      "angle": 120,
-      "locations": [-38, 77]
-    },
-    {
-      "id": "WS0015",
-      "size": "SMALL",
-      "type": "ENERGY",
-      "mount": "TURRET",
-      "arc": 210,
-      "angle": -120,
-      "locations": [-38, -77]
-    },
-    {
-      "id": "WS0016",
       "size": "SMALL",
       "type": "ENERGY",
       "mount": "TURRET",
@@ -83,7 +83,7 @@
       "locations": [-62, 18]
     },
     {
-      "id": "WS0017",
+      "id": "WS0015",
       "size": "SMALL",
       "type": "ENERGY",
       "mount": "TURRET",
@@ -92,7 +92,7 @@
       "locations": [-62, -18]
     },
     {
-      "id": "WS0026",
+      "id": "WS0024",
       "size": "SMALL",
       "type": "DECORATIVE",
       "mount": "TURRET",
@@ -101,7 +101,7 @@
       "locations": [25, 101]
     },
     {
-      "id": "WS0027",
+      "id": "WS0025",
       "size": "SMALL",
       "type": "DECORATIVE",
       "mount": "TURRET",
@@ -110,13 +110,13 @@
       "locations": [25, -101]
     },
     {
-      "id": "WS0007",
-      "size": "MEDIUM",
-      "type": "ENERGY",
+      "id": "WS0005",
+      "size": "LARGE",
+      "type": "BALLISTIC",
       "mount": "TURRET",
       "arc": 140,
       "angle": 0,
-      "locations": [68, -0]
+      "locations": [66, -0]
     },
     {
       "id": "WS0001",
@@ -137,36 +137,18 @@
       "locations": [72, -35]
     },
     {
-      "id": "WS0003",
-      "size": "SMALL",
-      "type": "MISSILE",
-      "mount": "HARDPOINT",
-      "arc": 5,
-      "angle": 0,
-      "locations": [93, 70]
-    },
-    {
-      "id": "WS0004",
-      "size": "SMALL",
-      "type": "MISSILE",
-      "mount": "HARDPOINT",
-      "arc": 5,
-      "angle": -0,
-      "locations": [93, -70]
-    },
-    {
-      "id": "WS0005",
+      "id": "WS0006",
       "size": "MEDIUM",
-      "type": "BALLISTIC",
+      "type": "ENERGY",
       "mount": "TURRET",
       "arc": 160,
       "angle": 30,
       "locations": [69, 63]
     },
     {
-      "id": "WS0006",
+      "id": "WS0007",
       "size": "MEDIUM",
-      "type": "BALLISTIC",
+      "type": "ENERGY",
       "mount": "TURRET",
       "arc": 160,
       "angle": -30,
@@ -178,7 +160,7 @@
       "type": "ENERGY",
       "mount": "TURRET",
       "arc": 150,
-      "angle": 30,
+      "angle": 35,
       "locations": [18, 66]
     },
     {
@@ -187,11 +169,11 @@
       "type": "ENERGY",
       "mount": "TURRET",
       "arc": 150,
-      "angle": -30,
+      "angle": -35,
       "locations": [18, -66]
     },
     {
-      "id": "WS0018",
+      "id": "WS0016",
       "size": "SMALL",
       "type": "SYSTEM",
       "mount": "HIDDEN",
@@ -200,7 +182,7 @@
       "locations": [93, 48]
     },
     {
-      "id": "WS0019",
+      "id": "WS0017",
       "size": "SMALL",
       "type": "SYSTEM",
       "mount": "HIDDEN",
@@ -209,7 +191,7 @@
       "locations": [93, -48]
     },
     {
-      "id": "WS0020",
+      "id": "WS0018",
       "size": "SMALL",
       "type": "SYSTEM",
       "mount": "HIDDEN",
@@ -218,7 +200,7 @@
       "locations": [46, 97]
     },
     {
-      "id": "WS0021",
+      "id": "WS0019",
       "size": "SMALL",
       "type": "SYSTEM",
       "mount": "HIDDEN",
@@ -227,7 +209,7 @@
       "locations": [46, -97]
     },
     {
-      "id": "WS0022",
+      "id": "WS0020",
       "size": "SMALL",
       "type": "SYSTEM",
       "mount": "HIDDEN",
@@ -236,7 +218,7 @@
       "locations": [-20, 90]
     },
     {
-      "id": "WS0023",
+      "id": "WS0021",
       "size": "SMALL",
       "type": "SYSTEM",
       "mount": "HIDDEN",
@@ -245,7 +227,7 @@
       "locations": [-20, -90]
     },
     {
-      "id": "WS0024",
+      "id": "WS0022",
       "size": "SMALL",
       "type": "SYSTEM",
       "mount": "HIDDEN",
@@ -254,7 +236,7 @@
       "locations": [-58, 82]
     },
     {
-      "id": "WS0025",
+      "id": "WS0023",
       "size": "SMALL",
       "type": "SYSTEM",
       "mount": "HIDDEN",
@@ -361,11 +343,8 @@
     77, -27,
     77, -44,
     94, -45,
-    94, -75,
-    81, -76,
-    73, -80,
-    64, -81,
-    63, -85,
+    93, -72,
+    87, -82,
     54, -85.5,
     54, -89,
     40, -103,
@@ -373,7 +352,9 @@
     2, -97,
     -5, -86,
     -13, -91,
-    -43, -93,
+    -25, -91,
+    -29, -96,
+    -47, -94,
     -48, -88,
     -55, -86,
     -62, -76,
@@ -394,7 +375,9 @@
     -62, 76,
     -55, 86,
     -48, 88,
-    -43, 93,
+    -47, 94,
+    -29, 96,
+    -25, 91,
     -13, 91,
     -5, 86,
     2, 97,
@@ -402,11 +385,8 @@
     40, 103,
     54, 89,
     54, 85.5,
-    63, 85,
-    64, 81,
-    73, 80,
-    81, 76,
-    94, 75,
+    87, 82,
+    93, 72,
     94, 45,
     77, 44,
     77, 27,

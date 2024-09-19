@@ -25,6 +25,7 @@ public class InReC_greg_p extends BaseHullMod {
 
 	@Override
 	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
+		float pad = 2f;
 		float opad = 10f;
 		
 		Color h = Misc.getHighlightColor();
@@ -33,6 +34,9 @@ public class InReC_greg_p extends BaseHullMod {
 
 		label = tooltip.addPara("Rather than deploying single Footman drones, this ship will instead deploy pairs of light drones armed with %s.", opad, h, "Pulse Bolters");
 		label.setHighlight("Pulse Bolters");
+		label.setHighlightColors(h);
+		label = tooltip.addPara("Drones feature a solid-state flux capacitor, and will self destruct after firing %s bursts.", pad, h, "15");
+		label.setHighlight("15");
 		label.setHighlightColors(h);
 		
 		label = tooltip.addPara("May only be installed on InReCo vessels that feature a Footman deployment system, and only one Footman Variant may be installed at a time.", opad);

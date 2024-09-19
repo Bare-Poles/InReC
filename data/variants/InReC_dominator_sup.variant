@@ -4,7 +4,7 @@
   "displayName": "Support",
   "goalVariant": true,
   "fluxCapacitors": 0,
-  "fluxVents": 26,
+  "fluxVents": 28,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -20,22 +20,22 @@
       "weapons": {
         "WS0001": "InReC_flock_pod",
         "WS0002": "InReC_flock_pod",
-        "WS0003": "InReC_pesticide",
-        "WS0004": "InReC_pesticide"
+        "WS0003": "InReC_pesticide_pod",
+        "WS0004": "InReC_pesticide_pod"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0005": "InReC_millstone",
-        "WS0006": "InReC_millstone"
+        "WS0005": "InReC_millstone_tri"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
+        "WS0006": "InReC_disruption",
         "WS0007": "InReC_disruption"
       }
     },
@@ -62,9 +62,7 @@
       "mode": "LINKED",
       "weapons": {
         "WS0014": "InReC_flash_lt",
-        "WS0015": "InReC_flash_lt",
-        "WS0016": "InReC_flash_lt",
-        "WS0017": "InReC_flash_lt"
+        "WS0015": "InReC_flash_lt"
       }
     }
   ],

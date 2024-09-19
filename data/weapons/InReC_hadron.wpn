@@ -1,0 +1,27 @@
+{
+	"id":"InReC_hadron",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/InReC_hadron_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/InReC_hadron_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/InReC_hadron_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/InReC_hadron_hardpoint_glow.png",
+	"glowColor":[200,237,57,225],
+	"turretOffsets":[8,1, 8,-1],
+	"turretAngleOffsets":[0, 0],
+	"hardpointOffsets":[11,1, 11,-1],
+	"hardpointAngleOffsets":[0, 0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":29.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":6.5,
+					   "particleSizeMin":12.0,
+					   "particleSizeRange":14.0,
+					   "particleDuration":0.16,
+					   "particleCount":11,
+					   "particleColor":[200,235,55,225]},
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"InReC_hadron_shot",  # projectile that will be fired
+	"fireSoundTwo":"InReC_hadron_fire", #InReC_pulse_m_fire
+}

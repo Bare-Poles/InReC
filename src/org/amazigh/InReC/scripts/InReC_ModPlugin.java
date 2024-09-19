@@ -7,7 +7,6 @@ import com.fs.starfarer.api.campaign.CampaignPlugin;
 import com.fs.starfarer.api.combat.MissileAIPlugin;
 import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
-import org.amazigh.InReC.scripts.ai.InReC_fumigatorMissileAI;
 import org.amazigh.InReC.scripts.ai.InReC_defoliantMissileAI;
 import org.amazigh.InReC.scripts.ai.InReC_beekeeperMissileAI;
 import org.amazigh.InReC.scripts.ai.InReC_apiaristMissileAI;
@@ -18,7 +17,6 @@ import org.dark.shaders.util.ShaderLib;
 
 public class InReC_ModPlugin extends BaseModPlugin {
 	
-	public static final String FUMIGATOR_MISSILE_ID = "InReC_fumigator";
 	public static final String DEFOLIANT_MISSILE_ID = "InReC_defoliant";
 	public static final String BEEKEEPER_MISSILE_ID = "InReC_beekeeper";
 	public static final String APIARIST_MISSILE_ID = "InReC_apiarist";
@@ -46,8 +44,6 @@ public class InReC_ModPlugin extends BaseModPlugin {
     @Override
     public PluginPick<MissileAIPlugin> pickMissileAI(MissileAPI missile, ShipAPI launchingShip) {
         switch (missile.getProjectileSpecId()) {
-            case FUMIGATOR_MISSILE_ID:
-                return new PluginPick<MissileAIPlugin>(new InReC_fumigatorMissileAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SPECIFIC);
             case DEFOLIANT_MISSILE_ID:
                 return new PluginPick<MissileAIPlugin>(new InReC_defoliantMissileAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SPECIFIC);
             case BEEKEEPER_MISSILE_ID:

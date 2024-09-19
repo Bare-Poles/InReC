@@ -35,6 +35,9 @@ public class InReC_greg_a extends BaseHullMod {
 		label = tooltip.addPara("Deployed Footman drones have their weapon replaced with a %s.", opad, h, "Fusion Bolter");
 		label.setHighlight("Fusion Bolter");
 		label.setHighlightColors(h);
+		label = tooltip.addPara("Drones feature a solid-state flux capacitor, and will self destruct after firing %s bursts.", pad, h, "15");
+		label.setHighlight("15");
+		label.setHighlightColors(h);
 		
 		label = tooltip.addPara("Deployed Footman drones have improved %s and %s over the standard variant.", pad, h, "Hull", "Armour");
 		label.setHighlight("Hull", "Armour");

@@ -73,6 +73,13 @@
 		{"file":"sounds/sfx_wpn_energy/InReC_negatron_fire.ogg","pitch":1.05,"volume":0.45},
 	],
 
+	"InReC_hadron_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/InReC_hadron_fire.ogg","pitch":0.9,"volume":0.37},
+		{"file":"sounds/sfx_wpn_energy/InReC_hadron_fire.ogg","pitch":0.95,"volume":0.37},
+		{"file":"sounds/sfx_wpn_energy/InReC_hadron_fire.ogg","pitch":1.00,"volume":0.37},
+	],
+
 
 
 	"InReC_bludgeon_fire":

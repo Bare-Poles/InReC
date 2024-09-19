@@ -1,0 +1,25 @@
+{
+	"id":"InReC_guillotine_shot",
+
+	"onFireEffect":"org.amazigh.InReC.scripts.InReC_guillotineOnFireEffect",
+	"onHitEffect":"org.amazigh.InReC.scripts.InReC_guillotineOnHitEffect",
+
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"length":50.0,
+	"hitGlowRadius":160,
+	"width":12,
+	"fadeTime":0.4,
+	"fringeColor":[251,120,30,200],
+	"coreColor":[255,216,183,245],
+	"glowColor":[251,130,30,134],
+	"glowRadius":60,
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"passThroughMissiles":true,
+	"passThroughFighters":true,
+	"passThroughFightersOnlyWhenDestroyed":true,
+	"bulletSprite":"graphics/missiles/InReC_guillotine_shell.png"
+}

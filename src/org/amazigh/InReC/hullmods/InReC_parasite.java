@@ -87,7 +87,7 @@ public class InReC_parasite extends BaseHullMod {
 	
 	private class ShipSpecificData {
         private boolean DONE = false;
-        private float counted = 0.1f; // we start it at 0.1, so it will be properly exceed the threshold reliably
+        private float counted = 0.1f; // we start it at 0.1, so it will be properly exceed the threshold reliably (float rounding nonsense)
     }
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
@@ -107,6 +107,9 @@ public class InReC_parasite extends BaseHullMod {
 		Color h = Misc.getHighlightColor();
 		
 		LabelAPI label = tooltip.addPara("A set of external clamps that allow the ship to carry a set of light drones armed with Pulse Bolters.", opad);
+		label = tooltip.addPara("The drones feature a solid-state flux capacitor, and will self destruct after firing %s bursts.", pad, h, "15");
+		label.setHighlight("15");
+		label.setHighlightColors(h);
 		
 		label = tooltip.addPara("The clamps can carry %s/%s/%s/%s drones, depending on this ship's hull size.", opad, h, "2", "4", "6", "8");
 		label.setHighlight("2", "4", "6", "8");

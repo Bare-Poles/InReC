@@ -1,0 +1,19 @@
+{
+	"id":"InReC_hadron_shot",
+
+	"onFireEffect":"org.amazigh.InReC.scripts.InReC_hadronOnFireEffect",
+
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"hitGlowRadius":34,
+	"length":34.0, #69
+	"width":15.0,
+	"fadeTime":0.31,
+	"fringeColor":[185,237,57,245],
+	"coreColor":[230,237,57,210],
+	"textureType":"SMOOTH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0
+}

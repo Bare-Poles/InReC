@@ -68,10 +68,6 @@ public class InReC_gluonProjScript extends BaseEveryFrameCombatPlugin {
 	 *
 	 * @param proj
 	 * The projectile to affect. proj.getWeapon() must be non-null.
-	 *
-	 * @param target
-	 * The target missile/asteroid/ship for the script's guidance.
-	 * Can be null, if the script does not follow a target ("ONE_TURN_DUMB") or to instantly activate secondary guidance mode.
 	 */
 	public InReC_gluonProjScript(@NotNull DamagingProjectileAPI proj) {
 		this.proj = proj;
