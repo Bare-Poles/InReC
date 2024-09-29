@@ -34,7 +34,7 @@ InReC_millstone_tri,WEAPON,"A simple and reliable three barreled cannon. While t
 InReC_fusor,WEAPON,"Two light railguns fused into a single weapons system, efficient and consistent, but surpassed in raw firepower by various other weapons.",,,,
 InReC_fusor_linked,WEAPON,"A pair of fused railguns, just like the smaller model remains efficient, but retains the comparative lack of damage output.",,,,
 InReC_canister,WEAPON,"A snub barreled cannon that fires canisters of high-density flechettes, able to overwhelm shield projectors in an instant, but has a rather short effective range.",,,,
-InReC_guillotine,WEAPON,[TODO!],,,,
+InReC_guillotine,WEAPON,"A heavy cannon that loads advanced siege shells with incredible reach and power, able to provide punishing fire support at range.",,,,
 ,,,,,,
 InReC_flock,WEAPON,A basic lightweight missile. While lacking in speed and payload it has a respectable long-burn engine and integrates an autoloader allowing for sustained support fire.,,,,
 InReC_flock_pod,WEAPON,A pod of basic lightweight missiles. While lacking in speed and payload it has a respectable long-burn engine and integrates an autoloader allowing for sustained support fire.,,,,

@@ -122,6 +122,30 @@
 		{"file":"sounds/sfx_wpn_guns/InReC_canister_fire.ogg","pitch":1.1,"volume":0.55},
 	],
 
+	"InReC_guillotine_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/InReC_guillotine_fire.ogg","pitch":0.96,"volume":1.0},
+		{"file":"sounds/sfx_wpn_guns/InReC_guillotine_fire.ogg","pitch":1.0,"volume":1.0},
+		{"file":"sounds/sfx_wpn_guns/InReC_guillotine_fire.ogg","pitch":1.04,"volume":1.0},
+	],
+
+	"InReC_guillotine_explosion":
+	[
+		{"file":"sounds/sfx_wpn_guns/InReC_guillotine_explosion.ogg","pitch":1.0,"volume":0.9},
+		{"file":"sounds/sfx_wpn_guns/InReC_guillotine_explosion.ogg","pitch":1.04,"volume":0.9},
+		{"file":"sounds/sfx_wpn_guns/InReC_guillotine_explosion.ogg","pitch":1.08,"volume":0.9},
+	],
+
+	"InReC_guillotine_sub_explosion":
+	[
+		{"file":"sounds/sfx_wpn_guns/InReC_guillotine_sub_explosion.ogg","pitch":1.02,"volume":0.63},
+		{"file":"sounds/sfx_wpn_guns/InReC_guillotine_sub_explosion.ogg","pitch":1.1,"volume":0.63},
+		{"file":"sounds/sfx_wpn_guns/InReC_guillotine_sub_explosion.ogg","pitch":1.18,"volume":0.63},
+	],
+
+
+
+
 
 
 	"InReC_blister_fire":

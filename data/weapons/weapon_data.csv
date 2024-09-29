@@ -19,7 +19,7 @@ Millstone Trio,InReC_millstone_tri,0,,3000,1100,,240,,10,20,16,,,,FRAGMENTATION,
 Rail Fusor,InReC_fusor,1,,1000,800,,80,,8,20,11,,,,KINETIC,68,,0.2,0.6,1,0,0,5,1,4,,1000,,,,,,,"kinetic14, inrec_wep_bp, merc",,InReCo,,Anti Shield,,,,,,,,,,19213
 Linked Rail Fusor,InReC_fusor_linked,1,,3000,900,,80,,8,15,19,,,,KINETIC,72,,0.2,0.8,1,0,0,5,1,4,,1000,,,,,,,"kinetic18, inrec_wep_bp, merc",,InReCo,,Anti Shield,,,,,,,,,,19213.1
 Protractor Canister-shot,InReC_canister,2,,1200,500,,60,,6,30,12,,,,KINETIC,42,,0,3,1,0,30,45,5,3,,1200,,,,,,,"kinetic15, SR, inrec_wep_bp, merc",,InReCo,,Anti Shield,,,,Spread,,,,,,19214
-Guillotine Artillery Cannon,InReC_guillotine,3,,8000,1200,,1500,,300,4,24,,,,ENERGY,1950,,1,9,1,0,0,5,1,2,,800,,,,,,"STRIKE, USE_VS_FRIGATES, GROUP_ALTERNATING","energy19, he16, kinetic16, LR, inrec_wep_bp, merc",,InReCo,,Fire Support,,,,,"%s submunitions detonate shortly after impact, each dealing %s damage",Five | 300 Fragmentation,,,,19215
+Guillotine Artillery Cannon,InReC_guillotine,3,,8000,1200,,1500,,300,4,24,,,,ENERGY,1800,,0,10,1,0,0,5,2,0.5,,700,,,,,,"STRIKE, USE_VS_FRIGATES, GROUP_ALTERNATING","energy19, he16, kinetic16, LR, inrec_wep_bp, merc",,InReCo,,Fire Support,,,,,"Shortly after impact %s submunitions detonate, each dealing %s damage",Five | 300 Fragmentation,,,,19215
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Flock MRM,InReC_flock,1,,300,2000,,120,,16,15,4,,,,HIGH_EXPLOSIVE,0,,0,11.4,3,0.3,0,3,1,1,,200,70,15,100,,,DO_NOT_AIM,"missile8, utility0, inrec_wep_bp, merc",,InReCo,,Fire Support,Slow,Medium,,,,,,,,19221

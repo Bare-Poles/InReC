@@ -88,7 +88,7 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
 	private float DETECT=810000; //900^2
 	
 	// timer for firing missiles after getting into range
-	private IntervalUtil missileInterval = new IntervalUtil(0.1f, 0.1f);
+	private IntervalUtil missileInterval = new IntervalUtil(0.11f, 0.14f);
 	
 	// timer for simulating lifetime 
 	private IntervalUtil lifeInterval = new IntervalUtil(5f, 5f);

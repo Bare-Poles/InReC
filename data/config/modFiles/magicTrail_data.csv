@@ -65,8 +65,15 @@ InReC_fusor_shot,InReC_fusor_shot,base_trail_mild,10,0,0.1,0.32,9,3,"[200,200,25
 InReC_gluon_shot,InReC_gluon_shot,base_trail_smooth,10,0,0,0.3,9,7,"[253,171,103]","[73,137,54]",0.4,128,-64,TRUE,0,0,1,0,TRUE,FALSE,TRUE,5,55,0,0,0,0,FALSE,TRUE
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-InReC_hadron_shot_core,InReC_hadron_shot,base_trail_smooth,10,0,0.04,0.06,14,12,"[237,227,57]","[128,112,27]",0.45,256,-96,TRUE,5,0,1,0,TRUE,FALSE,TRUE,10,100,0,0,0,0,FALSE,TRUE
-InReC_hadron_shot_glow,InReC_hadron_shot,base_trail_smooth,10,0,0,0.2,23,19,"[123,158,38]","[39,175,17]",0.2,256,-96,TRUE,-5,0,1,0,TRUE,FALSE,TRUE,10,100,0,0,0,0,FALSE,TRUE
+InReC_guillotine_shot_core_1,InReC_guillotine_shot,base_trail_zapWithCore,10,0,0,0.95,7,5,"[255,136,30]","[192,101,22]",0.4,200,100,TRUE,-5,2.4,1,0,TRUE,FALSE,FALSE,23,111,0.3,0,0,180,TRUE,false
+InReC_guillotine_shot_core_2,InReC_guillotine_shot,base_trail_zapWithCore,10,0,0,1.0,7,5,"[255,128,30]","[192,97,22]",0.4,200,100,TRUE,-5,2.3,1,0,TRUE,FALSE,FALSE,23,111,0.5,0,0,180,TRUE,false
+InReC_guillotine_shot_contrail,InReC_guillotine_shot,base_trail_contrail,10,0.05,0,0.75,16,15,"[96,156,228]","[69,107,96]",0.45,269,-130,TRUE,-5,1.5,1,0,TRUE,FALSE,TRUE,23,111,0.4,0,0,0,FALSE,false
+InReC_guillotine_shot_smoke,InReC_guillotine_shot,base_trail_heavySmoke,10,0.1,0.25,0.75,8,18,"[50,55,50]","[110,145,110]",0.35,320,5,TRUE,-15,1.5,1,0,TRUE,FALSE,FALSE,0,25,0,0,0,20,true,false
+InReC_guillotine_shot_glow,InReC_guillotine_shot,base_trail_smooth,10,0,0.05,0.3,79,61,"[255,137,69]","[205,151,53]",0.45,200,1000,TRUE,30,0,1,0,TRUE,FALSE,TRUE,0,0,0,0,0,0,FALSE,false
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+InReC_hadron_shot_core,InReC_hadron_shot,base_trail_smooth,10,0,0.05,0.08,12,10,"[237,227,57]","[128,112,27]",0.42,256,-96,TRUE,5,0,1,0,TRUE,FALSE,TRUE,10,100,0,0,0,0,FALSE,TRUE
+InReC_hadron_shot_glow,InReC_hadron_shot,base_trail_smooth,10,0,0,0.23,23,19,"[123,158,38]","[39,175,17]",0.2,256,-96,TRUE,-5,0,1,0,TRUE,FALSE,TRUE,10,100,0,0,0,0,FALSE,TRUE
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 InReC_millstone_mono_shot_core,InReC_millstone_mono_shot,base_trail_heavySmoke,10,0.1,0.05,0.25,7,2,"[255,55,45]","[225,220,170]",0.5,256,-128,TRUE,5,8,1,0,TRUE,TRUE,TRUE,11,110,0.4,0,0,160,TRUE,false

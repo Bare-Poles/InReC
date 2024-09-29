@@ -21,12 +21,12 @@ public class InReC_slotRange_b extends BaseHullMod {
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
 		
-		ship.addListener(new InReC_EnergyRangefinderRangeModifier(MAX_RANGE));
+		ship.addListener(new InReC_EnergyRangefinderBuiltInRangeModifier(MAX_RANGE));
 	}
 	
-	public static class InReC_EnergyRangefinderRangeModifier implements WeaponBaseRangeModifier {
+	public static class InReC_EnergyRangefinderBuiltInRangeModifier implements WeaponBaseRangeModifier {
 		public float maxRange;
-		public InReC_EnergyRangefinderRangeModifier(float maxRange) {
+		public InReC_EnergyRangefinderBuiltInRangeModifier(float maxRange) {
 			this.maxRange = maxRange;
 		}
 		

@@ -15,7 +15,7 @@
 	"hardpointAngleOffsets":[0],
 	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
 	"animationType":"MUZZLE_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
-	"muzzleFlashSpec":{"length":69.0,   # only used if animationType = MUZZLE_FLASH
+	"muzzleFlashSpec":{"length":79.0,   # only used if animationType = MUZZLE_FLASH
 					   "spread":10.0,
 					   "particleSizeMin":10.0,
 					   "particleSizeRange":26.0,
@@ -23,5 +23,5 @@
 					   "particleCount":48,
 					   "particleColor":[250,133,30,220]},
 	"projectileSpecId":"InReC_guillotine_shot",  # projectile that will be fired
-	"fireSoundTwo":"mjolnir_fire", #TEMP! InReC_grinder_l_fire
+	"fireSoundTwo":"InReC_guillotine_fire", #TEMP! mjolnir_fire
 }

@@ -14,12 +14,12 @@
 	"fadeTime":0.4,
 	"fringeColor":[251,120,30,200],
 	"coreColor":[255,216,183,245],
-	"glowColor":[251,130,30,134],
-	"glowRadius":60,
+	"glowColor":[251,130,30,114],
+	"glowRadius":40,
 	"textureScrollSpeed":64.0,
 	"pixelsPerTexel":5.0,
-	"passThroughMissiles":true,
-	"passThroughFighters":true,
-	"passThroughFightersOnlyWhenDestroyed":true,
+	# "passThroughMissiles":true, # nah, because it explodes onHit, penetrating is not the vibe
+	# "passThroughFighters":true,
+	# "passThroughFightersOnlyWhenDestroyed":true,
 	"bulletSprite":"graphics/missiles/InReC_guillotine_shell.png"
 }
