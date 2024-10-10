@@ -1,58 +1,60 @@
 {
-  "variantId": "InReC_venture_sup",
+  "variantId": "InReC_venture_swrm",
   "hullId": "InReC_venture",
-  "displayName": "Support",
+  "displayName": "Swarm",
   "goalVariant": true,
-  "fluxCapacitors": 0,
-  "fluxVents": 9,
+  "fluxCapacitors": 2,
+  "fluxVents": 0,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "targetingunit",
-    "missleracks"
+    "InReC_parasite",
+    "InReC_greg_p",
+    "InReC_slotFlares"
   ],
   "weaponGroups": [
     {
       "autofire": false,
-      "mode": "ALTERNATING",
-      "weapons": {
-        "WS0001": "InReC_beekeeper_pod",
-        "WS0002": "InReC_beekeeper_pod"
-      }
-    },
-    {
-      "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0003": "InReC_apiarist"
+        "WS0001": "InReC_heart-throb",
+        "WS0002": "InReC_heart-throb"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0004": "InReC_fusor"
+        "WS0003": "InReC_flock"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0005": "InReC_hadron",
-        "WS0006": "InReC_hadron"
+        "WS0004": "InReC_millstone"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0007": "InReC_spark"
+        "WS0007": "InReC_gluon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "InReC_flash",
+        "WS0006": "InReC_flash"
       }
     }
   ],
   "modules": [],
   "wings": [
-    "InReC_espada_fighter_wing",
-    "InReC_espada_fighter_wing"
+    "InReC_flash_drone_wing",
+    "InReC_flash_drone_wing"
   ]
 }

@@ -7,7 +7,7 @@ InReC_pulse_drone_g_wing,InReC_pulse_drone_g_std,"auto_fighter, no_drop, no_sell
 InReC_pulse_drone_w_wing,InReC_pulse_drone_w_std,"auto_fighter, no_drop, no_sell, mid, rapid_reform, leader_no_swarm, wingmen_no_swarm, match_leader_facing, independent_of_carrier, restricted",0,,0,0,V,100000,550,0,1,FIGHTER,Drone,5,100000,,,,,,,,,,,,,19205
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 InReC_flash_drone_wing,InReC_flash_drone_std,"interceptor3, interceptor, mid, auto_fighter, merc",0,,5,5,CLAW,2500,250,650,6,INTERCEPTOR,Interceptor Drone,5,6000,,,,,,,,,,,,,19211
-InReC_grinder_drone_wing,InReC_grinder_drone_std,"support2, fighter, mid, merc",0,,5,8,V,0,500,,5,SUPPORT,Support Drone,8,9000,,,,,,,,,,,,,19212
-InReC_flock_drone_wing,InReC_flock_drone_std,"support2, fighter, mid, merc",0,,5,10,BOX,0,500,,4,SUPPORT,Support Drone,8,11000,,,,,,,,,,,,,19213
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+InReC_grinder_drone_wing,InReC_grinder_drone_std,"support2, fighter, mid, auto_fighter, merc",0,,5,8,V,0,500,,5,SUPPORT,Support Drone,8,9000,,,,,,,,,,,,,19212
+InReC_flock_drone_wing,InReC_flock_drone_std,"support2, fighter, mid, auto_fighter, merc",0,,5,10,BOX,0,500,,4,SUPPORT,Support Drone,8,11000,,,,,,,,,,,,,19213
+InReC_espada_fighter_wing,InReC_espada_std,"fighter4, fighter, mid, merc",0,,6,8,V,4000,500,,3,FIGHTER,Heavy Fighter,10,7500,,,,,,,,,,,,,19214
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,

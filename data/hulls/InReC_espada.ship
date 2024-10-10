@@ -1,0 +1,89 @@
+{
+  "hullName": "Espada",
+  "hullId": "InReC_espada",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/InReC_espada.png",
+  "style": "INREC",
+  "height": 36,
+  "width": 26,
+  "center": [13, 16],
+  "collisionRadius": 30,
+  "shieldCenter": [1, -0],
+  "shieldRadius": 23,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 20,
+      "angle": 0,
+      "locations": [8, 3.5]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-1, -0]
+    },
+    {
+      "id": "WS 004",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 180,
+      "locations": [-10, 0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-15, 6.5],
+      "length": 36,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-15, -6.5],
+      "length": 36,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-11, 10],
+      "length": 12,
+      "width": 4,
+      "angle": 160,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-11, -10],
+      "length": 12,
+      "width": 4,
+      "angle": 200,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    }
+  ],
+  "bounds": [
+    17, -4,
+    -4, -11,
+    -13, -7,
+    -13, 7,
+    -4, 11,
+    13, 6
+  ]
+}

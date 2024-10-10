@@ -95,9 +95,9 @@ InReC_pulse_hvy_shot,InReC_pulse_hvy_shot,base_trail_smooth,10,0,0.04,0.11,13,7,
 InReC_pulse_shot,InReC_pulse_shot,base_trail_smooth,10,0,0.03,0.09,10,5,"[152,243,203]","[20,60,50]",0.4,256,-128,TRUE,5,0,1,0,TRUE,FALSE,TRUE,20,200,0.1,0,0,0,FALSE,TRUE
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-InReC_spark_hvy_shot,InReC_spark_hvy_shot,base_trail_zapWithCore,8,0,0,0.18,9.5,3,"[245,215,110]","[70,10,120]",0.48,256,-128,TRUE,5,12,1,0,TRUE,FALSE,TRUE,18,180,0.8,0,0,270,FALSE,TRUE
+InReC_spark_hvy_shot,InReC_spark_hvy_shot,base_trail_zapWithCore,8,0,0,0.18,9.5,3,"[215,185,55]","[70,10,120]",0.48,256,-128,TRUE,5,12,1,0,TRUE,FALSE,TRUE,18,180,0.8,0,0,270,FALSE,TRUE
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-InReC_spark_shot,InReC_spark_shot,base_trail_zapWithCore,8,0,0,0.15,8,2.5,"[245,215,110]","[70,10,120]",0.48,256,-128,TRUE,5,12,1,0,TRUE,FALSE,TRUE,18,180,0.8,0,0,270,FALSE,TRUE
+InReC_spark_shot,InReC_spark_shot,base_trail_zapWithCore,8,0,0,0.15,8,2.5,"[215,185,55]","[70,10,120]",0.48,256,-128,TRUE,5,12,1,0,TRUE,FALSE,TRUE,18,180,0.8,0,0,270,FALSE,TRUE
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

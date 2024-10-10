@@ -7,3 +7,5 @@ Concussion Damper,InReC_damper,1,,,,,,,2,0.05,0.25,3,0.25,0,,,,,TRUE,,,,TRUE,TRU
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Drone Launch,InReC_greg,,,,,,,,1,0.04,0,0.1,0,4,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_mid.png
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Decoy Flare Launcher,InReC_jam_flares,,,,,,,,1,0.045,,,,3,,,,,,,,,,,,,graphics/icons/hullsys/flare_launcher.png
+,,,,,,,,,,,,,,,,,,,,,,,,,,,

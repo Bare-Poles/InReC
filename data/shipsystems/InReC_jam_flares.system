@@ -1,0 +1,7 @@
+{
+	"id":"InReC_jam_flares",
+	"type":"WEAPON",
+	"aiType":"FLARE_JAMMER",
+	"weaponDataId":"InReC_jam_flares",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

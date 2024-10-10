@@ -1,0 +1,29 @@
+{
+  "variantId": "InReC_espada_std",
+  "hullId": "InReC_espada",
+  "displayName": "Heavy Fighter",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "InReC_pesticide_ftr"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "InReC_spark"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

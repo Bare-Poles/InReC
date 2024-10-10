@@ -31,9 +31,6 @@ public class InReC_defoliantMissileAI implements MissileAIPlugin, GuidedMissileA
     // how long to wait before starting up the engine after "locking" on to the target. (reduced to 0.7f with ECCM)
     private float DELAY=1.0f;
     
-    // what fraction of turn rate to drop to after "locking" on to the target.
-    private final float DECAY_TURN=0.6f;
-
     //Damping of the turn speed when closing on the desired aim. The smaller the snappier.
     private final float DAMPING=0.1f;
     
@@ -320,14 +317,6 @@ public class InReC_defoliantMissileAI implements MissileAIPlugin, GuidedMissileA
             MISSILE.setAngularVelocity(aimAngle / DAMPING);
         }
         
-        // Clamps angular velocity if the missile is in the "locked" state
-        if (ARMED) {
-        	float currTurnLimit = DECAY_TURN * MISSILE.getMaxTurnRate();
-        	if (Math.abs(MISSILE.getAngularVelocity()) > currTurnLimit) {
-        		float decayMult = currTurnLimit / Math.abs(MISSILE.getAngularVelocity());
-        		MISSILE.setAngularVelocity(MISSILE.getAngularVelocity() * decayMult);
-        	}
-        }
     }
     
     //////////////////////
