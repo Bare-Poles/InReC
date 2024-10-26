@@ -79,7 +79,7 @@ public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileA
 	
 	
 	// how many shots to fire (multiply this by 2 because firing from two launch ports at once)
-	private int AMMO = 20;
+	private int AMMO = 14; //20
 	
 	// to check whether the missile is within "MIRV" range, and whether to fire the missiles
 	private boolean TRIGGER = false;
@@ -88,7 +88,7 @@ public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileA
 	private float DETECT=810000; //900^2
 	
 	// timer for firing missiles after getting into range
-	private IntervalUtil missileInterval = new IntervalUtil(0.1f, 0.12f);
+	private IntervalUtil missileInterval = new IntervalUtil(0.12f, 0.14f); //0.1f, 0.12f
 
 	// timer for simulating lifetime 
 	private IntervalUtil lifeInterval = new IntervalUtil(5f, 5f);
@@ -254,7 +254,9 @@ public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileA
 
 				Vector2f smokeVel = new Vector2f(vel.x * 0.8f, vel.y * 0.8f);
 				
-				float angle = MathUtils.getRandomNumberInRange((20-AMMO) * 2.2f, (20-AMMO) * 3.4f);  // formerly 0.8-1.2 * 2.8
+				// float angle = MathUtils.getRandomNumberInRange((20-AMMO) * 2.2f, (20-AMMO) * 3.4f);  // formerly 0.8-1.2 * 2.8
+					// numbers from when it had 20 "ammo"
+				float angle = MathUtils.getRandomNumberInRange((14-AMMO) * 3.15f, (14-AMMO) * 4.85f);
 				
 				float subFacing1 = MISSILE.getFacing() + angle;
 				Vector2f loc1 = MathUtils.getPointOnCircumference(loc, 2f, subFacing1);

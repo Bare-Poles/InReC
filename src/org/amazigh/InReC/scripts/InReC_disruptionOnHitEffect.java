@@ -66,15 +66,13 @@ public class InReC_disruptionOnHitEffect implements OnHitEffectPlugin {
 		                    FXTimer1.advance(amount);
 
 		                    Vector2f hitLoc = new Vector2f();
-		                    if (arcTimer.intervalElapsed() || FXTimer1.intervalElapsed()) {
+		                    
+		                    if (arcTimer.intervalElapsed()) {
 		                        hitLoc = VectorUtils.rotate(new Vector2f(shipRefHitLoc), target.getFacing() - initialFacing);
 		                        hitLoc = new Vector2f(hitLoc.x + target.getLocation().x, hitLoc.y + target.getLocation().y);
-		                    }
-	                        
-		                    if (arcTimer.intervalElapsed()) {
 		                    	
 		                    	// we arc!
-		                    	engine.spawnEmpArcPierceShields(projectile.getSource(), point, target, target,
+		                    	engine.spawnEmpArcPierceShields(projectile.getSource(), hitLoc, target, target,
 		        						DamageType.ENERGY,
 		        						arcDamage, // damage
 		        						arcEmp, // emp
@@ -100,14 +98,17 @@ public class InReC_disruptionOnHitEffect implements OnHitEffectPlugin {
 		                    
 		                    
 		                    if (FXTimer1.intervalElapsed()) {
+		                        hitLoc = VectorUtils.rotate(new Vector2f(shipRefHitLoc), target.getFacing() - initialFacing);
+		                        hitLoc = new Vector2f(hitLoc.x + target.getLocation().x, hitLoc.y + target.getLocation().y);
 
 		                        for (int i=0; i < 3; i++) {
 			                    	Vector2f sparkVel = MathUtils.getRandomPointInCircle(target.getVelocity(), MathUtils.getRandomNumberInRange(15f, 55f));
-			                    	engine.addSmoothParticle(hitLoc,
+			                    	Vector2f sparkLoc = MathUtils.getRandomPointInCircle(hitLoc, 5f);
+			                    	engine.addSmoothParticle(sparkLoc,
 			                    			sparkVel,
-			                    			MathUtils.getRandomNumberInRange(2f, 3f),
+			                    			MathUtils.getRandomNumberInRange(2f, 5f),
 			                    			1f,
-			                    			MathUtils.getRandomNumberInRange(0.25f, 0.45f),
+			                    			MathUtils.getRandomNumberInRange(0.3f, 0.45f),
 			                    			new Color(90,200,225,240));
 		                        }
 		                    }

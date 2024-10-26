@@ -63,8 +63,8 @@
 					"splitRange":900,
 					"minTimeToSplit":1,
 					"canSplitEarly":false,
-					"splitSound":"swarmer_fire",
-					"numShots":30,
+					"splitSound":"InReC_blister_fire", #swarmer_fire
+					"numShots":20, #30
 					"damage":60,
 					"impact":10,
 					"emp":0,

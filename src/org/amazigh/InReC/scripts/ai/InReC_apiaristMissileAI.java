@@ -79,7 +79,7 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
 	
 	
 	// how many shots to fire (multiply this by 2 because firing from two launch ports at once)
-	private int AMMO = 15;
+	private int AMMO = 10; //15
 	
 	// to check whether the missile is within "MIRV" range, and whether to fire the missiles
 	private boolean TRIGGER = false;
@@ -88,7 +88,7 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
 	private float DETECT=810000; //900^2
 	
 	// timer for firing missiles after getting into range
-	private IntervalUtil missileInterval = new IntervalUtil(0.11f, 0.14f);
+	private IntervalUtil missileInterval = new IntervalUtil(0.12f, 0.17f); //0.11f, 0.14f
 	
 	// timer for simulating lifetime 
 	private IntervalUtil lifeInterval = new IntervalUtil(5f, 5f);

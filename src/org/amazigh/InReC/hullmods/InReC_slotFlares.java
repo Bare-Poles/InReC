@@ -8,6 +8,8 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.loading.WeaponSlotAPI;
 
 import java.awt.Color;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
@@ -19,6 +21,20 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
 public class InReC_slotFlares extends BaseHullMod {
+	
+	private static Map<HullSize, Float> count = new HashMap<HullSize, Float>();
+	static {
+		count.put(HullSize.DESTROYER, 2f);
+		count.put(HullSize.CRUISER, 3f);
+		count.put(HullSize.CAPITAL_SHIP, 6f);
+	}
+	
+	private static Map<HullSize, Float> count_s = new HashMap<HullSize, Float>();
+	static {
+		count_s.put(HullSize.DESTROYER, 3f);
+		count_s.put(HullSize.CRUISER, 4f);
+		count_s.put(HullSize.CAPITAL_SHIP, 9f);
+	}
 	
 	public void advanceInCombat(ShipAPI ship, float amount){
 		CombatEngineAPI engine = Global.getCombatEngine();
@@ -34,8 +50,10 @@ public class InReC_slotFlares extends BaseHullMod {
         MutableShipStatsAPI stats = ship.getMutableStats();
         boolean sMod = isSMod(stats);
 		if (sMod) {
-			info.COUNT = 3;
+			info.COUNT = (int) ((float) (count_s.get(ship.getHullSize()))); // so you have to cast from "Float" to "float" in order to cast to int, that's fucked up.
 			info.COOLDOWN = 20f;
+		} else {
+			info.COUNT = (int) ((float) (count.get(ship.getHullSize())));
 		}
         
 		
@@ -59,8 +77,8 @@ public class InReC_slotFlares extends BaseHullMod {
         // if there is a missile within range, fire flares!
         if (info.FIRING) {
         	info.TIMER += amount;
-        	if (info.TIMER > 0.15f) {
-            	info.TIMER -= 0.15f;
+        	if (info.TIMER > 0.14f) {
+            	info.TIMER -= 0.14f;
             	
             	for (WeaponSlotAPI weapon : ship.getHullSpec().getAllWeaponSlotsCopy()) {
 	        		if (weapon.isDecorative()) {
@@ -94,8 +112,8 @@ public class InReC_slotFlares extends BaseHullMod {
             }
         }
         
-        // if not ready, and not firing, start the cooldown timer!
-        if (!info.READY && !info.FIRING) {
+        // if not ready, start the cooldown timer!
+        if (!info.READY) {
         	info.TIMER += amount;
         	if (info.TIMER >= info.COOLDOWN) {
         		info.READY = true;
@@ -160,8 +178,8 @@ public class InReC_slotFlares extends BaseHullMod {
 		label = tooltip.addPara("Each slot on the vessel will mount an automated flare launcher, this ship has %s slots.", opad, h, "" + slotCount);
 		label.setHighlight("" + slotCount);
 		label.setHighlightColors(h);
-		label = tooltip.addPara("On detecting a hostile missile within %s range, each flare launcher will fire %s seeker flares.", pad, h, "1000", "2");
-		label.setHighlight("1000", "2");
+		label = tooltip.addPara("On detecting a hostile missile within %s range, each flare launcher will fire %s seeker flares.", pad, h, "1000", "" + ((float) (count.get(ship.getHullSize()))));
+		label.setHighlight("1000", "" + ((float) (count.get(ship.getHullSize()))));
 		label.setHighlightColors(h, h);
 		label = tooltip.addPara("The flare launchers take %s to reload after use.", pad, h, "25 seconds");
 		label.setHighlight("25 seconds");
@@ -172,8 +190,10 @@ public class InReC_slotFlares extends BaseHullMod {
 	}
 	
 	public String getSModDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "3";
-		if (index == 1) return "20 seconds";
+		if (index == 0) return "" + (int) ((float) (count.get(HullSize.DESTROYER)));
+		if (index == 1) return "" + (int) ((float) (count.get(HullSize.CRUISER)));
+		if (index == 2) return "" + (int) ((float) (count.get(HullSize.CAPITAL_SHIP)));
+		if (index == 3) return "20 seconds";
 		return null;
 	}
 	

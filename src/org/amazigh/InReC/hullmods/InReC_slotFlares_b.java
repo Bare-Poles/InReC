@@ -51,8 +51,8 @@ public class InReC_slotFlares_b extends BaseHullMod {
         // if there is a missile within range, fire flares!
         if (info.FIRING) {
         	info.TIMER += amount;
-        	if (info.TIMER > 0.15f) {
-            	info.TIMER -= 0.15f;
+        	if (info.TIMER > 0.16f) {
+            	info.TIMER -= 0.16f;
             	
             	for (WeaponSlotAPI weapon : ship.getHullSpec().getAllWeaponSlotsCopy()) {
 	        		if (weapon.isDecorative()) {
@@ -86,8 +86,8 @@ public class InReC_slotFlares_b extends BaseHullMod {
             }
         }
         
-        // if not ready, and not firing, start the cooldown timer!
-        if (!info.READY && !info.FIRING) {
+        // if not ready, start the cooldown timer!
+        if (!info.READY) {
         	info.TIMER += amount;
         	if (info.TIMER >= info.COOLDOWN) {
         		info.READY = true;

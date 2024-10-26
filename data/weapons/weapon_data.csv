@@ -31,13 +31,13 @@ Fumigator Flare Dispenser,InReC_fumigator,1,,1600,2000,,400,,,10,9,,,,FRAGMENTAT
 Defoliant Strike Missile,InReC_defoliant,1,,400,2000,,400,,15,20,4,9,,,KINETIC,0,,0,6,1,0,0,0,0,0,,600,100,5,200,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","missile8, strike3, inrec_wep_bp, merc",,InReCo,,Anti Shield,Very Fast,Special,,,After an initial aiming stage accelerates rapidly and continues with limited guidance.,,,,TRUE,19224
 Heart-throb Drone Launcher,InReC_heart-throb,2,,1800,4000,,900,,,10,12,,,,ENERGY,0,,0,29,2,1,0,0,0,0,,250,100,10,300,,,DO_NOT_AIM,"utility15, missile10, damage_special, inrec_wep_bp, merc",,InReCo,,Drone Launcher,Medium,Excellent,,,"Launches a pair of autonomous drones, each armed with a %s.
 Drones feature a solid-state flux capacitor, and will self destruct after firing %s shots.",Pulse Bolter | 70,,,TRUE,19225
-Beekeeper Kinetic Blister,InReC_beekeeper,2,,500,1500,,400,,,15,4,2,,,KINETIC,0,,0,5,1,0,0,0,0,0,,250,75,30,300,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","strike4, missile8, inrec_wep_bp, merc",,InReCo,,Anti Shield,Medium,Good,,,On nearing its target the missile will slow down and fire a barrage of %s.,Micro Missiles,,,TRUE,19226
+Beekeeper Kinetic Blister,InReC_beekeeper,2,,500,1500,,400,,,15,4,3,,,KINETIC,0,,0,5,1,0,0,0,0,0,,250,75,30,300,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","strike4, missile8, inrec_wep_bp, merc",,InReCo,,Anti Shield,Medium,Good,,,On nearing its target the missile will slow down and fire a barrage of %s.,Micro Missiles,,,TRUE,19226
 Beekeeper Sub,InReC_beekeeper_sub,0,,1000,1200,,50,,4,10,,,,,KINETIC,0,,0,1,1,0,0,0,0,0,,350,350,5,40,,,"SYSTEM, DO_NOT_AIM",,,InReCo,,,,,,,,,,,,19226.1
-Beekeeper Kinetic Blister Pod,InReC_beekeeper_pod,2,,1800,1500,,400,,,10,12,8,,,KINETIC,0,,0,15,1,0,0,0,0,0,,250,75,30,300,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","strike8, missile13, inrec_wep_bp, merc",,InReCo,,Anti Shield,Medium,Good,,,On nearing its target the missile will slow down and fire a barrage of %s.,Micro Missiles,,,TRUE,19226.2
-Apiarist Blister,InReC_apiarist,2,,500,1500,,400,,,15,4,2,,,HIGH_EXPLOSIVE,0,,0,5,1,0,0,0,0,0,,250,75,30,300,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","strike4, missile8, inrec_wep_bp, merc",,InReCo,,Anti Armor,Medium,Good,,,"On nearing its target the missile will slow down and fire a barrage of %s.
+Beekeeper Kinetic Blister Pod,InReC_beekeeper_pod,2,,1800,1500,,400,,,10,12,12,,,KINETIC,0,,0,15,1,0,0,0,0,0,,250,75,30,300,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","strike8, missile13, inrec_wep_bp, merc",,InReCo,,Anti Shield,Medium,Good,,,On nearing its target the missile will slow down and fire a barrage of %s.,Micro Missiles,,,TRUE,19226.2
+Apiarist Blister,InReC_apiarist,2,,500,1500,,400,,,15,4,3,,,HIGH_EXPLOSIVE,0,,0,5,1,0,0,0,0,0,,250,75,30,300,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","strike4, missile8, inrec_wep_bp, merc",,InReCo,,Anti Armor,Medium,Good,,,"On nearing its target the missile will slow down and fire a barrage of %s.
 Each %s deals an additional %s damage to armor. This damage is not reduced by armor.",Micro Missiles | Micro Missile | 40,,,TRUE,19227
 Apiarist Sub,InReC_apiarist_sub,0,,1000,1200,,60,,4,10,,,,,HIGH_EXPLOSIVE,0,,0,1,1,0,0,0,0,0,,300,300,5.8,50,,,"SYSTEM, DO_NOT_AIM, MISSILE_SPREAD",,,InReCo,,,,,,,,,,,,19227.1
-Apiarist Blister Pod,InReC_apiarist_pod,2,,1800,1500,,400,,,10,12,8,,,HIGH_EXPLOSIVE,0,,0,15,1,0,0,0,0,0,,250,75,30,300,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","strike8, missile13, inrec_wep_bp, merc",,InReCo,,Anti Armor,Medium,Good,,,"On nearing its target the missile will slow down and fire a barrage of %s.
+Apiarist Blister Pod,InReC_apiarist_pod,2,,1800,1500,,400,,,10,12,12,,,HIGH_EXPLOSIVE,0,,0,15,1,0,0,0,0,0,,250,75,30,300,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES","strike8, missile13, inrec_wep_bp, merc",,InReCo,,Anti Armor,Medium,Good,,,"On nearing its target the missile will slow down and fire a barrage of %s.
 Each %s deals an additional %s damage to armor. This damage is not reduced by armor.",Micro Missiles | Micro Missile | 40,,,TRUE,19227.2
 Herbicide SRM,InReC_herbicide,1,,400,800,,120,,10,25,5,90,,,HIGH_EXPLOSIVE,0,,0,7,6,0.2,1,10,1,2,,500,100,3.5,60,,,"DO_NOT_AIM, STRIKE, USE_VS_FRIGATES, MISSILE_SPREAD","missile8, strike4, inrec_wep_bp, merc",,InReCo,,Anti Armor,Fast,Medium,,,,,,,,19228
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -62,6 +62,7 @@ Decoy Flare Launcher,InReC_jam_flares,,,1000,200,,20,100,0,,,,,,ENERGY,0,,0,0.1,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Deco Champion L,InReC_deco_champion,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
 Deco Champion R,InReC_deco_champion2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
+Deco Conquest,InReC_deco_conq,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
 Deco Dominator R,InReC_deco_dominator,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
 Deco Dominator L,InReC_deco_dominator2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,
 Deco Drover R,InReC_deco_drover,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_drop, no_drop_salvage",,,,,,,,,,,,,,

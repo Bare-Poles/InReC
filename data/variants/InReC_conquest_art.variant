@@ -1,0 +1,89 @@
+{
+  "variantId": "InReC_conquest_art",
+  "hullId": "InReC_conquest",
+  "displayName": "Artillery",
+  "goalVariant": true,
+  "fluxCapacitors": 13,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "InReC_slotRange",
+    "InReC_parasite",
+    "InReC_greg_p"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "InReC_guillotine"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0002": "InReC_heart-throb",
+        "WS0003": "InReC_heart-throb",
+        "WS0004": "InReC_heart-throb",
+        "WS0005": "InReC_heart-throb",
+        "WS0006": "InReC_heart-throb"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0007": "InReC_flock",
+        "WS0008": "InReC_flock",
+        "WS0009": "InReC_flock"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "InReC_millstone"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "InReC_hadron",
+        "WS0012": "InReC_hadron",
+        "WS0013": "InReC_hadron",
+        "WS0018": "InReC_gluon",
+        "WS0020": "InReC_gluon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0014": "InReC_flash",
+        "WS0015": "InReC_flash"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0016": "InReC_flash_lt",
+        "WS0017": "InReC_flash_lt",
+        "WS0019": "InReC_flash_lt",
+        "WS0021": "InReC_flash_lt",
+        "WS0022": "InReC_flash_lt",
+        "WS0023": "InReC_flash_lt"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "InReC_flash_drone_wing",
+    "InReC_flash_drone_wing",
+    "InReC_flash_drone_wing"
+  ]
+}
