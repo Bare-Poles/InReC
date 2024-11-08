@@ -8,7 +8,7 @@ Spark Bolter,InReC_spark,1,,400,450,,30,,0,100,6,,,,FRAGMENTATION,6,,0.05,0.65,7
 Heavy Spark Bolter,InReC_spark_hvy,0,,1200,550,,40,,0,50,10,,,,FRAGMENTATION,8,,0.05,0.25,5,0.05,7,7,0,0,,1250,,,,,,PD,"pd12, energy10, inrec_wep_bp, merc",,InReCo,,Point Defense,,,,,,,,,,19203.1
 Fusion Bolter,InReC_fusion,2,,600,450,,30,,0,30,7,,,,HIGH_EXPLOSIVE,30,,0.1,2.7,5,0.05,40,40,0,0,,1000,,,,,,,"energy9, inrec_wep_bp, merc",,InReCo,,Anti Armour,,,,Spread,Each bolt deals an additional %s damage to armor. This damage is not reduced by armor.,6,,,,19204
 Gluon Bolter,InReC_gluon,3,,750,800,,25,,0,15,7,,,,ENERGY,30,,0.2,3.65,24,0.05,15,15,0,0,,720,,,,,,,"energy10, LR, inrec_wep_bp, merc",,InReCo,,Fire Support,,,,Swarming,,,,,,19205
-Disruption Bolter,InReC_disruption,2,,2400,600,,150,400,0,20,12,,,,ENERGY,195,,0.2,1.9,4,0.3,4,4,0,0,,1000,,,,,,,"energy13, inrec_wep_bp, merc",,InReCo,,Suppression,,,,,"Each hits on hull or armor will discharge %s arcs, each arc dealing %s and %s damage.",4 | 30 Energy | 80 EMP,,,,19206
+Disruption Bolter,InReC_disruption,2,,2400,600,,150,200,0,20,12,,,,ENERGY,195,,0.2,1.9,4,0.3,4,4,0,0,,1000,,,,,,,"energy13, inrec_wep_bp, merc",,InReCo,,Suppression,,,,,"Each hit on hull or armor will discharge %s arcs, each arc dealing %s and %s damage.",4 | 30 Energy | 100 EMP,,,,19206
 Negatron Bolter,InReC_negatron,3,,2400,700,,210,,0,15,12,,,,ENERGY,231,,0.15,2.05,5,0.2,6,6,0,0,,1000,,,,,,,"energy13, inrec_wep_bp, merc",,InReCo,,General,,,,,,,,,,19207
 Hadron Bolter,InReC_hadron,2,,2000,750,,80,,0,12,10,,,,ENERGY,64,,0.4,2.9,8,0.1,7,7,0,0,,900,,,,,,,"energy12, LR, inrec_wep_bp, merc",,InReCo,,Fire Support,,,,,,,,,,19208
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

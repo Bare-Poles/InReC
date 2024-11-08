@@ -16,6 +16,9 @@
     "InReC_slot",
     "missile_autoloader"
   ],
+  "builtInWeapons": {
+    "WS0027": "InReC_deco_conq"
+  },
   "weaponSlots": [
     {
       "id": "WS0002",
@@ -221,8 +224,8 @@
       "type": "MISSILE",
       "mount": "HARDPOINT",
       "arc": 5,
-      "angle": 90,
-      "locations": [157, 78]
+      "angle": 0,
+      "locations": [201, -68]
     },
     {
       "id": "WS0027",
@@ -342,7 +345,7 @@
       "length": 46,
       "width": 16,
       "angle": 180,
-      "contrailSize": 128,
+      "contrailSize": 64,
       "style": "CUSTOM",
       "styleId": "INREC"
     },
@@ -403,8 +406,8 @@
   ],
   "bounds": [
     214, 56,
-    162, 76,
-    152, 76,
+    166, 74,
+    152, 72,
     146, 60,
     141, 60,
     137, 76,
@@ -440,7 +443,8 @@
     17, -69,
     96, -68,
     101, -71,
-    159, -71,
+    195, -72,
+    193, -60,
     215, -54,
     219, -38,
     172, -34,

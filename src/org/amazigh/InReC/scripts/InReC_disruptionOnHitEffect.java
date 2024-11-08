@@ -48,7 +48,7 @@ public class InReC_disruptionOnHitEffect implements OnHitEffectPlugin {
 		                
 		                int arcsFired = 0;
 		                float arcDamage = projectile.getDamageAmount() * 0.2f;
-		                float arcEmp = projectile.getEmpAmount() * 0.2f;
+		                float arcEmp = projectile.getEmpAmount() * 0.5f;
 		                
 		                final Vector2f shipRefHitLoc = new Vector2f(point.x - target.getLocation().x, point.y - target.getLocation().y);
 		                final IntervalUtil arcTimer = new IntervalUtil(0.2f, 0.3f);
