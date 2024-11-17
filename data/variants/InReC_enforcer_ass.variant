@@ -4,11 +4,10 @@
   "displayName": "Assault",
   "goalVariant": true,
   "fluxCapacitors": 0,
-  "fluxVents": 5,
+  "fluxVents": 11,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "InReC_slotVent",
     "heavyarmor",
     "unstable_injector"
   ],

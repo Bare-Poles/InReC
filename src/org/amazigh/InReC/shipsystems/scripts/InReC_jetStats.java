@@ -14,8 +14,10 @@ public class InReC_jetStats extends BaseShipSystemScript {
 			stats.getMaxSpeed().unmodify(id); // to slow down ship to its regular top speed while powering drive down
 			stats.getMaxTurnRate().unmodify(id);
 		} else {
-			stats.getMaxSpeed().modifyFlat(id, 80f);
+			stats.getMaxSpeed().modifyFlat(id, 60f);
+			stats.getAcceleration().modifyFlat(id, 15f * effectLevel);
 			stats.getAcceleration().modifyPercent(id, 240f * effectLevel);
+			stats.getDeceleration().modifyFlat(id, 10f * effectLevel);
 			stats.getDeceleration().modifyPercent(id, 240f * effectLevel);
 			stats.getTurnAcceleration().modifyFlat(id, 10f * effectLevel);
 			stats.getTurnAcceleration().modifyPercent(id, 50f * effectLevel);
@@ -54,7 +56,7 @@ public class InReC_jetStats extends BaseShipSystemScript {
 		if (index == 0) {
 			return new StatusData("improved maneuverability", false);
 		} else if (index == 1) {
-			return new StatusData("+80 top speed", false);
+			return new StatusData("+60 top speed", false);
 		}
 		return null;
 	}

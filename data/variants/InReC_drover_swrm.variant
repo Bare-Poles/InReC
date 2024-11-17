@@ -4,12 +4,11 @@
   "displayName": "Swarm",
   "goalVariant": true,
   "fluxCapacitors": 5,
-  "fluxVents": 0,
+  "fluxVents": 6,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "InReC_greg_p",
-    "InReC_slotFlares",
     "targetingunit",
     "InReC_parasite"
   ],

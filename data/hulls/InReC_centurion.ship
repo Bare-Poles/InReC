@@ -83,7 +83,7 @@
       "id": "WS0008",
       "size": "SMALL",
       "type": "DECORATIVE",
-      "mount": "TURRET",
+      "mount": "HIDDEN",
       "arc": 0,
       "angle": 180,
       "locations": [-23, 1]

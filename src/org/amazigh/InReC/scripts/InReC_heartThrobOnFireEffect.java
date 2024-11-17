@@ -32,7 +32,7 @@ public class InReC_heartThrobOnFireEffect implements OnFireEffectPlugin {
     		droneMember.setOwner(owner);
     		droneMember.setAlly(ship.isAlly());
     		
-    		ShipAPI drone = engine.getFleetManager(owner).spawnFleetMember(droneMember, posZero, angle, 0.5f);
+    		ShipAPI drone = engine.getFleetManager(owner).spawnFleetMember(droneMember, posZero, angle, 1.5f);
     		drone.setCRAtDeployment(0.7f);
     		drone.setCollisionClass(CollisionClass.FIGHTER);
     		

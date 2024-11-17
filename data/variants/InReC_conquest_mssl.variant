@@ -3,15 +3,14 @@
   "hullId": "InReC_conquest",
   "displayName": "Missile",
   "goalVariant": true,
-  "fluxCapacitors": 21,
-  "fluxVents": 10,
+  "fluxCapacitors": 26,
+  "fluxVents": 20,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "InReC_siegeMods",
     "eccm",
-    "targetingunit",
-    "InReC_slotFlares"
+    "targetingunit"
   ],
   "weaponGroups": [
     {

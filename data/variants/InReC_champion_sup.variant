@@ -4,12 +4,11 @@
   "displayName": "Support",
   "goalVariant": true,
   "fluxCapacitors": 10,
-  "fluxVents": 20,
+  "fluxVents": 29,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "targetingunit",
-    "InReC_slotFlares",
     "InReC_siegeMods"
   ],
   "weaponGroups": [

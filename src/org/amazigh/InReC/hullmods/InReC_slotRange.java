@@ -114,7 +114,7 @@ public class InReC_slotRange extends BaseHullMod {
 		label.setHighlightColors(h, h, h, h);
 		
 		
-		label = tooltip.addPara("May only be installed on InReCo vessels, and only one slot hullmod may be installed at a time.", opad);
+		label = tooltip.addPara("May only be installed on InReCo vessels.", opad);
 		
 	}
 	
@@ -130,18 +130,22 @@ public class InReC_slotRange extends BaseHullMod {
 	
 	@Override
 	public boolean isApplicableToShip(ShipAPI ship) {
-		return ship.getVariant().getHullMods().contains("InReC_slot") && !ship.getVariant().getHullMods().contains("InReC_slotVent") && !ship.getVariant().getHullMods().contains("InReC_slotShield") && !ship.getVariant().getHullMods().contains("InReC_slotFlares");
+		return ship.getVariant().getHullMods().contains("InReC_slot") || ship.getVariant().getHullMods().contains("InReC_slotVent_b") || ship.getVariant().getHullMods().contains("InReC_slotFlares_b");
 	}
 	
 	public boolean showInRefitScreenModPickerFor(ShipAPI ship) {
-		return ship.getVariant().getHullMods().contains("InReC_slot");
+		return ship.getVariant().getHullMods().contains("InReC_slot") || ship.getVariant().getHullMods().contains("InReC_slotVent_b") || ship.getVariant().getHullMods().contains("InReC_slotFlares_b");
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
-		if (ship.getVariant().getHullMods().contains("InReC_slotVent") || ship.getVariant().getHullMods().contains("InReC_slotShield") || ship.getVariant().getHullMods().contains("InReC_slotFlares")) {
-			return "May only install one InReCo Slot hullmod at a time.";
+		boolean valid = false;
+		if (ship.getVariant().getHullMods().contains("InReC_slot") || ship.getVariant().getHullMods().contains("InReC_slotVent_b") || ship.getVariant().getHullMods().contains("InReC_slotFlares_b")) {
+			valid = true;
 		}
-		if (!ship.getVariant().getHullMods().contains("InReC_slot")) {
+		if (ship.getVariant().getHullMods().contains("InReC_slotRange_b") ) {
+			return "Already installed.";
+		}
+		if (!valid) {
 			return "Only compatible with InReCo vessels.";
 		}
 		return null;

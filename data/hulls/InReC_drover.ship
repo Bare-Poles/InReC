@@ -12,13 +12,9 @@
   "shieldRadius": 114,
   "viewOffset": 0,
   "builtInMods": [
-    "InReC_slot",
-    "InReC_gregSlot"
+    "InReC_gregSlot",
+    "InReC_slotFlares_b"
   ],
-  "builtInWeapons": {
-    "WS0007": "InReC_deco_drover2",
-    "WS0008": "InReC_deco_drover"
-  },
   "weaponSlots": [
     {
       "id": "WS0001",
@@ -87,19 +83,19 @@
       "id": "WS0007",
       "size": "SMALL",
       "type": "DECORATIVE",
-      "mount": "TURRET",
+      "mount": "HIDDEN",
       "arc": 0,
       "angle": 90,
-      "locations": [-6, 60]
+      "locations": [-6, 64]
     },
     {
       "id": "WS0008",
       "size": "SMALL",
       "type": "DECORATIVE",
-      "mount": "TURRET",
+      "mount": "HIDDEN",
       "arc": 0,
       "angle": -90,
-      "locations": [-6, -60]
+      "locations": [-6, -64]
     },
     {
       "id": "LB 1",

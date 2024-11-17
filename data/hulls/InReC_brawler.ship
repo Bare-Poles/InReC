@@ -4,15 +4,15 @@
   "hullSize": "FRIGATE",
   "spriteName": "graphics/ships/InReC_brawler.png",
   "style": "INREC",
-  "height": 62,
+  "height": 60,
   "width": 102,
-  "center": [51, 31],
+  "center": [51, 29],
   "collisionRadius": 70,
   "shieldCenter": [2, -0],
   "shieldRadius": 67,
   "viewOffset": 0,
   "builtInMods": [
-    "InReC_slotShield_b"
+    "InReC_slot"
   ],
   "weaponSlots": [
     {
@@ -121,7 +121,8 @@
     -24, -33,
     -24, -12,
     -21, -10,
-    -29, -0,
+    -27, -4,
+    -27, 3,
     -21, 10,
     -24, 12,
     -24, 33,

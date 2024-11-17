@@ -3,13 +3,12 @@
   "hullId": "InReC_enforcer",
   "displayName": "Support",
   "goalVariant": true,
-  "fluxCapacitors": 0,
-  "fluxVents": 17,
+  "fluxCapacitors": 3,
+  "fluxVents": 20,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "targetingunit",
-    "InReC_slotFlares",
     "InReC_siegeMods"
   ],
   "weaponGroups": [

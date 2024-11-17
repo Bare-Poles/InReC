@@ -14,10 +14,6 @@
   "builtInMods": [
     "InReC_slot"
   ],
-  "builtInWeapons": {
-    "WS0024": "InReC_deco_dominator2",
-    "WS0025": "InReC_deco_dominator"
-  },
   "weaponSlots": [
     {
       "id": "WS0010",
@@ -90,24 +86,6 @@
       "arc": 150,
       "angle": -150,
       "locations": [-62, -18]
-    },
-    {
-      "id": "WS0024",
-      "size": "SMALL",
-      "type": "DECORATIVE",
-      "mount": "TURRET",
-      "arc": 0,
-      "angle": 90,
-      "locations": [25, 101]
-    },
-    {
-      "id": "WS0025",
-      "size": "SMALL",
-      "type": "DECORATIVE",
-      "mount": "TURRET",
-      "arc": 0,
-      "angle": -90,
-      "locations": [25, -101]
     },
     {
       "id": "WS0005",

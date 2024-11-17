@@ -14,10 +14,6 @@
   "builtInMods": [
     "InReC_slot"
   ],
-  "builtInWeapons": {
-    "WS0017": "InReC_deco_enforcer",
-    "WS0018": "InReC_deco_enforcer2"
-  },
   "weaponSlots": [
     {
       "id": "LB 1",
@@ -175,24 +171,6 @@
       "arc": 30,
       "angle": 180,
       "locations": [-33, -0]
-    },
-    {
-      "id": "WS0017",
-      "size": "SMALL",
-      "type": "DECORATIVE",
-      "mount": "TURRET",
-      "arc": 0,
-      "angle": 90,
-      "locations": [-9, 25]
-    },
-    {
-      "id": "WS0018",
-      "size": "SMALL",
-      "type": "DECORATIVE",
-      "mount": "TURRET",
-      "arc": 0,
-      "angle": -90,
-      "locations": [-9, -25]
     }
   ],
   "engineSlots": [

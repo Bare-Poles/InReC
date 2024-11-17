@@ -8,6 +8,9 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.loading.WeaponSlotAPI;
 
 import java.awt.Color;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
 
@@ -17,6 +20,14 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
 public class InReC_slotVent_b extends BaseHullMod {
+	
+	private static Map<HullSize, Float> mag = new HashMap<HullSize, Float>();
+	static {
+		mag.put(HullSize.FRIGATE, 40f);
+		mag.put(HullSize.DESTROYER, 80f);
+		mag.put(HullSize.CRUISER, 120f);
+		mag.put(HullSize.CAPITAL_SHIP, 200f);
+	}
 	
 	public static final float FLAT_DISS = 40;
 	
@@ -37,7 +48,9 @@ public class InReC_slotVent_b extends BaseHullMod {
             info = new ShipSpecificData();
         }
         
-		float fluxDiff = amount * Math.min(FLAT_DISS, (ship.getFluxTracker().getCurrFlux() - ship.getFluxTracker().getHardFlux()));
+        float dissipation = (Float) mag.get(ship.getHullSize());
+        
+		float fluxDiff = amount * Math.min(dissipation, (ship.getFluxTracker().getCurrFlux() - ship.getFluxTracker().getHardFlux()));
     	
 		// if you have more soft flux than hard flux, dissipate some for free!
 		if (fluxDiff > 0f) {
@@ -128,8 +141,8 @@ public class InReC_slotVent_b extends BaseHullMod {
 		
 		LabelAPI label = tooltip.addPara("A set of secondary flux vents that improve dissipation of soft flux.", opad);
 		
-		label = tooltip.addPara("The secondary vents will passively dissipate up to %s soft flux every second.", opad, h, "" + (int)FLAT_DISS);
-		label.setHighlight("" + (int)FLAT_DISS);
+		label = tooltip.addPara("The secondary vents will passively dissipate up to %s soft flux every second.", opad, h, "" + (Float) mag.get(ship.getHullSize()));
+		label.setHighlight("" + (Float) mag.get(ship.getHullSize()));
 		label.setHighlightColors(h);
 		
 		label = tooltip.addPara("The rate of this bonus dissipation is %s increased by active venting.", pad, bad, "Not");

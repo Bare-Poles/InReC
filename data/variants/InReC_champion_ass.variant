@@ -3,14 +3,14 @@
   "hullId": "InReC_champion",
   "displayName": "Assault",
   "goalVariant": true,
-  "fluxCapacitors": 3,
+  "fluxCapacitors": 0,
   "fluxVents": 30,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "targetingunit",
-    "InReC_slotVent",
-    "InReC_rebalancer"
+    "InReC_rebalancer",
+    "fluxdistributor"
   ],
   "weaponGroups": [
     {

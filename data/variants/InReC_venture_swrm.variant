@@ -3,15 +3,14 @@
   "hullId": "InReC_venture",
   "displayName": "Swarm",
   "goalVariant": true,
-  "fluxCapacitors": 2,
-  "fluxVents": 0,
+  "fluxCapacitors": 6,
+  "fluxVents": 5,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "targetingunit",
     "InReC_parasite",
-    "InReC_greg_p",
-    "InReC_slotFlares"
+    "InReC_greg_p"
   ],
   "weaponGroups": [
     {

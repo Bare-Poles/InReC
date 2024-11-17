@@ -4,13 +4,12 @@
   "displayName": "Assault",
   "goalVariant": true,
   "fluxCapacitors": 0,
-  "fluxVents": 8,
+  "fluxVents": 23,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "targetingunit",
     "missleracks",
-    "InReC_slotVent",
     "InReC_rebalancer"
   ],
   "weaponGroups": [

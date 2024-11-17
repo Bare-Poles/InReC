@@ -14,10 +14,6 @@
   "builtInMods": [
     "InReC_slot"
   ],
-  "builtInWeapons": {
-    "WS0017": "InReC_deco_champion",
-    "WS0018": "InReC_deco_champion2"
-  },
   "weaponSlots": [
     {
       "id": "WS0001",
@@ -162,24 +158,6 @@
       "arc": 210,
       "angle": -130,
       "locations": [-68, -48]
-    },
-    {
-      "id": "WS0017",
-      "size": "SMALL",
-      "type": "DECORATIVE",
-      "mount": "TURRET",
-      "arc": 0,
-      "angle": 90,
-      "locations": [-26, 54]
-    },
-    {
-      "id": "WS0018",
-      "size": "SMALL",
-      "type": "DECORATIVE",
-      "mount": "TURRET",
-      "arc": 0,
-      "angle": -90,
-      "locations": [-26, -54]
     }
   ],
   "engineSlots": [

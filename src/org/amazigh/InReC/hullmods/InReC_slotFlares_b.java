@@ -8,6 +8,8 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.loading.WeaponSlotAPI;
 
 import java.awt.Color;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
@@ -20,6 +22,22 @@ import com.fs.starfarer.api.util.Misc;
 
 public class InReC_slotFlares_b extends BaseHullMod {
 	
+	private static Map<HullSize, Float> count = new HashMap<HullSize, Float>();
+	static {
+		count.put(HullSize.FRIGATE, 2f);
+		count.put(HullSize.DESTROYER, 2f);
+		count.put(HullSize.CRUISER, 3f);
+		count.put(HullSize.CAPITAL_SHIP, 4f);
+	}
+	
+	private static Map<HullSize, Float> cooldown = new HashMap<HullSize, Float>();
+	static {
+		cooldown.put(HullSize.FRIGATE, 15f);
+		cooldown.put(HullSize.DESTROYER, 20f);
+		cooldown.put(HullSize.CRUISER, 15f);
+		cooldown.put(HullSize.CAPITAL_SHIP, 10f);
+	}
+	
 	public void advanceInCombat(ShipAPI ship, float amount){
 		CombatEngineAPI engine = Global.getCombatEngine();
 		if (engine.isPaused() || !ship.isAlive() || ship.isPiece()) {
@@ -30,6 +48,10 @@ public class InReC_slotFlares_b extends BaseHullMod {
         if (info == null) {
             info = new ShipSpecificData();
         }
+        
+        info.COUNT = (int) ((float) (count.get(ship.getHullSize()))); // so you have to cast from "Float" to "float" in order to cast to int, that's fucked up.
+		info.COOLDOWN = (int) ((float) (cooldown.get(ship.getHullSize())));
+		
         
 		// once a second, check to see if there is an enemy missile within ~1000 range
         if (info.READY) {
@@ -51,8 +73,8 @@ public class InReC_slotFlares_b extends BaseHullMod {
         // if there is a missile within range, fire flares!
         if (info.FIRING) {
         	info.TIMER += amount;
-        	if (info.TIMER > 0.16f) {
-            	info.TIMER -= 0.16f;
+        	if (info.TIMER > 0.15f) {
+            	info.TIMER -= 0.15f;
             	
             	for (WeaponSlotAPI weapon : ship.getHullSpec().getAllWeaponSlotsCopy()) {
 	        		if (weapon.isDecorative()) {
@@ -140,17 +162,41 @@ public class InReC_slotFlares_b extends BaseHullMod {
 		
 		Color h = Misc.getHighlightColor();
 		
-		LabelAPI label = tooltip.addPara("An automated flare launcher, that automatically fires seeker flares on detecting hostile missiles.", opad);
+		int slotCount = 0;
+		for (WeaponSlotAPI weapon : ship.getHullSpec().getAllWeaponSlotsCopy()) {
+    		if (weapon.isDecorative()) {
+    			slotCount ++;
+    		}
+		}
 		
-		label = tooltip.addPara("This vessel has %s automated flare launcher.", opad, h, "one");
-		label.setHighlight("one");
-		label.setHighlightColors(h);
-		label = tooltip.addPara("On detecting a hostile missile within %s range, the flare launcher will fire %s seeker flares.", pad, h, "1000", "2");
-		label.setHighlight("1000", "2");
-		label.setHighlightColors(h, h);
-		label = tooltip.addPara("The flare launcher takes %s to reload after use.", pad, h, "15 seconds");
-		label.setHighlight("15 seconds");
-		label.setHighlightColors(h);
+		LabelAPI label = tooltip.addPara("An automated flare launching system, will automatically fire seeker flares on detecting nearby hostile missiles.", opad);
+		
+		if (slotCount > 1) {
+			label = tooltip.addPara("This vessel has %s automated flare launchers.", opad, h, "two");
+			label.setHighlight("two");
+			label.setHighlightColors(h);
+
+			label = tooltip.addPara("On detecting a hostile missile within %s range, the flare launcher will fire %s seeker flares.", pad, h, "1000", "" + (int) ((float) (count.get(ship.getHullSize()))));
+			label.setHighlight("1000", "" + (int) ((float) (count.get(ship.getHullSize()))));
+			label.setHighlightColors(h, h);
+
+			label = tooltip.addPara("The flare launcher takes %s to reload after use.", pad, h, (int) ((float) (cooldown.get(ship.getHullSize()))) + " seconds");
+			label.setHighlight((int) ((float) (cooldown.get(ship.getHullSize()))) + " seconds");
+			label.setHighlightColors(h);
+			
+		} else {
+			label = tooltip.addPara("This vessel has %s automated flare launcher.", opad, h, "one");
+			label.setHighlight("one");
+			label.setHighlightColors(h);
+			
+			label = tooltip.addPara("On detecting a hostile missile within %s range, each flare launcher will fire %s seeker flares.", pad, h, "1000", "" + (int) ((float) (count.get(ship.getHullSize()))));
+			label.setHighlight("1000", "" + (int) ((float) (count.get(ship.getHullSize()))));
+			label.setHighlightColors(h, h);
+
+			label = tooltip.addPara("The flare launchers take %s to reload after use.", pad, h, (int) ((float) (cooldown.get(ship.getHullSize()))) + " seconds");
+			label.setHighlight((int) ((float) (cooldown.get(ship.getHullSize()))) + " seconds");
+			label.setHighlightColors(h);
+		}
 		
 	}
 	

@@ -3,13 +3,12 @@
   "hullId": "InReC_dominator",
   "displayName": "Support",
   "goalVariant": true,
-  "fluxCapacitors": 0,
-  "fluxVents": 28,
+  "fluxCapacitors": 7,
+  "fluxVents": 30,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "InReC_siegeMods",
-    "InReC_slotFlares",
     "eccm",
     "targetingunit"
   ],

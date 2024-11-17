@@ -13,12 +13,9 @@
   "viewOffset": 0,
   "builtInMods": [
     "InReC_gregSlot",
-    "InReC_slot",
-    "missile_autoloader"
+    "missile_autoloader",
+    "InReC_slotFlares_b"
   ],
-  "builtInWeapons": {
-    "WS0027": "InReC_deco_conq"
-  },
   "weaponSlots": [
     {
       "id": "WS0002",
@@ -231,10 +228,10 @@
       "id": "WS0027",
       "size": "SMALL",
       "type": "DECORATIVE",
-      "mount": "TURRET",
+      "mount": "HIDDEN",
       "arc": 0,
       "angle": 0,
-      "locations": [71, -0]
+      "locations": [75, -0]
     },
     {
       "id": "WS0024",

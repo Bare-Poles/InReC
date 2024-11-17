@@ -1,0 +1,84 @@
+{
+  "variantId": "InReC_retribution_ass",
+  "hullId": "InReC_retribution",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 43,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "missleracks",
+    "InReC_rebalancer",
+    "InReC_slotShield"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "InReC_herbicide",
+        "WS0004": "InReC_herbicide",
+        "WS0005": "InReC_herbicide",
+        "WS0006": "InReC_herbicide"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0007": "InReC_defoliant",
+        "WS0008": "InReC_defoliant",
+        "WS0009": "InReC_defoliant",
+        "WS0010": "InReC_defoliant",
+        "WS0011": "InReC_defoliant",
+        "WS0012": "InReC_defoliant"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "InReC_fusor_linked",
+        "WS0002": "InReC_fusor_linked"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0016": "InReC_negatron",
+        "WS0017": "InReC_negatron"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0018": "InReC_pulse",
+        "WS0019": "InReC_pulse"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "InReC_spark_hvy",
+        "WS0014": "InReC_spark_hvy",
+        "WS0015": "InReC_spark_hvy",
+        "WS0022": "InReC_spark_hvy"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0020": "InReC_flash_lt",
+        "WS0021": "InReC_flash_lt"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

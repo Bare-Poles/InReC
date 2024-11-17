@@ -54,7 +54,7 @@ public class InReC_slotShield extends BaseHullMod {
 		label.setHighlight("" + (int)SHIELD_MALUS + "%");
 		label.setHighlightColors(bad);
 		
-		label = tooltip.addPara("May only be installed on InReCo vessels, and only one slot hullmod may be installed at a time.", opad);
+		label = tooltip.addPara("May only be installed on InReCo vessels.", opad);
 		
 	}
 	
@@ -66,18 +66,19 @@ public class InReC_slotShield extends BaseHullMod {
 	
 	@Override
 	public boolean isApplicableToShip(ShipAPI ship) {
-		return ship.getVariant().getHullMods().contains("InReC_slot") && !ship.getVariant().getHullMods().contains("InReC_slotVent") && !ship.getVariant().getHullMods().contains("InReC_slotFlares") && !ship.getVariant().getHullMods().contains("InReC_slotRange");
+		return ship.getVariant().getHullMods().contains("InReC_slot") || ship.getVariant().getHullMods().contains("InReC_slotVent_b") || ship.getVariant().getHullMods().contains("InReC_slotFlares_b") || ship.getVariant().getHullMods().contains("InReC_slotRange_b");
 	}
 	
 	public boolean showInRefitScreenModPickerFor(ShipAPI ship) {
-		return ship.getVariant().getHullMods().contains("InReC_slot");
+		return ship.getVariant().getHullMods().contains("InReC_slot") || ship.getVariant().getHullMods().contains("InReC_slotVent_b") || ship.getVariant().getHullMods().contains("InReC_slotFlares_b") || ship.getVariant().getHullMods().contains("InReC_slotRange_b");
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
-		if (ship.getVariant().getHullMods().contains("InReC_slotVent") || ship.getVariant().getHullMods().contains("InReC_slotFlares") || ship.getVariant().getHullMods().contains("InReC_slotRange")) {
-			return "May only install one InReCo Slot hullmod at a time.";
+		boolean valid = false;
+		if (ship.getVariant().getHullMods().contains("InReC_slot") || ship.getVariant().getHullMods().contains("InReC_slotVent_b") || ship.getVariant().getHullMods().contains("InReC_slotFlares_b") || ship.getVariant().getHullMods().contains("InReC_slotRange_b")) {
+			valid = true;
 		}
-		if (!ship.getVariant().getHullMods().contains("InReC_slot")) {
+		if (!valid) {
 			return "Only compatible with InReCo vessels.";
 		}
 		return null;
