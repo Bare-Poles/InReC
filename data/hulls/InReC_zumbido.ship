@@ -1,0 +1,173 @@
+{
+  "hullName": "Zumbido",
+  "hullId": "InReC_zumbido",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/InReC_zumbido.png",
+  "style": "INREC",
+  "height": 128,
+  "width": 115,
+  "center": [57, 58],
+  "collisionRadius": 83,
+  "shieldCenter": [5, -0],
+  "shieldRadius": 77,
+  "viewOffset": 50,
+  "builtInMods": [
+    "InReC_concVanes",
+    "high_maintenance"
+  ],
+  "builtInWeapons": {
+    "WS 002": "InReC_beekeeper_array",
+    "WS 003": "InReC_beekeeper_array"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS 006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 0,
+      "locations": [6, -0]
+    },
+    {
+      "id": "WS 004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 35,
+      "locations": [16, 17]
+    },
+    {
+      "id": "WS 005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": -35,
+      "locations": [16, -17]
+    },
+    {
+      "id": "WS 001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [42, 0]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [5.5, 26.5]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [5.5, -26.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-44, 14],
+      "length": 56,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-46, -0],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-44, -14],
+      "length": 56,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-21, 26],
+      "length": 40,
+      "width": 9,
+      "angle": 170,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-21, -26],
+      "length": 40,
+      "width": 9,
+      "angle": -170,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    }
+  ],
+  "bounds": [
+    66, -6,
+    46, -15,
+    50, -22,
+    62, -19,
+    66, -26,
+    22, -39,
+    18, -26,
+    9, -29,
+    11, -42,
+    -36, -54,
+    -39, -49,
+    -28, -45,
+    -31, -38,
+    -44, -41,
+    -45, -32,
+    -54, -32,
+    -55, -28,
+    -35, -27,
+    -35, -20,
+    -42, -16,
+    -41, -8,
+    -44, -5,
+    -44, 5,
+    -41, 8,
+    -42, 16,
+    -35, 20,
+    -35, 27,
+    -55, 28,
+    -54, 32,
+    -45, 32,
+    -44, 41,
+    -31, 38,
+    -28, 45,
+    -39, 49,
+    -36, 54,
+    11, 42,
+    9, 29,
+    18, 26,
+    22, 39,
+    66, 26,
+    62, 19,
+    50, 22,
+    46, 15,
+    66, 6,
+    49, 5,
+    49, -5
+  ]
+}

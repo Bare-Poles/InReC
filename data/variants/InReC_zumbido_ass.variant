@@ -1,0 +1,42 @@
+{
+  "variantId": "InReC_zumbido_ass",
+  "hullId": "InReC_zumbido",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 2,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "InReC_slotShield",
+    "unstable_injector"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "InReC_negatron"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "InReC_beekeeper_array",
+        "WS 003": "InReC_beekeeper_array"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "InReC_spark",
+        "WS 005": "InReC_spark",
+        "WS 006": "InReC_spark"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

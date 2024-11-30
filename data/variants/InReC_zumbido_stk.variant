@@ -1,0 +1,48 @@
+{
+  "variantId": "InReC_zumbido_stk",
+  "hullId": "InReC_zumbido",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 5,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "InReC_rebalancer",
+    "InReC_slotRange"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "InReC_disruption"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "InReC_beekeeper_array",
+        "WS 003": "InReC_beekeeper_array"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 006": "InReC_fusion"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "InReC_flash_lt",
+        "WS 005": "InReC_flash_lt"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

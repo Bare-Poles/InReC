@@ -10,6 +10,7 @@ import org.lwjgl.util.vector.Vector2f;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
+import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipAPI;
@@ -61,6 +62,19 @@ public class InReC_concDamper extends BaseHullMod {
             		float shuntAngle = VectorUtils.getAngle(ship.getLocation(), target_missile.getLocation());
             		Vector2f velShunt = MathUtils.getPointOnCircumference(target_missile.getVelocity(), PUSH_VALUE * effectLevel, shuntAngle);
             		target_missile.getVelocity().set(velShunt);
+            		
+            		engine.applyDamage(target_missile, target_missile.getLocation(), 10f, DamageType.FRAGMENTATION, 0, true, true, ship);
+            		// added damage to make it more "useful" compared to a regular damper
+            		
+            		engine.addNebulaParticle(target_missile.getLocation(),
+            				ship.getVelocity(),
+                    		MathUtils.getRandomNumberInRange(18f, 21f),
+                    		1.9f, //endsizemult
+                    		0.5f, //rampUpFraction
+                    		0.4f, //fullBrightnessFraction
+                    		0.3f, //totalDuration
+                    		new Color(30,50,40,101),
+                    		true);
             		
             		// CombatUtils.applyForce((CombatEntityAPI) target_missile, VectorUtils.getAngle(ship.getLocation(), target_missile.getLocation()), 10f * effectLevel);
                 	// was the initial idea, but lead to some missiles getting YEETED in a very silly manner, so i swapped to a "manual" push

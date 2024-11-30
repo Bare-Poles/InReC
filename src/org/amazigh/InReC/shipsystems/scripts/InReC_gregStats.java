@@ -62,7 +62,7 @@ public class InReC_gregStats extends BaseShipSystemScript {
                     		gregMember.setOwner(owner);
                     		gregMember.setAlly(ship.isAlly());
                     		
-                    		ShipAPI greg = engine.getFleetManager(owner).spawnFleetMember(gregMember, posZero, weapon.computeMidArcAngle(ship), 1.5f);
+                    		ShipAPI greg = engine.getFleetManager(owner).spawnFleetMember(gregMember, posZero, weapon.computeMidArcAngle(ship), 1.2f);
                     		greg.setCRAtDeployment(0.7f);
                     		greg.setCollisionClass(CollisionClass.FIGHTER);
                     		
@@ -84,7 +84,7 @@ public class InReC_gregStats extends BaseShipSystemScript {
                 		gregMember.setOwner(owner);
                 		gregMember.setAlly(ship.isAlly());
                 		
-                		ShipAPI greg = engine.getFleetManager(owner).spawnFleetMember(gregMember, posZero, weapon.computeMidArcAngle(ship), 0.5f);
+                		ShipAPI greg = engine.getFleetManager(owner).spawnFleetMember(gregMember, posZero, weapon.computeMidArcAngle(ship), 1.2f);
                 		greg.setCRAtDeployment(0.7f);
                 		greg.setCollisionClass(CollisionClass.FIGHTER);
                 		
