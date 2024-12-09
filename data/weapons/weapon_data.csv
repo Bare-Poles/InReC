@@ -4,9 +4,9 @@ Pulse Bolter,InReC_pulse,0,,250,550,,30,,0,50,4,,,,ENERGY,21,,0.1,1,7,0.15,5,5,0
 Heavy Pulse Bolter,InReC_pulse_hvy,0,,1100,650,,70,,0,25,8,,,,ENERGY,49,,0.15,1.1,6,0.15,5,5,0,0,,1000,,,,,,,"energy12, inrec_wep_bp, merc",,InReCo,,General,,,,,,,,,,19201.1
 Light Flash Bolter,InReC_flash_lt,0,,200,400,,30,,0,100,4,,,,ENERGY,18,,0.1,0.6,3,0.15,30,30,0,0,,1200,,,,,,PD,"pd6, energy6, SR, inrec_wep_bp, merc",,InReCo,,Point Defense (area),,,,Spread,,,,,,19202
 Flash Bolter,InReC_flash,1,,1500,450,,40,,0,50,12,,,,ENERGY,24,,0.1,2.4,6,0.1,35,35,0,0,,1200,,,,,,PD,"pd13, energy11, SR, inrec_wep_bp, merc",,InReCo,,Point Defense (area),,,,Spread,,,,,,19202.1
-Spark Bolter,InReC_spark,1,,400,450,,30,,0,100,6,,,,FRAGMENTATION,6,,0.05,0.65,7,0.05,6,6,0,0,,1250,,,,,,PD,"pd7, energy5, inrec_wep_bp, merc",,InReCo,,Point Defense,,,,,,,,,,19203
-Heavy Spark Bolter,InReC_spark_hvy,0,,1200,550,,40,,0,50,10,,,,FRAGMENTATION,8,,0.05,0.25,5,0.05,7,7,0,0,,1250,,,,,,PD,"pd12, energy10, inrec_wep_bp, merc",,InReCo,,Point Defense,,,,,,,,,,19203.1
-Fusion Bolter,InReC_fusion,2,,600,450,,30,,0,30,7,,,,HIGH_EXPLOSIVE,30,,0.1,2.7,5,0.05,32,32,0,0,,1000,,,,,,,"energy9, inrec_wep_bp, merc",,InReCo,,Anti Armour,,,,Spread,Each bolt deals an additional %s damage to armor. This damage is not reduced by armor.,6,,,,19204
+Spark Bolter,InReC_spark,1,,400,450,,30,,0,100,6,,,,FRAGMENTATION,6,,0.06,0.58,7,0.06,6,6,0,0,,1250,,,,,,PD,"pd7, energy5, inrec_wep_bp, merc",,InReCo,,Point Defense,,,,,,,,,,19203
+Heavy Spark Bolter,InReC_spark_hvy,0,,1200,550,,40,,0,50,10,,,,FRAGMENTATION,8,,0.06,0.2,5,0.06,7,7,0,0,,1250,,,,,,PD,"pd12, energy10, inrec_wep_bp, merc",,InReCo,,Point Defense,,,,,,,,,,19203.1
+Fusion Bolter,InReC_fusion,2,,600,450,,30,,0,30,7,,,,HIGH_EXPLOSIVE,27,,0.1,2.62,5,0.07,32,32,0,0,,1000,,,,,,,"energy9, inrec_wep_bp, merc",,InReCo,,Anti Armour,,,,Spread,Each bolt deals an additional %s damage to armor. This damage is not reduced by armor.,12,,,,19204
 Gluon Bolter,InReC_gluon,3,,750,800,,25,,0,15,7,,,,ENERGY,30,,0.2,3.65,24,0.05,15,15,0,0,,720,,,,,,,"energy10, LR, inrec_wep_bp, merc",,InReCo,,Fire Support,,,,Swarming,,,,,,19205
 Disruption Bolter,InReC_disruption,2,,2400,600,,150,200,0,20,12,,,,ENERGY,180,,0.2,1.9,4,0.3,4,4,0,0,,1000,,,,,,,"energy13, inrec_wep_bp, merc",,InReCo,,Suppression,,,,,"Each hit on hull or armor will discharge %s arcs, each arc dealing %s and %s damage.",4 | 30 Energy | 100 EMP,,,,19206
 Negatron Bolter,InReC_negatron,3,,2400,700,,210,,0,15,12,,,,ENERGY,231,,0.15,2.05,5,0.2,6,6,0,0,,1000,,,,,,,"energy13, inrec_wep_bp, merc",,InReCo,,General,,,,,,,,,,19207
@@ -44,13 +44,13 @@ Herbicide SRM,InReC_herbicide,1,,400,800,,120,,10,25,5,90,,,HIGH_EXPLOSIVE,0,,0,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Pulse Bolter (Drone),InReC_pulse_drn,0,,1000,550,,30,,0,50,0,70,,,ENERGY,0,,0,1.1,7,0.15,5,5,0,0,,1000,,,,,,"SYSTEM, DO_NOT_CONSERVE",,,InReCo,,General,,,,,,,,,,19231
 Pulse Bolter,InReC_pulse_drn_2,0,,1000,550,,30,,0,50,99,105,,,ENERGY,0,,0,1.1,7,0.15,5,5,0,0,,1000,,,,,,"SYSTEM, DO_NOT_CONSERVE",,,InReCo,,General,,,,,,,,,,19231.1
-Fusion Bolter,InReC_fusion_drn,0,,1000,450,,30,,0,40,0,180,,,HIGH_EXPLOSIVE,30,,0.1,2.2,4,0.05,32,32,0,0,,1000,,,,,,"SYSTEM, DO_NOT_CONSERVE",,,InReCo,,Anti Armour,,,,Spread,Each bolt deals an additional %s damage to armor. This damage is not reduced by armor.,6,,,,19232
+Fusion Bolter,InReC_fusion_drn,0,,1000,450,,30,,0,40,0,180,,,HIGH_EXPLOSIVE,30,,0.1,2.14,4,0.07,32,32,0,0,,1000,,,,,,"SYSTEM, DO_NOT_CONSERVE",,,InReCo,,Anti Armour,,,,Spread,Each bolt deals an additional %s damage to armor. This damage is not reduced by armor.,12,,,,19232
 Gluon Bolter,InReC_gluon_drn,0,,1000,800,,25,,0,25,0,200,,,ENERGY,30,,0.2,3.05,20,0.05,15,15,0,0,,720,,,,,,"SYSTEM, DO_NOT_CONSERVE",,,InReCo,,Fire Support,,,,Swarming,,,,,,19233
 Light Flash Bolter,InReC_flash_lt_drn,0,,1000,400,,30,,0,100,0,,,,ENERGY,0,,0.1,1.1,3,0.15,30,30,0,0,,1200,,,,,,"SYSTEM, PD",,,InReCo,,Point Defense (area),,,,,,,,,,19234
 Millstone Mono,InReC_millstone_drn,0,,1000,1000,,180,,9,50,0,,,,FRAGMENTATION,45,,0,1.2,1,,1,,,,,800,,,,,,SYSTEM,,,InReCo,,General,,,,,,,,,,19235
 Flock MRM (Drone),InReC_flock_drn,0,,1000,2000,,120,,16,15,0,,,,HIGH_EXPLOSIVE,0,,0,13.75,2,0.3,0,3,1,1,,200,70,15,100,,,"SYSTEM, DO_NOT_AIM",,,InReCo,,Fire Support,,,,,,,,,,19236
 Pesticide Launcher,InReC_pesticide_ftr,0,,1000,1000,,90,60,15,20,0,,,,FRAGMENTATION,0,,0,9.25,6,0.15,20,32,2,1,,250,400,7,120,,,"SYSTEM, DO_NOT_AIM, MISSILE_SPREAD",,,InReCo,,Saturation,Medium,Good,,,,,,,,19237
-Beekeeper Micromissile Array,InReC_beekeeper_array,0,,1000,1200,,50,,4,0,,,,,KINETIC,0,,0,9.09,8,0.13,5,10,1,2,,350,450,5,40,,,DO_NOT_AIM,,,InReCo,,Anti Shield,,,,,,,,,,19238
+Beekeeper Micromissile Array,InReC_beekeeper_array,0,,1000,1200,,50,,4,0,,,,,KINETIC,0,,0,7.09,8,0.13,5,10,1,2,,350,450,5,40,,,DO_NOT_AIM,,,InReCo,,Anti Shield,,,,,,,,,,19238
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Flare (Dumb),InReC_flare_dumb,,,1000,400,,20,200,0,,,,,,ENERGY,0,,0,1,1,0.1,30,30,0,0,,150,300,3.2,100,,,SYSTEM,,,InReCo,,,,,,,,,,,,19241

@@ -73,7 +73,7 @@ public class InReC_concDamper extends BaseHullMod {
                     		0.5f, //rampUpFraction
                     		0.4f, //fullBrightnessFraction
                     		0.3f, //totalDuration
-                    		new Color(30,50,40,101),
+                    		new Color(45,75,60,101),
                     		true);
             		
             		// CombatUtils.applyForce((CombatEntityAPI) target_missile, VectorUtils.getAngle(ship.getLocation(), target_missile.getLocation()), 10f * effectLevel);

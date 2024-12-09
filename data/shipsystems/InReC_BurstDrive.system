@@ -1,0 +1,29 @@
+{
+	"id":"InReC_BurstDrive",
+	"type":"ENGINE_MOD",
+	#"aiType":"MANEUVERING_JETS",
+	"aiType":"CUSTOM",
+	"aiScript":"org.amazigh.InReC.shipsystems.scripts.ai.InReC_BurstDriveAI",
+
+	"statsScript":"org.amazigh.InReC.shipsystems.scripts.InReC_BurstDriveStats",
+
+	"engineGlowColor":[65,220,195,255],
+	"engineGlowLengthMult":1.5,
+	"engineGlowWidthMult":1,
+	"engineGlowGlowMult":1.8,
+
+	"flameoutOnImpactChance":0,
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":false,
+
+	"useSound":"explosion_fleet_member",
+	"loopSound":"system_maneuvering_jets_loop",
+	"outOfUsesSound":"engine_disabled",
+
+	"aiHints":{
+		"activeSpeedIncrease":200,
+		"burstMovementPotential":100,
+		"averageSpeedIncrease":50,
+	}
+}

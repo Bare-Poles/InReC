@@ -176,12 +176,12 @@ public class InReC_slotFlares_b extends BaseHullMod {
 			label.setHighlight("two");
 			label.setHighlightColors(h);
 
-			label = tooltip.addPara("On detecting a hostile missile within %s range, the flare launcher will fire %s seeker flares.", pad, h, "1000", "" + (int) ((float) (count.get(ship.getHullSize()))));
-			label.setHighlight("1000", "" + (int) ((float) (count.get(ship.getHullSize()))));
+			label = tooltip.addPara("On detecting a hostile missile within %s range, each flare launcher will fire %s seeker flares.", pad, h, "1000", "" + count.get(ship.getHullSize()).intValue());
+			label.setHighlight("1000", "" + count.get(ship.getHullSize()).intValue());
 			label.setHighlightColors(h, h);
 
-			label = tooltip.addPara("The flare launcher takes %s to reload after use.", pad, h, (int) ((float) (cooldown.get(ship.getHullSize()))) + " seconds");
-			label.setHighlight((int) ((float) (cooldown.get(ship.getHullSize()))) + " seconds");
+			label = tooltip.addPara("The flare launchers takes %s to reload after use.", pad, h, cooldown.get(ship.getHullSize()).intValue() + " seconds");
+			label.setHighlight(cooldown.get(ship.getHullSize()).intValue() + " seconds");
 			label.setHighlightColors(h);
 			
 		} else {
@@ -189,12 +189,12 @@ public class InReC_slotFlares_b extends BaseHullMod {
 			label.setHighlight("one");
 			label.setHighlightColors(h);
 			
-			label = tooltip.addPara("On detecting a hostile missile within %s range, each flare launcher will fire %s seeker flares.", pad, h, "1000", "" + (int) ((float) (count.get(ship.getHullSize()))));
-			label.setHighlight("1000", "" + (int) ((float) (count.get(ship.getHullSize()))));
+			label = tooltip.addPara("On detecting a hostile missile within %s range, the flare launcher will fire %s seeker flares.", pad, h, "1000", "" + count.get(ship.getHullSize()).intValue());
+			label.setHighlight("1000", "" + count.get(ship.getHullSize()).intValue());
 			label.setHighlightColors(h, h);
 
-			label = tooltip.addPara("The flare launchers take %s to reload after use.", pad, h, (int) ((float) (cooldown.get(ship.getHullSize()))) + " seconds");
-			label.setHighlight((int) ((float) (cooldown.get(ship.getHullSize()))) + " seconds");
+			label = tooltip.addPara("The flare launcher takes %s to reload after use.", pad, h, cooldown.get(ship.getHullSize()).intValue() + " seconds");
+			label.setHighlight(cooldown.get(ship.getHullSize()).intValue() + " seconds");
 			label.setHighlightColors(h);
 		}
 		

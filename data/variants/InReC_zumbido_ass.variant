@@ -3,13 +3,13 @@
   "hullId": "InReC_zumbido",
   "displayName": "Assault",
   "goalVariant": true,
-  "fluxCapacitors": 2,
+  "fluxCapacitors": 5,
   "fluxVents": 10,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "InReC_slotShield",
-    "unstable_injector"
+    "unstable_injector",
+    "fluxdistributor"
   ],
   "weaponGroups": [
     {
@@ -31,8 +31,14 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS 004": "InReC_spark",
-        "WS 005": "InReC_spark",
+        "WS 004": "InReC_pulse",
+        "WS 005": "InReC_pulse"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
         "WS 006": "InReC_spark"
       }
     }

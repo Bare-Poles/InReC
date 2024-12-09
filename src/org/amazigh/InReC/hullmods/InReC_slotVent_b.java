@@ -141,8 +141,10 @@ public class InReC_slotVent_b extends BaseHullMod {
 		
 		LabelAPI label = tooltip.addPara("A set of secondary flux vents that improve dissipation of soft flux.", opad);
 		
-		label = tooltip.addPara("The secondary vents will passively dissipate up to %s soft flux every second.", opad, h, "" + (Float) mag.get(ship.getHullSize()));
-		label.setHighlight("" + (Float) mag.get(ship.getHullSize()));
+		
+		
+		label = tooltip.addPara("The secondary vents will passively dissipate up to %s soft flux every second.", opad, h, "" + mag.get(ship.getHullSize()).intValue());
+		label.setHighlight("" + mag.get(ship.getHullSize()).intValue());
 		label.setHighlightColors(h);
 		
 		label = tooltip.addPara("The rate of this bonus dissipation is %s increased by active venting.", pad, bad, "Not");

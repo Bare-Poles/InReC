@@ -3,7 +3,7 @@
   "hullId": "InReC_zumbido",
   "hullSize": "FRIGATE",
   "spriteName": "graphics/ships/InReC_zumbido.png",
-  "style": "INREC",
+  "style": "INREC_SPECIAL",
   "height": 128,
   "width": 115,
   "center": [57, 58],
@@ -12,8 +12,10 @@
   "shieldRadius": 77,
   "viewOffset": 50,
   "builtInMods": [
+    "high_maintenance",
     "InReC_concVanes",
-    "high_maintenance"
+    "InReC_quickCaps",
+    "InReC_slot"
   ],
   "builtInWeapons": {
     "WS 002": "InReC_beekeeper_array",
