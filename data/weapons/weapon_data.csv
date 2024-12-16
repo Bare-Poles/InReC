@@ -51,6 +51,7 @@ Millstone Mono,InReC_millstone_drn,0,,1000,1000,,180,,9,50,0,,,,FRAGMENTATION,45
 Flock MRM (Drone),InReC_flock_drn,0,,1000,2000,,120,,16,15,0,,,,HIGH_EXPLOSIVE,0,,0,13.75,2,0.3,0,3,1,1,,200,70,15,100,,,"SYSTEM, DO_NOT_AIM",,,InReCo,,Fire Support,,,,,,,,,,19236
 Pesticide Launcher,InReC_pesticide_ftr,0,,1000,1000,,90,60,15,20,0,,,,FRAGMENTATION,0,,0,9.25,6,0.15,20,32,2,1,,250,400,7,120,,,"SYSTEM, DO_NOT_AIM, MISSILE_SPREAD",,,InReCo,,Saturation,Medium,Good,,,,,,,,19237
 Beekeeper Micromissile Array,InReC_beekeeper_array,0,,1000,1200,,50,,4,0,,,,,KINETIC,0,,0,7.09,8,0.13,5,10,1,2,,350,450,5,40,,,DO_NOT_AIM,,,InReCo,,Anti Shield,,,,,,,,,,19238
+Beekeeper Micromissile Array,InReC_beekeeper_array_2,0,,1000,1200,,50,,4,0,,,,,KINETIC,0,,0,6.57,12,0.13,5,10,1,2,,350,450,5,40,,,DO_NOT_AIM,,,InReCo,,Anti Shield,,,,,,,,,,19239
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Flare (Dumb),InReC_flare_dumb,,,1000,400,,20,200,0,,,,,,ENERGY,0,,0,1,1,0.1,30,30,0,0,,150,300,3.2,100,,,SYSTEM,,,InReCo,,,,,,,,,,,,19241

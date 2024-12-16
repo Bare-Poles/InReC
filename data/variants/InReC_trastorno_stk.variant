@@ -1,0 +1,59 @@
+{
+  "variantId": "InReC_trastorno_stk",
+  "hullId": "InReC_trastorno",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 19,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "InReC_slotRange",
+    "unstable_injector",
+    "InReC_rebalancer"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "InReC_beekeeper_array_2",
+        "WS0004": "InReC_beekeeper_array_2"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "InReC_fusion",
+        "WS0006": "InReC_fusion",
+        "WS0007": "InReC_fusion",
+        "WS0008": "InReC_fusion"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "InReC_canister"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "InReC_disruption"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "InReC_flash_lt",
+        "WS0010": "InReC_flash_lt"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

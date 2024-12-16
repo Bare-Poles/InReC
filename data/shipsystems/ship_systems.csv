@@ -10,3 +10,4 @@ Drone Launch,InReC_greg,,,,,,,,1,0.04,0,0.1,0,4,,,,,,,,,,,,,graphics/icons/hulls
 Decoy Flare Launcher,InReC_jam_flares,,,,,,,,1,0.045,,,,3,,,,,,,,,,,,,graphics/icons/hullsys/flare_launcher.png
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Burst Drive,InReC_BurstDrive,,,,,,,,,,0.25,0.5,2.75,6.5,,,,,TRUE,,,,,,,,graphics/icons/hullsys/infernium_injector.png
+Micro Burst Drive,InReC_MicroBurstDrive,,,,,,,,3,0.125,0.25,0.3,1.45,0.5,,,,,TRUE,,,,,,,,graphics/icons/hullsys/infernium_injector.png

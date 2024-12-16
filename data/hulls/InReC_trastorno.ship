@@ -1,0 +1,241 @@
+{
+  "hullName": "Trastorno",
+  "hullId": "InReC_trastorno",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/InReC_trastorno.png",
+  "style": "INREC_SPECIAL",
+  "height": 158,
+  "width": 136,
+  "center": [68, 73],
+  "collisionRadius": 99,
+  "shieldCenter": [5, -0],
+  "shieldRadius": 93,
+  "viewOffset": 50,
+  "builtInMods": [
+    "high_maintenance",
+    "InReC_concVanes",
+    "InReC_quickCaps",
+    "InReC_slot"
+  ],
+  "builtInWeapons": {
+    "WS0003": "InReC_beekeeper_array_2",
+    "WS0004": "InReC_beekeeper_array_2"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 0,
+      "locations": [-16, -0]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 110,
+      "locations": [-39, 13]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -110,
+      "locations": [-39, -13]
+    },
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [39, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [-12.5, 20.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [-12.5, -20.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [60, 19]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [60, -19]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [48, 19]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [48, -19]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-70, 19],
+      "length": 56,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-73, -0],
+      "length": 64,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-70, -19],
+      "length": 56,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-33, 32],
+      "length": 40,
+      "width": 9,
+      "angle": 160,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-33, -32],
+      "length": 40,
+      "width": 9,
+      "angle": -160,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-42, 28],
+      "length": 45,
+      "width": 9,
+      "angle": 170,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-42, -28],
+      "length": 45,
+      "width": 9,
+      "angle": -170,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    }
+  ],
+  "bounds": [
+    62, -18,
+    60, -28,
+    64, -35,
+    76, -32,
+    80, -39,
+    36, -52,
+    31, -37,
+    20, -40,
+    22, -53,
+    -25, -65,
+    -28, -60,
+    -17, -56,
+    -20, -49,
+    -33, -52,
+    -34, -43,
+    -43, -43,
+    -44, -39,
+    -24, -38,
+    -24, -32,
+    -40, -28,
+    -42, -24,
+    -60, -25,
+    -67, -22,
+    -71, -5,
+    -71, 5,
+    -67, 22,
+    -60, 25,
+    -42, 24,
+    -40, 28,
+    -24, 32,
+    -24, 38,
+    -44, 39,
+    -43, 43,
+    -34, 44,
+    -33, 52,
+    -20, 49,
+    -14, 58,
+    -28, 60,
+    -25, 65,
+    22, 53,
+    20, 40,
+    32, 39,
+    36, 52,
+    80, 39,
+    76, 32,
+    64, 35,
+    60, 28,
+    62, 18,
+    72, 16,
+    72, 11,
+    82, 11,
+    82, 7,
+    46, 5,
+    46, -5,
+    82, -7,
+    82, -11,
+    72, -11,
+    72, -16
+  ]
+}

@@ -4,12 +4,16 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipSystemAPI;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 import com.fs.starfarer.api.plugins.ShipSystemStatsScript;
 import com.fs.starfarer.api.util.Misc;
 
 import java.awt.Color;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.util.vector.Vector2f;
@@ -29,6 +33,13 @@ public class InReC_BurstDriveStats extends BaseShipSystemScript {
     
     public static final float TIME_MULT = 0.6f; // add one to get the actual timescale multiplier
 	public static final float DAMAGE_REDUCTION = 0.15f;
+	
+	 // Boosted RoF for energy weps while they are disabled, to reload them (so it's also a sort of energy FMR as well as mobility)
+	private static Map<HullSize, Float> reloadMult = new HashMap<HullSize, Float>();
+	static {
+		reloadMult.put(HullSize.FRIGATE, 4f); // ~3.125s cut from reload times
+		reloadMult.put(HullSize.DESTROYER, 8f); // ~3.825s cut from reload times  // destroyer gets a stronger mult, as it has a shorter active duration
+	}
 	
     @Override
     public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
@@ -65,6 +76,15 @@ public class InReC_BurstDriveStats extends BaseShipSystemScript {
 			Global.getCombatEngine().getTimeMult().unmodify(id);
 		}
     	
+		if (state == ShipSystemStatsScript.State.IN || state == ShipSystemStatsScript.State.ACTIVE) {
+			
+			float mult = (float) reloadMult.get(stats.getVariant().getHullSize());
+			
+			stats.getEnergyRoFMult().modifyMult(id, 1f + (mult * effectLevel));
+		} else {
+			stats.getEnergyRoFMult().unmodify(id);
+		}
+		
     	
         // then we BOOST
         if (!boosted && state == ShipSystemStatsScript.State.ACTIVE) {
@@ -177,6 +197,8 @@ public class InReC_BurstDriveStats extends BaseShipSystemScript {
 		stats.getHullDamageTakenMult().unmodify(id);
 		stats.getArmorDamageTakenMult().unmodify(id);
 		stats.getEmpDamageTakenMult().unmodify(id);
+
+		stats.getEnergyRoFMult().unmodify(id);
     }
 
     @Override
