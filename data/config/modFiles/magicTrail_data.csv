@@ -41,7 +41,7 @@ InReC_bludgeon_shot_smoke,InReC_bludgeon_shot,base_trail_heavySmoke,10,0.05,0.1,
 InReC_bludgeon_shot_cinder,InReC_bludgeon_shot,base_trail_rough,10,0,0.05,0.1,6,10,"[255,230,100]","[60,46,20]",0.95,240,5,TRUE,10,4,1,0,TRUE,FALSE,TRUE,0,0,0,0,0,0,false,false
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-InReC_canister_shot,InReC_canister_shot,base_trail_mild,10,0.05,0,0.1,5,3,"[220,230,240]","[80,40,80]",0.5,256,-128,TRUE,5,1,1,0,TRUE,FALSE,TRUE,5,40,0.2,0,0,0,TRUE,TRUE
+InReC_canister_shot,InReC_canister_shot,base_trail_mild,10,0.05,0,0.18,5,3,"[220,230,240]","[80,40,80]",0.5,256,-128,TRUE,5,1,1,0,TRUE,FALSE,TRUE,5,40,0.2,0,0,0,TRUE,TRUE
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 InReC_disruption_shot_core,InReC_disruption_shot,base_trail_smooth,10,0.05,0,0.14,21,15,"[90,188,255]","[9,21,51]",0.42,256,-100,TRUE,5,0,1,0,TRUE,FALSE,TRUE,20,200,0.1,0,0,0,FALSE,TRUE

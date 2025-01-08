@@ -1,9 +1,9 @@
 {
-	"id":"InReC_beekeeper_array",
+	"id":"InReC_fungicide_array",
 	"specClass":"projectile",
 	"type":"MISSILE",
 	"size":"SMALL",
-	"turretSprite":"graphics/weapons/InReC_zumbido_beekeeper.png",
+	"turretSprite":"graphics/weapons/InReC_zumbido_array.png",
 	"hardpointSprite":"",
 	"turretOffsets":[0,1, 0,-1, 0,3, 0,-3],
 	"turretAngleOffsets":[1, -1, 3, -3],
@@ -17,11 +17,11 @@
 				 "cloudParticleCount":3,
 				 "cloudDuration":0.8,
 				 "cloudRadius":8.0,
-				 "blowbackParticleCount":3,
+				 "blowbackParticleCount":2,
 				 "blowbackDuration":1.0,
-				 "blowbackLength":18.0,
+				 "blowbackLength":12.0,
 				 "blowbackSpread":10.0,
-				 "particleColor":[90,100,110,175]},
-	"projectileSpecId":"InReC_beekeeper_sub",
-	"fireSoundTwo":"InReC_blister_fire", #swarmer_fire
+				 "particleColor":[90,108,110,169]},
+	"projectileSpecId":"InReC_fungicide_mssl",
+	"fireSoundTwo":"InReC_blister_fire",
 }

@@ -1,0 +1,44 @@
+{
+	"id":"InReC_fungicide_mssl",
+	"specClass":"missile",
+	"missileType":"MISSILE",
+	"sprite":"graphics/missiles/InReC_fungicide_mssl.png",
+	"size":[5,12],
+	"center":[2.5,6],
+	"collisionRadius":6,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[66,226,200,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":69, # purely visual
+
+	"reduceDamageWhileFading":true,
+	"fizzleOnReachingWeaponRange":true,
+	"dudProbabilityOnFlameout":0,
+
+	"flameoutTime":0.5,
+	"noEngineGlowTime":0.2,
+	"fadeTime":0.25,
+	"engineSpec":{"turnAcc":2000, #1000
+				  "turnRate":400, #200
+				  "acc":1500,
+				  "dec":100},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-6.5, 0],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[60,225,207,255],
+						"contrailDuration":0.95,
+						"contrailWidthMult":0.65,
+						"contrailWidthAddedFractionAtEnd":1.1,# can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":7, # min segment length, in pixels
+						"contrailMaxSpeedMult":0.2f,
+						"contrailAngularVelocityMult":0.4f,
+						"contrailSpawnDistMult":0.1f, # how far away from engine it starts
+						"contrailColor":[70,123,130,200], #140 a
+					    	"glowSizeMult":1.1,
+						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":4.0,
+				    "length":21.0,
+				    "angle":180.0}]
+}

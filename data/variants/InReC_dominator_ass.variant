@@ -3,8 +3,8 @@
   "hullId": "InReC_dominator",
   "displayName": "Assault",
   "goalVariant": true,
-  "fluxCapacitors": 3,
-  "fluxVents": 30,
+  "fluxCapacitors": 0,
+  "fluxVents": 28,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -33,7 +33,7 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0005": "InReC_fusor_linked"
+        "WS0005": "InReC_compass"
       }
     },
     {

@@ -18,8 +18,8 @@
     "InReC_slot"
   ],
   "builtInWeapons": {
-    "WS0003": "InReC_beekeeper_array_2",
-    "WS0004": "InReC_beekeeper_array_2"
+    "WS0003": "InReC_fungicide_array_2",
+    "WS0004": "InReC_fungicide_array_2"
   },
   "weaponSlots": [
     {

@@ -4,14 +4,13 @@
   "displayName": "Assault",
   "goalVariant": true,
   "fluxCapacitors": 0,
-  "fluxVents": 43,
+  "fluxVents": 48,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "targetingunit",
     "missleracks",
-    "InReC_rebalancer",
-    "InReC_slotShield"
+    "InReC_rebalancer"
   ],
   "weaponGroups": [
     {
@@ -40,8 +39,8 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "InReC_fusor_linked",
-        "WS0002": "InReC_fusor_linked"
+        "WS0001": "InReC_compass",
+        "WS0002": "InReC_compass"
       }
     },
     {

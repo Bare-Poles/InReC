@@ -33,6 +33,7 @@ InReC_flare_jam,projectile,75,0.2,0.5,"[18,187,220]",,,,,,,,,,,0.75,TRUE
 InReC_flare_smart,projectile,150,0.3,0.5,"[18,187,220]",,,,,,,,,,,0.75,TRUE
 InReC_flock_mrm,projectile,90,0.2,0.5,"[150,250,60]",8,150,0.2,0.7,"[100,150,252]",,,,,,1,FALSE
 InReC_fumigator,projectile,110,0.5,0.4,"[250,95,30]",5,220,0.4,1,"[255,73,50]",,,,,,1,FALSE
+InReC_fungicide_mssl,projectile,80,0.23,0.2,"[60,225,207]",5,90,0.23,0.5,"[66,226,200]",,,,,,1,FALSE
 # InReC_heart-throb_dummy,,,,,,,,,,,,,,,,,
 InReC_herbicide,projectile,110,0.3,0.2,"[205,75,125]",9,160,0.2,0.7,"[255,95,160]",,,,,,1,FALSE
 InReC_pesticide,projectile,60,0.15,0.5,"[250,95,30]",7,69,0.15,0.4,"[255,73,50]",,,,,,1,FALSE

@@ -143,6 +143,12 @@
 		{"file":"sounds/sfx_wpn_guns/InReC_guillotine_sub_explosion.ogg","pitch":1.18,"volume":0.63},
 	],
 
+	"InReC_compass_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/InReC_canister_fire.ogg","pitch":0.95,"volume":0.6},
+		{"file":"sounds/sfx_wpn_guns/InReC_canister_fire.ogg","pitch":1.0,"volume":0.6},
+		{"file":"sounds/sfx_wpn_guns/InReC_canister_fire.ogg","pitch":1.05,"volume":0.6},
+	],
 
 
 

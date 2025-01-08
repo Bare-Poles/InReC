@@ -13,7 +13,7 @@ import com.fs.starfarer.api.util.Misc;
 public class InReC_slotShield extends BaseHullMod {
 	
 	public static final float SHIELD_MALUS = 10f;
-	public static final float SOFT_FLUX_CONVERSION = 0.25f;
+	public static final float SOFT_FLUX_CONVERSION = 0.3f;
 	
 	public static final float SHIELD_UPKEEP_BONUS = 25f;
 	
