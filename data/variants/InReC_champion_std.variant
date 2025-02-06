@@ -3,7 +3,7 @@
   "hullId": "InReC_champion",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 9,
+  "fluxCapacitors": 5,
   "fluxVents": 30,
   "quality": 1,
   "permaMods": [],
@@ -38,9 +38,15 @@
       "mode": "LINKED",
       "weapons": {
         "WS0009": "InReC_pulse_hvy",
-        "WS0010": "InReC_pulse_hvy",
-        "WS0011": "InReC_pulse",
-        "WS0012": "InReC_pulse"
+        "WS0010": "InReC_pulse_hvy"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "InReC_quark",
+        "WS0012": "InReC_quark"
       }
     },
     {

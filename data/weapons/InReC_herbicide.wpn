@@ -7,7 +7,7 @@
 	"hardpointSprite":"graphics/weapons/InReC_herbicide_hardpoint_base.png",
 	"turretOffsets":[6,0],
 	"turretAngleOffsets":[0],
-	"hardpointOffsets":[8,0],
+	"hardpointOffsets":[10,0],
 	"hardpointAngleOffsets":[0],
 	"barrelMode":"ALTERNATING",
 	"animationType":"SMOKE",
@@ -24,5 +24,6 @@
 				 "blowbackSpread":10.0,
 				 "particleColor":[120,105,95,145]},
 	"projectileSpecId":"InReC_herbicide",
-	"fireSoundTwo":"annihilator_fire", #TEMP!
+	"fireSoundTwo":"breach_fire", #TEMP!
+		# annihilator_fire
 }

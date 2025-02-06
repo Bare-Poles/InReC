@@ -3,8 +3,8 @@
   "hullId": "InReC_sunder",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 9,
-  "fluxVents": 9,
+  "fluxCapacitors": 6,
+  "fluxVents": 10,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -41,8 +41,14 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0006": "InReC_pulse_hvy",
-        "WS0008": "InReC_pulse"
+        "WS0006": "InReC_pulse_hvy"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "InReC_quark"
       }
     },
     {

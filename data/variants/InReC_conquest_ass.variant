@@ -4,7 +4,7 @@
   "displayName": "Assault",
   "goalVariant": true,
   "fluxCapacitors": 0,
-  "fluxVents": 18,
+  "fluxVents": 14,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -37,7 +37,7 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0010": "InReC_bludgeon"
+        "WS0010": "InReC_hangnail"
       }
     },
     {
@@ -53,16 +53,16 @@
       "weapons": {
         "WS0011": "InReC_negatron",
         "WS0012": "InReC_negatron",
-        "WS0014": "InReC_negatron",
-        "WS0020": "InReC_pulse",
-        "WS0021": "InReC_pulse"
+        "WS0014": "InReC_negatron"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0013": "InReC_disruption"
+        "WS0013": "InReC_disruption",
+        "WS0020": "InReC_quark",
+        "WS0021": "InReC_quark"
       }
     },
     {

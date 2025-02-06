@@ -23,5 +23,5 @@
 				 "blowbackSpread":10.0,
 				 "particleColor":[160,170,150,130]},
 	"projectileSpecId":"InReC_flock_mrm",
-	"fireSoundTwo":"swarmer_fire", #TEMP!
+	"fireSoundTwo":"swarmer_fire", #TEMP!?
 }

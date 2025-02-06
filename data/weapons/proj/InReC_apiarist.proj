@@ -68,7 +68,7 @@
 					"damage":60,
 					"impact":10,
 					"emp":0,
-					"damageType":KINETIC,
+					"damageType":HIGH_EXPLOSIVE,
 					"hitpoints":50,
 					"arc":60,
 					"spreadInaccuracy":20,

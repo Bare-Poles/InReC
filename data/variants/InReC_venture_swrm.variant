@@ -4,7 +4,7 @@
   "displayName": "Swarm",
   "goalVariant": true,
   "fluxCapacitors": 6,
-  "fluxVents": 5,
+  "fluxVents": 7,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -17,8 +17,14 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "InReC_heart-throb",
-        "WS0002": "InReC_heart-throb"
+        "WS0001": "InReC_heart-throb"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "InReC_wishbone"
       }
     },
     {

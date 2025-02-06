@@ -27,18 +27,39 @@ public class InReC_rebalancer extends BaseHullMod {
 		}
 		
 		MutableShipStatsAPI stats = ship.getMutableStats();
+
+		boolean sMod;
+		sMod = isSMod(stats);
 		
-		float shieldReal = 1f - (SHIELD_BONUS * 0.02f * Math.min(0.5f, (ship.getFluxLevel() - ship.getHardFluxLevel())));
-		float fluxReal = 1f - (WEP_FLUX_BONUS * 0.02f * Math.min(0.5f, ship.getHardFluxLevel()));
-		// we only divide these by 50 rather than 100, because the scaling flux level thing only goes up to 0.5x
+		float shieldReal = 0f;
+		float fluxReal = 0f;
+		if (sMod) {
+			shieldReal = 1f - (SHIELD_BONUS * 0.025f * Math.min(0.4f, (ship.getFluxLevel() - ship.getHardFluxLevel())));
+			fluxReal = 1f - (WEP_FLUX_BONUS * 0.025f * Math.min(0.4f, ship.getHardFluxLevel()));
+			// we divide these by 40 because smod! scaling to 40% flux!
+		} else {
+			shieldReal = 1f - (SHIELD_BONUS * 0.02f * Math.min(0.5f, (ship.getFluxLevel() - ship.getHardFluxLevel())));
+			fluxReal = 1f - (WEP_FLUX_BONUS * 0.02f * Math.min(0.5f, ship.getHardFluxLevel()));
+			// we only divide these by 50 rather than 100, because the scaling flux level thing only goes up to 0.5x
+		}
+		
+		
 		
 		stats.getShieldDamageTakenMult().modifyMult(spec.getId(), shieldReal);
 		stats.getEnergyWeaponFluxCostMod().modifyMult(spec.getId(), fluxReal);
 		
 		if (ship == Global.getCombatEngine().getPlayerShip()) {
 			
-			float shieldStatus = SHIELD_BONUS * 2f * Math.min(0.5f, (ship.getFluxLevel() - ship.getHardFluxLevel()));
-			float fluxStatus = WEP_FLUX_BONUS * 2f * Math.min(0.5f, ship.getHardFluxLevel());
+			float shieldStatus = 0f;
+			float fluxStatus = 0f;
+			
+			if (sMod) {
+				shieldStatus = SHIELD_BONUS * 2.5f * Math.min(0.4f, (ship.getFluxLevel() - ship.getHardFluxLevel()));
+				fluxStatus = WEP_FLUX_BONUS * 2.5f * Math.min(0.4f, ship.getHardFluxLevel());
+			} else {
+				shieldStatus = SHIELD_BONUS * 2f * Math.min(0.5f, (ship.getFluxLevel() - ship.getHardFluxLevel()));
+				fluxStatus = WEP_FLUX_BONUS * 2f * Math.min(0.5f, ship.getHardFluxLevel());
+			}
 			
 			Global.getCombatEngine().maintainStatusForPlayerShip("INREC_REBALANCER", "graphics/icons/hullsys/fortress_shield.png",  "Flux Rebalancer", "Shield bonus: " + (int)shieldStatus + "% / Weapon flux bonus: " + (int)fluxStatus + "%", false);
 		}
@@ -81,6 +102,11 @@ public class InReC_rebalancer extends BaseHullMod {
 		
 		label = tooltip.addPara("May only be installed on InReCo vessels.", opad);
 		
+	}
+	
+	public String getSModDescriptionParam(int index, HullSize hullSize) {
+		if (index == 0) return "40%";
+		return null;
 	}
 	
 	

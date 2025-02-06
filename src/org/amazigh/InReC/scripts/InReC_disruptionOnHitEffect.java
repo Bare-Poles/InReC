@@ -39,8 +39,8 @@ public class InReC_disruptionOnHitEffect implements OnHitEffectPlugin {
             				MathUtils.getRandomNumberInRange(0.2f, 0.6f),
             				new Color(95,125,150,75),
             				true);
-					
-					// hi! thanks VIC, i stole code again lol!
+            		
+            		
 					engine.addPlugin(new EveryFrameCombatPlugin() {
 						
 		                final float initialFacing = target.getFacing();

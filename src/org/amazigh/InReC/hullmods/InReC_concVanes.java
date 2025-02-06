@@ -40,8 +40,11 @@ public class InReC_concVanes extends BaseHullMod {
         
     	info.TIMER += amount; 
     	
+    	float pulseDam = 20f;
+    	
     	if (ship.getFluxTracker().isVenting() || ship.getSystem().isActive()) {
-    		info.TIMER += amount * 0.3f; // faster pulses when venting or system is active!
+    		pulseDam = 25f; // stronger pulse damage when venting or system is active!
+    		info.TIMER += amount * 0.2f; // also slightly faster pulses!
     	}
     	
     	if (ship.getFluxTracker().isOverloaded()) {
@@ -103,7 +106,7 @@ public class InReC_concVanes extends BaseHullMod {
             		Vector2f velShunt = MathUtils.getPointOnCircumference(target_missile.getVelocity(), PUSH_VALUE, shuntAngle);
             		target_missile.getVelocity().set(velShunt);
             		
-            		engine.applyDamage(target_missile, target_missile.getLocation(), 15f, DamageType.ENERGY, 0, true, true, ship);
+            		engine.applyDamage(target_missile, target_missile.getLocation(), pulseDam, DamageType.ENERGY, 0, true, true, ship);
             		// these are more powerful than the damper pulses!
             		
             		engine.addNebulaParticle(target_missile.getLocation(),
@@ -150,14 +153,14 @@ public class InReC_concVanes extends BaseHullMod {
 		 
 		 LabelAPI label = tooltip.addPara("Specialised vanes are installed on this vessel, that allow for automatic projection of defensive concussive pulses.", opad);
 		 
-		 label = tooltip.addPara("Upon detecting a nearby hostile missile a pulse is fired that deals %s damage and applies a force to any nearby hostile missiles.", opad, h, "15 Energy");
-		 label.setHighlight("15 Energy");
+		 label = tooltip.addPara("Upon detecting a nearby hostile missile a pulse is fired that deals %s damage and applies a force to any nearby hostile missiles.", opad, h, "20 Energy");
+		 label.setHighlight("20 Energy");
 		 label.setHighlightColors(h);
 		 label = tooltip.addPara("Pulses can be fired at most once every %s,", pad, h, "Half a Second");
 		 label.setHighlight("Half a Second");
 		 label.setHighlightColors(h);
 		 
-		 label = tooltip.addPara("The vanes are tied into the vessels active venting systems, causing pulses to automatically fire and increasing active vent rate by %s.", opad, h, (int)VENT_BONUS + "%");
+		 label = tooltip.addPara("The vanes are tied into the vessels active venting systems, active vent rate is increased by %s and active venting causes pulses to automatically fire.", opad, h, (int)VENT_BONUS + "%");
 		 label.setHighlight((int)VENT_BONUS + "%");
 		 label.setHighlightColors(h);
 		 

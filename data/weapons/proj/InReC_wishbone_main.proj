@@ -1,0 +1,72 @@
+{
+	"id":"InReC_wishbone_main",
+	"specClass":"missile",	
+	"missileType":"MIRV",
+
+	"onHitEffect":"org.amazigh.InReC.scripts.InReC_quarkOnHitEffect",
+ # If you somehow score a hit with the "main" Wishbone missile, you get a single 50% stronger than normal Quark Charge embedded in the target (funny)
+
+	"sprite":"graphics/missiles/InReC_wishbone.png",
+	"size":[10,26],	
+	"center":[5,13],
+	"collisionRadius":14,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[229,190,66,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":85, # purely visual
+	#"alwaysAccelerate":true,
+	"engineSpec":{
+				  "turnAcc":60, #50
+				  "turnRate":42, #35
+				  "acc":180, #150
+				  "dec":150}, #125
+	"engineSlots":[{"id":"ES1",
+					"loc":[-13, 0],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[255,120,73,255],
+						"contrailDuration":2,
+						"contrailWidthMult":2,
+						"contrailWidthAddedFractionAtEnd":2,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":15, # min segment length, in pixels
+						"contrailMaxSpeedMult":.0f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailSpawnDistMult":.75, # how far away from engine it starts
+						"contrailColor":[130,110,60,150],
+						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":5.4,
+				    "length":41.0,
+				    "angle":180.0}],
+	"behaviorSpec":{"behavior":"MIRV",
+					"splitRange":900,
+					"splitRangeRange":100,
+					"minTimeToSplit":2.5,
+					"canSplitEarly":false,
+					"splitSound":"InReC_wishbone_split", #pilum_lrm_split
+					"numShots":4,
+					"damage":120,
+					"emp":0, # needs to match highlight in weapon_data.csv
+					"damageType":HIGH_EXPLOSIVE,
+					"hitpoints":100,
+					"evenSpread":true,
+					"arc":300, #270
+					"spreadInaccuracy":0,
+					"spreadSpeed":210, #100
+					"spreadSpeedRange":0,
+					"projectileSpec":"InReC_wishbone_sub",
+					"debrisSmall":6,
+					"debrisMedium":3,
+					"debrisLarge":1,
+					"smokeSpec":{"particleSizeMin":10.0,
+								 "particleSizeRange":16.0,
+								 "cloudParticleCount":12,
+								 "cloudDuration":0.9,
+								 "cloudRadius":10.0,
+								 "blowbackParticleCount":4,
+								 "blowbackDuration":0.5,
+								 "blowbackLength":20.0,
+								 "blowbackSpread":10.0,
+								 "particleColor":[170,160,150,150]}
+					}
+}

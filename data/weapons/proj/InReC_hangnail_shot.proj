@@ -1,0 +1,22 @@
+{
+	"id":"InReC_hangnail_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+
+	"onFireEffect":"org.amazigh.InReC.scripts.InReC_hangnailOnFireEffect",
+	"onHitEffect":"org.amazigh.InReC.scripts.InReC_quarkOnHitEffect",
+
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"length":60.0,
+	"hitGlowRadius":80,
+	"width":8.4,
+	"fadeTime":0.12,
+	"fringeColor":[255,211,73,225],
+	"coreColor":[255,205,195,180],
+	"glowColor":[242,114,69,111],
+	"glowRadius":28,
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/shell_large_yellow.png"
+}

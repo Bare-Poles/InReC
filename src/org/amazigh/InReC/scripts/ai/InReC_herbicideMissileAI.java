@@ -101,7 +101,7 @@ public class InReC_herbicideMissileAI implements MissileAIPlugin, GuidedMissileA
     
     // how far off from direct aim the "swarm spread" should be, big numbers can result in extremely *weird* behaviour
     private float SWARM_OFFSET = 10f;
-    
+	
     
     //////////////////////
     //    VARIABLES     //
@@ -249,7 +249,7 @@ public class InReC_herbicideMissileAI implements MissileAIPlugin, GuidedMissileA
         		if (delayTime < DELAY) {
         			delayTime +=amount;	
         		} else {
-            		MISSILE.giveCommand(ShipCommand.ACCELERATE);  
+            		MISSILE.giveCommand(ShipCommand.ACCELERATE);
             		locked = true;
         		}
         	}

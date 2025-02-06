@@ -2,13 +2,31 @@
 	"id":"InReC_herbicide",
 	"specClass":"missile",
 	"missileType":"MISSILE_TWO_STAGE_SECOND_UNGUIDED",
+
+	# "onHitEffect":"org.amazigh.InReC.scripts.InReC_herbicideOnHitEffect",
+
 	"sprite":"graphics/missiles/InReC_herbicide.png",
-	"size":[6,12],	
-	"center":[3,6],
-	"collisionRadius":8,
+	"size":[10,14],	
+	"center":[5,7],
+	"collisionRadius":9,
 	"collisionClass":"MISSILE_NO_FF",
 	"explosionColor":[255,95,160,255],  # purely visual, will get a white additively blended core on top of this color
-	"explosionRadius":80, # purely visual
+	"explosionRadius":160, # purely visual
+	"explosionSpec":{"duration":0.1f, # not visual
+					 "radius":140,
+					 "coreRadius":90, # full damage within core radius
+					 "collisionClass":HITS_SHIPS_AND_ASTEROIDS,
+					 "collisionClassByFighter":HITS_SHIPS_AND_ASTEROIDS,
+					 "particleSizeMin":4.0,
+					 "particleSizeRange":3.0,
+					 "particleDuration":1,
+					 "particleCount":69,
+					 "particleColor":[255,110,169,255],
+					 "explosionColor":[255,95,160,255],
+					 "detailedExplosionFlashColorFringe":[205,95,210,255],
+					 "detailedExplosionFlashRadius":190,
+					 "useDetailedExplosion":true
+					 },
 
 	"reduceDamageWhileFading":true,
 	# "fizzleOnReachingWeaponRange":true,
@@ -18,10 +36,10 @@
 	"noEngineGlowTime":0.2, # time spent without the engine glow being rendered
 	"fadeTime":0.5, # fadeout duration
 
-	"engineSpec":{"turnAcc":600, #400
-				  "turnRate":200, #180
-				  "acc":1200,
-				  "dec":60}, #40
+	"engineSpec":{"turnAcc":540, #600
+				  "turnRate":180, #200
+				  "acc":1080, #1200
+				  "dec":54}, #60
 	"engineSlots":[{"id":"ES1",
 					"loc":[-10, 0],
 				    "style":"CUSTOM",
@@ -39,8 +57,8 @@
 					    	"glowSizeMult":1.35,
 						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
 					},
-				    "width":7.0,
-				    "length":45.0,
+				    "width":9.6, # 7.0
+				    "length":57.0, #45
 				    "angle":180.0}]
 }
 			

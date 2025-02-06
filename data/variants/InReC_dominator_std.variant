@@ -3,7 +3,7 @@
   "hullId": "InReC_dominator",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 5,
+  "fluxCapacitors": 1,
   "fluxVents": 30,
   "quality": 1,
   "permaMods": [],
@@ -44,8 +44,8 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0012": "InReC_pulse",
-        "WS0013": "InReC_pulse"
+        "WS0012": "InReC_quark",
+        "WS0013": "InReC_quark"
       }
     },
     {

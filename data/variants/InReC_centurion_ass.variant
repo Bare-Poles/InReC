@@ -3,8 +3,8 @@
   "hullId": "InReC_centurion",
   "displayName": "Assault",
   "goalVariant": true,
-  "fluxCapacitors": 5,
-  "fluxVents": 8,
+  "fluxCapacitors": 0,
+  "fluxVents": 9,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -25,15 +25,21 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "InReC_bludgeon"
+        "WS0001": "InReC_hangnail"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0004": "InReC_pulse",
-        "WS0005": "InReC_pulse",
+        "WS0004": "InReC_quark",
+        "WS0005": "InReC_quark"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
         "WS0006": "InReC_pulse",
         "WS0007": "InReC_pulse"
       }

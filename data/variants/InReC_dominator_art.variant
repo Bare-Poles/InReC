@@ -4,7 +4,7 @@
   "displayName": "Artillery",
   "goalVariant": true,
   "fluxCapacitors": 0,
-  "fluxVents": 23,
+  "fluxVents": 27,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -19,13 +19,19 @@
       "mode": "ALTERNATING",
       "weapons": {
         "WS0001": "InReC_heart-throb",
-        "WS0002": "InReC_heart-throb",
-        "WS0003": "InReC_heart-throb",
-        "WS0004": "InReC_heart-throb"
+        "WS0002": "InReC_heart-throb"
       }
     },
     {
       "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "InReC_wishbone",
+        "WS0004": "InReC_wishbone"
+      }
+    },
+    {
+      "autofire": true,
       "mode": "LINKED",
       "weapons": {
         "WS0005": "InReC_guillotine"
@@ -52,7 +58,7 @@
       }
     },
     {
-      "autofire": true,
+      "autofire": false,
       "mode": "LINKED",
       "weapons": {
         "WS0014": "InReC_flash_lt",

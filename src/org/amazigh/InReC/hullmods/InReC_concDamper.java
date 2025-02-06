@@ -63,7 +63,7 @@ public class InReC_concDamper extends BaseHullMod {
             		Vector2f velShunt = MathUtils.getPointOnCircumference(target_missile.getVelocity(), PUSH_VALUE * effectLevel, shuntAngle);
             		target_missile.getVelocity().set(velShunt);
             		
-            		engine.applyDamage(target_missile, target_missile.getLocation(), 10f, DamageType.FRAGMENTATION, 0, true, true, ship);
+            		engine.applyDamage(target_missile, target_missile.getLocation(), 15f, DamageType.FRAGMENTATION, 0, true, true, ship);
             		// added damage to make it more "useful" compared to a regular damper
             		
             		engine.addNebulaParticle(target_missile.getLocation(),

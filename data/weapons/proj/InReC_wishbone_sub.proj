@@ -1,0 +1,42 @@
+{
+	"id":"InReC_wishbone_sub",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+
+	"onHitEffect":"org.amazigh.InReC.scripts.InReC_quarkOnHitEffect",
+
+	"sprite":"graphics/missiles/InReC_wishbone_sub.png",
+	"size":[8,16],
+	"center":[4,8],
+	"collisionRadius":10,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[229,190,66,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":72, # purely visual
+	"fadeTime":1, # fadeout duration
+	"maxFlightTime":8,
+	"engineSpec":{
+				  "turnAcc":200, #160
+				  "turnRate":80, #65
+				  "acc":666,
+				  "dec":300,
+				  "maxSpeed":250}, #200
+	"engineSlots":[{"id":"ES1",
+					"loc":[-8, 0],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[255,120,73,255],
+						"contrailDuration":1.3,
+						"contrailWidthMult":0.75,
+						"contrailWidthAddedFractionAtEnd":0.9,# can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":5, # min segment length, in pixels
+						"contrailMaxSpeedMult":0.3f,
+						"contrailAngularVelocityMult":0.6f,
+						"contrailSpawnDistMult":0, # how far away from engine it starts
+						"contrailColor":[115,95,33,140],
+						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":6.0,
+				    "length":28.0,
+				    "angle":180.0}],
+}

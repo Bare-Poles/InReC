@@ -4,7 +4,7 @@
   "displayName": "Strike",
   "goalVariant": true,
   "fluxCapacitors": 0,
-  "fluxVents": 8,
+  "fluxVents": 10,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -35,15 +35,15 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0007": "InReC_bludgeon"
+        "WS0007": "InReC_hangnail"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0010": "InReC_fusion",
-        "WS0011": "InReC_fusion"
+        "WS0010": "InReC_quark",
+        "WS0011": "InReC_quark"
       }
     },
     {

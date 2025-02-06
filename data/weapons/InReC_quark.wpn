@@ -1,0 +1,31 @@
+{
+	"id":"InReC_quark",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"SMALL",
+	"turretSprite":"graphics/weapons/InReC_quark_turret_base.png",
+	"turretGunSprite":"graphics/weapons/InReC_quark_turret_recoil.png",
+	"turretGlowSprite":"graphics/weapons/InReC_quark_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/InReC_quark_hardpoint_base.png",
+	"hardpointGunSprite":"graphics/weapons/InReC_quark_hardpoint_recoil.png",
+	"hardpointGlowSprite":"graphics/weapons/InReC_quark_hardpoint_glow.png",
+	"visualRecoil":5.0,
+	"renderHints":[RENDER_BARREL_BELOW],
+	"glowColor":[229,108,66,225],
+	"turretOffsets":[4,0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[6,0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":25.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":7.0,
+					   "particleSizeMin":8.0,
+					   "particleSizeRange":11.0,
+					   "particleDuration":0.2,
+					   "particleCount":12,
+					   "particleColor":[229,147,66,225]},	
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"InReC_quark_shot",  # projectile that will be fired
+	"fireSoundTwo":"InReC_quark_fire", #heavy_blaster_fire
+}

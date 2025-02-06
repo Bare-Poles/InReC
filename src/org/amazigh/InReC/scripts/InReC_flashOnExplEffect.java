@@ -29,7 +29,7 @@ public class InReC_flashOnExplEffect implements ProximityExplosionEffect {
     				0.6f,
     				0.5f,
     				MathUtils.getRandomNumberInRange(0.9f, 1.4f),
-    				new Color(65,140,150,75),
+    				new Color(65,140,150,69), // 75 alpha
     				true);
         }
 		
@@ -63,7 +63,7 @@ public class InReC_flashOnExplEffect implements ProximityExplosionEffect {
     				0.4f,
     				0.2f,
     				MathUtils.getRandomNumberInRange(0.7f, 1.15f),
-    				new Color(60,150,160,75),
+    				new Color(60,150,160,69), // 75 alpha
     				true);
         }
 	}

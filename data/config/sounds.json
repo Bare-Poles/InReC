@@ -80,12 +80,14 @@
 		{"file":"sounds/sfx_wpn_energy/InReC_hadron_fire.ogg","pitch":1.00,"volume":0.37},
 	],
 
-
-
-	"InReC_bludgeon_fire":
+	"InReC_quark_fire":
 	[
-		{"file":"sounds/sfx_wpn_guns/heavy_mortar_fire_01.ogg","pitch":0.85,"volume":0.85},
+		{"file":"sounds/sfx_wpn_energy/InReC_pulse_fire.ogg","pitch":0.8,"volume":0.55},
+		{"file":"sounds/sfx_wpn_energy/InReC_pulse_fire.ogg","pitch":0.85,"volume":0.55},
+		{"file":"sounds/sfx_wpn_energy/InReC_pulse_fire.ogg","pitch":0.9,"volume":0.55},
 	],
+
+
 
 	"InReC_grinder_s_fire":
 	[
@@ -150,6 +152,10 @@
 		{"file":"sounds/sfx_wpn_guns/InReC_canister_fire.ogg","pitch":1.05,"volume":0.6},
 	],
 
+	"InReC_hangnail_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/InReC_hangnail_fire.ogg","pitch":1,"volume":0.85}, # mauler_fire_01_loud
+	],
 
 
 
@@ -158,6 +164,12 @@
 	[
 		{"file":"sounds/sfx_wpn_missiles/InReC_blister_fire.ogg","pitch":1,"volume":0.7},
 	],
+
+	"InReC_wishbone_split":{
+		"sounds":[
+			{"file":"sounds/sfx_wpn_missiles/pilum_lrm_fire_01.ogg","pitch":0.9,"volume":0.25},
+		],		
+	},
 
 
 }
