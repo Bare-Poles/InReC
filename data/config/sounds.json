@@ -29,7 +29,7 @@
 
 	"InReC_spark_s_fire":
 	[
-		{"file":"sounds/sfx_wpn_energy/InReC_spark_fire.ogg","pitch":0.8,"volume":0.2},
+		{"file":"sounds/sfx_wpn_energy/InReC_spark_fire.ogg","pitch":0.9,"volume":0.2},
 		{"file":"sounds/sfx_wpn_energy/InReC_spark_fire.ogg","pitch":1.0,"volume":0.2},
 		{"file":"sounds/sfx_wpn_energy/InReC_spark_fire.ogg","pitch":1.1,"volume":0.2},
 	],
@@ -86,6 +86,21 @@
 		{"file":"sounds/sfx_wpn_energy/InReC_pulse_fire.ogg","pitch":0.85,"volume":0.55},
 		{"file":"sounds/sfx_wpn_energy/InReC_pulse_fire.ogg","pitch":0.9,"volume":0.55},
 	],
+
+	"InReC_burst_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/InReC_burst_fire_01.ogg","pitch":0.95,"volume":0.25},
+		{"file":"sounds/sfx_wpn_energy/InReC_burst_fire_01.ogg","pitch":1.0,"volume":0.25},
+		{"file":"sounds/sfx_wpn_energy/InReC_burst_fire_01.ogg","pitch":1.05,"volume":0.25},
+		{"file":"sounds/sfx_wpn_energy/InReC_burst_fire_02.ogg","pitch":0.95,"volume":0.25},
+		{"file":"sounds/sfx_wpn_energy/InReC_burst_fire_02.ogg","pitch":1.0,"volume":0.25},
+		{"file":"sounds/sfx_wpn_energy/InReC_burst_fire_02.ogg","pitch":1.05,"volume":0.25},
+		{"file":"sounds/sfx_wpn_energy/InReC_burst_fire_03.ogg","pitch":0.95,"volume":0.25},
+		{"file":"sounds/sfx_wpn_energy/InReC_burst_fire_03.ogg","pitch":1.0,"volume":0.25},
+		{"file":"sounds/sfx_wpn_energy/InReC_burst_fire_03.ogg","pitch":1.05,"volume":0.25},
+	],
+
+
 
 
 
@@ -167,7 +182,7 @@
 
 	"InReC_wishbone_split":{
 		"sounds":[
-			{"file":"sounds/sfx_wpn_missiles/pilum_lrm_fire_01.ogg","pitch":0.9,"volume":0.25},
+			{"file":"sounds/sfx_wpn_missiles/pilum_lrm_fire_01.ogg","pitch":0.9,"volume":0.5},
 		],		
 	},
 

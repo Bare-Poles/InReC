@@ -37,6 +37,9 @@ trail,projectile,sprite,minLength,fadeIn,duration,fadeOut,sizeIn,sizeOut,colorIn
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+InReC_burst_shot,InReC_burst_shot,base_trail_smooth,10,0,0.03,0.07,7,3,"[147,239,230]","[50,20,60]",0.35,128,-32,TRUE,5,0,1,0,TRUE,FALSE,TRUE,10,100,0.1,0,0,0,FALSE,TRUE
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 InReC_canister_shot,InReC_canister_shot,base_trail_mild,10,0.05,0,0.18,5,3,"[220,230,240]","[80,40,80]",0.5,256,-128,TRUE,5,1,1,0,TRUE,FALSE,TRUE,5,40,0.2,0,0,0,TRUE,TRUE
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -72,10 +75,10 @@ InReC_hadron_shot_core,InReC_hadron_shot,base_trail_smooth,10,0,0.05,0.08,12,10,
 InReC_hadron_shot_glow,InReC_hadron_shot,base_trail_smooth,10,0,0,0.23,23,19,"[123,158,38]","[39,175,17]",0.2,256,-96,TRUE,-5,0,1,0,TRUE,FALSE,TRUE,10,100,0,0,0,0,FALSE,TRUE
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-InReC_hangnail_shot_core,InReC_hangnail_shot,base_trail_smooth,10,0.05,0.09,0.08,10,2,"[229,190,66]","[203,79,43]",0.69,310,10,TRUE,18,1,1,0,TRUE,FALSE,TRUE,24,0,0.3,0,30,0,true,false
+InReC_hangnail_shot_core,InReC_hangnail_shot,base_trail_smooth,10,0.05,0.09,0.1,10,2,"[229,190,66]","[203,79,43]",0.69,310,10,TRUE,18,1,1,0,TRUE,FALSE,TRUE,24,0,0.3,0,30,0,true,false
 InReC_hangnail_shot_smoke,InReC_hangnail_shot,base_trail_heavySmoke,10,0.05,0.1,0.3,17,45,"[79,81,77]","[32,40,29]",0.5,240,5,TRUE,0,3,1,0,TRUE,FALSE,FALSE,30,0,0.2,0,0,0,true,true
-InReC_hangnail_shot_cinder,InReC_hangnail_shot,base_trail_rough,10,0,0.05,0.13,6,13,"[255,120,73]","[69,34,17]",0.95,275,8,TRUE,10,4,1,0,TRUE,FALSE,TRUE,18,0,0.1,0,0,0,false,false
-InReC_hangnail_shot_glow,InReC_hangnail_shot,base_trail_smooth,10,0,0.04,0.1,55,38,"[242,114,69]","[229,108,66]",0.4,200,1000,TRUE,20,0,1,0,TRUE,FALSE,TRUE,0,0,0,0,0,0,FALSE,false
+InReC_hangnail_shot_cinder,InReC_hangnail_shot,base_trail_rough,10,0,0.05,0.23,6,13,"[255,120,73]","[69,34,17]",0.95,275,8,TRUE,10,4,1,0,TRUE,FALSE,TRUE,18,0,0.1,0,0,0,false,false
+InReC_hangnail_shot_glow,InReC_hangnail_shot,base_trail_smooth,10,0,0.06,0.12,55,38,"[242,114,69]","[229,108,66]",0.4,200,1000,TRUE,20,0,1,0,TRUE,FALSE,TRUE,0,0,0,0,0,0,FALSE,false
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 InReC_millstone_mono_shot_core,InReC_millstone_mono_shot,base_trail_heavySmoke,10,0.1,0.05,0.25,7,2,"[255,55,45]","[225,220,170]",0.5,256,-128,TRUE,5,8,1,0,TRUE,TRUE,TRUE,11,110,0.4,0,0,160,TRUE,false
@@ -97,9 +100,8 @@ InReC_pulse_hvy_shot,InReC_pulse_hvy_shot,base_trail_smooth,10,0,0.04,0.11,13,7,
 InReC_pulse_shot,InReC_pulse_shot,base_trail_smooth,10,0,0.03,0.09,10,5,"[152,243,203]","[20,60,50]",0.4,256,-128,TRUE,5,0,1,0,TRUE,FALSE,TRUE,20,200,0.1,0,0,0,FALSE,TRUE
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-InReC_quark_shot_core,InReC_quark_shot,base_trail_smooth,10,0,0.05,0.06,12,6,"[244,115,70]","[80,58,23]",0.4,280,-140,TRUE,5,1,1,0,TRUE,FALSE,TRUE,10,250,0.1,0,0,0,FALSE,false
-InReC_quark_shot_glow_1,InReC_quark_shot,base_trail_mild,10,0,0.07,0.06,24,18,"[229,190,66]","[110,60,35]",0.25,280,-140,TRUE,5,1,1,0,TRUE,FALSE,TRUE,10,250,0.1,0,0,69,TRUE,TRUE
-InReC_quark_shot_glow_2,InReC_quark_shot,base_trail_smooth,10,0,0.04,0.08,29,19,"[242,114,69]","[229,108,66]",0.3,200,1000,TRUE,12,0,1,0,TRUE,FALSE,TRUE,0,0,0,0,0,0,FALSE,false
+InReC_quark_shot_core,InReC_quark_shot,base_trail_smooth,10,0,0.04,0.05,12,6,"[244,141,70]","[80,49,23]",0.4,280,-140,TRUE,5,1,1,0,TRUE,FALSE,TRUE,10,250,0.1,0,0,0,FALSE,false
+InReC_quark_shot_glow,InReC_quark_shot,base_trail_smooth,10,0,0.06,0.08,31,20,"[242,114,69]","[229,99,66]",0.4,200,1000,TRUE,12,0,1,0,TRUE,FALSE,TRUE,0,0,0,0,0,0,FALSE,false
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 InReC_spark_hvy_shot,InReC_spark_hvy_shot,base_trail_zapWithCore,8,0,0,0.18,9.5,3,"[215,185,55]","[70,10,120]",0.48,256,-128,TRUE,5,12,1,0,TRUE,FALSE,TRUE,18,180,0.8,0,0,270,FALSE,TRUE

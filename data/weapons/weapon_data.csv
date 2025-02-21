@@ -13,6 +13,7 @@ Negatron Bolter,InReC_negatron,3,,2400,700,,210,,0,15,12,,,,ENERGY,231,,0.15,2.0
 Hadron Bolter,InReC_hadron,2,,2000,800,,80,,0,12,10,,,,ENERGY,64,,0.4,2.9,8,0.1,7,7,0,0,,900,,,,,,,"energy12, LR, inrec_wep_bp, merc",,InReCo,,Fire Support,,,,,,,,,,19208
 Quark Bolter,InReC_quark,3,,700,500,,120,,0,20,6,,,,ENERGY,150,,0.2,3.4,3,0.2,7,7,0,0,,900,,,,,,,"energy9, inrec_wep_bp, merc",,InReCo,,Assault,,,,,"Hits on hull will embed a %s in the target. After %s, each charge will explode, dealing %s damage.
 The damage of each charge is increased by %s for each other charge currently embedded in the target, up to a maximum damage of %s.",Quark Charge | 5 Seconds | 60 Fragmentation | 5% | 180,,,,19209
+Pulse Burst Driver,InReC_burst,0,,150,350,,20,,0,80,2,,,,ENERGY,10,,0.07,1.61,5,0.08,9,9,0,0,,1000,,,,,,,"pd1, energy1, SR, inrec_wep_bp",,InReCo,,Point Defense,,,,,,,,,,19210
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Hangnail Repeating Cannon,InReC_hangnail,3,,2000,700,,180,,12,25,12,6,0.666666,2,HIGH_EXPLOSIVE,198,,0,0.4,1,0,0,16,4,4,,1000,,,,,,,"he16, inrec_wep_bp, merc",,InReCo,,Anti Armor,,,,,"Hits on hull will embed a %s in the target. After %s, each charge will explode, dealing %s damage.

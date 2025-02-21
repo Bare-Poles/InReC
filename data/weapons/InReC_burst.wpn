@@ -1,0 +1,28 @@
+{
+	"id":"InReC_burst",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"mountTypeOverride":"HYBRID",
+	"size":"SMALL",
+	"turretSprite":"graphics/weapons/InReC_burst_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/InReC_burst_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/InReC_burst_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/InReC_burst_hardpoint_glow.png",
+	"glowColor":[147,212,230,240],
+	"turretOffsets":[6,0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[7,0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":16.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":6.0,
+					   "particleSizeMin":5.0,
+					   "particleSizeRange":7.0,
+					   "particleDuration":0.12,
+					   "particleCount":7,
+					   "particleColor":[105,170,200,205]},
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"InReC_burst_shot",  # projectile that will be fired
+	"fireSoundTwo":"InReC_burst_fire",
+}

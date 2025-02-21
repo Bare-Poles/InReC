@@ -1,0 +1,30 @@
+{
+  "variantId": "InReC_javali_std",
+  "hullId": "InReC_javali",
+  "displayName": "Assault Fighter",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "InReC_quark"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "InReC_burst",
+        "WS0002": "InReC_burst"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

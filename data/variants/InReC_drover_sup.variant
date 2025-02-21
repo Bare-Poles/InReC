@@ -3,7 +3,7 @@
   "hullId": "InReC_drover",
   "displayName": "Support",
   "goalVariant": true,
-  "fluxCapacitors": 8,
+  "fluxCapacitors": 4,
   "fluxVents": 0,
   "quality": 1,
   "permaMods": [],
@@ -40,6 +40,6 @@
   ],
   "modules": [],
   "wings": [
-    "InReC_espada_fighter_wing"
+    "InReC_javali_fighter_wing"
   ]
 }

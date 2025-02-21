@@ -4,7 +4,7 @@
   "displayName": "Standard",
   "goalVariant": true,
   "fluxCapacitors": 6,
-  "fluxVents": 10,
+  "fluxVents": 12,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -56,7 +56,7 @@
       "mode": "LINKED",
       "weapons": {
         "WS0007": "InReC_flash_lt",
-        "WS0009": "InReC_flash_lt"
+        "WS0009": "InReC_burst"
       }
     }
   ],

@@ -4,7 +4,7 @@
   "displayName": "Assault",
   "goalVariant": true,
   "fluxCapacitors": 0,
-  "fluxVents": 25,
+  "fluxVents": 29,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -55,8 +55,8 @@
         "WS0012": "InReC_flash_lt",
         "WS0013": "InReC_flash_lt",
         "WS0014": "InReC_flash_lt",
-        "WS0015": "InReC_flash_lt",
-        "WS0016": "InReC_flash_lt"
+        "WS0015": "InReC_burst",
+        "WS0016": "InReC_burst"
       }
     }
   ],

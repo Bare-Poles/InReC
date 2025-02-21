@@ -1,19 +1,14 @@
 {
-	"id":"InReC_quark_shot",
-
-	"onHitEffect":"org.amazigh.InReC.scripts.InReC_quarkOnHitEffect",
-
+	"id":"InReC_burst_shot",
 	"specClass":"projectile",
 	"spawnType":"BALLISTIC_AS_BEAM",
 	"collisionClass":"RAY",
 	"collisionClassByFighter":"RAY_FIGHTER",
-	"length":34.0,
-	"width":11.0,
+	"length":29.0,
+	"width":6.0,
 	"fadeTime":0.25,
-	"fringeColor":[115,97,41,241],
-	"coreColor":[244,115,70,222],
-	"glowColor":[218,103,34,91],
-	"glowRadius":16,
+	"fringeColor":[55,144,101,245], # 57,122,102,245
+	"coreColor":[147,239,230,210], # 113,243,205,210
 	"textureType":"SMOOTH",  # only needed for BEAM spawnType
 	"textureScrollSpeed":-256.0,
 	"pixelsPerTexel":1.0

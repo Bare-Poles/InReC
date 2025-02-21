@@ -15,13 +15,14 @@ Quick Cycle Capacitors,InReC_quickCaps,,,InReCo,,,,,TRUE,,0,0,0,0,org.amazigh.In
 # Modular,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 # Greg,,,,,,,,,,,,,,,,,,,
-Footman (Assault),InReC_greg_a,1,,InReCo,"special, merc, standard",Special,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_greg_a,Assault Greg!,Assault Greg!,,graphics/hullmods/InReC_greg_a.png
-Footman (Support),InReC_greg_s,1,,InReCo,"special, merc, standard",Special,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_greg_s,Support Greg!,Support Greg!,,graphics/hullmods/InReC_greg_s.png
+Lacayo (Assault),InReC_greg_a,1,,InReCo,"special, merc, standard",Special,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_greg_a,Assault Greg!,Assault Greg!,,graphics/hullmods/InReC_greg_a.png
+Lacayo (Support),InReC_greg_s,1,,InReCo,"special, merc, standard",Special,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_greg_s,Support Greg!,Support Greg!,,graphics/hullmods/InReC_greg_s.png
 Pulse Drone,InReC_greg_p,1,,InReCo,"special, merc, standard",Special,5000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_greg_p,"Pulse Drones, but no greg :(","Pulse Drones, but no greg :(",,graphics/hullmods/InReC_greg_p.png
 ,,,,,,,,,,,,,,,,,,,
 "# ""General"" Modular",,,,,# no_build_in on siege mods??,,,,,,,,,,,,,,
 Siege Modifications,InReC_siegeMods,2,,InReCo,"special, merc",Weapons,10000,TRUE,,,5,10,15,25,org.amazigh.InReC.hullmods.InReC_siegeMods,Missile Spam and Sniping!,Missile Spam and Sniping!,,graphics/hullmods/InReC_siegeMods.png
 Flux Rebalancer,InReC_rebalancer,2,,InReCo,"special, merc","Special, Weapons, Shields",10000,TRUE,,,5,10,15,25,org.amazigh.InReC.hullmods.InReC_rebalancer,"Shield res + EN wep Flux, fancy.","Shield res + EN wep Flux, fancy.",Bonuses reach maximum strength when their relevant flux type reaches %s of current flux capacity.,graphics/hullmods/InReC_rebalancer.png
+Flux Recycler,InReC_recycler,3,,InReCo,"special, merc","Special, Weapons, Shields",12000,TRUE,,,5,10,15,25,org.amazigh.InReC.hullmods.InReC_recycler,Buffs for running high-flux.,Buffs for running high-flux.,,graphics/hullmods/InReC_recycler.png
 Parasite Drones,InReC_parasite,2,,InReCo,"special, merc",Fighters,10000,TRUE,,,4,8,12,20,org.amazigh.InReC.hullmods.InReC_parasite,ONE OFF DRONE SPAM LET'S GO!,ONE OFF DRONE SPAM LET'S GO!,,graphics/hullmods/InReC_parasite.png
 Shield Bypass Array,InReC_slotShield,1,,InReCo,"defensive, shields, merc, standard",Shields,8000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_slotShield,Shield soft flux conversion!,Shield soft flux conversion!,Shield upkeep reduced by %s.,graphics/hullmods/InReC_slotShield.png
 Bolt Focus Regulator,InReC_slotRange,1,,InReCo,"offensive, merc, standard",Weapons,8000,TRUE,,,3,6,9,15,org.amazigh.InReC.hullmods.InReC_slotRange,Energy proj wep range!,Energy proj wep range!,Increases the range increase of all non-beam Energy and Hybrid weapons by %s and increases the maximum to %s/%s/%s/%s.,graphics/hullmods/InReC_slotRange.png

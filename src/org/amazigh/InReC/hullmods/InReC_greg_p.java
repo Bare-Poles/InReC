@@ -30,16 +30,16 @@ public class InReC_greg_p extends BaseHullMod {
 		
 		Color h = Misc.getHighlightColor();
 		
-		LabelAPI label = tooltip.addPara("Replaces the Footman drones deployed by the ships system with several light Pulse Drones.", opad);
+		LabelAPI label = tooltip.addPara("Replaces the Lacayo drones deployed by the ships system with several light Pulse Drones.", opad);
 
-		label = tooltip.addPara("Rather than deploying single Footman drones, this ship will instead deploy pairs of light drones armed with %s.", opad, h, "Pulse Bolters");
+		label = tooltip.addPara("Rather than deploying single Lacayo drones, this ship will instead deploy pairs of light drones armed with %s.", opad, h, "Pulse Bolters");
 		label.setHighlight("Pulse Bolters");
 		label.setHighlightColors(h);
 		label = tooltip.addPara("Drones feature a solid-state flux capacitor, and will self destruct after firing %s bursts.", pad, h, "15");
 		label.setHighlight("15");
 		label.setHighlightColors(h);
 		
-		label = tooltip.addPara("May only be installed on InReCo vessels that feature a Footman deployment system, and only one Footman Variant may be installed at a time.", opad);
+		label = tooltip.addPara("May only be installed on InReCo vessels that feature a Lacayo deployment system, and only one Lacayo Variant may be installed at a time.", opad);
 		
 	}
 	
@@ -54,10 +54,10 @@ public class InReC_greg_p extends BaseHullMod {
 	
 	public String getUnapplicableReason(ShipAPI ship) {
 		if (ship.getVariant().getHullMods().contains("InReC_greg_a") || ship.getVariant().getHullMods().contains("InReC_greg_s")) {
-			return "May only install one Footman Variant at a time.";
+			return "May only install one Lacayo Variant at a time.";
 		}
 		if (!ship.getVariant().getHullMods().contains("InReC_gregSlot")) {
-			return "Only compatible with InReCo vessels that feature a Footman deployment system.";
+			return "Only compatible with InReCo vessels that feature a Lacayo deployment system.";
 		}
 		return null;
 	}

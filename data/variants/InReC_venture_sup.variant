@@ -4,7 +4,7 @@
   "displayName": "Support",
   "goalVariant": true,
   "fluxCapacitors": 0,
-  "fluxVents": 9,
+  "fluxVents": 5,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -53,6 +53,6 @@
   "modules": [],
   "wings": [
     "InReC_espada_fighter_wing",
-    "InReC_espada_fighter_wing"
+    "InReC_javali_fighter_wing"
   ]
 }

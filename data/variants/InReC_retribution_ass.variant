@@ -4,7 +4,7 @@
   "displayName": "Assault",
   "goalVariant": true,
   "fluxCapacitors": 0,
-  "fluxVents": 44,
+  "fluxVents": 48,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -73,8 +73,8 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0020": "InReC_flash_lt",
-        "WS0021": "InReC_flash_lt"
+        "WS0020": "InReC_burst",
+        "WS0021": "InReC_burst"
       }
     }
   ],

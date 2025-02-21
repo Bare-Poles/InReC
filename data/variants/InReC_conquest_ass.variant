@@ -4,7 +4,7 @@
   "displayName": "Assault",
   "goalVariant": true,
   "fluxCapacitors": 0,
-  "fluxVents": 14,
+  "fluxVents": 22,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -70,12 +70,12 @@
       "mode": "LINKED",
       "weapons": {
         "WS0015": "InReC_spark_hvy",
-        "WS0016": "InReC_flash_lt",
-        "WS0017": "InReC_flash_lt",
+        "WS0016": "InReC_burst",
+        "WS0017": "InReC_burst",
         "WS0018": "InReC_flash_lt",
-        "WS0019": "InReC_flash_lt",
+        "WS0019": "InReC_burst",
         "WS0022": "InReC_flash_lt",
-        "WS0023": "InReC_flash_lt"
+        "WS0023": "InReC_burst"
       }
     }
   ],

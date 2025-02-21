@@ -3,8 +3,8 @@
   "hullId": "InReC_trastorno",
   "displayName": "Strike",
   "goalVariant": true,
-  "fluxCapacitors": 0,
-  "fluxVents": 19,
+  "fluxCapacitors": 3,
+  "fluxVents": 20,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -49,8 +49,8 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0009": "InReC_flash_lt",
-        "WS0010": "InReC_flash_lt"
+        "WS0009": "InReC_burst",
+        "WS0010": "InReC_burst"
       }
     }
   ],

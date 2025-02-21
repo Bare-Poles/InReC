@@ -3,8 +3,8 @@
   "hullId": "InReC_dominator",
   "displayName": "Assault",
   "goalVariant": true,
-  "fluxCapacitors": 0,
-  "fluxVents": 28,
+  "fluxCapacitors": 6,
+  "fluxVents": 30,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -64,10 +64,10 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0012": "InReC_flash_lt",
-        "WS0013": "InReC_flash_lt",
-        "WS0014": "InReC_flash_lt",
-        "WS0015": "InReC_flash_lt"
+        "WS0012": "InReC_burst",
+        "WS0013": "InReC_burst",
+        "WS0014": "InReC_burst",
+        "WS0015": "InReC_burst"
       }
     }
   ],
