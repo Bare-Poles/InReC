@@ -14,8 +14,8 @@
 	"fadeTime":0.5,
 	"engineSpec":{"turnAcc":1500,
 				  "turnRate":200,
-				  "acc":1000, #2000
-				  "dec":75}, #200 300
+				  "acc":1000,
+				  "dec":75}, #200
 	"engineSlots":[{"id":"ES1",
 					"loc":[-8, 0],
 				    "style":"CUSTOM",

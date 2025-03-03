@@ -1,0 +1,85 @@
+{
+  "hullName": "Empacho",
+  "hullId": "InReC_empacho",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/InReC_empacho.png",
+  "style": "INREC_SPECIAL",
+  "height": 52,
+  "width": 54,
+  "center": [27, 25],
+  "collisionRadius": 30,
+  "shieldCenter": [1, -0],
+  "shieldRadius": 28.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "InReC_concVanes"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 0,
+      "locations": [11, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-24.5, 8.5],
+      "length": 25,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-24.5, -8.5],
+      "length": 25,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-20, 15],
+      "length": 14,
+      "width": 6,
+      "angle": 160,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    },
+    {
+      "location": [-20, -15],
+      "length": 14,
+      "width": 6,
+      "angle": 200,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "INREC"
+    }
+  ],
+  "bounds": [
+    18, -4,
+    24, -7,
+    14, -11,
+    19, -17,
+    -9, -24,
+    -13, -18,
+    -18, -16,
+    -23, -8,
+    -16, -0,
+    -23, 8,
+    -18, 16,
+    -13, 18,
+    -9, 24,
+    19, 17,
+    14, 11,
+    24, 7,
+    18, 4
+  ]
+}

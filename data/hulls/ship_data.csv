@@ -9,7 +9,8 @@ Flash Drone,InReC_flash_drone,Attack Drone,InReCo,,,200,60,100,,100,,,300,400,40
 Millstone Platform,InReC_grinder_drone,Gun Drone,InReCo,,,500,120,200,,100,,,150,150,150,160,320,30,NONE,,,,,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,192102
 Flock Platform,InReC_flock_drone,Missile Drone,InReCo,,,500,120,200,,100,,,150,150,150,90,180,30,NONE,,,,,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,192103
 Espada,InReC_espada,Heavy Fighter,InReCo,InReC_jam_flares,,750,120,100,,24,,,200,400,350,100,200,35,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,,,,,,,0,,,,192104
-Javali,InReC_javali,Assault Fighter,InReCo,,,900,200,550,,120,,,150,200,175,100,200,50,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,,,,,,,0,,,,192105
+Javali,InReC_javali,Assault Fighter,InReCo,,,900,200,550,,125,,,150,200,175,100,200,50,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,,,,,,,0,,,,192105
+Empacho,InReC_empacho,Support Fighter,InReCo,,,1200,100,600,,150,,,150,240,200,90,180,80,NONE,,0,0,0,,,4,4,,,,,,,,,,,,,,,,,,,,,,0,,,,192106
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Brawler (IRC),InReC_brawler,Missile Frigate,InReCo,fastmissileracks,6,2000,400,2500,,180,50,,110,180,120,60,120,250,FRONT,,270,0.4,0.8,,,15,30,40,20,1,20,10,10000,8,10,240,0.25,5,5,,,,,,,,"InReC_bp, merc",,0.5,2,2,,192201

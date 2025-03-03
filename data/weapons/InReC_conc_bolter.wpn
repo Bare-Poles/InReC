@@ -1,0 +1,25 @@
+{
+	"id":"InReC_conc_bolter",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/InReC_conc_bolter.png",
+	"hardpointSprite":"graphics/weapons/InReC_conc_bolter.png",
+	"turretOffsets":[0,0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[0,0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"LINKED",
+        "separateRecoilForLinkedBarrels":"TRUE",
+	"animationType":"MUZZLE_FLASH",
+	"muzzleFlashSpec":{"length":30.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":6.0,
+					   "particleSizeMin":14.0,
+					   "particleSizeRange":17.0,
+					   "particleDuration":0.15,
+					   "particleCount":10,
+					   "particleColor":[65,220,195,222]},
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"InReC_conc_bolter_shot",  # projectile that will be fired
+	"fireSoundTwo":"InReC_conc_fire",
+}

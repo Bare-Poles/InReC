@@ -42,9 +42,12 @@ public class InReC_concVanes extends BaseHullMod {
     	
     	float pulseDam = 20f;
     	
-    	if (ship.getFluxTracker().isVenting() || ship.getSystem().isActive()) {
-    		pulseDam = 25f; // stronger pulse damage when venting or system is active!
-    		info.TIMER += amount * 0.2f; // also slightly faster pulses!
+    	if (! ship.getHullSize().equals(HullSize.FIGHTER)) {
+    		// fighter hullsize check because the fighter doesn't have a system!
+        	if (ship.getFluxTracker().isVenting() || ship.getSystem().isActive()) {
+        		pulseDam = 25f; // stronger pulse damage when venting or system is active!
+        		info.TIMER += amount * 0.2f; // also slightly faster pulses!
+        	}
     	}
     	
     	if (ship.getFluxTracker().isOverloaded()) {
@@ -53,28 +56,52 @@ public class InReC_concVanes extends BaseHullMod {
     	
     	// jitter
     	int alpha = 20 + Math.min(80, (int)(info.TIMER * 160f));
+    	int copies = 20;
+    	float jRange = 6f; 
+    			
+    	if (ship.getHullSize().equals(HullSize.FIGHTER)) {
+    		alpha = (int)(alpha * 0.75f);
+    		copies = 10;
+    		jRange = 8f;
+    	}
+    	
     	Color effectColor = new Color(65,220,195,alpha);
     	// setting up the vfx color
-    	ship.setJitterUnder(this, effectColor, 1f, 20, 0f, 6f + (info.TIMER * 6f));
+    	ship.setJitterUnder(this, effectColor, 1f, copies, 0f, jRange + (info.TIMER * 6f));
     	
-    	if (ship.getSystem().isActive()) {
-            // jitter
-            int alpha2 = 18 + (int)(ship.getSystem().getEffectLevel() * 37f);
-        	Color effectColor2 = new Color(65,220,195,alpha2);
-        	// setting up the vfx color
-        	ship.setJitter(this, effectColor2, 1f, 3, 0f, 5f);
+
+    	if (! ship.getHullSize().equals(HullSize.FIGHTER)) {
+    		// fighter hullsize check because the fighter doesn't have a system!
+        	if (ship.getSystem().isActive()) {
+                // jitter
+                int alpha2 = 18 + (int)(ship.getSystem().getEffectLevel() * 37f);
+            	Color effectColor2 = new Color(65,220,195,alpha2);
+            	// setting up the vfx color
+            	ship.setJitter(this, effectColor2, 1f, 3, 0f, 5f);
+        	}
     	}
     	
     	if (info.TIMER > 0.5f) {
     		
+        	int count = 69;
+        	float range = 320f;
+        	if (ship.getHullSize().equals(HullSize.FIGHTER)) {
+        		count = 49; // setup so the "fighter version" has slightly shorter range / particle count - we're sharing the hullmod across fighter/ship for 0.98 codex info compatibility!
+        		range = 280f;
+        	}
+        	
     		if (AIUtils.getNearestEnemyMissile(ship) != null) {
-    			if (MathUtils.isWithinRange(ship, AIUtils.getNearestEnemyMissile(ship), 320f)) {
+    			if (MathUtils.isWithinRange(ship, AIUtils.getNearestEnemyMissile(ship), range)) {
     				info.TARGET = true;
             	}
     		}
-    		if (ship.getFluxTracker().isVenting() || ship.getSystem().isActive()) {
-    			info.TARGET = true; // forced pulses when venting or system is active!
-    		}
+
+        	if (! ship.getHullSize().equals(HullSize.FIGHTER)) {
+        		// fighter hullsize check because the fighter doesn't have a system!
+        		if (ship.getFluxTracker().isVenting() || ship.getSystem().isActive()) {
+        			info.TARGET = true; // forced pulses when venting or system is active!
+        		}
+        	}
         	info.TIMER -= 0.1f; // forcing a 0.1s rate limiter, for performance reasons
         	
     		if (info.TARGET) {
@@ -83,14 +110,15 @@ public class InReC_concVanes extends BaseHullMod {
             	
             	engine.addSmoothParticle(ship.getLocation(),
             			ship.getVelocity(),
-            			(ship.getCollisionRadius() * 2f) + 500f,
+            			(ship.getCollisionRadius() * 2f) + (range * 1.5625f),
             			1f,
             			0.15f,
             			new Color(60,220,210,59));
             	
-            	for (int i = 0; i < 69; i++) {
+            	
+            	for (int i = 0; i < count; i++) {
             		float angle = MathUtils.getRandomNumberInRange(0f, 360f);
-	        		Vector2f sparkPoint = MathUtils.getPointOnCircumference(ship.getLocation(), ship.getCollisionRadius() + MathUtils.getRandomNumberInRange(0f, 360f), angle);
+	        		Vector2f sparkPoint = MathUtils.getPointOnCircumference(ship.getLocation(), ship.getCollisionRadius() + MathUtils.getRandomNumberInRange(0f, range + 40f), angle);
 	        		Vector2f sparkVel = MathUtils.getPointOnCircumference(ship.getVelocity(), MathUtils.getRandomNumberInRange(14f, 28f), angle);
         			engine.addSmoothParticle(sparkPoint,
 	        				sparkVel,
@@ -100,7 +128,7 @@ public class InReC_concVanes extends BaseHullMod {
 	            			new Color(65,220,195,175));
 	        	}
             	
-            	for (MissileAPI target_missile : AIUtils.getNearbyEnemyMissiles(ship, ship.getCollisionRadius() + 360f)) {
+            	for (MissileAPI target_missile : AIUtils.getNearbyEnemyMissiles(ship, ship.getCollisionRadius() + range + 40f)) {
             		
             		float shuntAngle = VectorUtils.getAngle(ship.getLocation(), target_missile.getLocation());
             		Vector2f velShunt = MathUtils.getPointOnCircumference(target_missile.getVelocity(), PUSH_VALUE, shuntAngle);

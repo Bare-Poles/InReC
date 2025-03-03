@@ -3,6 +3,7 @@ id,type,size,intensity,fadeout,color,offset,hit size,hit intensity,hit fadeout,h
 # PROJ,,,,,,,,,,,,,,,,,
 InReC_burst_shot,projectile,45,0.2,0.2,"[69,216,188]",,50,0.2,0.35,"[69,216,188]",35,0.2,0.2,"[105,170,200]",,0.5,TRUE
 InReC_canister_shot,projectile,,,,,,,,,,130,0.15,0.45,"[235,245,255]",,0.3,TRUE
+InReC_conc_bolter_shot,projectile,90,0.3,0.3,"[65,220,195]",,120,0.3,0.65,"[65,220,195]",90,0.3,0.2,"[65,220,195]",,1,TRUE
 InReC_disruption_shot,projectile,140,0.3,0.3,"[25,165,110]",,180,0.35,0.7,"[25,165,110]",140,0.3,0.4,"[100,210,255]",,1,TRUE
 InReC_flash_lt_shot,projectile,70,0.2,0.2,"[113,217,243]",,110,0.2,1,"[113,217,243]",90,0.15,0.15,"[110,215,240]",,1,TRUE
 InReC_flash_shot,projectile,80,0.2,0.2,"[113,217,243]",,125,0.2,1,"[113,217,243]",100,0.15,0.15,"[110,215,240]",,0.5,TRUE

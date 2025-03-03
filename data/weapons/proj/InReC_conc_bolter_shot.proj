@@ -1,0 +1,29 @@
+{
+	"id":"InReC_conc_bolter_shot",
+
+	"onFireEffect":"org.amazigh.InReC.scripts.InReC_concOnFireEffect",
+	"onHitEffect":"org.amazigh.InReC.scripts.InReC_concOnHitEffect",
+
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+
+	"length":41.0, #26
+	"width":18.0, #20
+	"fadeTime":0.3,
+	"fringeColor":[65,220,195,170], # 65,220,195
+	"coreColor":[230,245,255,220],
+	"glowColor":[69,241,193,61],
+	"glowRadius":45,
+	"hitGlowRadius":41,
+	"textureScrollSpeed":64.0,
+
+	"pixelsPerTexel":1.0,
+	"bulletSprite":"",
+	"textureType": [
+    	"graphics/fx/beam_weave_fringe.png", # FRINGE		beam_pulsar.png
+    	"graphics/fx/beamcoreb.png" # CORE
+	]
+
+}

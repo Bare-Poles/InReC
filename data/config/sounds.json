@@ -100,6 +100,15 @@
 		{"file":"sounds/sfx_wpn_energy/InReC_burst_fire_03.ogg","pitch":1.05,"volume":0.25},
 	],
 
+	"InReC_conc_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/InReC_conc_fire.ogg","pitch":0.95,"volume":0.42},
+		{"file":"sounds/sfx_wpn_energy/InReC_conc_fire.ogg","pitch":1.0,"volume":0.42},
+		{"file":"sounds/sfx_wpn_energy/InReC_conc_fire.ogg","pitch":1.05,"volume":0.42},
+	],
+
+
+
 
 
 

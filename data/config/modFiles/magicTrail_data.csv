@@ -43,6 +43,10 @@ InReC_burst_shot,InReC_burst_shot,base_trail_smooth,10,0,0.03,0.07,7,3,"[147,239
 InReC_canister_shot,InReC_canister_shot,base_trail_mild,10,0.05,0,0.18,5,3,"[220,230,240]","[80,40,80]",0.5,256,-128,TRUE,5,1,1,0,TRUE,FALSE,TRUE,5,40,0.2,0,0,0,TRUE,TRUE
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+InReC_conc_bolter_shot_core,InReC_conc_bolter_shot,base_trail_smooth,10,0,0.05,0.15,25,10,"[230,245,255]","[40,135,120]",0.55,256,-128,TRUE,0,0,1,0,TRUE,FALSE,TRUE,50,200,0.5,0,0,0,FALSE,false
+InReC_conc_bolter_shot_glow,InReC_conc_bolter_shot,base_trail_contrail,10,0.05,0,0.2,18,32,"[62,222,176]","[39,139,111]",0.45,256,-128,TRUE,10,0,1,0,TRUE,FALSE,TRUE,20,400,0.1,0,0,0,FALSE,false
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 InReC_disruption_shot_core,InReC_disruption_shot,base_trail_smooth,10,0.05,0,0.14,21,15,"[90,188,255]","[9,21,51]",0.42,256,-100,TRUE,5,0,1,0,TRUE,FALSE,TRUE,20,200,0.1,0,0,0,FALSE,TRUE
 InReC_disruption_shot_glow,InReC_disruption_shot,base_trail_fuzzy,10,0.03,0,0.1,27,20,"[35,175,255]","[15,120,70]",0.24,256,-200,TRUE,-5,1,1,0,TRUE,FALSE,TRUE,20,300,0.1,0,0,0,FALSE,TRUE
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

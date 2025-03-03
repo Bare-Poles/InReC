@@ -53,7 +53,7 @@ public class InReC_quarkOnHitEffect implements OnHitEffectPlugin {
 				listener.notifyHit(projectile.hashCode());
 				
 				
-				engine.addPlugin(new EveryFrameCombatPlugin() {					
+				engine.addPlugin(new EveryFrameCombatPlugin() {
 					
 	                final float initialFacing = target.getFacing();
 	                final float baseDamage = projectile.getDamageAmount();
@@ -119,7 +119,7 @@ public class InReC_quarkOnHitEffect implements OnHitEffectPlugin {
 	                    	for (int i=0; i < 3; i++) {
 	                    		
 	                    		float angle = ejectAngle + MathUtils.getRandomNumberInRange(77f, 103f);
-	                    		Vector2f sparkVel = MathUtils.getPointOnCircumference(target.getVelocity(), MathUtils.getRandomNumberInRange(15f, 51f), angle);
+	                    		Vector2f sparkVel = MathUtils.getPointOnCircumference(target.getVelocity(), MathUtils.getRandomNumberInRange(19f, 69f), angle);
 	                    		
 		                    	engine.addSmoothParticle(MathUtils.getRandomPointInCircle(hitLoc, 2f),
 		                        		sparkVel,
@@ -130,12 +130,12 @@ public class InReC_quarkOnHitEffect implements OnHitEffectPlugin {
 	                    	}
 	                    	
 	                    	engine.addNebulaParticle(hitLoc, target.getVelocity(),
-	                        		MathUtils.getRandomNumberInRange(12f, 17f),
-	                        		1.7f, //endsizemult
+	                        		MathUtils.getRandomNumberInRange(14f, 19f),
+	                        		1.81f, //endsizemult
 	                        		0.2f, //rampUpFraction
-	                        		0.3f, //fullBrightnessFraction
+	                        		0.69f, //fullBrightnessFraction
 	                        		MathUtils.getRandomNumberInRange(0.4f, 0.6f), //totalDuration
-	                        		new Color(60,34,30,101),
+	                        		new Color(60,34,30,111),
 	                        		true);
 	                    	
 	                    	engine.addSmoothParticle(hitLoc, target.getVelocity(),

@@ -4,7 +4,7 @@
   "displayName": "Assault",
   "goalVariant": true,
   "fluxCapacitors": 0,
-  "fluxVents": 22,
+  "fluxVents": 24,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -60,9 +60,7 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0013": "InReC_disruption",
-        "WS0020": "InReC_quark",
-        "WS0021": "InReC_quark"
+        "WS0013": "InReC_disruption"
       }
     },
     {
@@ -74,14 +72,16 @@
         "WS0017": "InReC_burst",
         "WS0018": "InReC_flash_lt",
         "WS0019": "InReC_burst",
-        "WS0022": "InReC_flash_lt",
+        "WS0020": "InReC_burst",
+        "WS0021": "InReC_burst",
+        "WS0022": "InReC_burst",
         "WS0023": "InReC_burst"
       }
     }
   ],
   "modules": [],
   "wings": [
-    "InReC_grinder_drone_wing",
+    "InReC_empacho_support_wing",
     "InReC_grinder_drone_wing",
     "InReC_grinder_drone_wing"
   ]

@@ -85,7 +85,7 @@ public class InReC_guillotineOnHitEffect implements OnHitEffectPlugin {
     				1.56f, //endSizeMult
     				0.45f, //rampUpFraction
     				0.36f, //fullBrightnessFraction
-    				MathUtils.getRandomNumberInRange(1.45f, 1.75f), //dur
+    				MathUtils.getRandomNumberInRange(1.5f, 1.9f), //dur
     				new Color(50,55,45,96));
     	}
     	
