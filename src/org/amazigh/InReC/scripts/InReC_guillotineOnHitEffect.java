@@ -59,7 +59,7 @@ public class InReC_guillotineOnHitEffect implements OnHitEffectPlugin {
         
         Vector2f fxVel = new Vector2f(); // stationary explosion, no target vel inheritance as i normally would, because the subs are stationary
 		
-        // "background" nebs + "hit flash" particles
+        // "background" nebs
     	for (int i=0; i < 6; i++) {
     		engine.addSwirlyNebulaParticle(MathUtils.getRandomPointInCircle(point, 38f),
     				MathUtils.getRandomPointInCircle(fxVel, 5f),

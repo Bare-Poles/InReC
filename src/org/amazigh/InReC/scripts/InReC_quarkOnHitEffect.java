@@ -244,8 +244,6 @@ public class InReC_quarkOnHitEffect implements OnHitEffectPlugin {
 			this.ship = ship;
 		}
 		
-		
-		
 		public void notifyHit(int hash) {
 			recentHits.add(hash, 5.1f, 5.1f); // it crashed one time when this was set to a flat 5 (matching actual lifetime) so i bumped it up to hopefully catch any issues there.
 		}

@@ -59,7 +59,8 @@ Flock MRM (Drone),InReC_flock_drn,0,,1000,2000,,120,,16,15,0,,,,HIGH_EXPLOSIVE,0
 Pesticide Launcher,InReC_pesticide_ftr,0,,1000,1000,,90,60,15,20,0,,,,FRAGMENTATION,0,,0,9.25,6,0.15,20,32,2,1,,250,440,7,120,,,"SYSTEM, DO_NOT_AIM, MISSILE_SPREAD",,,InReCo,,Saturation,Medium,Good,,,,,,,,19237
 Fungicide Micromissile Array,InReC_fungicide_array,0,,1000,1200,,70,,4,0,0,,,,KINETIC,0,,0,7.3,8,0.1,5,10,1,2,,750,300,5,50,,,"SYSTEM, DO_NOT_AIM",,,InReCo,,Anti Shield,Very Fast,Special,,,After an initial aiming stage accelerates rapidly and continues with limited guidance.,,,,,19238
 Fungicide Micromissile Array,InReC_fungicide_array_2,0,,1000,1200,,70,,4,0,0,,,,KINETIC,0,,0,6.9,12,0.1,5,10,1,2,,750,300,5,50,,,"SYSTEM, DO_NOT_AIM",,,InReCo,,Anti Shield,Very Fast,Special,,,After an initial aiming stage accelerates rapidly and continues with limited guidance.,,,,,19238.1
-Concussion Bolter,InReC_conc_bolter,0,,1000,1200,,50,,0,20,0,,,,ENERGY,100,,0.15,4.1,4,0.25,6,6,0,0,,850,,,,,,SYSTEM,,,InReCo,,Suppression,,,,,"On impact each shot Reduces the targets Speed, Maneuverability, Weapon Accuracy and Weapon Turn Rate by %s for %s.",3% | 5 Seconds,,,,19239
+Concussion Bolter,InReC_conc_bolter,0,,1000,1200,,50,,0,20,0,,,,ENERGY,100,,0.15,4.1,4,0.25,6,6,0,0,,850,,,,,,SYSTEM,,,InReCo,,Suppression,,,,,"On impact each shot Reduces the targets Speed, Maneuverability, Weapon Accuracy and Weapon Turn Rate by %s for %s.
+This effect stacks with multiple impacts.",3% | 5 Seconds,,,,19239
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Flare (Dumb),InReC_flare_dumb,,,1000,400,,20,200,0,,,,,,ENERGY,0,,0,1,1,0.1,30,30,0,0,,150,300,3.2,100,,,SYSTEM,,,InReCo,,,,,,,,,,,,19241
