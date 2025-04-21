@@ -120,10 +120,10 @@ public class InReC_slotRange extends BaseHullMod {
 	
 	public String getSModDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return "" + (int)SMOD_RANGE_BONUS;
-		if (index == 0) return "" + (int)FRIG_MAX_RANGE + 50;
-		if (index == 0) return "" + (int)DEST_MAX_RANGE + 50;
-		if (index == 0) return "" + (int)CRU_MAX_RANGE + 50;
-		if (index == 0) return "" + (int)CAP_MAX_RANGE + 50;
+		if (index == 1) return "" + (int)(FRIG_MAX_RANGE + 50);
+		if (index == 2) return "" + (int)(DEST_MAX_RANGE + 50);
+		if (index == 3) return "" + (int)(CRU_MAX_RANGE + 50);
+		if (index == 4) return "" + (int)(CAP_MAX_RANGE + 50);
 		return null;
 	}
 	

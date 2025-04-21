@@ -106,7 +106,10 @@ public class InReC_parasite extends BaseHullMod {
 		
 		Color h = Misc.getHighlightColor();
 		
-		LabelAPI label = tooltip.addPara("A set of external clamps that allow the ship to carry a set of light drones armed with Pulse Bolters.", opad);
+		LabelAPI label = tooltip.addPara("A set of external clamps that allow the ship to carry a set of Veia Drones armed with Pulse Bolters.", opad);
+		label = tooltip.addPara("Each drone has %s and %s.", pad, h, "300 Hull", "80 Armour");
+		label.setHighlight("300 Hull", "80 Armour");
+		label.setHighlightColors(h, h);
 		label = tooltip.addPara("The drones feature a solid-state flux capacitor, and will self destruct after firing %s bursts.", pad, h, "15");
 		label.setHighlight("15");
 		label.setHighlightColors(h);

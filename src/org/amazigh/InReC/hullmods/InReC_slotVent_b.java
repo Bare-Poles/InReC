@@ -138,22 +138,28 @@ public class InReC_slotVent_b extends BaseHullMod {
 		
 		Color h = Misc.getHighlightColor();
 		Color bad = Misc.getNegativeHighlightColor();
+		Color grey = Misc.getGrayColor();
 		
 		LabelAPI label = tooltip.addPara("A set of secondary flux vents that improve dissipation of soft flux.", opad);
 		
-		
-		
-		label = tooltip.addPara("The secondary vents will passively dissipate up to %s soft flux every second.", opad, h, "" + mag.get(ship.getHullSize()).intValue());
-		label.setHighlight("" + mag.get(ship.getHullSize()).intValue());
-		label.setHighlightColors(h);
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			label = tooltip.addPara("The secondary vents will passively dissipate up to %s soft flux every second.", opad, h, "" + mag.get(ship.getHullSize()).intValue());
+			label.setHighlight("" + mag.get(ship.getHullSize()).intValue());
+			label.setHighlightColors(h);
+		} else {
+			label = tooltip.addPara("The secondary vents will passively dissipate up to %s/%s/%s/%s soft flux every second.", opad, h, "" + mag.get(HullSize.FRIGATE).intValue(), "---", "---", "" + mag.get(HullSize.CAPITAL_SHIP).intValue());
+			label.setHighlight("" + mag.get(HullSize.FRIGATE).intValue(), "---", "---", "" + mag.get(HullSize.CAPITAL_SHIP).intValue());
+			label.setHighlightColors(h, grey, grey, h);
+		}
 		
 		label = tooltip.addPara("The rate of this bonus dissipation is %s increased by active venting.", pad, bad, "Not");
 		label.setHighlight("Not");
 		label.setHighlightColors(bad);
-		
+
 		label = tooltip.addPara("Active flux vent rate increased by %s.", opad, h, "" + (int)VENT_BONUS + "%");
 		label.setHighlight("" + (int)VENT_BONUS + "%");
 		label.setHighlightColors(h);
+		
 		
 	}
 	

@@ -73,7 +73,7 @@ public class InReC_slotRange_b extends BaseHullMod {
 		
 		Color h = Misc.getHighlightColor();
 		
-		LabelAPI label = tooltip.addPara("A series of regulators that allow for an increase in the range of projectile energy weaponry.", opad);
+		LabelAPI label = tooltip.addPara("A series of integrated regulators that allow for an increase in the range of projectile energy weaponry.", opad);
 		
 		label = tooltip.addPara("Increases the base range of all non-beam Energy and Hybrid weapons by %s.", opad, h, "" + (int)RANGE_BONUS);
 		label.setHighlight("" + (int)RANGE_BONUS);

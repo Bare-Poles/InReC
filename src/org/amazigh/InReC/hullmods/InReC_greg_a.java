@@ -39,9 +39,9 @@ public class InReC_greg_a extends BaseHullMod {
 		label.setHighlight("15");
 		label.setHighlightColors(h);
 		
-		label = tooltip.addPara("Deployed Lacayo drones have improved %s and %s over the standard variant.", pad, h, "Hull", "Armour");
-		label.setHighlight("Hull", "Armour");
-		label.setHighlightColors(h, h);
+		label = tooltip.addPara("Deployed Lacayo drones have their %s and %s increased to %s and %s respectively.", pad, h, "Hull", "Armour", "750", "200");
+		label.setHighlight("Hull", "Armour", "750", "200");
+		label.setHighlightColors(h, h, h, h);
 		
 		label = tooltip.addPara("May only be installed on InReCo vessels that feature a Lacayo deployment system, and only one Lacayo Variant may be installed at a time.", opad);
 		

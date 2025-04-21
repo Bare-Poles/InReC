@@ -30,11 +30,14 @@ public class InReC_greg_p extends BaseHullMod {
 		
 		Color h = Misc.getHighlightColor();
 		
-		LabelAPI label = tooltip.addPara("Replaces the Lacayo drones deployed by the ships system with several light Pulse Drones.", opad);
+		LabelAPI label = tooltip.addPara("Replaces the Lacayo drones deployed by the ships system with several Veia Drones.", opad);
 
-		label = tooltip.addPara("Rather than deploying single Lacayo drones, this ship will instead deploy pairs of light drones armed with %s.", opad, h, "Pulse Bolters");
+		label = tooltip.addPara("Rather than deploying single Lacayo drones, this ship will instead deploy pairs of Veia Drones armed with %s.", opad, h, "Pulse Bolters");
 		label.setHighlight("Pulse Bolters");
 		label.setHighlightColors(h);
+		label = tooltip.addPara("Each drone has %s and %s.", pad, h, "300 Hull", "80 Armour");
+		label.setHighlight("300 Hull", "80 Armour");
+		label.setHighlightColors(h, h);
 		label = tooltip.addPara("Drones feature a solid-state flux capacitor, and will self destruct after firing %s bursts.", pad, h, "15");
 		label.setHighlight("15");
 		label.setHighlightColors(h);

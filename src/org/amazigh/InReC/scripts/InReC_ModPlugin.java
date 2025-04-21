@@ -7,6 +7,8 @@ import com.fs.starfarer.api.campaign.CampaignPlugin;
 import com.fs.starfarer.api.combat.MissileAIPlugin;
 import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
+
 import org.amazigh.InReC.scripts.ai.InReC_defoliantMissileAI;
 import org.amazigh.InReC.scripts.ai.InReC_fungicideMissileAI;
 import org.amazigh.InReC.scripts.ai.InReC_beekeeperMissileAI;
@@ -62,5 +64,34 @@ public class InReC_ModPlugin extends BaseModPlugin {
             default:
                 return null;
         }
+    }
+    
+    @Override
+	public void onCodexDataGenerated() {
+    	CodexDataV2.makeRelated(CodexDataV2.getShipSystemEntryId("InReC_greg"), CodexDataV2.getHullmodEntryId("InReC_greg_a"));
+    	CodexDataV2.makeRelated(CodexDataV2.getShipSystemEntryId("InReC_greg"), CodexDataV2.getHullmodEntryId("InReC_greg_s"));
+    	CodexDataV2.makeRelated(CodexDataV2.getShipSystemEntryId("InReC_greg"), CodexDataV2.getHullmodEntryId("InReC_greg_p"));
+    	
+    	CodexDataV2.makeRelated(CodexDataV2.getShipSystemEntryId("InReC_greg"), CodexDataV2.getFighterEntryId("InReC_greg_wing"));
+    	CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("InReC_greg_a"), CodexDataV2.getFighterEntryId("InReC_greg_a_wing"));
+    	CodexDataV2.makeRelated(CodexDataV2.getShipSystemEntryId("InReC_greg"), CodexDataV2.getFighterEntryId("InReC_greg_a_wing"));
+    	CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("InReC_greg_s"), CodexDataV2.getFighterEntryId("InReC_greg_s_wing"));
+    	CodexDataV2.makeRelated(CodexDataV2.getShipSystemEntryId("InReC_greg"), CodexDataV2.getFighterEntryId("InReC_greg_s_wing"));
+    	CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("InReC_greg_p"), CodexDataV2.getFighterEntryId("InReC_pulse_drone_g_wing"));
+    	CodexDataV2.makeRelated(CodexDataV2.getShipSystemEntryId("InReC_greg"), CodexDataV2.getFighterEntryId("InReC_pulse_drone_g_wing"));
+    	
+    	CodexDataV2.makeRelated(CodexDataV2.getFighterEntryId("InReC_pulse_drone_g_wing"), CodexDataV2.getWeaponEntryId("InReC_pulse"));
+    	CodexDataV2.makeRelated(CodexDataV2.getFighterEntryId("InReC_pulse_drone_w_wing"), CodexDataV2.getWeaponEntryId("InReC_pulse"));
+    	CodexDataV2.makeRelated(CodexDataV2.getFighterEntryId("InReC_greg_a_wing"), CodexDataV2.getWeaponEntryId("InReC_fusion"));
+    	CodexDataV2.makeRelated(CodexDataV2.getFighterEntryId("InReC_greg_s_wing"), CodexDataV2.getWeaponEntryId("InReC_gluon"));
+    	
+    	CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("InReC_parasite"), CodexDataV2.getFighterEntryId("InReC_pulse_drone_g_wing"));
+    	
+    	CodexDataV2.makeRelated(CodexDataV2.getWeaponEntryId("InReC_heart-throb"), CodexDataV2.getFighterEntryId("InReC_pulse_drone_w_wing"));
+    	
+    	CodexDataV2.makeRelated(CodexDataV2.getWeaponEntryId("InReC_quark"), CodexDataV2.getWeaponEntryId("InReC_hangnail"));
+    	CodexDataV2.makeRelated(CodexDataV2.getWeaponEntryId("InReC_quark"), CodexDataV2.getWeaponEntryId("InReC_wishbone"));
+    	CodexDataV2.makeRelated(CodexDataV2.getWeaponEntryId("InReC_hangnail"), CodexDataV2.getWeaponEntryId("InReC_wishbone"));
+    	
     }
 }

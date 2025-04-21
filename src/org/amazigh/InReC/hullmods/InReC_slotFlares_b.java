@@ -163,40 +163,57 @@ public class InReC_slotFlares_b extends BaseHullMod {
 		Color h = Misc.getHighlightColor();
 		
 		int slotCount = 0;
-		for (WeaponSlotAPI weapon : ship.getHullSpec().getAllWeaponSlotsCopy()) {
-    		if (weapon.isDecorative()) {
-    			slotCount ++;
-    		}
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			for (WeaponSlotAPI weapon : ship.getHullSpec().getAllWeaponSlotsCopy()) {
+	    		if (weapon.isDecorative()) {
+	    			slotCount ++;
+	    		}
+			}
 		}
 		
 		LabelAPI label = tooltip.addPara("An automated flare launching system, will automatically fire seeker flares on detecting nearby hostile missiles.", opad);
-		
-		if (slotCount > 1) {
-			label = tooltip.addPara("This vessel has %s automated flare launchers.", opad, h, "two");
-			label.setHighlight("two");
-			label.setHighlightColors(h);
 
-			label = tooltip.addPara("On detecting a hostile missile within %s range, each flare launcher will fire %s seeker flares.", pad, h, "1000", "" + count.get(ship.getHullSize()).intValue());
-			label.setHighlight("1000", "" + count.get(ship.getHullSize()).intValue());
-			label.setHighlightColors(h, h);
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			if (slotCount > 1) {
+				label = tooltip.addPara("This vessel has %s automated flare launchers.", opad, h, "two");
+				label.setHighlight("two");
+				label.setHighlightColors(h);
 
-			label = tooltip.addPara("The flare launchers takes %s to reload after use.", pad, h, cooldown.get(ship.getHullSize()).intValue() + " seconds");
-			label.setHighlight(cooldown.get(ship.getHullSize()).intValue() + " seconds");
-			label.setHighlightColors(h);
-			
+				label = tooltip.addPara("On detecting a hostile missile within %s range, each flare launcher will fire %s seeker flares.", pad, h, "1000", "" + count.get(ship.getHullSize()).intValue());
+				label.setHighlight("1000", "" + count.get(ship.getHullSize()).intValue());
+				label.setHighlightColors(h, h);
+
+				label = tooltip.addPara("The flare launchers takes %s to reload after use.", pad, h, cooldown.get(ship.getHullSize()).intValue() + " seconds");
+				label.setHighlight(cooldown.get(ship.getHullSize()).intValue() + " seconds");
+				label.setHighlightColors(h);
+				
+			} else {
+				label = tooltip.addPara("This vessel has %s automated flare launcher.", opad, h, "one");
+				label.setHighlight("one");
+				label.setHighlightColors(h);
+				
+				label = tooltip.addPara("On detecting a hostile missile within %s range, the flare launcher will fire %s seeker flares.", pad, h, "1000", "" + count.get(ship.getHullSize()).intValue());
+				label.setHighlight("1000", "" + count.get(ship.getHullSize()).intValue());
+				label.setHighlightColors(h, h);
+
+				label = tooltip.addPara("The flare launcher takes %s to reload after use.", pad, h, cooldown.get(ship.getHullSize()).intValue() + " seconds");
+				label.setHighlight(cooldown.get(ship.getHullSize()).intValue() + " seconds");
+				label.setHighlightColors(h);
+			}
 		} else {
-			label = tooltip.addPara("This vessel has %s automated flare launcher.", opad, h, "one");
-			label.setHighlight("one");
-			label.setHighlightColors(h);
+			label = tooltip.addPara("Vessels feature %s/%s/%s/%s automated flare launchers.", opad, h, "one", "two", "two", "one");
+			label.setHighlight("one", "two", "two", "one");
+			label.setHighlightColors(h, h, h, h);
 			
-			label = tooltip.addPara("On detecting a hostile missile within %s range, the flare launcher will fire %s seeker flares.", pad, h, "1000", "" + count.get(ship.getHullSize()).intValue());
-			label.setHighlight("1000", "" + count.get(ship.getHullSize()).intValue());
-			label.setHighlightColors(h, h);
+			label = tooltip.addPara("On detecting a hostile missile within %s range, each flare launcher will fire %s/%s/%s/%s seeker flares.", pad, h, "1000", "2", "2", "3", "4");
+			label.setHighlight("1000", "2", "2", "3", "4");
+			label.setHighlightColors(h, h, h, h, h);
 
-			label = tooltip.addPara("The flare launcher takes %s to reload after use.", pad, h, cooldown.get(ship.getHullSize()).intValue() + " seconds");
-			label.setHighlight(cooldown.get(ship.getHullSize()).intValue() + " seconds");
-			label.setHighlightColors(h);
+			label = tooltip.addPara("The flare launchers take %s/%s/%s/%s seconds to reload after use.", pad, h, "15", "20", "15", "10");
+			label.setHighlight("15", "20", "15", "10");
+			label.setHighlightColors(h, h, h, h);
 		}
+		
 		
 	}
 	

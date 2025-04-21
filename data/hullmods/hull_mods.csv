@@ -1,14 +1,14 @@
 name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sModDesc,sprite
 # Built-in - hidden,,,,,,,,,,,,,,,,,,,
-InReCo Modular Slot,InReC_slot,1,,InReCo,,,,,TRUE,TRUE,999,999,999,999,org.amazigh.InReC.hullmods.InReC_slot,Hidden Hullmod that allows InReCo ships to mount their modular hullmods,Hidden Hullmod that allows InReCo ships to mount their modular hullmods,,graphics/hullmods/detach_never.png
-InReCo Greg Slot,InReC_gregSlot,1,,InReCo,,,,,TRUE,TRUE,999,999,999,999,org.amazigh.InReC.hullmods.InReC_slot,Hidden Hullmod that allows InReCo ships to swap greg drone types,Hidden Hullmod that allows InReCo ships to swap greg drone types,,graphics/hullmods/detach_always.png
+InReCo Modular Slot,InReC_slot,,,InReCo,,,,,TRUE,TRUE,999,999,999,999,org.amazigh.InReC.hullmods.InReC_slot,Hidden Hullmod that allows InReCo ships to mount their modular hullmods,Hidden Hullmod that allows InReCo ships to mount their modular hullmods,,graphics/hullmods/detach_never.png
+InReCo Greg Slot,InReC_gregSlot,,,InReCo,,,,,TRUE,TRUE,999,999,999,999,org.amazigh.InReC.hullmods.InReC_slot,Hidden Hullmod that allows InReCo ships to swap greg drone types,Hidden Hullmod that allows InReCo ships to swap greg drone types,,graphics/hullmods/detach_always.png
 Concussion Damper,InReC_concDamper,,,InReCo,,,,,TRUE,TRUE,0,0,0,0,org.amazigh.InReC.hullmods.InReC_concDamper,Concussion Damper effect hullmod,Concussion Damper effect hullmod,,graphics/hullmods/detach_never.png
 InReCo Greg Hullmod,InReC_gregHullmod,,,InReCo,,,,,TRUE,TRUE,0,0,0,0,org.amazigh.InReC.hullmods.InReC_gregHullmod,Buff to footman engine/wep health/repair,Buff to footman engine/wep health/repair,,graphics/hullmods/detach_always.png
 ,,,,,,,,,,,,,,,,,,,
 # Built-in - Visible,,,,,,,,,,,,,,,,,,,
-External Flux Vents,InReC_slotVent_b,1,,InReCo,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_slotVent_b,Soft Venting! (Built-in),Soft Venting! (Built-in),,graphics/hullmods/InReC_slotVent_b.png
-Automated Protection Unit,InReC_slotFlares_b,1,,InReCo,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_slotFlares_b,Automatic Flares! (Built-in),Automatic Flares! (Built-in),,graphics/hullmods/InReC_slotFlares.png
-Bolt Focus Regulator,InReC_slotRange_b,1,,InReCo,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_slotRange_b,Energy proj wep range! (Built-in),Energy proj wep range! (Built-in),,graphics/hullmods/InReC_slotRange.png
+External Flux Vents,InReC_slotVent_b,,,InReCo,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_slotVent_b,Soft Venting! (Built-in),Soft Venting! (Built-in),,graphics/hullmods/InReC_slotVent_b.png
+Automated Protection Unit,InReC_slotFlares_b,,,InReCo,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_slotFlares_b,Automatic Flares! (Built-in),Automatic Flares! (Built-in),,graphics/hullmods/InReC_slotFlares.png
+Integrated Bolt Focus Regulator,InReC_slotRange_b,,,InReCo,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_slotRange_b,Energy proj wep range! (Built-in),Energy proj wep range! (Built-in),,graphics/hullmods/InReC_slotRange.png
 Concussion Resonance Vanes ,InReC_concVanes,,,InReCo,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_concVanes,Concussion Pulses and boosted active vent rate,Concussion Pulses and boosted active vent rate,,graphics/hullmods/InReC_concVanes.png
 Quick Cycle Capacitors,InReC_quickCaps,,,InReCo,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_quickCaps,This vessel features special rapid charging capacitors that increase energy weapon Rate of Fire by %s and reduce the flux cost to fire energy weapons by %s.,"Plus EN Wep RoF, Minus EN wep flux cost.",,graphics/hullmods/InReC_quickCaps.png
 ,,,,,,,,,,,,,,,,,,,

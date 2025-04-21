@@ -59,7 +59,7 @@ public class InReC_slotShield extends BaseHullMod {
 	}
 	
 	public String getSModDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + (int)SHIELD_UPKEEP_BONUS;
+		if (index == 0) return "" + (int)SHIELD_UPKEEP_BONUS + "%";
 		return null;
 	}
 	

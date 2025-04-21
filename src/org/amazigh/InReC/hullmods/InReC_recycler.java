@@ -261,7 +261,7 @@ public class InReC_recycler extends BaseHullMod {
 		label.setHighlight("0%");
 		
 		
-		tooltip.addSectionHeading("Heat Generation", Alignment.MID, opad);
+		tooltip.addSectionHeading("Heat Generation", Alignment.MID, pluspad);
 		tooltip.addPara("While heat generation/decay primarily scales with current flux level there are other modifiers, a full list is as follows:", pad);
 		
 		float col1 = 150;
@@ -280,7 +280,7 @@ public class InReC_recycler extends BaseHullMod {
 		tooltip.addRow(Alignment.MID, h, "Overloaded/Venting",
 				Alignment.MID, bad, "-" + (int)VENT_DECAY + "%");
 		tooltip.addTable("", 0, opad);
-		label = tooltip.addPara("The change in heat ovver time is a combination all currently active modifiers.", opad);
+		label = tooltip.addPara("The change in heat over time is a combination all currently active modifiers.", opad);
 		
 		
 		label = tooltip.addPara("May only be installed on InReCo vessels.", pluspad);
