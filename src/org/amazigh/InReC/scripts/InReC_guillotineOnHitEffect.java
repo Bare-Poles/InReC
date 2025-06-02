@@ -3,6 +3,7 @@ package org.amazigh.InReC.scripts;
 import java.awt.Color;
 import java.util.List;
 
+import org.amazigh.InReC.scripts.InReC_ModPlugin.INREC_RadialEmitter;
 import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
 import com.fs.starfarer.api.Global;
@@ -27,7 +28,7 @@ public class InReC_guillotineOnHitEffect implements OnHitEffectPlugin {
 	private static final Color COLOR_D_C = new Color(145,165,155,255);
 	private static final Color COLOR_D_F = new Color(201,107,30,255);
 	
-    private static final Color SPARK_COLOR = new Color(60,220,210,235);
+//    private static final Color SPARK_COLOR = new Color(60,220,210,235);
 	
 	public void onHit(final DamagingProjectileAPI projectile, CombatEntityAPI target,
 					  final Vector2f point, boolean shieldHit, ApplyDamageResultAPI damageResult, final CombatEngineAPI engine) {
@@ -91,17 +92,17 @@ public class InReC_guillotineOnHitEffect implements OnHitEffectPlugin {
     	
     	
     	// extra sparks
-    	for (int i=0; i < 169; i++) {
-        	float sparkAngle = MathUtils.getRandomNumberInRange(0f, 360f);
-        	Vector2f velocity = MathUtils.getPointOnCircumference(fxVel, MathUtils.getRandomNumberInRange(22f, 34f), sparkAngle);
-        	
-        	engine.addSmoothParticle(MathUtils.getPointOnCircumference(point, 7 + (i * 0.5f), sparkAngle),
-        			velocity,
-        			MathUtils.getRandomNumberInRange(3f, 5f),
-        			1f,
-        			MathUtils.getRandomNumberInRange(1.8f, 2.3f),
-        			SPARK_COLOR);
-        }
+    	INREC_RadialEmitter emitterSparks = new INREC_RadialEmitter(null);
+    	emitterSparks.location(point);
+    	emitterSparks.angle(0);
+    	emitterSparks.arc(360f);
+    	emitterSparks.life(1.8f, 2.3f);
+    	emitterSparks.size(3f, 5f);
+        emitterSparks.velocity(22f, 12f);
+        emitterSparks.distance(7f, 84.5f);
+        emitterSparks.color(60,220,210,235); // SPARK_COLOR
+        emitterSparks.velDistLinkage(false);
+        emitterSparks.burst(169);
 		
         engine.spawnExplosion(point, fxVel, COLOR_U, 189f, 1.1f);
         
@@ -194,18 +195,17 @@ public class InReC_guillotineOnHitEffect implements OnHitEffectPlugin {
                 				true);
                 	}
                     
-                    for (int i=0; i < 41; i++) {
-                    	float sparkAngle = MathUtils.getRandomNumberInRange(0f, 360f);
-                    	Vector2f velocity = MathUtils.getPointOnCircumference(blastVel, MathUtils.getRandomNumberInRange(14f, 24f), sparkAngle);
-                    	
-                    	engine.addSmoothParticle(MathUtils.getPointOnCircumference(blastLoc, 7 + (i * 0.5f), sparkAngle),
-                    			velocity,
-                    			MathUtils.getRandomNumberInRange(3f, 5f),
-                    			1f,
-                    			MathUtils.getRandomNumberInRange(0.9f, 1.15f),
-                    			new Color(251,130,30,255));
-                    }
-                    
+                	INREC_RadialEmitter emitterSpark = new INREC_RadialEmitter(null);
+                	emitterSpark.location(blastLoc);
+                	emitterSpark.angle(0);
+                	emitterSpark.arc(360f);
+                	emitterSpark.life(0.9f, 1.15f);
+                	emitterSpark.size(3f, 5f);
+                    emitterSpark.velocity(14f, 10f);
+                    emitterSpark.distance(7f, 20.5f);
+                    emitterSpark.color(251,130,30,255);
+                    emitterSpark.velDistLinkage(false);
+                    emitterSpark.burst(41);
                 }
                 
                 if (blastsFired >= blastCount) engine.removePlugin(this);

@@ -101,15 +101,15 @@ public class InReC_disruptionOnHitEffect implements OnHitEffectPlugin {
 		                        hitLoc = VectorUtils.rotate(new Vector2f(shipRefHitLoc), target.getFacing() - initialFacing);
 		                        hitLoc = new Vector2f(hitLoc.x + target.getLocation().x, hitLoc.y + target.getLocation().y);
 
-		                        for (int i=0; i < 3; i++) {
+		                        for (int i=0; i < 2; i++) {
 			                    	Vector2f sparkVel = MathUtils.getRandomPointInCircle(target.getVelocity(), MathUtils.getRandomNumberInRange(15f, 55f));
 			                    	Vector2f sparkLoc = MathUtils.getRandomPointInCircle(hitLoc, 5f);
 			                    	engine.addSmoothParticle(sparkLoc,
 			                    			sparkVel,
-			                    			MathUtils.getRandomNumberInRange(2f, 5f),
+			                    			MathUtils.getRandomNumberInRange(2f, 7f),
 			                    			1f,
 			                    			MathUtils.getRandomNumberInRange(0.3f, 0.45f),
-			                    			new Color(90,200,225,240));
+			                    			new Color(90,200,225,245));
 		                        }
 		                    }
 		                    

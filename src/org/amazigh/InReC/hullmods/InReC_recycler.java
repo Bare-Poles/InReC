@@ -245,7 +245,8 @@ public class InReC_recycler extends BaseHullMod {
 		label.setHighlight("over 50%");
 		label.setHighlightColors(h);
 		label = tooltip.addPara("The higher the ships flux level, the faster the recycler generates heat.", pad);
-		label = tooltip.addPara("Once heat reaches %s the recycler activates granting the following buffs:", pad, h, "100%");
+		
+		label = tooltip.addPara("Once heat reaches %s the recycler activates granting the following buffs:", opad, h, "100%");
 		label.setHighlight("100%");
 		label.setHighlightColors(h);
 		label = tooltip.addPara("The amount of damage taken by shields is reduced by %s.", pad, h, "" + (int)SHIELD_BONUS +"%");

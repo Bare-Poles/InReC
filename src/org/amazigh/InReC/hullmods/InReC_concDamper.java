@@ -2,6 +2,7 @@ package org.amazigh.InReC.hullmods;
 
 import java.awt.Color;
 
+import org.amazigh.InReC.scripts.InReC_ModPlugin.INREC_RadialEmitter;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
@@ -45,17 +46,16 @@ public class InReC_concDamper extends BaseHullMod {
             			0.15f,
             			new Color(60,220,210,59));
             	
-            	for (int i = 0; i < 56; i++) {
-            		float angle = MathUtils.getRandomNumberInRange(0f, 360f);
-	        		Vector2f sparkPoint = MathUtils.getPointOnCircumference(ship.getLocation(), ship.getCollisionRadius() + MathUtils.getRandomNumberInRange(0f, 300f), angle);
-	        		Vector2f sparkVel = MathUtils.getPointOnCircumference(ship.getVelocity(), MathUtils.getRandomNumberInRange(14f, 28f), angle);
-        			engine.addSmoothParticle(sparkPoint,
-	        				sparkVel,
-	            			MathUtils.getRandomNumberInRange(4f, 8f),
-	            			1f,
-	            			MathUtils.getRandomNumberInRange(0.4f, 0.7f),
-	            			new Color(65,220,195,175));
-	        	}
+            	INREC_RadialEmitter emitter = new INREC_RadialEmitter(ship);
+                emitter.location(ship.getLocation());
+                emitter.angle(0f);
+                emitter.arc(360f);
+                emitter.life(0.4f, 0.7f);
+                emitter.size(4f, 8f);
+        		emitter.velocity(14f, 14f);
+        		emitter.distance(ship.getCollisionRadius(), 300f);
+        		emitter.color(65,220,195,175);
+        		emitter.burst(56);
             	
             	for (MissileAPI target_missile : AIUtils.getNearbyEnemyMissiles(ship, ship.getCollisionRadius() + 300f)) {
             		

@@ -24,5 +24,10 @@
       "name": "MagicLib",
       "version": { "major": '1', "minor": '5', "patch": '1' }
   },
+  {
+      "id": "particleengine",
+      "name": "Particle Engine",
+      "version": { "major": '0', "minor": '9', "patch": '1' }
+  },
  ],
 }

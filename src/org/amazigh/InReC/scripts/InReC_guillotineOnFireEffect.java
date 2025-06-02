@@ -2,10 +2,12 @@ package org.amazigh.InReC.scripts;
 
 import java.awt.Color;
 
+import org.amazigh.InReC.scripts.InReC_ModPlugin.INREC_RadialEmitter;
 import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.combat.CombatEngineAPI;
+import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.OnFireEffectPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
@@ -14,7 +16,7 @@ import com.fs.starfarer.api.combat.WeaponAPI;
 public class InReC_guillotineOnFireEffect implements OnFireEffectPlugin {
     
     private static final Color FLASH_COLOR = new Color(251,130,30,215);
-    private static final Color SPARK_COLOR = new Color(60,220,210,235);
+//    private static final Color SPARK_COLOR = new Color(60,220,210,235);
     
     public void onFire(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine) {
 
@@ -57,47 +59,51 @@ public class InReC_guillotineOnFireEffect implements OnFireEffectPlugin {
                 		MathUtils.getRandomNumberInRange(2.3f, 2.8f), //totalDuration
                 		new Color(50,55,45,111 - i),
                 		true);
-                
-                for (int j=0; j < 4; j++) {
-
-        			float angle2 = projectile.getFacing() + MathUtils.getRandomNumberInRange(-12f, 12f);
-                    Vector2f sparkVel = MathUtils.getPointOnCircumference(ship.getVelocity(), MathUtils.getRandomNumberInRange(5f, 69f), angle2);
-                    Vector2f sparkLoc = MathUtils.getPointOnCircumference(proj_location, i * 3f, angle2);
-                    
-                    engine.addSmoothParticle(sparkLoc,
-                    		sparkVel,
-            				MathUtils.getRandomNumberInRange(3f, 8f), //size
-            				1f, //brightness
-            				MathUtils.getRandomNumberInRange(1.1f, 1.4f), //duration
-            				FLASH_COLOR);
-                	}
         	}
             
+            INREC_RadialEmitter emitterCore = new INREC_RadialEmitter((CombatEntityAPI) ship);
+            emitterCore.location(proj_location);
+            emitterCore.angle(angle -12f);
+            emitterCore.arc(24f);
+            emitterCore.life(1.1f, 1.4f);
+            emitterCore.size(3f, 8f);
+    		emitterCore.velocity(5f, 64f);
+    		emitterCore.distance(3f, 45f);
+    		emitterCore.color(251,130,30,215); // FLASH_COLOR
+    		emitterCore.velDistLinkage(false);
+    		emitterCore.burst(60);
+    		
+            
             // "special" sparks
-            for (int i=0; i < 47; i++) {
-            	float sparkAngle1 = angle + MathUtils.getRandomNumberInRange(40f, 55f);
-            	float sparkAngle2 = angle - MathUtils.getRandomNumberInRange(40f, 55f);
-            	
-            	Vector2f velocity1 = MathUtils.getPointOnCircumference(ship_velocity, (55f - i) + MathUtils.getRandomNumberInRange(0f, 16f), sparkAngle1);
-            	Vector2f velocity2 = MathUtils.getPointOnCircumference(ship_velocity, (55f - i) + MathUtils.getRandomNumberInRange(0f, 16f), sparkAngle2);
-            	
-            	Vector2f spawnLocation = MathUtils.getPointOnCircumference(proj_location, i * 2f, angle);
-            	Vector2f spawnLocation1 = MathUtils.getRandomPointInCircle(spawnLocation, MathUtils.getRandomNumberInRange(0f, 5f));
-            	Vector2f spawnLocation2 = MathUtils.getRandomPointInCircle(spawnLocation, MathUtils.getRandomNumberInRange(0f, 5f));
-            	
-            	engine.addSmoothParticle(spawnLocation1,
-            			velocity1,
-            			MathUtils.getRandomNumberInRange(2f, 3f),
-            			1f - (i * 0.01f),
-            			MathUtils.getRandomNumberInRange(1.1f, 1.6f) + (i * 0.01f),
-            			SPARK_COLOR);
-            	engine.addSmoothParticle(spawnLocation2,
-            			velocity2,
-            			MathUtils.getRandomNumberInRange(2f, 3f),
-            			1f - (i * 0.01f),
-            			MathUtils.getRandomNumberInRange(1.1f, 1.6f) + (i * 0.01f),
-            			SPARK_COLOR);
-            }
+    		
+            INREC_RadialEmitter emitterSpc1 = new INREC_RadialEmitter((CombatEntityAPI) ship);
+            emitterSpc1.location(proj_location);
+            emitterSpc1.angle(angle);
+            emitterSpc1.arc(0f);
+            emitterSpc1.life(1.01f, 1.93f);
+            emitterSpc1.size(2f, 3f);
+            emitterSpc1.velocity(70f, -46f);
+            emitterSpc1.distance(2f, 94f);
+    		emitterSpc1.color(60,220,210,205); // SPARK_COLOR
+    		emitterSpc1.coreDispersion(5f);
+    		emitterSpc1.emissionOffset(40f, 15f);
+    		emitterSpc1.lifeLinkage(true);
+    		emitterSpc1.burst(47);
+    		
+    		INREC_RadialEmitter emitterSpc2 = new INREC_RadialEmitter((CombatEntityAPI) ship);
+            emitterSpc2.location(proj_location);
+            emitterSpc2.angle(angle);
+            emitterSpc2.arc(0f);
+            emitterSpc2.life(1.01f, 1.93f);
+            emitterSpc2.size(2f, 3f);
+            emitterSpc2.velocity(70f, -46f);
+            emitterSpc2.distance(2f, 94f);
+    		emitterSpc2.color(60,220,210,205); // SPARK_COLOR
+    		emitterSpc2.coreDispersion(5f);
+    		emitterSpc2.emissionOffset(-55f, 15f);
+    		emitterSpc2.lifeLinkage(true);
+    		emitterSpc2.burst(47);
+            
             
     }
   }

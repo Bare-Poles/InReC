@@ -3,6 +3,7 @@ package org.amazigh.InReC.scripts;
 import java.awt.Color;
 import java.util.List;
 
+import org.amazigh.InReC.scripts.InReC_ModPlugin.INREC_RadialEmitter;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.util.vector.Vector2f;
@@ -88,17 +89,16 @@ public class InReC_quarkOnHitEffect implements OnHitEffectPlugin {
 		                    	
 		                    	engine.spawnExplosion(hitLoc, target.getVelocity(), new Color(207,171,60,225), 13f, 0.3f);
 		                    	
-		                    	for (int i=0; i < 30; i++) {
-		                    		float angle = (i * 12f) + MathUtils.getRandomNumberInRange(0f, 10f);
-		                    		Vector2f sparkVel = MathUtils.getPointOnCircumference(target.getVelocity(), MathUtils.getRandomNumberInRange(10f, 57f), angle);
-		                    		
-			                    	engine.addSmoothParticle(MathUtils.getRandomPointInCircle(hitLoc, 2f),
-			                        		sparkVel,
-			                				MathUtils.getRandomNumberInRange(3f, 6f), //size
-			                				1f, //brightness
-			                				MathUtils.getRandomNumberInRange(0.35f, 0.55f), //duration
-			                				new Color(229,108,66,222));
-		                    	}
+		                    	INREC_RadialEmitter emitter = new INREC_RadialEmitter((CombatEntityAPI) target);
+		                        emitter.location(hitLoc);
+		                        emitter.angle(0f);
+		                        emitter.arc(360f);
+		                        emitter.life(0.35f, 0.55f);
+		                        emitter.size(3f, 6f);
+		                		emitter.velocity(10f, 47f);
+		                		emitter.distance(0f, 2f);
+		                		emitter.color(229,108,66,222);
+		                		emitter.burst(30);
 		                    	
 		                    	for (int i=0; i < 2; i++) {
 			                    	engine.addNebulaParticle(hitLoc, target.getVelocity(),
@@ -187,18 +187,17 @@ public class InReC_quarkOnHitEffect implements OnHitEffectPlugin {
 	                    	engine.spawnExplosion(hitLoc, target.getVelocity(), new Color(207,171,60,225), 13f + (0.5f * fxScale), 0.3f);
 	                    	engine.addHitParticle(hitLoc, target.getVelocity(), 34f + fxScale, 1f, 0.1f, new Color(207,134,60,225));
 	                    	
-	                    	for (int i=0; i < 36; i++) {
-	                    		float angle = (i * 10f) + MathUtils.getRandomNumberInRange(0f, 8f);
-	                    		Vector2f sparkVel = MathUtils.getPointOnCircumference(target.getVelocity(), MathUtils.getRandomNumberInRange(10f, 57f), angle);
-	                    		
-		                    	engine.addSmoothParticle(MathUtils.getPointOnCircumference(hitLoc, MathUtils.getRandomNumberInRange(2f, 7f), angle),
-		                        		sparkVel,
-		                				MathUtils.getRandomNumberInRange(3f, 6f), //size
-		                				1f, //brightness
-		                				MathUtils.getRandomNumberInRange(0.35f, 0.55f), //duration
-		                				new Color(232,101,66,222));
-	                    	}
-	                    	
+	                    	INREC_RadialEmitter emitter = new INREC_RadialEmitter((CombatEntityAPI) target);
+	                        emitter.location(hitLoc);
+	                        emitter.angle(0f);
+	                        emitter.arc(360f);
+	                        emitter.life(0.35f, 0.55f);
+	                        emitter.size(3f, 6f);
+	                		emitter.velocity(10f, 47f);
+	                		emitter.distance(2f, 5f);
+	                		emitter.color(232,101,66,222);
+	                		emitter.burst(36);
+	                		
 	                    	for (int i=0; i < 2; i++) {
 		                    	engine.addNebulaParticle(hitLoc, target.getVelocity(),
 		                        		MathUtils.getRandomNumberInRange(16f, 21f) + fxScale,

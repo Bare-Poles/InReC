@@ -2,6 +2,7 @@ package org.amazigh.InReC.shipsystems.scripts;
 
 import java.awt.Color;
 
+import org.amazigh.InReC.scripts.InReC_ModPlugin.INREC_RadialEmitter;
 import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
 
@@ -106,19 +107,29 @@ public class InReC_gregStats extends BaseShipSystemScript {
                 			new Color(250,205,80,255));
             		
         			for (int i=0; i < 10; i++) {
-                        Vector2f smokeVel = MathUtils.getRandomPointOnCircumference(ship.getVelocity(), MathUtils.getRandomNumberInRange(4f, 60f));
-        	            float randomSize2 = MathUtils.getRandomNumberInRange(20f, 25f);
-        	            engine.addSmokeParticle(MathUtils.getRandomPointInCircle(posZero, 30f), smokeVel, randomSize2, 0.9f, MathUtils.getRandomNumberInRange(0.5f, 1.0f), new Color(110,110,100,180));
-        	            
-        	            for (int j=0; j < 3; j++) {
-        	            	engine.addSmoothParticle(MathUtils.getRandomPointInCircle(posZero, 15f), //position
-        	            			MathUtils.getRandomPointOnCircumference(ship.getVelocity(), MathUtils.getRandomNumberInRange(40f, 120f)), //velocity
-        	            			MathUtils.getRandomNumberInRange(4f, 9f), //size
-        	            			MathUtils.getRandomNumberInRange(0.5f, 0.7f), //brightness
-        	            			MathUtils.getRandomNumberInRange(0.4f, 0.6f), //duration
-        	            			new Color(255,195,90,255));
-        	            }
+        				Vector2f smokeVel = MathUtils.getRandomPointInCone(ship.getVelocity(), 55f,  weapon.computeMidArcAngle(ship) - 30f,  weapon.computeMidArcAngle(ship) + 30f);
+        				float randomSize2 = MathUtils.getRandomNumberInRange(20f, 25f);
+        				
+        	            engine.addSmokeParticle(MathUtils.getRandomPointInCircle(posZero, 29f),
+        	            		smokeVel,
+        	            		randomSize2,
+        	            		0.9f,
+        	            		MathUtils.getRandomNumberInRange(0.5f, 1.0f),
+        	            		new Color(110,110,100,180));
             		}
+        			
+        			INREC_RadialEmitter emitter = new INREC_RadialEmitter(ship);
+                    emitter.location(posZero);
+                    emitter.angle(weapon.computeMidArcAngle(ship) - 45f);
+                    emitter.arc(90f);
+                    emitter.life(0.38f, 0.53f);
+                    emitter.size(4f, 9f);
+            		emitter.velocity(20f, 50f);
+            		emitter.distance(0f, 12f);
+            		emitter.color(255,195,90,159); // 255,195,90,255
+            		emitter.coreDispersion(15f);
+            		emitter.burst(25);
+            		
                 }
     		}
     		

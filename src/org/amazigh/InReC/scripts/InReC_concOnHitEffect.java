@@ -3,7 +3,7 @@ package org.amazigh.InReC.scripts;
 import java.awt.Color;
 import java.util.List;
 
-import org.lazywizard.lazylib.MathUtils;
+import org.amazigh.InReC.scripts.InReC_ModPlugin.INREC_RadialEmitter;
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.combat.CollisionClass;
@@ -42,18 +42,17 @@ public class InReC_concOnHitEffect implements OnHitEffectPlugin {
     			0.25f,
     			new Color(60,210,220,99));
 		
-		for (int i = 0; i < 30; i++) {
-    		float angle = MathUtils.getRandomNumberInRange(0f, 360f);
-    		Vector2f sparkPoint = MathUtils.getPointOnCircumference(point, MathUtils.getRandomNumberInRange(0f, 200f), angle);
-    		Vector2f sparkVel = MathUtils.getPointOnCircumference(fxVel, MathUtils.getRandomNumberInRange(12f, 24f), angle);
-			engine.addSmoothParticle(sparkPoint,
-    				sparkVel,
-        			MathUtils.getRandomNumberInRange(4f, 8f),
-        			1f,
-        			MathUtils.getRandomNumberInRange(0.4f, 0.69f),
-        			new Color(65,220,195,175));
-    	}
-    	
+		INREC_RadialEmitter emitter = new INREC_RadialEmitter((CombatEntityAPI) target);
+		emitter.location(point);
+		emitter.angle(0f);
+		emitter.arc(360f);
+		emitter.life(0.4f, 0.69f);
+		emitter.size(4f, 8f);
+		emitter.velocity(12f, 12f);
+		emitter.distance(0f, 200f);
+		emitter.color(65,220,195,175);
+		emitter.burst(30);
+		
 		DamagingExplosionSpec blast = new DamagingExplosionSpec(0.1f,
                 200f,
                 160f,
@@ -107,21 +106,19 @@ public class InReC_concOnHitEffect implements OnHitEffectPlugin {
 	                    
 	                    if (FXTimer.intervalElapsed()) {
 	                    	
-	                    	int pCount = 2 + (int) (target.getCollisionRadius() * 0.08f);
-	                    	float pAngle = 360f / pCount;
+	                    	int pCount = 2 + (int) (target.getCollisionRadius() * 0.07f); // 0.08f
 	                    	
-	                    	for (int i = 0; i < pCount; i++) {
-	                    		float angle = (i * pAngle) + MathUtils.getRandomNumberInRange(0f, pAngle);
-	                    		Vector2f sparkPoint = MathUtils.getPointOnCircumference(target.getLocation(),target.getCollisionRadius() * MathUtils.getRandomNumberInRange(0.75f, 1f), angle);
-	                    		Vector2f sparkVel = MathUtils.getPointOnCircumference(target.getVelocity(), MathUtils.getRandomNumberInRange(-5f, -13f), angle);
-	                			engine.addSmoothParticle(sparkPoint,
-	                    				sparkVel,
-	                        			MathUtils.getRandomNumberInRange(3f, 7f),
-	                        			1f,
-	                        			MathUtils.getRandomNumberInRange(0.2f, 0.4f),
-	                        			new Color(65,220,195,125));
-	                    	}
-	                        
+	                    	INREC_RadialEmitter emitter = new INREC_RadialEmitter((CombatEntityAPI) target);
+	                		emitter.location(target.getLocation());
+	                		emitter.angle(0f);
+	                		emitter.arc(360f);
+	                		emitter.life(0.2f, 0.4f);
+	                		emitter.size(3f, 7f);
+	                		emitter.velocity(-5f, -9f);
+	                		emitter.distance(target.getCollisionRadius() * 0.65f, target.getCollisionRadius() * 0.35f);
+	                		emitter.color(65,220,195,125);
+	                		emitter.burst(pCount);
+	                    	
 	                        lifeTimer ++;
 	                    }
 	                    

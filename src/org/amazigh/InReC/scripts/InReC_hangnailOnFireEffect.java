@@ -2,10 +2,12 @@ package org.amazigh.InReC.scripts;
 
 import java.awt.Color;
 
+import org.amazigh.InReC.scripts.InReC_ModPlugin.INREC_RadialEmitter;
 import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.combat.CombatEngineAPI;
+import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.OnFireEffectPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
@@ -14,7 +16,7 @@ import com.fs.starfarer.api.combat.WeaponAPI;
 public class InReC_hangnailOnFireEffect implements OnFireEffectPlugin {
     
     private static final Color FLASH_COLOR = new Color(207,171,60,225);
-    private static final Color SPARK_COLOR = new Color(229,108,66,222);
+//    private static final Color SPARK_COLOR = new Color(229,108,66,222);
     
     public void onFire(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine) {
 
@@ -43,21 +45,20 @@ public class InReC_hangnailOnFireEffect implements OnFireEffectPlugin {
                 		new Color(56,46,41,alpha),
                 		true);
                 
-                for (int j=0; j < 3; j++) {
-                	
-        			float angle2 = proj_facing + MathUtils.getRandomNumberInRange(-21f, 21f);
-        			Vector2f sparkVel = MathUtils.getPointOnCircumference(ship.getVelocity(), MathUtils.getRandomNumberInRange(10f, 90f), angle2);
-        			
-        			Vector2f sparkPoint = MathUtils.getPointOnCircumference(proj_location, i*j, proj_facing);
-        			
-                    engine.addSmoothParticle(MathUtils.getRandomPointInCircle(sparkPoint, 2f),
-                    		sparkVel,
-            				MathUtils.getRandomNumberInRange(3f, 6f), //size
-            				1f, //brightness
-            				MathUtils.getRandomNumberInRange(0.35f, 0.55f), //duration
-            				SPARK_COLOR);
-                	}
         	}
+        	
+        	INREC_RadialEmitter emitter = new INREC_RadialEmitter((CombatEntityAPI) ship);
+            emitter.location(proj_location);
+            emitter.angle(proj_facing);
+            emitter.arc(0f);
+            emitter.life(0.35f, 0.55f);
+            emitter.size(3f, 6f);
+    		emitter.velocity(10f, 80f);
+    		emitter.distance(3f, 36f);
+    		emitter.color(229,108,66,222); // SPARK_COLOR
+    		emitter.velDistLinkage(false);
+    		emitter.emissionOffset(-21, 42);
+    		emitter.burst(36);
         	
     }
   }

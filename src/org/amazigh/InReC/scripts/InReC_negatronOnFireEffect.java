@@ -2,10 +2,12 @@ package org.amazigh.InReC.scripts;
 
 import java.awt.Color;
 
+import org.amazigh.InReC.scripts.InReC_ModPlugin.INREC_RadialEmitter;
 import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.combat.CombatEngineAPI;
+import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.OnFireEffectPlugin;
 import com.fs.starfarer.api.combat.WeaponAPI;
@@ -21,19 +23,18 @@ public class InReC_negatronOnFireEffect implements OnFireEffectPlugin {
             Vector2f proj_location = projectile.getLocation();
             engine.addHitParticle(proj_location, ship_velocity, 45f, 1f, 0.1f, FLASH_COLOR.darker());
             
-            for (int i=0; i < 24; i++) {
-            	Vector2f velocity = MathUtils.getPointOnCircumference(ship_velocity, (i * 3f) + MathUtils.getRandomNumberInRange(0f, 3f), MathUtils.getRandomNumberInRange(angle - 3f, angle + 3f));
-            	
-            	Vector2f spawnLocation = MathUtils.getPointOnCircumference(proj_location, (i+1) * 0.4f, angle);
-            	spawnLocation = MathUtils.getRandomPointInCircle(spawnLocation, 4f);
-            	
-            	engine.addSmoothParticle(spawnLocation,
-            			velocity,
-            			MathUtils.getRandomNumberInRange(2f, 3f),
-            			1f,
-            			0.9f,
-            			FLASH_COLOR);
-            }
+        	INREC_RadialEmitter emitter = new INREC_RadialEmitter((CombatEntityAPI) weapon.getShip());
+            emitter.location(proj_location);
+            emitter.angle(angle);
+            emitter.arc(0f);
+            emitter.life(0.9f, 0.9f);
+            emitter.size(2f, 3f);
+    		emitter.velocity(3f, 75f);
+    		emitter.distance(0.8f, 9.2f);
+    		emitter.color(60,220,210,210); // FLASH_COLOR
+    		emitter.emissionOffset(-3, 6);
+    		emitter.coreDispersion(4f);
+    		emitter.burst(24);
             
             for (int i=0; i < 2; i++) {
             	Vector2f neb_velocity = MathUtils.getPointOnCircumference(ship_velocity, 10f, angle);
