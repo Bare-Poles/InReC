@@ -25,8 +25,7 @@ public class InReC_negatronOnFireEffect implements OnFireEffectPlugin {
             
         	INREC_RadialEmitter emitter = new INREC_RadialEmitter((CombatEntityAPI) weapon.getShip());
             emitter.location(proj_location);
-            emitter.angle(angle);
-            emitter.arc(0f);
+            emitter.angle(angle, 0f);
             emitter.life(0.9f, 0.9f);
             emitter.size(2f, 3f);
     		emitter.velocity(3f, 75f);

@@ -110,21 +110,22 @@ public class InReC_ModPlugin extends BaseModPlugin {
         private final Vector2f location;
 		private float angle, arc, minLife, maxLife, minSize, maxSize, minVelocity, addVelocity, minDistance, addDistance, emissionOffsetBase, emissionOffsetAdd, coreDispersion;
         private final float[] color = new float[] {1f, 1f, 1f, 1f};
-        private boolean linkage, lifeLink;
+        private boolean linkage, lifeLink, angleSplit;
         private CombatEntityAPI anchor;
 
         public INREC_RadialEmitter(CombatEntityAPI host) {
         	anchor = host;
             location = new Vector2f();
-            angle = arc = 0f;
+            angle = 0f;
+            arc = 360f; //these default to giving omnidirectional emission, as that's my main use-case for this Emitter
             minLife = maxLife = 0.5f;
             minSize = 20f;
             maxSize = 30f;
             minVelocity = addVelocity = 1f;
-            minDistance = addDistance = 1f;
+            minDistance = addDistance = 0f;
             emissionOffsetBase = emissionOffsetAdd = 0f;
             linkage = true;
-            lifeLink = false;
+            lifeLink = angleSplit = false;
             coreDispersion = 0;
         }
 
@@ -145,18 +146,10 @@ public class InReC_ModPlugin extends BaseModPlugin {
 
         /**
          * @param angle
-         * @return Starting angle
+         * @return Starting angle an The arc in which to emit particles (defaults have it emit in all directions)
          */
-        public INREC_RadialEmitter angle(float angle) {
+        public INREC_RadialEmitter angle(float angle, float arc) {
             this.angle = angle;
-            return this;
-        }
-
-        /**
-         * @param arc
-         * @return The arc in which to emit particles (360 for  in all directions)
-         */
-        public INREC_RadialEmitter arc(float arc) {
             this.arc = arc;
             return this;
         }
@@ -219,13 +212,21 @@ public class InReC_ModPlugin extends BaseModPlugin {
         
         /**
          * @param lifeLink
-         * @return If lifetime should be linked to vel/dist scaling
+         * @return If lifetime should be linked to vel/dist scaling (defaults to false)
+         */
+        public INREC_RadialEmitter angleSplit(boolean angleSplit) {
+            this.angleSplit = angleSplit;
+            return this;
+        }
+        
+        /**
+         * @param angleSplit
+         * @return If angle of dist/vel should be generated seperate from each other (defaults to false)
          */
         public INREC_RadialEmitter lifeLinkage(boolean lifeLinkage) {
             this.lifeLink = lifeLinkage;
             return this;
         }
-        
         
         
         @Override
@@ -252,6 +253,10 @@ public class InReC_ModPlugin extends BaseModPlugin {
             float theta = angle + MathUtils.getRandomNumberInRange(0, arc);
             Vector2f vel = Misc.getUnitVectorAtDegreeAngle(theta + (emissionOffsetBase + MathUtils.getRandomNumberInRange(0, emissionOffsetAdd)));
             vel.scale(minVelocity + (rand * addVelocity));
+
+            if (angleSplit) {
+            	theta = angle + MathUtils.getRandomNumberInRange(0, arc);
+            }
             
             Vector2f pt = new Vector2f(0,0);
             

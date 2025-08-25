@@ -10,6 +10,7 @@ import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
+import com.fs.starfarer.api.combat.EmpArcEntityAPI;
 import com.fs.starfarer.api.combat.EveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.OnHitEffectPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
@@ -50,8 +51,8 @@ public class InReC_disruptionOnHitEffect implements OnHitEffectPlugin {
 		                float arcDamage = projectile.getDamageAmount() * 0.2f;
 		                float arcEmp = projectile.getEmpAmount() * 0.5f;
 		                
-		                final Vector2f shipRefHitLoc = new Vector2f(point.x - target.getLocation().x, point.y - target.getLocation().y);
-		                final IntervalUtil arcTimer = new IntervalUtil(0.2f, 0.3f);
+		                Vector2f shipRefHitLoc = new Vector2f(point.x - target.getLocation().x, point.y - target.getLocation().y);
+		                final IntervalUtil arcTimer = new IntervalUtil(0.21f, 0.36f);
 		                final IntervalUtil FXTimer1 = new IntervalUtil(0.05f, 0.1f);
 		                
 		                @Override
@@ -72,7 +73,7 @@ public class InReC_disruptionOnHitEffect implements OnHitEffectPlugin {
 		                        hitLoc = new Vector2f(hitLoc.x + target.getLocation().x, hitLoc.y + target.getLocation().y);
 		                    	
 		                    	// we arc!
-		                    	engine.spawnEmpArcPierceShields(projectile.getSource(), hitLoc, target, target,
+		                        EmpArcEntityAPI arc = engine.spawnEmpArcPierceShields(projectile.getSource(), hitLoc, target, target,
 		        						DamageType.ENERGY,
 		        						arcDamage, // damage
 		        						arcEmp, // emp
@@ -81,7 +82,11 @@ public class InReC_disruptionOnHitEffect implements OnHitEffectPlugin {
 		        						22f, // thickness
 		        						new Color(25,110,146,255),
 		        	    				new Color(255,255,255,255));
-		                    	
+		                        
+		                        shipRefHitLoc = new Vector2f(arc.getTargetLocation().x - target.getLocation().x, arc.getTargetLocation().y - target.getLocation().y);
+		                        	// *chain* arcs :)))
+		                        
+		                        
 		                    	Vector2f nebVel = MathUtils.getRandomPointInCircle(target.getVelocity(), MathUtils.getRandomNumberInRange(2f, 10f));
 		                		engine.addSwirlyNebulaParticle(hitLoc,
 		                				nebVel,

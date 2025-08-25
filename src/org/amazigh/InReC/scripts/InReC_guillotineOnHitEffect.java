@@ -94,8 +94,6 @@ public class InReC_guillotineOnHitEffect implements OnHitEffectPlugin {
     	// extra sparks
     	INREC_RadialEmitter emitterSparks = new INREC_RadialEmitter(null);
     	emitterSparks.location(point);
-    	emitterSparks.angle(0);
-    	emitterSparks.arc(360f);
     	emitterSparks.life(1.8f, 2.3f);
     	emitterSparks.size(3f, 5f);
         emitterSparks.velocity(22f, 12f);
@@ -197,8 +195,6 @@ public class InReC_guillotineOnHitEffect implements OnHitEffectPlugin {
                     
                 	INREC_RadialEmitter emitterSpark = new INREC_RadialEmitter(null);
                 	emitterSpark.location(blastLoc);
-                	emitterSpark.angle(0);
-                	emitterSpark.arc(360f);
                 	emitterSpark.life(0.9f, 1.15f);
                 	emitterSpark.size(3f, 5f);
                     emitterSpark.velocity(14f, 10f);

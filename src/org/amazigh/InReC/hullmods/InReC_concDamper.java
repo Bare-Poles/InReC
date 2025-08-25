@@ -48,8 +48,6 @@ public class InReC_concDamper extends BaseHullMod {
             	
             	INREC_RadialEmitter emitter = new INREC_RadialEmitter(ship);
                 emitter.location(ship.getLocation());
-                emitter.angle(0f);
-                emitter.arc(360f);
                 emitter.life(0.4f, 0.7f);
                 emitter.size(4f, 8f);
         		emitter.velocity(14f, 14f);

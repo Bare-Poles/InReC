@@ -44,8 +44,6 @@ public class InReC_concOnHitEffect implements OnHitEffectPlugin {
 		
 		INREC_RadialEmitter emitter = new INREC_RadialEmitter((CombatEntityAPI) target);
 		emitter.location(point);
-		emitter.angle(0f);
-		emitter.arc(360f);
 		emitter.life(0.4f, 0.69f);
 		emitter.size(4f, 8f);
 		emitter.velocity(12f, 12f);
@@ -106,18 +104,26 @@ public class InReC_concOnHitEffect implements OnHitEffectPlugin {
 	                    
 	                    if (FXTimer.intervalElapsed()) {
 	                    	
-	                    	int pCount = 2 + (int) (target.getCollisionRadius() * 0.07f); // 0.08f
+	                    	int pCount1 = 1 + (int) (target.getCollisionRadius() * 0.04f);
+	                    	int pCount2 = 1 + (int) (target.getCollisionRadius() * 0.03f);
 	                    	
-	                    	INREC_RadialEmitter emitter = new INREC_RadialEmitter((CombatEntityAPI) target);
-	                		emitter.location(target.getLocation());
-	                		emitter.angle(0f);
-	                		emitter.arc(360f);
-	                		emitter.life(0.2f, 0.4f);
-	                		emitter.size(3f, 7f);
-	                		emitter.velocity(-5f, -9f);
-	                		emitter.distance(target.getCollisionRadius() * 0.65f, target.getCollisionRadius() * 0.35f);
-	                		emitter.color(65,220,195,125);
-	                		emitter.burst(pCount);
+	                    	INREC_RadialEmitter emitter1 = new INREC_RadialEmitter((CombatEntityAPI) target);
+	                		emitter1.location(target.getLocation());
+	                		emitter1.life(0.2f, 0.4f);
+	                		emitter1.size(3f, 7f);
+	                		emitter1.velocity(-5f, -9f);
+	                		emitter1.distance(target.getCollisionRadius() * 0.65f, target.getCollisionRadius() * 0.35f);
+	                		emitter1.color(65,220,195,125);
+	                		emitter1.burst(pCount1);
+	                		
+	                		INREC_RadialEmitter emitter2 = new INREC_RadialEmitter((CombatEntityAPI) target);
+	                		emitter2.location(target.getLocation());
+	                		emitter2.life(0.2f, 0.38f);
+	                		emitter2.size(3f, 7f);
+	                		emitter2.velocity(-5f, -9f);
+	                		emitter2.distance(target.getCollisionRadius() * 0.55f, target.getCollisionRadius() * 0.5f);
+	                		emitter2.color(65,220,195,120);
+	                		emitter2.burst(pCount2);
 	                    	
 	                        lifeTimer ++;
 	                    }

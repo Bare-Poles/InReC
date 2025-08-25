@@ -24,8 +24,7 @@ public class InReC_fusorOnFireEffect implements OnFireEffectPlugin {
             
             INREC_RadialEmitter emitter = new INREC_RadialEmitter((CombatEntityAPI) weapon.getShip());
     		emitter.location(proj_location);
-    		emitter.angle(angle -3f);
-    		emitter.arc(6f);
+    		emitter.angle(angle -3f, 6f);
     		emitter.life(0.45f, 0.6f);
     		emitter.size(2f, 3f);
     		emitter.velocity(4f, 44f);

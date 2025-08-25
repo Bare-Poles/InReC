@@ -49,8 +49,7 @@ public class InReC_hangnailOnFireEffect implements OnFireEffectPlugin {
         	
         	INREC_RadialEmitter emitter = new INREC_RadialEmitter((CombatEntityAPI) ship);
             emitter.location(proj_location);
-            emitter.angle(proj_facing);
-            emitter.arc(0f);
+            emitter.angle(proj_facing, 0f);
             emitter.life(0.35f, 0.55f);
             emitter.size(3f, 6f);
     		emitter.velocity(10f, 80f);

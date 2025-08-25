@@ -2,6 +2,7 @@ package org.amazigh.InReC.scripts;
 
 import java.awt.Color;
 
+import org.amazigh.InReC.scripts.InReC_ModPlugin.INREC_RadialEmitter;
 import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
 
@@ -20,6 +21,17 @@ public class InReC_flashOnExplEffect implements ProximityExplosionEffect {
 		CombatEngineAPI engine = Global.getCombatEngine();
 		
 		Vector2f point = explosion.getLocation();
+		
+		INREC_RadialEmitter emitterSparks = new INREC_RadialEmitter(null);
+    	emitterSparks.location(point);
+    	emitterSparks.life(0.7f, 0.8f);
+    	emitterSparks.size(2f, 6f);
+        emitterSparks.velocity(8f, 12f);
+        emitterSparks.distance(1f, explosion.getCollisionRadius());
+        emitterSparks.color(113,217,243,145);
+        emitterSparks.velDistLinkage(false);
+        emitterSparks.burst((int) (explosion.getCollisionRadius() - 10f));
+        
 		
         for (int i = 0; i < 2; i++) {
     		engine.addSwirlyNebulaParticle(point,

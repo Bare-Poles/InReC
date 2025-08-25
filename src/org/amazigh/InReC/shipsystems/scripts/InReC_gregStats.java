@@ -120,8 +120,7 @@ public class InReC_gregStats extends BaseShipSystemScript {
         			
         			INREC_RadialEmitter emitter = new INREC_RadialEmitter(ship);
                     emitter.location(posZero);
-                    emitter.angle(weapon.computeMidArcAngle(ship) - 45f);
-                    emitter.arc(90f);
+                    emitter.angle(weapon.computeMidArcAngle(ship) - 45f, 90f);
                     emitter.life(0.38f, 0.53f);
                     emitter.size(4f, 9f);
             		emitter.velocity(20f, 50f);

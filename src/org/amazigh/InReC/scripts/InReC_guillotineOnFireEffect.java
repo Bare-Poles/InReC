@@ -26,7 +26,7 @@ public class InReC_guillotineOnFireEffect implements OnFireEffectPlugin {
             float angle = projectile.getFacing();
             engine.addPlugin(new InReC_guillotineTrailScript(projectile));
             
-            engine.spawnExplosion(proj_location, ship_velocity, FLASH_COLOR, 69f, 0.23f);
+            engine.spawnExplosion(proj_location, ship_velocity, FLASH_COLOR, 69f, 0.5f);
             engine.addHitParticle(proj_location, ship_velocity, 125f, 1f, 0.1f, FLASH_COLOR.brighter());
             
             // "background" nebs
@@ -63,8 +63,7 @@ public class InReC_guillotineOnFireEffect implements OnFireEffectPlugin {
             
             INREC_RadialEmitter emitterCore = new INREC_RadialEmitter((CombatEntityAPI) ship);
             emitterCore.location(proj_location);
-            emitterCore.angle(angle -12f);
-            emitterCore.arc(24f);
+            emitterCore.angle(angle -12f, 24f);
             emitterCore.life(1.1f, 1.4f);
             emitterCore.size(3f, 8f);
     		emitterCore.velocity(5f, 64f);
@@ -78,8 +77,7 @@ public class InReC_guillotineOnFireEffect implements OnFireEffectPlugin {
     		
             INREC_RadialEmitter emitterSpc1 = new INREC_RadialEmitter((CombatEntityAPI) ship);
             emitterSpc1.location(proj_location);
-            emitterSpc1.angle(angle);
-            emitterSpc1.arc(0f);
+            emitterSpc1.angle(angle, 0f);
             emitterSpc1.life(1.01f, 1.93f);
             emitterSpc1.size(2f, 3f);
             emitterSpc1.velocity(70f, -46f);
@@ -92,8 +90,7 @@ public class InReC_guillotineOnFireEffect implements OnFireEffectPlugin {
     		
     		INREC_RadialEmitter emitterSpc2 = new INREC_RadialEmitter((CombatEntityAPI) ship);
             emitterSpc2.location(proj_location);
-            emitterSpc2.angle(angle);
-            emitterSpc2.arc(0f);
+            emitterSpc2.angle(angle, 0f);
             emitterSpc2.life(1.01f, 1.93f);
             emitterSpc2.size(2f, 3f);
             emitterSpc2.velocity(70f, -46f);

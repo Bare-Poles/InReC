@@ -56,7 +56,7 @@ public class InReC_quarkOnHitEffect implements OnHitEffectPlugin {
 				
 				engine.addPlugin(new EveryFrameCombatPlugin() {
 					
-	                final float initialFacing = target.getFacing();
+	                float initialFacing = target.getFacing();
 	                final float baseDamage = projectile.getDamageAmount();
 	                final Vector2f shipRefHitLoc = new Vector2f(point.x - target.getLocation().x, point.y - target.getLocation().y);
 	                
@@ -91,8 +91,6 @@ public class InReC_quarkOnHitEffect implements OnHitEffectPlugin {
 		                    	
 		                    	INREC_RadialEmitter emitter = new INREC_RadialEmitter((CombatEntityAPI) target);
 		                        emitter.location(hitLoc);
-		                        emitter.angle(0f);
-		                        emitter.arc(360f);
 		                        emitter.life(0.35f, 0.55f);
 		                        emitter.size(3f, 6f);
 		                		emitter.velocity(10f, 47f);
@@ -189,8 +187,6 @@ public class InReC_quarkOnHitEffect implements OnHitEffectPlugin {
 	                    	
 	                    	INREC_RadialEmitter emitter = new INREC_RadialEmitter((CombatEntityAPI) target);
 	                        emitter.location(hitLoc);
-	                        emitter.angle(0f);
-	                        emitter.arc(360f);
 	                        emitter.life(0.35f, 0.55f);
 	                        emitter.size(3f, 6f);
 	                		emitter.velocity(10f, 47f);

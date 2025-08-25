@@ -25,11 +25,12 @@ import com.fs.starfarer.api.util.Misc;
 
 public class InReC_recycler extends BaseHullMod {
 
-	public static final float SHIELD_MALUS = 30f;
+	public static final float SHIELD_MALUS = 25f;
 	
-	public static final float SHIELD_BONUS = 20f;
+	public static final float SHIELD_BONUS = 25f;
 	public static final float MANEUVER_BONUS = 30f;	
 	public static final float ROF_BONUS = 15f;
+	public static final float ROF_BONUS_PRIMED = 20f;
 	
 	public static final float FLAT_GAIN = 2f;
 	public static final float SCALING_GAIN = 8f;
@@ -72,7 +73,7 @@ public class InReC_recycler extends BaseHullMod {
 			// heat generation/decay
 		float heatMod = 1f;
 		if (ship.getFluxLevel() < 0.5f) {
-			heatMod = (ship.getFluxLevel() * (2f * BASE_DECAY)) - BASE_DECAY; // scaling from -5% at zero flux, up to 0% at half flux
+			heatMod = (ship.getFluxLevel() * (2f * BASE_DECAY)) - BASE_DECAY; // scaling from -4% at zero flux, up to 0% at half flux
 		} else {
 			heatMod = FLAT_GAIN + ((ship.getFluxLevel() - 0.5f) * (2f * SCALING_GAIN)); // scaling from +2% at half flux, up to +10% at full flux
 		}
@@ -95,6 +96,18 @@ public class InReC_recycler extends BaseHullMod {
 		}
 			// priming checks
 		
+		
+			//base RoF bonus
+		float rofMult = ROF_BONUS * (info.HEAT * 0.01f);
+		if (info.PRIMED) {
+			rofMult = ROF_BONUS_PRIMED; // full! bonus when primed!
+		}
+		stats.getBallisticRoFMult().modifyPercent(spec.getId(), rofMult);
+		stats.getBallisticAmmoRegenMult().modifyPercent(spec.getId(), rofMult);
+				// moved to be "base" because i really felt the hullmod was too tricky for AI to use, so this bonus (which also ramps flux generation a lil bit!) is (mostly) for them
+			//base RoF bonus
+		
+		
 			// core stat mod / vfx section
 		if (info.PRIMED) {
 			stats.getShieldDamageTakenMult().modifyMult(spec.getId(), 1f - (SHIELD_BONUS * 0.01f));
@@ -103,8 +116,6 @@ public class InReC_recycler extends BaseHullMod {
 			stats.getDeceleration().modifyPercent(spec.getId(), MANEUVER_BONUS);
 			stats.getTurnAcceleration().modifyPercent(spec.getId(), MANEUVER_BONUS * 2f);
 			stats.getMaxTurnRate().modifyPercent(spec.getId(), MANEUVER_BONUS);
-			
-			stats.getBallisticRoFMult().modifyPercent(spec.getId(), ROF_BONUS);
 			
 
 	    	// spawn smoke, more smoke with larger ships!
@@ -168,6 +179,8 @@ public class InReC_recycler extends BaseHullMod {
 	    	double timeMult = (double) ship.getMutableStats().getTimeMult().modified;
 			alpha = (int) Math.ceil(alpha / timeMult);
 	    	alpha = Math.min(alpha, 255);
+	    	int alpha2 = (int) (alpha * 0.5f); 
+	    	
 	    	
 	    	int green = 125;
 	    	int blue = 80;
@@ -176,12 +189,18 @@ public class InReC_recycler extends BaseHullMod {
 		    	blue = Math.max(0, 80 - (int)(info.HEAT - 75f));
 	    	}
 	    	
-			Color glowColor = new Color(250,green,blue,alpha);
+			Color glowColor1 = new Color(250,green,blue,alpha);
+			Color glowColor2 = new Color(250,green,blue,alpha2);
 			
-			SpriteAPI Glow = Global.getSettings().getSprite("campaignEntities", "fusion_lamp_glow");
-	    	Vector2f glowSize = new Vector2f(glowLength, glowLength);
+			SpriteAPI Glow1 = Global.getSettings().getSprite("campaignEntities", "fusion_lamp_glow");
+			SpriteAPI Glow2 = Global.getSettings().getSprite("campaignEntities", "fusion_lamp_glow");
+	    	Vector2f glowSize1 = new Vector2f(glowLength, glowLength);
+	    	Vector2f glowSize2 = new Vector2f(glowLength * 0.9f, glowLength * 0.9f);
 	    	
-	    	MagicRender.singleframe(Glow, ship.getLocation(), glowSize, ship.getFacing(), glowColor, true, CombatEngineLayers.BELOW_SHIPS_LAYER);
+	    	MagicRender.singleframe(Glow1, ship.getLocation(), glowSize1, ship.getFacing(), glowColor1, true, CombatEngineLayers.BELOW_SHIPS_LAYER);
+	    	MagicRender.singleframe(Glow2, ship.getLocation(), glowSize2, ship.getFacing(), glowColor2, true, CombatEngineLayers.ABOVE_SHIPS_AND_MISSILES_LAYER);
+	    	
+	    	
 	    	
 		}
 		
@@ -235,7 +254,7 @@ public class InReC_recycler extends BaseHullMod {
 		LabelAPI label = tooltip.addPara("An advanced system that recycles the passive thermal energy generated from flux buildup and uses it to enhance the combat performance of the ship.", opad);
 		
 		
-		label = tooltip.addPara("The recyclers integration interferes with the ships shield emitter.", opad);
+		label = tooltip.addPara("Integration of the recycler interferes with the ships shield emitter.", opad);
 		label = tooltip.addPara("Shield upkeep is increased by %s.", pad, bad, "" + (int)SHIELD_MALUS +"%");
 		label.setHighlight("" + (int)SHIELD_MALUS +"%");
 		label.setHighlightColors(bad);
@@ -245,8 +264,12 @@ public class InReC_recycler extends BaseHullMod {
 		label.setHighlight("over 50%");
 		label.setHighlightColors(h);
 		label = tooltip.addPara("The higher the ships flux level, the faster the recycler generates heat.", pad);
+		label = tooltip.addPara("As heat rises, Ballistic weapon Rate of Fire and Ammo Regeneration is increased by up to %s.", pad, h, "" + (int)ROF_BONUS +"%");
+		label.setHighlight("" + (int)ROF_BONUS +"%");
+		label.setHighlightColors(h);
 		
-		label = tooltip.addPara("Once heat reaches %s the recycler activates granting the following buffs:", opad, h, "100%");
+		
+		label = tooltip.addPara("Once heat reaches %s the recycler switches to an active state, granting the following buffs:", opad, h, "100%");
 		label.setHighlight("100%");
 		label.setHighlightColors(h);
 		label = tooltip.addPara("The amount of damage taken by shields is reduced by %s.", pad, h, "" + (int)SHIELD_BONUS +"%");
@@ -255,10 +278,10 @@ public class InReC_recycler extends BaseHullMod {
 		label = tooltip.addPara("The ship's maneuverability is improved by %s.", pad, h, "" + (int)MANEUVER_BONUS +"%");
 		label.setHighlight("" + (int)MANEUVER_BONUS +"%");
 		label.setHighlightColors(h);
-		label = tooltip.addPara("Ballistic weapon Rate of Fire is increased by %s.", pad, h, "" + (int)ROF_BONUS +"%");
-		label.setHighlight("" + (int)ROF_BONUS +"%");
+		label = tooltip.addPara("The Ballistic weapon Rate of Fire and Ammo Regeneration bonus is increased to %s.", pad, h, "" + (int)ROF_BONUS_PRIMED +"%");
+		label.setHighlight("" + (int)ROF_BONUS_PRIMED +"%");
 		label.setHighlightColors(h);
-		label = tooltip.addPara("The recycler will deactivate and stop granting buffs if heat drops to %s.", opad, h, "0%");
+		label = tooltip.addPara("The recycler will exit the active state and stop granting these buffs if heat drops to %s.", opad, h, "0%");
 		label.setHighlight("0%");
 		
 		

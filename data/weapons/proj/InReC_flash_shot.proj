@@ -1,4 +1,4 @@
-{
+	{
 	"id":"InReC_flash_shot",
 
 	"onFireEffect":"org.amazigh.InReC.scripts.InReC_flashOnFireEffect",
@@ -26,8 +26,8 @@
 									 "collisionClassByFighter":PROJECTILE_FIGHTER,
 									 "particleSizeMin":2.0,
 									 "particleSizeRange":4.0,
-									 "particleDuration":0.8,
-									 "particleCount":25,
+									 "particleDuration":0.1, #0.8
+									 "particleCount":1, #25
 									 "particleColor":[113,217,243,145],
 									 "sound":"explosion_flak"}, #TEMP!
 					}
