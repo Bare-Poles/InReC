@@ -28,15 +28,16 @@ public class InReC_recycler extends BaseHullMod {
 	public static final float SHIELD_MALUS = 25f;
 	
 	public static final float SHIELD_BONUS = 25f;
-	public static final float MANEUVER_BONUS = 30f;	
+	public static final float MANEUVER_BONUS = 35f;
 	public static final float ROF_BONUS = 15f;
-	public static final float ROF_BONUS_PRIMED = 20f;
+	public static final float ROF_BONUS_PRIMED = 25f;
+	public static final float COST_BONUS = 20f;
 	
 	public static final float FLAT_GAIN = 2f;
 	public static final float SCALING_GAIN = 8f;
 	public static final float BASE_DECAY = 4f;
-	public static final float VENT_DECAY = 6f;
-	public static final float PRIMED_DECAY = 8f;
+	public static final float VENT_DECAY = 5f;
+	public static final float PRIMED_DECAY = 6f;
 	
 	
 	private IntervalUtil smokeInterval = new IntervalUtil(0.15f,0.2f);
@@ -117,6 +118,9 @@ public class InReC_recycler extends BaseHullMod {
 			stats.getTurnAcceleration().modifyPercent(spec.getId(), MANEUVER_BONUS * 2f);
 			stats.getMaxTurnRate().modifyPercent(spec.getId(), MANEUVER_BONUS);
 			
+			stats.getBallisticWeaponFluxCostMod().modifyMult(spec.getId(), 1f - (COST_BONUS * 0.01f));
+			stats.getEnergyWeaponFluxCostMod().modifyMult(spec.getId(), 1f - (COST_BONUS * 0.01f));
+			stats.getMissileWeaponFluxCostMod().modifyMult(spec.getId(), 1f - (COST_BONUS * 0.01f));
 
 	    	// spawn smoke, more smoke with larger ships!
 			float sizeScalar = 1f + (smokeCount.get(ship.getHullSize()) * 0.1f);
@@ -158,7 +162,9 @@ public class InReC_recycler extends BaseHullMod {
 			stats.getTurnAcceleration().unmodify(spec.getId());
 			stats.getMaxTurnRate().unmodify(spec.getId());
 			
-			stats.getBallisticRoFMult().unmodify(spec.getId());
+			stats.getBallisticWeaponFluxCostMod().unmodify(spec.getId());
+			stats.getEnergyWeaponFluxCostMod().unmodify(spec.getId());
+			stats.getMissileWeaponFluxCostMod().unmodify(spec.getId());
 		}
 			// core stat mod / vfx section
 		
@@ -280,6 +286,9 @@ public class InReC_recycler extends BaseHullMod {
 		label.setHighlightColors(h);
 		label = tooltip.addPara("The Ballistic weapon Rate of Fire and Ammo Regeneration bonus is increased to %s.", pad, h, "" + (int)ROF_BONUS_PRIMED +"%");
 		label.setHighlight("" + (int)ROF_BONUS_PRIMED +"%");
+		label.setHighlightColors(h);
+		label = tooltip.addPara("The flux cost to fire all weapons is reduced by %s.", pad, h, "" + (int)COST_BONUS +"%");
+		label.setHighlight("" + (int)COST_BONUS +"%");
 		label.setHighlightColors(h);
 		label = tooltip.addPara("The recycler will exit the active state and stop granting these buffs if heat drops to %s.", opad, h, "0%");
 		label.setHighlight("0%");

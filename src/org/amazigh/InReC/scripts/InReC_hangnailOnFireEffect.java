@@ -32,11 +32,11 @@ public class InReC_hangnailOnFireEffect implements OnFireEffectPlugin {
     			float angle1 = proj_facing + MathUtils.getRandomNumberInRange(-3f, 3f);
                 Vector2f smokeVel = MathUtils.getPointOnCircumference(ship.getVelocity(), i * 3f, angle1);
                 
-                Vector2f smokeoint = MathUtils.getPointOnCircumference(proj_location, i * 3f, angle1);
+                Vector2f smokePoint = MathUtils.getPointOnCircumference(proj_location, i * 3f, angle1);
                 
                 int alpha = 140 - (i * 4);
                 
-                engine.addNebulaParticle(smokeoint, smokeVel,
+                engine.addNebulaParticle(smokePoint, smokeVel,
                 		MathUtils.getRandomNumberInRange(20f, 22f) - i,
                 		1.69f, //endsizemult
                 		0.17f, //rampUpFraction

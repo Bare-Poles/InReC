@@ -1,0 +1,29 @@
+{
+	"id":"InReC_stigmata",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"everyFrameEffect":"org.amazigh.InReC.scripts.InReC_stigmataEffect",
+	"type":"BALLISTIC",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/InReC_stigmata_turret_base.png",
+	"hardpointSprite":"graphics/weapons/InReC_stigmata_hardpoint_base.png",
+	"turretGlowSprite":"graphics/weapons/InReC_stigmata_turret_glow.png",
+	"hardpointGlowSprite":"graphics/weapons/InReC_stigmata_hardpoint_glow.png",
+	"glowColor":[176,55,62,255],
+	"turretOffsets":[16,-3, 16,0, 16,3],
+	"turretAngleOffsets":[-1, 0, 1],
+	"hardpointOffsets":[22,-3, 22,0, 22,3],
+	"hardpointAngleOffsets":[-1, 0, 1],
+	"unaffectedByProjectileSpeedBonuses":true,
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":23.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":9.0,
+					   "particleSizeMin":12.0,
+					   "particleSizeRange":14.0,
+					   "particleDuration":0.4,
+					   "particleCount":9,
+					  "particleColor":[176,116,159,235]},
+	"projectileSpecId":"InReC_stigmata_shot",  # projectile that will be fired	
+	"fireSoundTwo":"InReC_stigmata_fire", # voidblaster_fire
+	"stopPreviousFireSound":true,
+}

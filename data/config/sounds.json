@@ -107,6 +107,13 @@
 		{"file":"sounds/sfx_wpn_energy/InReC_conc_fire.ogg","pitch":1.05,"volume":0.42},
 	],
 
+	"InReC_tantrum_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/InReC_tantrum_fire.ogg","pitch":0.75,"volume":0.45},
+		{"file":"sounds/sfx_wpn_energy/InReC_tantrum_fire.ogg","pitch":0.85,"volume":0.45},
+		{"file":"sounds/sfx_wpn_energy/InReC_tantrum_fire.ogg","pitch":0.95,"volume":0.45},
+	],
+
 
 
 
@@ -182,6 +189,22 @@
 	],
 
 
+	"InReC_stigmata_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/InReC_stigmata_fire_01.ogg","pitch":1.0,"volume":0.74},
+		{"file":"sounds/sfx_wpn_guns/InReC_stigmata_fire_02.ogg","pitch":1.0,"volume":0.74},
+		{"file":"sounds/sfx_wpn_guns/InReC_stigmata_fire_03.ogg","pitch":1.0,"volume":0.74},
+		{"file":"sounds/sfx_wpn_guns/InReC_stigmata_fire_01.ogg","pitch":0.96,"volume":0.74},
+		{"file":"sounds/sfx_wpn_guns/InReC_stigmata_fire_02.ogg","pitch":0.96,"volume":0.74},
+		{"file":"sounds/sfx_wpn_guns/InReC_stigmata_fire_03.ogg","pitch":0.96,"volume":0.74},
+		{"file":"sounds/sfx_wpn_guns/InReC_stigmata_fire_01.ogg","pitch":0.92,"volume":0.74},
+		{"file":"sounds/sfx_wpn_guns/InReC_stigmata_fire_02.ogg","pitch":0.92,"volume":0.74},
+		{"file":"sounds/sfx_wpn_guns/InReC_stigmata_fire_03.ogg","pitch":0.92,"volume":0.74},
+	],
+
+
+
+
 
 
 	"InReC_blister_fire":
@@ -194,6 +217,5 @@
 			{"file":"sounds/sfx_wpn_missiles/pilum_lrm_fire_01.ogg","pitch":0.9,"volume":0.5},
 		],		
 	},
-
 
 }

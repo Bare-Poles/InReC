@@ -17,10 +17,10 @@
 					"effectRange":250,
 					"effectChance":0.2,
 				   },
-	"engineSpec":{"turnAcc":900,
-				  "turnRate":450,
-				  "acc":750,
-				  "dec":750},
+	"engineSpec":{"turnAcc":1000, #900
+				  "turnRate":500, #450
+				  "acc":900, #750
+				  "dec":900}, #750
 	"engineSlots":[
 					{"id":"ES1",
 					"loc":[0, 0],

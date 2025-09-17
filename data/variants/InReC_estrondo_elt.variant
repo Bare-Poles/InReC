@@ -1,0 +1,42 @@
+{
+  "variantId": "InReC_estrondo_elt",
+  "hullId": "InReC_estrondo",
+  "displayName": "Elite",
+  "goalVariant": true,
+  "fluxCapacitors": 7,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "InReC_rebalancer",
+    "InReC_recycler",
+    "fluxdistributor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "InReC_tantrum"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "InReC_stigmata",
+        "WS 003": "InReC_stigmata"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "InReC_burst",
+        "WS 005": "InReC_burst"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

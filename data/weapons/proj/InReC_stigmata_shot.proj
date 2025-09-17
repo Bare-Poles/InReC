@@ -1,0 +1,18 @@
+{
+	"id":"InReC_stigmata_shot",
+	"specClass":"projectile",
+	"onHitEffect":"org.amazigh.InReC.scripts.InReC_stigmataEffect",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":90.0,
+	"width":15.0,
+	"fadeTime":0.05,
+	"hitGlowRadius":48,
+	"glowColor":[0,0,0,0],
+	"fringeColor":[176,55,136,0],
+	"coreColor":[255,230,245,0],
+	"textureType":"SMOOTH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0
+}

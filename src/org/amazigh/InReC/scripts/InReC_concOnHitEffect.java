@@ -54,8 +54,8 @@ public class InReC_concOnHitEffect implements OnHitEffectPlugin {
 		DamagingExplosionSpec blast = new DamagingExplosionSpec(0.1f,
                 200f,
                 160f,
-                projectile.getDamageAmount() * 0.4f, // 20
-                projectile.getDamageAmount() * 0.2f, // 10
+                projectile.getDamageAmount() * 0.5f, // 50
+                projectile.getDamageAmount() * 0.2f, // 20
                 CollisionClass.PROJECTILE_FF,
                 CollisionClass.PROJECTILE_FIGHTER,
                 4f,

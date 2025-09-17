@@ -209,19 +209,19 @@ public class InReC_ModPlugin extends BaseModPlugin {
             this.coreDispersion = coreDispersion;
             return this;
         }
-        
+
         /**
-         * @param lifeLink
-         * @return If lifetime should be linked to vel/dist scaling (defaults to false)
+         * @param angleSplit
+         * @return If angle of dist/vel should be generated seperate from each other (defaults to false)
          */
         public INREC_RadialEmitter angleSplit(boolean angleSplit) {
             this.angleSplit = angleSplit;
             return this;
         }
-        
+
         /**
-         * @param angleSplit
-         * @return If angle of dist/vel should be generated seperate from each other (defaults to false)
+         * @param lifeLink
+         * @return If lifetime should be linked to vel/dist scaling (defaults to false)
          */
         public INREC_RadialEmitter lifeLinkage(boolean lifeLinkage) {
             this.lifeLink = lifeLinkage;

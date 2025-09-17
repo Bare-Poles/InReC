@@ -3,4 +3,10 @@
         "InReCo":[60,220,210,255],
     },
 
+    "graphics":{
+	"fx":{
+		"InReC_estrondo_glow":"graphics/ships/InReC_estrondo_glow.png",
+	},
+    }
+
 }

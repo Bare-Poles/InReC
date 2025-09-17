@@ -1,0 +1,20 @@
+{
+	"id":"InReC_tantrum_shot",
+	"specClass":"projectile",
+
+	"onHitEffect":"org.amazigh.InReC.scripts.InReC_tantrumEffect",
+
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":69.0,
+	"width":14.0,
+	"fadeTime":0.2,
+	"fringeColor":[102,57,122,205],
+	"coreColor":[93,235,205,222],
+	"glowColor":[169,52,197,69],
+	"glowRadius":44,
+	"textureType":"SMOOTH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0
+}

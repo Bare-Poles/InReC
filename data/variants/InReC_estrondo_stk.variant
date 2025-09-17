@@ -1,0 +1,42 @@
+{
+  "variantId": "InReC_estrondo_stk",
+  "hullId": "InReC_estrondo",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 4,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "InReC_rebalancer",
+    "unstable_injector",
+    "InReC_slotShield"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "InReC_tantrum"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "InReC_fusion",
+        "WS 005": "InReC_fusion"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "InReC_canister",
+        "WS 003": "InReC_canister"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -5,7 +5,7 @@
 	"aiType":"CUSTOM",
 	"aiScript":"org.amazigh.InReC.shipsystems.scripts.ai.InReC_BurstDriveAI",
 
-	"statsScript":"org.amazigh.InReC.shipsystems.scripts.InReC_BurstDriveStats",
+	"statsScript":"org.amazigh.InReC.shipsystems.scripts.InReC_MicroBurstDriveStats",
 
 	"engineGlowColor":[65,220,195,255],
 	"engineGlowLengthMult":1.5,

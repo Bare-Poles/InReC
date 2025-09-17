@@ -14,7 +14,7 @@ import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.util.vector.Vector2f;
 
-public class InReC_BurstDriveStats extends BaseShipSystemScript {
+public class InReC_MicroBurstDriveStats extends BaseShipSystemScript {
 	
 	private float smokeCount = 3f;
 	private float fxDelay = 0.2f;
@@ -31,7 +31,7 @@ public class InReC_BurstDriveStats extends BaseShipSystemScript {
 	public static final float DAMAGE_REDUCTION = 0.15f;
 	
 	 // Boosted RoF for energy weps while they are disabled, to reload them (so it's also a sort of energy FMR as well as mobility)
-	public static final float RELOAD_MULT = 4f; // ~3.125s cut from reload times
+	public static final float RELOAD_MULT = 8.5f; //  ~4.0375s cut from reload times
 	
     @Override
     public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
@@ -51,7 +51,7 @@ public class InReC_BurstDriveStats extends BaseShipSystemScript {
     	stats.getHullDamageTakenMult().modifyMult(id, 1f - (DAMAGE_REDUCTION * effectLevel));
 		stats.getArmorDamageTakenMult().modifyMult(id, 1f - (DAMAGE_REDUCTION * effectLevel));
 		stats.getEmpDamageTakenMult().modifyMult(id, 1f - (DAMAGE_REDUCTION * effectLevel));
-			// secret "hidden" (up to) 15% damage resist while system is active :)
+			// up to 15% damage resist while system is active :)
     	
     	// timescale!!
     	boolean player = false;

@@ -1,0 +1,43 @@
+{
+  "variantId": "InReC_estrondo_ass",
+  "hullId": "InReC_estrondo",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 1,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "InReC_slotRange",
+    "targetingunit",
+    "magazines",
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "InReC_tantrum"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "InReC_hangnail",
+        "WS 003": "InReC_hangnail"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "InReC_quark",
+        "WS 005": "InReC_quark"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}
