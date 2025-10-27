@@ -123,7 +123,7 @@ public class InReC_tantrumEffect implements OnHitEffectPlugin, OnFireEffectPlugi
 				INREC_RadialEmitter emitter2 = new INREC_RadialEmitter((CombatEntityAPI) weapon.getShip());
 		        emitter2.location(proj_location);
 		        emitter2.angle(proj_facing, 0f);
-		        emitter2.life(0.5f, 0.85f);
+		        emitter2.life(0.69f, 1.1f);
 		        emitter2.size(1.5f, 3f);
 				emitter2.velocity(6f, 9f);
 				emitter2.distance(2f, 34f + (sparkCount * 2f));

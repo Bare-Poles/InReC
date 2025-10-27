@@ -1,9 +1,9 @@
 {
- "id": "InReC",
+ "id": "InReCo",
  "name": "InReCo",
  "author": "Amazigh",
 
- "version": {"major":0, "minor":2, "patch":0},
+ "version": {"major":0, "minor":a, "patch":0},
  "description": "A divergent midline faction.",
  "gameVersion": "0.98a-RC8",
 
