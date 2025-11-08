@@ -43,7 +43,7 @@ public class InReC_DroneAmmoScript implements OnFireEffectPlugin, EveryFrameWeap
 		
 		if (interval1.intervalElapsed()) {
 			
-			int alpha = (int) (150 - (weapon.getAmmo() * 2)); 
+			int alpha = Math.min(255, Math.max(1, ((int) (150 - (weapon.getAmmo() * 2)))));
 			
 			Vector2f nebVel = MathUtils.getRandomPointInCircle(ship.getVelocity(), MathUtils.getRandomNumberInRange(2f, 8f));
     		engine.addSwirlyNebulaParticle(ship.getLocation(),
