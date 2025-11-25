@@ -12,7 +12,8 @@
   "shieldRadius": 28.5,
   "viewOffset": 0,
   "builtInMods": [
-    "InReC_concVanes"
+    "InReC_concVanes",
+    "InReC_platformRange"
   ],
   "weaponSlots": [
     {

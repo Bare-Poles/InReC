@@ -188,7 +188,6 @@
 		{"file":"sounds/sfx_wpn_guns/InReC_hangnail_fire.ogg","pitch":1,"volume":0.85}, # mauler_fire_01_loud
 	],
 
-
 	"InReC_stigmata_fire":
 	[
 		{"file":"sounds/sfx_wpn_guns/InReC_stigmata_fire_01.ogg","pitch":1.0,"volume":0.74},
@@ -202,6 +201,12 @@
 		{"file":"sounds/sfx_wpn_guns/InReC_stigmata_fire_03.ogg","pitch":0.92,"volume":0.74},
 	],
 
+	"InReC_headstone_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/InReC_headstone_fire.ogg","pitch":0.92,"volume":1.0},
+		{"file":"sounds/sfx_wpn_guns/InReC_headstone_fire.ogg","pitch":0.96,"volume":1.0},
+		{"file":"sounds/sfx_wpn_guns/InReC_headstone_fire.ogg","pitch":1.0,"volume":1.0},
+	],
 
 
 

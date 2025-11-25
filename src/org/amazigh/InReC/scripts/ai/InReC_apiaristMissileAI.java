@@ -253,10 +253,12 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
 
 				Vector2f smokeVel = new Vector2f(vel.x * 0.8f, vel.y * 0.8f);
 				
-				
-				float subFacing1 = MISSILE.getFacing() + MathUtils.getRandomNumberInRange(30f, 69f);
+				float angle1 = MathUtils.getRandomNumberInRange(17f, 54f);
+				float subFacing1 = MISSILE.getFacing() + angle1;
 				Vector2f loc1 = MathUtils.getPointOnCircumference(loc, 2f, subFacing1);
-				engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_apiarist_sub", loc1, subFacing1, MathUtils.getRandomPointInCircle(smokeVel, 15f));
+				CombatEntityAPI subMissile1 = engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_apiarist_sub", loc1, subFacing1, MathUtils.getRandomPointInCircle(smokeVel, 15f));
+				((MissileAPI)subMissile1).setFromMissile(true);
+				engine.addPlugin(new InReC_blisterHomingScript((MissileAPI)subMissile1, target, angle1));
 				
 				Vector2f puffRandomVel1 = MathUtils.getPointOnCircumference(smokeVel, MathUtils.getRandomNumberInRange(8f, 24f), subFacing1);
             	engine.addSmokeParticle(loc1,
@@ -266,11 +268,14 @@ public class InReC_apiaristMissileAI implements MissileAIPlugin, GuidedMissileAI
             			0.6f,
             			new Color(110,100,90,150));
             	
-            	
-            	float subFacing2 = MISSILE.getFacing() - MathUtils.getRandomNumberInRange(30f, 69f);
+
+				float angle2 = MathUtils.getRandomNumberInRange(-17f, -54f);
+            	float subFacing2 = MISSILE.getFacing() + angle2;
             	Vector2f loc2 = MathUtils.getPointOnCircumference(loc, 2f, subFacing2);
-            	engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_apiarist_sub", loc2, subFacing2 - MathUtils.getRandomNumberInRange(0f, 5f), MathUtils.getRandomPointInCircle(smokeVel, 15f));
-				
+            	CombatEntityAPI subMissile2 = engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_apiarist_sub", loc2, subFacing2 - MathUtils.getRandomNumberInRange(0f, 5f), MathUtils.getRandomPointInCircle(smokeVel, 15f));
+				((MissileAPI)subMissile2).setFromMissile(true);
+				engine.addPlugin(new InReC_blisterHomingScript((MissileAPI)subMissile2, target, angle2));
+            	
 				Vector2f puffRandomVel2 = MathUtils.getPointOnCircumference(smokeVel, MathUtils.getRandomNumberInRange(4f, 12f), subFacing2);
             	engine.addSmokeParticle(loc2,
             			puffRandomVel2,

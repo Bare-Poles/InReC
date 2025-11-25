@@ -332,7 +332,7 @@ public class InReC_pesticideMissileAI implements MissileAIPlugin, GuidedMissileA
  			}
  		}
 
- 		//If we didn't find a point in 20 tries, just choose target center
+ 		//If we didn't find a point in 13 tries, just choose target center
  		if (!success) {
  			targetPoint = new Vector2f(Misc.ZERO);
  		}

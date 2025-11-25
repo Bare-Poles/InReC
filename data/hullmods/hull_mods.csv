@@ -11,6 +11,7 @@ Automated Protection Unit,InReC_slotFlares_b,,,InReCo,,,,,TRUE,,0,0,0,0,org.amaz
 Integrated Bolt Focus Regulator,InReC_slotRange_b,,,InReCo,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_slotRange_b,Energy proj wep range! (Built-in),Energy proj wep range! (Built-in),,graphics/hullmods/InReC_slotRange.png
 Concussion Resonance Vanes ,InReC_concVanes,,,InReCo,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_concVanes,Concussion Pulses and boosted active vent rate,Concussion Pulses and boosted active vent rate,,graphics/hullmods/InReC_concVanes.png
 Quick Cycle Capacitors,InReC_quickCaps,,,InReCo,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_quickCaps,This vessel features special rapid charging capacitors that increase energy weapon Rate of Fire by %s and reduce the flux cost to fire energy weapons by %s.,"Plus EN Wep RoF, Minus EN wep flux cost.",,graphics/hullmods/InReC_quickCaps.png
+Carrier Targeting Uplink,InReC_platformRange,,,InReCo,,,,,TRUE,,0,0,0,0,org.amazigh.InReC.hullmods.InReC_platformRange,Extends the range of ballistic and energy weapons by %s/%s/%s/%s depending on the hull size of the carrier this craft was deployed from.,"For fighters, boosts weapon range based on size of carrier.",,graphics/hullmods/InReC_platformRange.png
 ,,,,,,,,,,,,,,,,,,,
 # Modular,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,

@@ -1,11 +1,11 @@
 {
     "masterVersionFile":"https://raw.githubusercontent.com/Bare-Poles/InReC/main/InReC.version",
-    "modName":"InReC",
+    "modName":"InReCo",
     "modThreadId":"24401",
     "modVersion":
     {
         "major":"0",
         "minor":"a",
-        "patch":"1"
+        "patch":"2"
     },
 }

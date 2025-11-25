@@ -17,23 +17,17 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0003": "InReC_apiarist_pod",
-        "WS0004": "InReC_apiarist_pod"
-      }
-    },
-    {
-      "autofire": false,
-      "mode": "ALTERNATING",
-      "weapons": {
         "WS0001": "InReC_beekeeper_pod",
-        "WS0002": "InReC_beekeeper_pod"
+        "WS0002": "InReC_beekeeper_pod",
+        "WS0003": "InReC_beekeeper_pod",
+        "WS0004": "InReC_beekeeper_pod"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0005": "InReC_compass"
+        "WS0005": "InReC_headstone"
       }
     },
     {

@@ -23,6 +23,7 @@ import com.fs.starfarer.api.combat.listeners.AdvanceableListener;
 import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
+import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.TimeoutTracker;
 
 public class InReC_quarkOnHitEffect implements OnHitEffectPlugin {
@@ -34,14 +35,11 @@ public class InReC_quarkOnHitEffect implements OnHitEffectPlugin {
 			if (shieldHit) {
 				// nothing, cry about it! ;)
 			} else {
-				
 				ShipAPI tagShip = (ShipAPI) target;
 				
 				if (tagShip.isHulk() || !tagShip.isAlive()) {
 					return; // no embedding on dead ships/hulks, because it can cause crashes!
 				}
-				
-				
 				
 				if (!tagShip.hasListenerOfClass(INREC_QuarkComboMult.class)) {
 					tagShip.addListener(new INREC_QuarkComboMult(tagShip));
@@ -76,6 +74,9 @@ public class InReC_quarkOnHitEffect implements OnHitEffectPlugin {
 	                    burstTimer.advance(amount);
 	                    FXTimer.advance(amount);
 	                    
+	                    ShipAPI tagShip = (ShipAPI) target;
+                    	List<INREC_QuarkComboMult> listeners = tagShip.getListeners(INREC_QuarkComboMult.class);
+        				
 	                    Vector2f hitLoc = new Vector2f();
 	                    if (burstTimer.intervalElapsed() || FXTimer.intervalElapsed()) {
 	                        hitLoc = VectorUtils.rotate(new Vector2f(shipRefHitLoc), target.getFacing() - initialFacing);
@@ -143,11 +144,22 @@ public class InReC_quarkOnHitEffect implements OnHitEffectPlugin {
                     				new Color(207,171,60,169));
 	                    }
 	                    
-	                    if (burstTimer.intervalElapsed()) {
+	                    boolean forceBurst = false;
+	                    if (!listeners.isEmpty())  {
+        					INREC_QuarkComboMult listener = listeners.get(0);
+        					 if (listener.agitated) {
+        						 forceBurst = true;
+        						 listener.agitateCounter(projectile.hashCode());
+        						 // adding to the count of agitated charges, so we know when to remove the main on-ship listener
+        						 
+        						 hitLoc = VectorUtils.rotate(new Vector2f(shipRefHitLoc), target.getFacing() - initialFacing);
+        						 hitLoc = new Vector2f(hitLoc.x + target.getLocation().x, hitLoc.y + target.getLocation().y);
+     	                    }
+        				}
+	                    
+	                   
+	                    if (burstTimer.intervalElapsed() || forceBurst) {
 	                    	
-	                    	ShipAPI tagShip = (ShipAPI) target;
-	                    	List<INREC_QuarkComboMult> listeners = tagShip.getListeners(INREC_QuarkComboMult.class);
-	        				
 	        				int count = 1;
 	        				float comboMult = 1f;
 	        				
@@ -156,16 +168,19 @@ public class InReC_quarkOnHitEffect implements OnHitEffectPlugin {
 	        				} else {
 	        					INREC_QuarkComboMult listener = listeners.get(0);
 	        					count = listener.recentHits.getItems().size();
-		        				comboMult = Math.max(1f, 1f + Math.min(2f, (count - 1) * 0.05f));	        					
+		        				comboMult = Math.max(1f, 1f + Math.min(4f, (count - 1) * 0.1f));
+		        				if (forceBurst) {
+		        					comboMult = 1.2f * (Math.max(1f, 1f + Math.min(4f, (listener.agitateMult - 1) * 0.1f)));
+		                    	}
 	        				}
 	        				int fxScale = Math.max(40, count);
-	                    	// we cap the scaling effects at 40x (for comboMult: 40*0.05 = 2)
+	                    	// we cap the scaling effects at 40x (for comboMult: 40*0.1 = 4)
 	        				
 	                    	float typeMult = 1f; // this script is used across three weapons! determining the mult to apply based on weapon type, so all have functionally the same onHit damage
 	                    	if (projectile.getWeapon().getType() == WeaponType.BALLISTIC) {
-	                    		typeMult /= 3f;
+	                    		typeMult /= 6f;
 	                    	} else {
-	                    		typeMult *= 0.5f;
+	                    		typeMult *= 0.25f;
 	                    	}
 	                    	
 //	                    	engine.addFloatingTextAlways(hitLoc,
@@ -178,7 +193,9 @@ public class InReC_quarkOnHitEffect implements OnHitEffectPlugin {
 //	        						1.5f, // durFadingOut
 //	        						1f); // baseAlpha
 	                    	
-	                    	engine.applyDamage(target, hitLoc, baseDamage * typeMult * comboMult, DamageType.FRAGMENTATION, 0, true, true, projectile.getSource());
+	                    	float finalDam = baseDamage * typeMult * comboMult;
+	                    	
+	                    	engine.applyDamage(target, hitLoc, finalDam, DamageType.ENERGY, 0, true, true, projectile.getSource());
 	                    	
 	                    	Global.getSoundPlayer().playSound("hit_glancing_energy", 0.84f, 1.0f + (fxScale * 0.01f), hitLoc, target.getVelocity());
 	                    	
@@ -204,6 +221,18 @@ public class InReC_quarkOnHitEffect implements OnHitEffectPlugin {
 		                        		new Color(104,85,30,111),
 		                        		true);
 	                    	}
+	                    	
+	                    	float dir = Misc.getAngleInDegrees(target.getLocation(), hitLoc);
+	                    	int debCount = Math.max(1, (int) (finalDam / 30f));
+	                    	engine.spawnDebrisSmall(hitLoc, target.getVelocity(), debCount, dir, 150f, 20f, 20f, 690f);
+	                    	
+	                    	if (!listeners.isEmpty()) {
+	        					INREC_QuarkComboMult listener = listeners.get(0);
+	        					if (listener.agitation.getItems().size() >= listener.recentHits.getItems().size()) {
+	        						tagShip.removeListener(listener);
+	        						// removing the quark listener (to remove any damage mult!)
+		                    	}      					
+	        				}
 	                    	
 	                    	engine.removePlugin(this);
 	                    }
@@ -235,12 +264,25 @@ public class InReC_quarkOnHitEffect implements OnHitEffectPlugin {
 		protected ShipAPI ship;
 		
 		protected TimeoutTracker<Integer> recentHits = new TimeoutTracker<Integer>();
+		protected TimeoutTracker<Integer> agitation = new TimeoutTracker<Integer>();
+		boolean agitated = false;
+		int agitateMult = 0;
 		public INREC_QuarkComboMult(ShipAPI ship) {
 			this.ship = ship;
 		}
 		
 		public void notifyHit(int hash) {
 			recentHits.add(hash, 5.1f, 5.1f); // it crashed one time when this was set to a flat 5 (matching actual lifetime) so i bumped it up to hopefully catch any issues there.
+		}
+		
+		public void agitate() {
+			agitated = true;
+			agitateMult = recentHits.getItems().size();
+			// so when agitated charges all deal the same damage (so 10 agitated charges will all get +90% rather than +90/80/70/etc)
+		}
+		
+		public void agitateCounter(int hash) {
+			agitation.add(hash, 1.0f, 1.0f);
 		}
 		
 		public void advance(float amount) {

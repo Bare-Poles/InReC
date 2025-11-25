@@ -23,5 +23,5 @@
 					   "particleCount":48,
 					   "particleColor":[250,133,30,220]},
 	"projectileSpecId":"InReC_guillotine_shot",  # projectile that will be fired
-	"fireSoundTwo":"InReC_guillotine_fire", #TEMP! mjolnir_fire
+	"fireSoundTwo":"InReC_guillotine_fire",
 }

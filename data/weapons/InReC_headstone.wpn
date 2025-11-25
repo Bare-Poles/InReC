@@ -1,0 +1,27 @@
+{
+	"id":"InReC_headstone",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"LARGE",
+	"turretSprite":"graphics/weapons/InReC_headstone_turret_base.png",
+	"turretGunSprite":"graphics/weapons/InReC_headstone_turret_recoil.png",
+	"hardpointSprite":"graphics/weapons/InReC_headstone_hardpoint_base.png",
+	"hardpointGunSprite":"graphics/weapons/InReC_headstone_hardpoint_recoil.png",	
+	"visualRecoil":6.0,  # the gun sprites are only used if this is non-0
+	"renderHints":[RENDER_BARREL_BELOW],
+	"turretOffsets":[22,0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[30,0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"MUZZLE_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":47.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":8.0,
+					   "particleSizeMin":11.0,
+					   "particleSizeRange":19.0,
+					   "particleDuration":0.6,
+					   "particleCount":36,
+					   "particleColor":[253,111,89,215]},
+	"projectileSpecId":"InReC_headstone_shot",  # projectile that will be fired
+	"fireSoundTwo":"InReC_headstone_fire",
+}

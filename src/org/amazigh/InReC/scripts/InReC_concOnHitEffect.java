@@ -103,9 +103,12 @@ public class InReC_concOnHitEffect implements OnHitEffectPlugin {
 	                    FXTimer.advance(amount);
 	                    
 	                    if (FXTimer.intervalElapsed()) {
+	                    	if (!((ShipAPI) target).isAlive() || ((ShipAPI) target).isPiece()) {
+	                    		 engine.removePlugin(this);
+	                    	}
 	                    	
-	                    	int pCount1 = 1 + (int) (target.getCollisionRadius() * 0.04f);
-	                    	int pCount2 = 1 + (int) (target.getCollisionRadius() * 0.03f);
+	                    	int pCount1 = 1 + (int) (target.getCollisionRadius() * 0.02f);
+	                    	int pCount2 = 1 + (int) (target.getCollisionRadius() * 0.015f);
 	                    	
 	                    	INREC_RadialEmitter emitter1 = new INREC_RadialEmitter((CombatEntityAPI) target);
 	                		emitter1.location(target.getLocation());

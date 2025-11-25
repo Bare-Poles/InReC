@@ -1,7 +1,7 @@
 {
 	"id":"InReC_apiarist_sub",
 	"specClass":"missile",
-	"missileType":"MISSILE",
+	"missileType":"NO_AI", #MISSILE
 
 	"onHitEffect":"org.amazigh.InReC.scripts.InReC_apiaristOnHitEffect",
 
@@ -16,9 +16,9 @@
 	"noEngineGlowTime":0.2,
 	"fadeTime":0.4,
 	"engineSpec":{"turnAcc":1600,
-				  "turnRate":200,
+				  "turnRate":240,
 				  "acc":1800,
-				  "dec":200},
+				  "dec":180},
 	"engineSlots":[{"id":"ES1",
 					"loc":[-6, 0],
 				    "style":"CUSTOM",

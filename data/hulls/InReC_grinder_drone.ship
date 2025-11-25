@@ -11,6 +11,9 @@
   "shieldCenter": [1, -0],
   "shieldRadius": 23,
   "viewOffset": 0,
+  "builtInMods": [
+    "InReC_platformRange"
+  ],
   "weaponSlots": [
     {
       "id": "WS0001",

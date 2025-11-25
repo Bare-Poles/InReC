@@ -99,8 +99,10 @@ public class InReC_ModPlugin extends BaseModPlugin {
     	
     	CodexDataV2.makeRelated(CodexDataV2.getWeaponEntryId("InReC_quark"), CodexDataV2.getWeaponEntryId("InReC_hangnail"));
     	CodexDataV2.makeRelated(CodexDataV2.getWeaponEntryId("InReC_quark"), CodexDataV2.getWeaponEntryId("InReC_wishbone"));
+    	CodexDataV2.makeRelated(CodexDataV2.getWeaponEntryId("InReC_quark"), CodexDataV2.getWeaponEntryId("InReC_headstone"));
     	CodexDataV2.makeRelated(CodexDataV2.getWeaponEntryId("InReC_hangnail"), CodexDataV2.getWeaponEntryId("InReC_wishbone"));
-    	
+    	CodexDataV2.makeRelated(CodexDataV2.getWeaponEntryId("InReC_hangnail"), CodexDataV2.getWeaponEntryId("InReC_headstone"));
+    	CodexDataV2.makeRelated(CodexDataV2.getWeaponEntryId("InReC_wishbone"), CodexDataV2.getWeaponEntryId("InReC_headstone"));
     }
     
     // Custom Particle Engine emitter, radial emission within an arc, with random velocity+distance matching facing within a provided min/max value

@@ -39,8 +39,8 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "InReC_compass",
-        "WS0002": "InReC_compass"
+        "WS0001": "InReC_headstone",
+        "WS0002": "InReC_headstone"
       }
     },
     {

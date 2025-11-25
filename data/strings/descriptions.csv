@@ -44,20 +44,22 @@ InReC_negatron,WEAPON,Delivers bursts of highly destructive charged energy bolts
 InReC_hadron,WEAPON,"Long ranged and respectably flux efficient, this weapon offers a modest amount of firepower best suited to ships keeping to a restricted flux budget.",,,,,
 InReC_quark,WEAPON,"Fires bursts of high powered bolts that embed Quark Charges into their targets, the resonant nature of the charges means that it is best used en-masse or alongside other weapons that can deliver charges.
 
-The resonant nature of Quark Charges means that there is an inherent synergy across the various weapons that deliver them, and mounting them in volume across a fleet can easily multiply their destructive potential.",,,,,
+The resonant nature of Quark Charges leads to an inherent synergy across the various weapons that deliver and manipulate them, and mounting them in volume across a fleet can easily multiply their destructive potential.",,,,,
 InReC_burst,WEAPON,"A low output pulse weapon, it sacrifices damage output in order to emphasise mount flexibility and ease of installation.",,,,,
 ,,,,,,,
 InReC_hangnail,WEAPON,"High velocity explosive shells that embed a Quark Charge into the target, the internal magazine grants it the ability to deliver devastating bursts of damage that can tear through armoured targets.
 
-The resonant nature of Quark Charges means that there is an inherent synergy across the various weapons that deliver them, and mounting them in volume across a fleet can easily multiply their destructive potential.",,,,,
+The resonant nature of Quark Charges leads to an inherent synergy across the various weapons that deliver and manipulate them, and mounting them in volume across a fleet can easily multiply their destructive potential.",,,,,
 InReC_millstone,WEAPON,"A simple and reliable two barreled cannon. While the mid-caliber fragmentation shells are somewhat lacking in damage output, the weapon has an easily manageable flux profile.",,,,,
 InReC_millstone_tri,WEAPON,"A simple and reliable three barreled cannon. While the mid-caliber fragmentation shells are somewhat lacking in damage output, the weapon has an easily manageable flux profile.",,,,,
 InReC_fusor,WEAPON,"Two light railguns fused into a single weapons system, efficient and consistent, but surpassed in raw firepower by various other weapons.",,,,,
 InReC_fusor_linked,WEAPON,"A pair of fused railguns, just like the smaller model remains efficient, but retains the comparative lack of damage output.",,,,,
 InReC_canister,WEAPON,"A snub barreled cannon that fires canisters of high-density flechettes, able to overwhelm shield projectors in an instant, but has a rather short effective range.",,,,,
 InReC_guillotine,WEAPON,"A heavy cannon that loads advanced siege shells with incredible reach and power, able to provide punishing fire support at range.",,,,,
-InReC_compass,WEAPON,"This cannon unleashes a focused cone of high-density flechettes, delivering consistent spikes of pressure on hostile shield projectors.",,,,,
 InReC_stigmata,WEAPON,"A triplicate mounting of relativistic accelerators, offering solid overall performance that is only held back by rapid projectile destabilisation.",,,,,
+InReC_headstone,WEAPON,"High caliber mortar that alongside a powerful explosive payload has the ability to agitate Quark Charges into early detonation.
+
+The resonant nature of Quark Charges leads to an inherent synergy across the various weapons that deliver and manipulate them, and mounting them in volume across a fleet can easily multiply their destructive potential.",,,,,
 ,,,,,,,
 InReC_flock,WEAPON,A basic lightweight missile. While lacking in speed and payload it has a respectable long-burn engine and integrates an autoloader allowing for sustained support fire.,,,,,
 InReC_flock_pod,WEAPON,A pod of basic lightweight missiles. While lacking in speed and payload it has a respectable long-burn engine and integrates an autoloader allowing for sustained support fire.,,,,,
@@ -73,7 +75,7 @@ InReC_apiarist_pod,WEAPON,A pod of Blister micromissile carriers that each deplo
 InReC_herbicide,WEAPON,"A launcher for high-yield armoured missiles, an effective anti-armour strike package with a respectable ammunition reserve.",,,,,
 InReC_wishbone,WEAPON,"Multi-stage long range missiles that release four anti-armour seekers on nearing a target, the ability to deliver Quark Charges at long range proves a valuable asset in fleet support.
 
-The resonant nature of Quark Charges means that there is an inherent synergy across the various weapons that deliver them, and mounting them in volume across a fleet can easily multiply their destructive potential.",,,,,
+The resonant nature of Quark Charges leads to an inherent synergy across the various weapons that deliver and manipulate them, and mounting them in volume across a fleet can easily multiply their destructive potential.",,,,,
 ,,,,,,,
 InReC_pulse_drn,WEAPON,"A standard burst fire energy bolt weapon, mostly unremarkable but with the saving grace of an efficient flux profile. This variant is mounted on an expendable drone powered by a limited capacitor, and as such has a limited number of shots it can fire.",,,,,
 InReC_pulse_drn_2,WEAPON,"A standard burst fire energy bolt weapon, mostly unremarkable but with the saving grace of an efficient flux profile. This variant is mounted on a drone without a full-sized power core, and as such has a limited number of shots it can fire.",,,,,

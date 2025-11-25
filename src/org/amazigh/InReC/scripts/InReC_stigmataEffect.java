@@ -119,35 +119,65 @@ public class InReC_stigmataEffect implements OnHitEffectPlugin, OnFireEffectPlug
         			    engine,
         			    projectile.getSource(),
         			    point,
-        			    3f,
-        			    200f,
+        			    4f,
+        			    222f,
         			    dir + MathUtils.getRandomNumberInRange(75f, 105f),
-        			    new Color(69,23,20),
-        				new Color(93,27,31));
+        			    new Color(104,34,30), //69,23,20
+        				new Color(125,41,46)); //93,27,31
 				
 				INREC_RadialEmitter emitterSpk = new INREC_RadialEmitter((CombatEntityAPI) target);
 				emitterSpk.location(point);
-				emitterSpk.angle(dir -40, 80f);
+				emitterSpk.angle(dir -44, 88f);
 				emitterSpk.life(0.65f, 0.95f);
 				emitterSpk.size(2f, 4f);
-				emitterSpk.velocity(16f, 52f);
-				emitterSpk.distance(0f, 5f);
+				emitterSpk.velocity(16f, 43f);
+				emitterSpk.distance(2f, 11f);
 				emitterSpk.color(208,67,91,215);
-				emitterSpk.burst(21);
-
+				emitterSpk.burst(23);
+				
 				engine.addSwirlyNebulaParticle(point, fxVel,
-						23f, 2.1f, 0.5f, 0.55f, 0.69f,
+						23f, 2.3f, 0.5f, 0.69f, 0.69f,
 						new Color(221,77,69,234), true);
 				
 				Global.getSoundPlayer().playSound("explosion_from_damage", 1.5f, 0.69f, point, fxVel);
 			}
 		}
 		
-		
 		engine.addSmoothParticle(point, fxVel, 45f, 1f, 0.82f, 0.5f, new Color(243,76,215));
 		engine.addSmoothParticle(point, fxVel, 27f, 1f, 0.69f, 0.5f, new Color(243,114,187));
 		engine.addNebulaParticle(point, fxVel, 27f, 2f, 0.34f, 0.69f, 0.6f, new Color(251,92,143));
+
+		float jet_facing = projectile.getFacing() + 180f;
 		
+		INREC_RadialEmitter emitterJet = new INREC_RadialEmitter((CombatEntityAPI) target);
+		emitterJet.location(point);
+		emitterJet.angle(jet_facing, 0f);
+		emitterJet.life(0.31f, 0.45f);
+        emitterJet.size(2.2f, 4.2f);
+        emitterJet.velocity(19f, 27f);
+        emitterJet.distance(5f, 37f);
+        emitterJet.color(211,134,157,181); // 211,134,189,181
+        	//(176,74,143,144);
+        emitterJet.coreDispersion(3f);
+        emitterJet.burst(18);
+		
+        INREC_RadialEmitter emitterSub = new INREC_RadialEmitter((CombatEntityAPI) target);
+        emitterSub.location(point);
+        emitterSub.angle(jet_facing, 0f);
+        emitterSub.life(0.3f, 0.42f);
+        emitterSub.size(2f, 4f);
+		emitterSub.velocity(19f, 19f);
+		emitterSub.distance(3f, 19f);
+		emitterSub.color(176,74,143,131);
+		emitterSub.coreDispersion(2f);
+		emitterSub.burst(7);
+		
+        for (int i=0; i < 3; i++) {
+            Vector2f smokeVel = MathUtils.getPointOnCircumference(fxVel, i * 11f, jet_facing);
+            Vector2f smokeLoc = MathUtils.getPointOnCircumference(point, i * 5f, jet_facing);
+            engine.addNebulaParticle(smokeLoc, smokeVel, 18f - i, 1.9f, 0.4f, 0.75f, 0.84f, new Color(61,45,50,111));       	
+        }
+        
 		if (!shieldHit) {
 			float arc = 150f;
 			engine.spawnDebrisSmall(point, fxVel, 7, dir, arc, 20f, 20f, 700f);

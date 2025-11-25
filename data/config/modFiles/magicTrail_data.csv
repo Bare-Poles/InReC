@@ -85,6 +85,12 @@ InReC_hangnail_shot_cinder,InReC_hangnail_shot,base_trail_rough,10,0,0.05,0.23,6
 InReC_hangnail_shot_glow,InReC_hangnail_shot,base_trail_smooth,10,0,0.06,0.12,55,38,"[242,114,69]","[229,108,66]",0.4,200,1000,TRUE,20,0,1,0,TRUE,FALSE,TRUE,0,0,0,0,0,0,FALSE,false
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+InReC_headstone_shot_core,InReC_headstone_shot,base_trail_smooth,10,0.07,0.21,0.24,14,3,"[252,56,45]","[205,179,69]",0.8,310,10,TRUE,16,1,1,0,TRUE,FALSE,TRUE,20,0,0.3,0,30,0,true,false
+InReC_headstone_shot_smoke,InReC_headstone_shot,base_trail_heavySmoke,10,0.09,0.22,0.75,21,54,"[81,79,77]","[40,37,28]",0.5,240,5,TRUE,0,4,1,0,TRUE,FALSE,FALSE,25,0,0.2,0,0,0,true,true
+InReC_headstone_shot_cinder,InReC_headstone_shot,base_trail_rough,10,0,0.12,0.52,8,16,"[255,81,73]","[75,24,31]",0.69,275,8,TRUE,9,5,1,0,TRUE,FALSE,TRUE,15,0,0.1,0,0,0,false,false
+InReC_headstone_shot_glow,InReC_headstone_shot,base_trail_smooth,10,0,0.2,0.42,85,66,"[255,46,37]","[210,174,64]",0.42,200,1000,TRUE,18,0,1,0,TRUE,FALSE,TRUE,0,0,0,0,0,0,FALSE,false
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 InReC_millstone_mono_shot_core,InReC_millstone_mono_shot,base_trail_heavySmoke,10,0.1,0.05,0.25,7,2,"[255,55,45]","[225,220,170]",0.5,256,-128,TRUE,5,8,1,0,TRUE,TRUE,TRUE,11,110,0.4,0,0,160,TRUE,false
 InReC_millstone_mono_shot_smoke,InReC_millstone_mono_shot,base_trail_smoke,10,0.03,0,0.14,12,20,"[231,146,140]","[37,22,20]",0.35,256,32,TRUE,5,4,1,0,TRUE,TRUE,TRUE,0,80,0.35,0,0,120,TRUE,TRUE
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

@@ -17,7 +17,7 @@ Brawler (IRC),InReC_brawler,Missile Frigate,InReCo,fastmissileracks,6,2000,400,2
 Vigilance (IRC),InReC_vigilance,Frigate,InReCo,InReC_cluster_flak,5,1800,250,2500,,200,45,,110,120,100,45,90,150,OMNI,,150,0.4,0.8,,,10,25,40,25,1,25,10,10000,8,10,240,0.25,4,4,,,,,,,,"InReC_bp, merc, rare_bp, ind",,,0.5,2,2,,192202
 Centurion (IRC),InReC_centurion,Heavy Frigate,InReCo,InReC_damper,7,2500,500,2800,,240,65,,120,120,100,50,100,300,OMNI,,180,0.4,0.8,,,30,40,40,25,1,25,10,25000,8,10,300,0.25,6,6,,,,,,,,"InReC_bp, merc, rare_bp, ind",,,0.4,2,2,,192203
 Cerberus (IRC),InReC_cerberus,Drone Tender,InReCo,InReC_greg,6,2400,350,1250,,180,35,,110,100,80,60,120,300,FRONT,,100,0.5,1,,,20,50,30,20,1,20,10,12000,8,10,240,0.25,5,5,,,,,,,,"InReC_bp, merc, rare_bp, ind",,,0.4,2,2,,192204
-Zumbido,InReC_zumbido,Advanced Frigate,InReCo,InReC_BurstDrive,7,2000,300,6000,,300,50,,160,160,140,120,240,250,FRONT,,150,0.2,1.2,,,15,25,40,20,1,20,10,40000,8,20,240,0.25,6,6,,,,,,,,"rare_bp, merc, ind",,,0.5,2,2,,192205
+Zumbido,InReC_zumbido,Advanced Frigate,InReCo,InReC_BurstDrive,9,2000,300,6000,,300,50,,160,160,140,120,240,250,FRONT,,150,0.2,1.2,,,15,25,40,20,1,20,10,40000,8,20,240,0.25,8,8,,,,,,,,"rare_bp, merc, ind",,,0.5,2,2,,192205
 Estrondo,InReC_estrondo,Advanced Gunship,InReCo,InReC_MicroBurstDrive,15,2000,350,9000,,500,65,,175,200,160,100,200,280,FRONT,,360,0.2,1,,,10,20,20,20,1,20,10,100000,8,30,180,0.25,15,15,,,,,,,,"rare_bp, merc, ind",,,0.5,2,2,,192206
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Sunder (IRC),InReC_sunder,Destroyer,InReCo,fastmissileracks,10,4000,250,6500,,400,105,,90,80,60,30,30,360,FRONT,,300,0.4,1,,,50,70,80,50,2,25,9,45000,5,15,360,0.25,11,11,,,,,,,,"InReC_bp, merc, rare_bp, ind",,,0.5,2,3,,192301
