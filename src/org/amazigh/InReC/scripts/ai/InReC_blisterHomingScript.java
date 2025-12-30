@@ -5,6 +5,7 @@ package org.amazigh.InReC.scripts.ai;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.*;
 import com.fs.starfarer.api.input.InputEventAPI;
+import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 
 import org.jetbrains.annotations.NotNull;
@@ -27,10 +28,15 @@ public class InReC_blisterHomingScript extends BaseEveryFrameCombatPlugin {
     private float timer=0, check=0f, ECCM=2, MAX_SPEED=300, swarmBase=0f, swarmTrue=0f;
     private float SWARM_OFFSET = 21f;
     private float PRECISION_RANGE=640000; // 800^2
+    
+    private boolean init=false;
+    private IntervalUtil delayInterval = new IntervalUtil(0.1f, 0.1f);
     		
-	public InReC_blisterHomingScript(@NotNull MissileAPI projectile, CombatEntityAPI target, float angle) {
+	public InReC_blisterHomingScript(@NotNull MissileAPI projectile, CombatEntityAPI target, float angle, float delay) {
 		this.projectile = projectile;
         this.target = target;
+        
+        delayInterval = new IntervalUtil(delay, delay);
         
 		MAX_SPEED = projectile.getMaxSpeed();
 		
@@ -65,6 +71,16 @@ public class InReC_blisterHomingScript extends BaseEveryFrameCombatPlugin {
 		}
 				
 		if (Global.getCombatEngine().isPaused() || projectile.isFading() || projectile.isFizzling()) {return;}
+		
+		if (!init) {
+			delayInterval.advance(amount);
+			projectile.giveCommand(ShipCommand.DECELERATE);
+			if (delayInterval.intervalElapsed()) {
+				init = true;
+			} else {
+				return;				
+			}
+		}
 		
 		if (target == null
 				|| ((target instanceof ShipAPI && !((ShipAPI) target).isAlive())

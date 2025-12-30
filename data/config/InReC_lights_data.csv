@@ -43,6 +43,8 @@ InReC_fungicide_mssl,projectile,80,0.23,0.2,"[60,225,207]",5,90,0.23,0.5,"[66,22
 # InReC_heart-throb_dummy,,,,,,,,,,,,,,,,,
 InReC_herbicide,projectile,110,0.3,0.2,"[205,75,125]",9,160,0.2,0.7,"[255,95,160]",,,,,,1,FALSE
 InReC_pesticide,projectile,60,0.15,0.5,"[250,95,30]",7,69,0.15,0.4,"[255,73,50]",,,,,,1,FALSE
+InReC_sundown,projectile,175,0.55,0.5,"[42,220,193]",12,300,0.5,1,"[48,226,193]",,,,,,1,FALSE
+InReC_sundown_sub,projectile,90,0.2,0.2,"[42,220,193]",6,100,0.2,0.5,"[48,226,193]",,,,,,1,FALSE
 InReC_wishbone_main,projectile,100,0.25,0.2,"[255,120,73]",13,180,0.25,0.75,"[229,190,66]",,,,,,1,FALSE
 InReC_wishbone_sub,projectile,90,0.2,0.5,"[255,120,73]",7,150,0.2,0.7,"[229,190,66]",,,,,,1,FALSE
 ,,,,,,,,,,,,,,,,,

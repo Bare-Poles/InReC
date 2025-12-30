@@ -1,0 +1,86 @@
+{
+  "variantId": "InReC_pegasus_std",
+  "hullId": "InReC_pegasus",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 14,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "missleracks",
+    "InReC_slotShield",
+    "fluxdistributor",
+    "InReC_rebalancer"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0000": "InReC_sundown",
+        "WS0001": "InReC_sundown"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "InReC_apiarist_pod",
+        "WS0004": "InReC_apiarist_pod",
+        "WS0005": "InReC_apiarist_pod",
+        "WS0006": "InReC_apiarist_pod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "InReC_fusor_linked"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "InReC_pulse_hvy",
+        "WS0008": "InReC_pulse_hvy",
+        "WS0009": "InReC_pulse_hvy"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0016": "InReC_pulse",
+        "WS0017": "InReC_pulse",
+        "WS0018": "InReC_pulse",
+        "WS0019": "InReC_pulse"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "InReC_flash_lt",
+        "WS0011": "InReC_flash_lt",
+        "WS0012": "InReC_flash_lt",
+        "WS0013": "InReC_flash_lt",
+        "WS0014": "InReC_flash_lt",
+        "WS0015": "InReC_flash_lt"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0020": "InReC_flash",
+        "WS0021": "InReC_flash_lt",
+        "WS0022": "InReC_flash_lt"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -1,6 +1,8 @@
 package org.amazigh.InReC.hullmods;
 
 import java.awt.Color;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.amazigh.InReC.scripts.InReC_ModPlugin.INREC_RadialEmitter;
 import org.lazywizard.lazylib.MathUtils;
@@ -17,7 +19,15 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipAPI;
 
 public class InReC_concDamper extends BaseHullMod {
-
+	
+	private static Map<HullSize, Float> mag = new HashMap<HullSize, Float>();
+	static {
+		mag.put(HullSize.FRIGATE, 56f);
+		mag.put(HullSize.DESTROYER, 69f); // ?
+		mag.put(HullSize.CRUISER, 82f);
+		mag.put(HullSize.CAPITAL_SHIP, 95f); // ?
+	}
+	
 	public static final float PUSH_VALUE = 100f; // the force that is applied by the "concussion pulses"
 	
 	public void advanceInCombat(ShipAPI ship, float amount){
@@ -53,8 +63,8 @@ public class InReC_concDamper extends BaseHullMod {
         		emitter.velocity(14f, 14f);
         		emitter.distance(ship.getCollisionRadius(), 300f);
         		emitter.color(65,220,195,175);
-        		emitter.burst(56);
-            	
+        		emitter.burst((int) ((float) mag.get(ship.getHullSize()))); // "Float" is a bitch ass, and should be killed with hammers (in minecraft)
+        		
             	for (MissileAPI target_missile : AIUtils.getNearbyEnemyMissiles(ship, ship.getCollisionRadius() + 300f)) {
             		
             		float shuntAngle = VectorUtils.getAngle(ship.getLocation(), target_missile.getLocation());

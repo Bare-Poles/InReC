@@ -1,0 +1,39 @@
+{
+	"id":"InReC_sundown_sub",
+	"specClass":"missile",
+	"missileType":"NO_AI", #MISSILE
+	"sprite":"graphics/missiles/InReC_sundown_sub.png",
+	"size":[6,14],
+	"center":[3,7],
+	"collisionRadius":6,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[66,191,226,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":60, # purely visual
+	"flameoutTime":0.8,
+	"noEngineGlowTime":0.2,
+	"fadeTime":0.4,
+	"engineSpec":{"turnAcc":1200,
+				  "turnRate":200,
+				  "acc":1500,
+				  "dec":120},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-7, 0],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[42,225,201,255],
+						"contrailDuration":1.5,
+						"contrailWidthMult":0.6,
+						"contrailWidthAddedFractionAtEnd":1.1,# can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":7, # min segment length, in pixels
+						"contrailMaxSpeedMult":0.1f,
+						"contrailAngularVelocityMult":0.6f,
+						"contrailSpawnDistMult":0.5f, # how far away from engine it starts
+						"contrailColor":[59,123,130,140],
+					    	"glowSizeMult":1.1,
+						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":5.0,
+				    "length":21.0,
+				    "angle":180.0}]
+}

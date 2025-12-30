@@ -1,0 +1,22 @@
+{
+	"id":"InReC_concFocus",
+	"type":"STAT_MOD",
+	"aiType":"WEAPON_BOOST",
+	
+	"statsScript":"org.amazigh.InReC.shipsystems.scripts.InReC_concFocusStats",
+	
+	"jitterUnderColor":[65,220,195,69],
+	"jitterUnderCopies":20,
+	"jitterUnderMinRange":0,
+	"jitterUnderRange":9,
+	"jitterUnderRangeRadiusFraction":0,	
+	
+	"weaponGlowColor":[60,220,210,200], # 60,220,210,55
+	"weaponTypes":[ENERGY],
+	
+	"useSound":"system_high_energy_focus_activate",
+	"deactivateSound":"system_high_energy_focus_deactivate",
+	
+	"outOfUsesSound":"gun_out_of_ammo",
+	"loopSound":"system_high_energy_focus_loop",	
+}

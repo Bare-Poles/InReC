@@ -21,7 +21,7 @@ import org.lazywizard.lazylib.VectorUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
 import org.lwjgl.util.vector.Vector2f;
 
-public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileAI {
+public class InReC_sundownMissileAI implements MissileAIPlugin, GuidedMissileAI {
     
 	//////////////////////
 	//     SETTINGS     //
@@ -79,19 +79,19 @@ public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileA
 	
 	
 	// how many shots to fire (multiply this by 2 because firing from two launch ports at once)
-	private int AMMO = 14; //20
+	private int AMMO = 15;
 	
 	// to check whether the missile is within "MIRV" range, and whether to fire the missiles
 	private boolean TRIGGER = false;
 	
 	// square of range to start to fire missiles at
-	private float DETECT=810000; //900^2
+	private float DETECT=1440000; //1200^2
 	
 	// timer for firing missiles after getting into range
-	private IntervalUtil missileInterval = new IntervalUtil(0.12f, 0.14f); //0.1f, 0.12f
+	private IntervalUtil missileInterval = new IntervalUtil(0.09f, 0.12f);
 
 	// timer for simulating lifetime 
-	private IntervalUtil lifeInterval = new IntervalUtil(5f, 5f);
+	private IntervalUtil lifeInterval = new IntervalUtil(7f, 7f);
 	
 	
 	
@@ -114,7 +114,7 @@ public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileA
 	//  DATA COLLECTING //
 	//////////////////////
 	
-    public InReC_beekeeperMissileAI(MissileAPI missile, ShipAPI launchingShip) {
+    public InReC_sundownMissileAI(MissileAPI missile, ShipAPI launchingShip) {
         this.MISSILE = missile;
         MAX_SPEED = missile.getMaxSpeed();
         if (missile.getSource().getVariant().getHullMods().contains("eccm")){
@@ -247,23 +247,25 @@ public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileA
             
         	if (missileInterval.intervalElapsed()) {
             	
-        		AMMO --;
-        		
             	Vector2f vel = MISSILE.getVelocity();
             	Vector2f loc = MISSILE.getLocation();
 
 				Vector2f smokeVel = new Vector2f(vel.x * 0.8f, vel.y * 0.8f);
 				
-				// float angle = MathUtils.getRandomNumberInRange((20-AMMO) * 2.2f, (20-AMMO) * 3.4f);  // formerly 0.8-1.2 * 2.8
-					// numbers from when it had 20 "ammo"
-				float angle = Math.max(0.1f, MathUtils.getRandomNumberInRange((14-AMMO) * 3.15f, (14-AMMO) * 4.85f));
+				float angle = Math.max(0.1f, MathUtils.getRandomNumberInRange(AMMO * 4.9f, AMMO * 5.5f));
 					// adding a base 0.1f minimum for sanity/safety with the homing stuff and it's side picking
 				
+				float delayTime = (16 - AMMO) * 0.04f; // later launched missiles have a bit of delay on AI startup, prevents clumping. 
+				float offset = (12 - AMMO) * angle * 0.09f; // angle that is fed to the submissile AI, causes a sort of "box" formation that might offer a level of PD resistance (maybe idk?)
+				float dist = (23 - AMMO) * 0.5f; // submissile spawning moves forwards as they spawn, looks like they are coming from different "ports" on the missile.
+				
+        		AMMO --;
+        		
 				float subFacing1 = MISSILE.getFacing() + angle;
-				Vector2f loc1 = MathUtils.getPointOnCircumference(loc, 2f, subFacing1);
-				CombatEntityAPI subMissile1 = engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_beekeeper_sub", loc1, subFacing1 + MathUtils.getRandomNumberInRange(0f, 5f), MathUtils.getRandomPointInCircle(smokeVel, 15f));
+				Vector2f loc1 = MathUtils.getPointOnCircumference(loc, dist, subFacing1);
+				CombatEntityAPI subMissile1 = engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_sundown_sub", loc1, subFacing1 + MathUtils.getRandomNumberInRange(0f, 5f), MathUtils.getRandomPointInCircle(smokeVel, 15f));
 				((MissileAPI)subMissile1).setFromMissile(true);
-				engine.addPlugin(new InReC_blisterHomingScript((MissileAPI)subMissile1, target, angle, 0));
+				engine.addPlugin(new InReC_blisterHomingScript((MissileAPI)subMissile1, target, (offset), delayTime));
 				
 				Vector2f puffRandomVel1 = MathUtils.getPointOnCircumference(smokeVel, MathUtils.getRandomNumberInRange(8f, 24f), subFacing1);
             	engine.addSmokeParticle(loc1,
@@ -271,17 +273,14 @@ public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileA
             			MathUtils.getRandomNumberInRange(7f, 14f),
             			0.8f,
             			0.6f,
-            			new Color(90,100,110,150));
+            			new Color(81,107,110,150));
             	
             	
 				float subFacing2 = MISSILE.getFacing() - angle;
-				Vector2f loc2 = MathUtils.getPointOnCircumference(loc, 2f, subFacing2);
-				CombatEntityAPI subMissile2 = engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_beekeeper_sub", loc2, subFacing2 - MathUtils.getRandomNumberInRange(0f, 5f), MathUtils.getRandomPointInCircle(smokeVel, 15f));
+				Vector2f loc2 = MathUtils.getPointOnCircumference(loc, dist, subFacing2);
+				CombatEntityAPI subMissile2 = engine.spawnProjectile(MISSILE.getSource(), MISSILE.getWeapon(), "InReC_sundown_sub", loc2, subFacing2 - MathUtils.getRandomNumberInRange(0f, 5f), MathUtils.getRandomPointInCircle(smokeVel, 15f));
 				((MissileAPI)subMissile2).setFromMissile(true);
-				engine.addPlugin(new InReC_blisterHomingScript((MissileAPI)subMissile2, target, -angle, 0));
-				
-				
-				
+				engine.addPlugin(new InReC_blisterHomingScript((MissileAPI)subMissile2, target, -(offset), delayTime));
 				
 				Vector2f puffRandomVel2 = MathUtils.getPointOnCircumference(smokeVel, MathUtils.getRandomNumberInRange(4f, 12f), subFacing2);
             	engine.addSmokeParticle(loc2,
@@ -289,7 +288,7 @@ public class InReC_beekeeperMissileAI implements MissileAIPlugin, GuidedMissileA
             			MathUtils.getRandomNumberInRange(7f, 14f),
             			0.8f,
             			0.6f,
-            			new Color(90,100,110,150));
+            			new Color(81,107,110,150));
 				
 				
             	Global.getSoundPlayer().playSound("InReC_blister_fire", 1.0f, 1.0f, loc, vel); //swarmer_fire

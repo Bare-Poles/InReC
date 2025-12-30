@@ -1,0 +1,60 @@
+{
+  "variantId": "InReC_falcon_elt",
+  "hullId": "InReC_falcon",
+  "displayName": "Elite",
+  "goalVariant": true,
+  "fluxCapacitors": 3,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "InReC_recycler",
+    "InReC_slotShield"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0002": "InReC_beekeeper",
+        "WS0003": "InReC_beekeeper"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "InReC_stigmata"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "InReC_fusion"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "InReC_disruption",
+        "WS0005": "InReC_disruption"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "InReC_burst",
+        "WS0008": "InReC_flash_lt",
+        "WS0009": "InReC_flash_lt",
+        "WS0010": "InReC_burst",
+        "WS0011": "InReC_burst"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

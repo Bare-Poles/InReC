@@ -57,7 +57,7 @@ Fusion Bolter,InReC_fusion_drn,0,,1000,450,,30,,0,40,0,180,,,HIGH_EXPLOSIVE,30,,
 Drone %s once ammunition is expended.",12 | Self-destructs,,,,19232
 Gluon Bolter,InReC_gluon_drn,0,,1000,800,,25,,0,25,0,200,,,ENERGY,30,,0.2,3.05,20,0.05,15,15,0,0,,720,,,,,,"SYSTEM, DO_NOT_CONSERVE",,,InReCo,,Fire Support,,,,Swarming,Drone %s once ammunition is expended.,Self-destructs,,,,19233
 Light Flash Bolter (Fighter),InReC_flash_lt_drn,0,,1000,400,,30,,0,100,0,,,,ENERGY,0,,0.1,1.1,3,0.15,30,30,0,0,,1200,,,,,,"SYSTEM, SHOW_IN_CODEX, PD",codex_require_related,,InReCo,,Point Defense (area),,,,,,,,,,19234
-Millstone Mono,InReC_millstone_drn,0,,1000,1000,,240,,9,50,0,,,,FRAGMENTATION,48,,0,1.25,1,0,1,10,1,8,,800,,,,,,"SYSTEM, SHOW_IN_CODEX",codex_require_related,,InReCo,,General,,,,,,,,,,19235
+Millstone Mono,InReC_millstone_drn,0,,1000,1000,,240,,9,50,0,,,,FRAGMENTATION,48,,0,1.5,1,0,1,10,1,8,,800,,,,,,"SYSTEM, SHOW_IN_CODEX",codex_require_related,,InReCo,,General,,,,,,,,,,19235
 Flock MRM (Drone),InReC_flock_drn,0,,1000,2000,,120,,16,15,0,,,,HIGH_EXPLOSIVE,0,,0,13.75,2,0.3,0,3,1,1,,200,70,15,100,,,"SYSTEM, SHOW_IN_CODEX, DO_NOT_AIM",codex_require_related,,InReCo,,Fire Support,,,,,,,,,,19236
 Pesticide Launcher (Fighter),InReC_pesticide_ftr,0,,1000,1000,,90,60,15,20,0,,,,FRAGMENTATION,0,,0,9.25,6,0.15,20,32,2,1,,250,440,7,120,,,"SYSTEM, SHOW_IN_CODEX, DO_NOT_AIM, MISSILE_SPREAD",codex_require_related,,InReCo,,Saturation,Medium,Good,,,,,,,,19237
 Fungicide Micromissile Array,InReC_fungicide_array,0,,1000,1200,,70,,4,0,0,,,,KINETIC,0,,0,7.3,8,0.1,5,10,1,2,,750,300,5,50,,,"SYSTEM, SHOW_IN_CODEX, DO_NOT_AIM",codex_require_related,,InReCo,,Anti Shield,Very Fast,Special,,,After an initial aiming stage accelerates rapidly and continues with limited guidance.,,,,,19238
@@ -65,6 +65,8 @@ Fungicide Micromissile Array,InReC_fungicide_array_2,0,,1000,1200,,70,,4,0,0,,,,
 Concussion Bolter,InReC_conc_bolter,0,,1000,1100,,100,,0,20,0,,,,ENERGY,200,,0.15,4.1,4,0.25,6,6,0,0,,850,,,,,,"SYSTEM, SHOW_IN_CODEX",codex_require_related,,InReCo,,Suppression,,,,,"On impact each shot Reduces the targets Top Speed, Maneuverability, Weapon Accuracy and Weapon Turn Rate by %s for %s.
 This effect stacks with multiple impacts.",3% | 5 Seconds,,,,19239
 Tantrum Reflux Bolter,InReC_tantrum,0,,1000,500,,80,,0,0,0,,,,ENERGY,120,,0.2,5.4,5,0.1,12,12,0,0,,1000,,,,,,"SYSTEM, SHOW_IN_CODEX, FIRE_WHEN_INEFFICIENT",codex_require_related,TANTRUM_only,InReCo,,Flux Management,,,,,"Each shot consumes %s of current flux from the firing ship, any hard flux that is consumed is then transferred to the target on impact.",3%,,,,192310
+Sundown Heavy Blister,InReC_sundown,0,,1000,2000,,900,,,0,0,10,0.033333,,ENERGY,0,,0,10,1,0,0,0,0,0,,250,75,30,600,,,"SYSTEM, SHOW_IN_CODEX, DO_NOT_AIM, STRIKE, USE_VS_FRIGATES",codex_require_related,,InReCo,,Fire Support,Medium,Good,,,On nearing its target the missile will slow down and fire a barrage of %s.,Micro Missiles,,,TRUE,192311
+ Sundown Sub,InReC_sundown_sub,0,,1000,1800,,90,,6,10,0,,,,ENERGY,0,,0,1,1,0,0,0,0,0,,300,350,9,90,,,"SYSTEM, DO_NOT_AIM",,,InReCo,,,,,,,,,,,,192311.1
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Flare (Dumb),InReC_flare_dumb,,,1000,400,,20,200,0,,,,,,ENERGY,0,,0,1,1,0.1,30,30,0,0,,150,300,3.2,100,,,SYSTEM,,,InReCo,,,,,,,,,,,,19241

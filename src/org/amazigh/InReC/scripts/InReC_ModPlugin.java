@@ -21,6 +21,7 @@ import org.amazigh.InReC.scripts.ai.InReC_beekeeperMissileAI;
 import org.amazigh.InReC.scripts.ai.InReC_apiaristMissileAI;
 import org.amazigh.InReC.scripts.ai.InReC_herbicideMissileAI;
 import org.amazigh.InReC.scripts.ai.InReC_pesticideMissileAI;
+import org.amazigh.InReC.scripts.ai.InReC_sundownMissileAI;
 import org.dark.shaders.light.LightData;
 import org.dark.shaders.util.ShaderLib;
 import org.lazywizard.lazylib.MathUtils;
@@ -34,8 +35,8 @@ public class InReC_ModPlugin extends BaseModPlugin {
 	public static final String HERBICIDE_MISSILE_ID = "InReC_herbicide";
 	public static final String FUNGICIDE_MISSILE_ID = "InReC_fungicide_mssl";
 	public static final String PESTICIDE_MISSILE_ID = "InReC_pesticide";
-
-
+	public static final String SUNDOWN_MISSILE_ID = "InReC_sundown";
+	
 	public boolean HAS_GRAPHICSLIB = false;
     
     //New game stuff
@@ -69,6 +70,8 @@ public class InReC_ModPlugin extends BaseModPlugin {
                 return new PluginPick<MissileAIPlugin>(new InReC_fungicideMissileAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SPECIFIC);
             case PESTICIDE_MISSILE_ID:
                 return new PluginPick<MissileAIPlugin>(new InReC_pesticideMissileAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SPECIFIC);
+            case SUNDOWN_MISSILE_ID:
+                return new PluginPick<MissileAIPlugin>(new InReC_sundownMissileAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SPECIFIC);
             default:
                 return null;
         }

@@ -1,0 +1,91 @@
+{
+	"id":"InReC_sundown",
+	"specClass":"missile",
+	"missileType":"MIRV",
+	"sprite":"graphics/missiles/InReC_sundown.png",
+	"size":[18,34],
+	"center":[9,17],
+	"collisionRadius":18,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[48,226,193,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":240, # purely visual
+	"armingTime":0.5,
+
+	"flameoutTime":1.5,
+	"noEngineGlowTime":0.2,
+	"fadeTime":0.7,
+	"engineSpec":{"turnAcc":650,
+				  "turnRate":160,
+				  "acc":280,
+				  "dec":220},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-12.5, 6],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[42,220,193,255],
+						"contrailDuration":2.1,
+						"contrailWidthMult":0.9,
+						"contrailWidthAddedFractionAtEnd":1.3,# can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":5, # min segment length, in pixels
+						"contrailMaxSpeedMult":0f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailSpawnDistMult":0.5f, # how far away from engine it starts
+						"contrailColor":[71,110,107,165],
+					    	"glowSizeMult":1.45,
+						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":8.0,
+				    "length":35.0,
+				    "angle":171.0},
+				{"id":"ES2",
+					"loc":[-12.5, -6],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[42,220,193,255],
+						"contrailDuration":2.1,
+						"contrailWidthMult":0.9,
+						"contrailWidthAddedFractionAtEnd":1.3,# can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":5, # min segment length, in pixels
+						"contrailMaxSpeedMult":0f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailSpawnDistMult":0.5f, # how far away from engine it starts
+						"contrailColor":[71,110,107,165],
+					    	"glowSizeMult":1.45,
+						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":8.0,
+				    "length":35.0,
+				    "angle":189.0}],
+
+	"behaviorSpec":{"behavior":"MIRV",
+					"splitRange":1200,
+					"minTimeToSplit":1,
+					"canSplitEarly":false,
+					"splitSound":"InReC_blister_fire", #swarmer_fire
+					"numShots":30,
+					"damage":90,
+					"impact":10,
+					"emp":0,
+					"damageType":ENERGY,
+					"hitpoints":50,
+					"arc":60,
+					"spreadInaccuracy":20,
+					"arcOffset":0,
+					"evenSpread":false,
+					"spreadSpeed":100,
+					"spreadSpeedRange":30,
+					"projectileSpec":"InReC_sundown_sub",
+					"smokeSpec":{"particleSizeMin":10.0,
+								 "particleSizeRange":14.0,
+								 "cloudParticleCount":3,
+								 "cloudDuration":0.8,
+								 "cloudRadius":8.0,
+								 "blowbackParticleCount":3,
+								 "blowbackDuration":1,
+								 "blowbackLength":18.0,
+								 "blowbackSpread":10.0,
+								 "particleColor":[81,107,110,175]}
+					}
+}

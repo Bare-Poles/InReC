@@ -12,6 +12,7 @@ import java.util.Map;
 
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
+import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -113,6 +114,10 @@ public class InReC_slotRange extends BaseHullMod {
 		label.setHighlight("" + (int)FRIG_MAX_RANGE, "" + (int)DEST_MAX_RANGE, "" + (int)CRU_MAX_RANGE, "" + (int)CAP_MAX_RANGE);
 		label.setHighlightColors(h, h, h, h);
 		
+		tooltip.addSectionHeading("Interactions with other modifiers", Alignment.MID, opad);
+		tooltip.addPara("Since the base range is increased, this range modifier"
+				+ " - unlike most other flat modifiers in the game - "
+				+ "is increased by percentage modifiers from other hullmods and skills.", opad);
 		
 		label = tooltip.addPara("May only be installed on InReCo vessels.", opad);
 		

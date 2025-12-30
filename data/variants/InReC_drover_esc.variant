@@ -3,7 +3,7 @@
   "hullId": "InReC_drover",
   "displayName": "Escort",
   "goalVariant": true,
-  "fluxCapacitors": 12,
+  "fluxCapacitors": 10,
   "fluxVents": 1,
   "quality": 1,
   "permaMods": [],

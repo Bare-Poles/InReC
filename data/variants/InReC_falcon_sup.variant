@@ -1,60 +1,59 @@
 {
-  "variantId": "InReC_venture_esc",
-  "hullId": "InReC_venture",
-  "displayName": "Escort",
+  "variantId": "InReC_falcon_sup",
+  "hullId": "InReC_falcon",
+  "displayName": "Support",
   "goalVariant": true,
-  "fluxCapacitors": 0,
-  "fluxVents": 7,
+  "fluxCapacitors": 5,
+  "fluxVents": 30,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "InReC_greg_a",
-    "InReC_slotShield",
     "targetingunit",
-    "InReC_rebalancer"
+    "InReC_siegeMods"
   ],
   "weaponGroups": [
     {
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0003": "InReC_defoliant"
+        "WS0002": "InReC_flock",
+        "WS0003": "InReC_flock"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "InReC_millstone"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "InReC_fumigator",
-        "WS0002": "InReC_pesticide_pod"
+        "WS0004": "InReC_hadron",
+        "WS0005": "InReC_hadron"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0004": "InReC_fusor"
+        "WS0006": "InReC_gluon",
+        "WS0007": "InReC_gluon"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0005": "InReC_pulse_hvy",
-        "WS0006": "InReC_pulse_hvy"
-      }
-    },
-    {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {
-        "WS0007": "InReC_flash_lt"
+        "WS0008": "InReC_spark",
+        "WS0009": "InReC_spark",
+        "WS0010": "InReC_spark",
+        "WS0011": "InReC_spark"
       }
     }
   ],
   "modules": [],
-  "wings": [
-    "InReC_grinder_drone_wing",
-    "InReC_grinder_drone_wing"
-  ]
+  "wings": []
 }
